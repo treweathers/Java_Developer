@@ -277,7 +277,7 @@ Let's recap the variables and constants related to our cosmic journey. Create a 
 ### 1. Introducing Numerical Data Types
 In Java, we use numerical data types to represent numbers. Specifically, in this lesson, we're focusing on `int` and `float`. The `int` data type is used to represent whole integer numbers, and the `float` data type is used to represent decimal numbers - numbers with a decimal point.
 
-The largest value an `int` can store is `2147483647`, which is  2 ^ 31 −1, and the smallest is `-2147483648`, which is −2 ^ 31. Here's an example of using the `int` number:
+The largest value an `int` can store is `2147483647`, which is  2^31 − 1, and the smallest is `-2147483648`, which is −2^31. Here's an example of using the `int` number:
 
     int daysInWeek = 7;
     System.out.println(daysInWeek);  // This will print: 7
