@@ -127,9 +127,19 @@ Start the countdown for the launch of our virtual spacecraft. Remember, every Ja
 
 ## Lesson 2: Java Variables: Storing Data on Our Journey to the Stars
 
+### 1. What are Java Variables?
+Visualize Java variables as tiny boxes filled with data. The short example below demonstrates how a variable is created in Java:
 
+    int numberOfStars; // We declare a variable, akin to opting for a box
+    numberOfStars = 88; // We then fill it with a value
+    System.out.println(numberOfStars); // Finally, we verify its contents. It outputs: 88
 
+Here, 'int' is the variable's data type (integer number), `numberOfStars` is the variable's name, and `88` is its value. We will cover data types in the next lesson, so don't worry if the `int` part is not clear for now.
 
+However, there is a shorter way of doing the same - you can create and assign the variable at the same time. Here is an example:
+
+    int numberOfStars = 88; // creating and assigning the variable with a value
+    System.out.println(numberOfStars);
 
 
 
