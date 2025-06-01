@@ -257,6 +257,21 @@ It's time to define a constant for our cosmic journey speed. Add the necessary c
         }
     }
 
+#### Practice 5
+Let's recap the variables and constants related to our cosmic journey. Create a new constant to represent Earth's orbital speed and a variable for the number of planets, then display their values. Ready to blast off?
+
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Declare a constant for Earth's orbital speed and give it a value of 108000 (km/h)
+            final int EARTHS_ORBITAL_SPEED = 108000;
+            // TODO: Declare a variable for the number of planets in the Solar System and assign it to 8
+            int planetsInSolarSystem = 8;
+            // TODO: Print out both the orbital speed of the Earth and the number of planets using print statements
+            System.out.println(EARTHS_ORBITAL_SPEED);
+            System.out.println(planetsInSolarSystem);
+        }
+    }
+
 
 
 
