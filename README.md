@@ -478,7 +478,28 @@ modify the starter code to check if a spacecraft is moving too quickly for a saf
 ###### feedback: instructions unclear - left a comment saying output should be false with the same print message! It needed to be true, and the message needed to be changed.
 
 #### Practice #3
+Your mission is to calculate whether our spacecraft can outrun starlight. Provide the missing logic to complete the code!
 
+    class Solution {
+        public static void main(String[] args) {
+            int starLightSpeed = 299792; // Speed of light from a star in km/s
+            int spacecraftSpeed = 40000; // Speed of spacecraft in km/s
+    
+            // TODO: Determine if our spacecraft can travel faster than starlight and print the result
+            System.out.println("Can our spacecraft outrun starlight? " + /* TODO: Add the missing logic here */);
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            int starLightSpeed = 299792; // Speed of light from a star in km/s
+            int spacecraftSpeed = 40000; // Speed of spacecraft in km/s
+    
+            // TODO: Determine if our spacecraft can travel faster than starlight and print the result
+            boolean isSpaceCraftFaster = spacecraftSpeed > starLightSpeed;
+            System.out.println("Can our spacecraft outrun starlight? " + isSpaceCraftFaster /* TODO: Add the missing logic here */);
+        }
+    }
 
 #### Practice #4
 
