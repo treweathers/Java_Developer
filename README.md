@@ -122,6 +122,7 @@ Start the countdown for the launch of our virtual spacecraft. Remember, every Ja
     }
 
 
+## Lesson 2: Java Variables: Storing Data on Our Journey to the Stars
 
 
 
