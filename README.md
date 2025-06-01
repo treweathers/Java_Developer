@@ -328,7 +328,23 @@ Here's how you assign `null` to a variable:
 
 Note: as `null` is nothing, you can't perform any operations on it, even though it seems to be a `String` in the example above. You can still print the `null` variable or reassign it to an actual value, but you can't perform any other operations on it; they will cause an error known as `NullPointerException`. But no worries, we will cover this in detail in the next lessons!
 
+#### Practice #1
+Run the code
+    class Solution {
+        public static void main(String[] args) {
+            float researchResult = 9.81f; // Gravitational constant in m/s^2
+            boolean isTheoryConfirmed = true; // The research confirms the theory
+            char grade = 'A'; // The quality assessment of the research
+            String conclusion = "Hypothesis verified.";
+            
+            System.out.println(researchResult);
+            System.out.println("Is the theory confirmed? " + isTheoryConfirmed);
+            System.out.println("Research grade: " + grade);
+            System.out.println(conclusion);
+        }
+    }
 
+Practice #2
 
 
 
