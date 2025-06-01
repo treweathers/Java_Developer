@@ -446,3 +446,21 @@ Run the code
         }
     }
 
+Practice #2
+modify the starter code to check if a spacecraft is moving too quickly for a safe landing. You will need to change the comparison operator and update the variable name to accurately reflect the new logic.
+
+    class Solution {
+        public static void main(String[] args) {
+            // Scenario: Determining if a spacecraft is in safe velocity range for landing
+            int safeLandingMaxSpeed = 1000; // maximum safe landing speed in km/h
+            int spacecraftSpeed = 1200; // current spacecraft speed in km/h
+    
+            // TODO: Create a new boolean variable "isTooFastForLanding" and update the print statement accordingly
+            boolean canLandSafely = spacecraftSpeed <= safeLandingMaxSpeed;
+            System.out.println("Can the spacecraft land safely? " + canLandSafely);
+            // If spacecraftSpeed is 1200, it will print: Can the spacecraft land safely? false
+        }
+    }
+
+
+
