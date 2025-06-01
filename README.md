@@ -140,7 +140,7 @@ However, there is a shorter way of doing the same - you can create and assign th
 
     int numberOfStars = 88; // creating and assigning the variable with a value
     System.out.println(numberOfStars);
-## 2. Java Naming Conventions
+### 2. Java Naming Conventions
 Just as labeling a box effectively, choosing a name for a Java variable necessitates certain rules and conventions. These ensure that our code remains free of errors and is easy for others to understand.
 
 The variable name should start with a lowercase letter and adhere to the CamelCase convention: if the variable name contains just a single word, all letters should be lowercase; if the variable name contains multiple words, however, the first one should be lowercase, and each of the next ones should start with a capital letter. For example, `age`, `weight`, `myAge`, `firstDayOfWeek`.
@@ -156,7 +156,7 @@ Certain characters, such as digits and special characters, are not permissible a
     // int 0zero = 0;
     // int ?questionMark = 1;
 
-## 3. Assignment Operations in Java
+### 3. Assignment Operations in Java
 Assignment in Java involves allocating or changing a value to a variable using the `=` operator. This process resembles placing an item in a box.
 
     int constellations = 88; // We design a box, label it and deposit a value inside
@@ -165,7 +165,7 @@ Assignment in Java involves allocating or changing a value to a variable using t
     constellations = 77; // We change the value of the variable
     System.out.println(constellations); // We inspect the updated contents. It outputs: 77
 
-## 4. Java Constants
+### 4. Java Constants
 While the previous section explains how to change the value of the variable, Java also provides a way to define constants, i.e., variables that cannot change their value once assigned. We use the `final` keyword to declare a constant. The naming convention for constants is to use uppercase letters with words separated by underscore `_`.
 
 It is a good practice to declare a value as `final` if you know that it's not going to change for various reasons such as readability, safety (avoid unintentional modifications), and sometimes for performance.
@@ -176,6 +176,21 @@ It is a good practice to declare a value as `final` if you know that it's not go
     // DAYS_IN_WEEK = 6; // This will not compile and run
 
 Here, `DAYS_IN_WEEK` serves as a constant, prohibiting alterations once assigned. The value for this variable cannot be changed after it's assigned.
+
+#### Practice # 1
+Run the code
+
+    class Solution {
+        public static void main(String[] args) {
+            final int SOLAR_SYSTEM_PLANETS = 8;
+            System.out.println("Number of planets in the Solar System: " + SOLAR_SYSTEM_PLANETS);
+            
+            int universeAge = 14;
+            System.out.println("The universe is approximately " + universeAge + " billion years old.");
+        }
+    }
+
+#### Practice # 2
 
 
 
