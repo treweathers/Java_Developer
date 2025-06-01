@@ -134,7 +134,7 @@ Visualize Java variables as tiny boxes filled with data. The short example below
     numberOfStars = 88; // We then fill it with a value
     System.out.println(numberOfStars); // Finally, we verify its contents. It outputs: 88
 
-Here, 'int' is the variable's data type (integer number), `numberOfStars` is the variable's name, and `88` is its value. We will cover data types in the next lesson, so don't worry if the `int` part is not clear for now.
+Here, `int` is the variable's data type (integer number), `numberOfStars` is the variable's name, and `88` is its value. We will cover data types in the next lesson, so don't worry if the `int` part is not clear for now.
 
 However, there is a shorter way of doing the same - you can create and assign the variable at the same time. Here is an example:
 
