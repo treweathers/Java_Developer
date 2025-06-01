@@ -111,6 +111,17 @@ Complete the code to broadcast your greeting across the cosmos!
 Practice #5
 Start the countdown for the launch of our virtual spacecraft. Remember, every Java program starts with a class and a main method.
 
+    // TODO: Declare a class named 'Solution' (other class names won't work)
+    // Make sure NOT to make your class 'public'
+    class Solution {
+         // TODO: Inside your class, define the main 'public static void main' method that Java looks for
+         public static void main(String[] args) {
+            // TODO: Use a print statement to display a message "3, 2, 1... Lift off!" to the console
+            System.out.println("3, 2, 1... Lift off!");
+         }
+    }
+
+
 
 
 
