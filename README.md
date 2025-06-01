@@ -433,4 +433,16 @@ Next, let's examine the less than `(<)`, greater than `(>)`, less than or equal 
 
 We compared the distances to two planets. Our spaceship isn't closer to planet A, thus `isACloser` yields `false`. However, the spaceship is closer or at an equal distance to planet B, so `isBCloserOrSame` returns `true`.
 
+#### Practice #1
+Run the code
+
+    class Solution {
+        public static void main(String[] args) {
+            int crewMembersOnboard = 5;
+            int maxCapacity = 8;
+    
+            boolean canAddMoreCrew = crewMembersOnboard < maxCapacity;
+            System.out.println("Can we add more crew members? " + canAddMoreCrew);
+        }
+    }
 
