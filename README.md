@@ -83,6 +83,7 @@ Change the text within the System.out.println to "Journey to the stars begins wi
         }
     }
 
+
     solution.java:4: error: ';' expected
             System.out.println("Greetings, interstellar explorers!")
                                                                 ^
@@ -96,7 +97,15 @@ Change the text within the System.out.println to "Journey to the stars begins wi
         }
     }
 
+Practice #4
+Complete the code to broadcast your greeting across the cosmos!
 
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Print a welcome message for new space explorers learning Java.
+            System.out.println("Welcome new space explorers learning Java!");
+        }
+    }
 
 
 
