@@ -156,7 +156,7 @@ Certain characters, such as digits and special characters, are not permissible a
     // int 0zero = 0;
     // int ?questionMark = 1;
 
-### 3. Assignment Operations in Java
+## 3. Assignment Operations in Java
 Assignment in Java involves allocating or changing a value to a variable using the `=` operator. This process resembles placing an item in a box.
 
     int constellations = 88; // We design a box, label it and deposit a value inside
