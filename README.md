@@ -462,5 +462,19 @@ modify the starter code to check if a spacecraft is moving too quickly for a saf
         }
     }
 
+    class Solution {
+        public static void main(String[] args) {
+            // Scenario: Determining if a spacecraft is in safe velocity range for landing
+            int safeLandingMaxSpeed = 1000; // maximum safe landing speed in km/h
+            int spacecraftSpeed = 1200; // current spacecraft speed in km/h
+    
+            // TODO: Create a new boolean variable "isTooFastForLanding" and update the print statement accordingly
+            boolean isTooFastForLanding = spacecraftSpeed > safeLandingMaxSpeed;
+            System.out.println("Is the spacecraft moving too fast? " + isTooFastForLanding);
+            // If spacecraftSpeed is 1200, it will print: Can the spacecraft land safely? false
+        }
+    }
+
+###### feedback: instructions unclear - left a comment saying output should be false with the same print message! It needed to be true, and the message needed to be changed.
 
 
