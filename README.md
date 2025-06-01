@@ -214,7 +214,27 @@ Modify the provided starter code to define the speed of light as a constant that
     }
 
 #### Practice #3
+Your mission is to find and fix the bug. Happy debugging!
 
+    class Solution {
+        public static void main(String[] args) {
+            int earthOrbitRadius = 149600000; // in kilometers
+            System.out.println("The Earth's orbit radius is " + earthOrbitRadius + " kilometers.");
+    
+            int 8planets = 8;
+            System.out.println("There are " + 8planets + " planets in the Solar System.");
+        }
+    }
+
+    class Solution {
+        public static void main(String[] args) {
+            int earthOrbitRadius = 149600000; // in kilometers
+            System.out.println("The Earth's orbit radius is " + earthOrbitRadius + " kilometers.");
+    
+            int planets8 = 8;
+            System.out.println("There are " + planets8 + " planets in the Solar System.");
+        }
+    }
 
 
 
