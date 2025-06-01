@@ -1,6 +1,6 @@
 # COURSE 1: Java Programming for Beginners
 
-In Java, we use statements to perform actions, and each statement ends with a semicolon (;). Java employs curly braces ({ }) to define a block of code.
+In Java, we use statements to perform actions, and each statement ends with a semicolon `(;)`. Java employs curly braces `({ })` to define a block of code.
 
 Look at this simple Java syntax example:
 
