@@ -257,7 +257,7 @@ It's time to define a constant for our cosmic journey speed. Add the necessary c
         }
     }
 
-#### Practice 5
+#### Practice #5
 Let's recap the variables and constants related to our cosmic journey. Create a new constant to represent Earth's orbital speed and a variable for the number of planets, then display their values. Ready to blast off?
 
     class Solution {
@@ -272,7 +272,27 @@ Let's recap the variables and constants related to our cosmic journey. Create a 
         }
     }
 
+## Lesson 3: Java Basics: Exploring Primitive Data Types and Strings
 
+### 1. Introducing Numerical Data Types
+In Java, we use numerical data types to represent numbers. Specifically, in this lesson, we're focusing on `int` and `float`. The `int` data type is used to represent whole integer numbers, and the `float` data type is used to represent decimal numbers - numbers with a decimal point.
+
+The largest value an `int` can store is `2147483647`, which is  2 ^ 31 −1, and the smallest is `-2147483648`, which is −2 ^ 31. Here's an example of using the `int` number:
+
+    int daysInWeek = 7;
+    System.out.println(daysInWeek);  // This will print: 7
+    
+    int maximalInteger = 2147483647;
+    System.out.println(maximalInteger);  // This will print: 2147483647
+    
+    int tooBigInteger = 2147483648; // Oops! Error, the number is too large
+
+Now, let's move on to the `float` data type. `float` is used when dealing with numbers that have decimal points, also known as floating-point numbers. A `float` can hold up to 7 decimal digits of precision. Consider the following example:
+
+    float pi = 3.1415926f;
+    System.out.println(pi);  // This will print: 3.1415926
+
+Ensure that the `f` at the end of the number is present; it differentiates a `float` from a `double` - another type for decimal numbers, with higher precision.
 
 
 
