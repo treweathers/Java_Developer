@@ -294,5 +294,23 @@ Now, let's move on to the `float` data type. `float` is used when dealing with n
 
 Ensure that the `f` at the end of the number is present; it differentiates a `float` from a `double` - another type for decimal numbers, with higher precision.
 
+### 2. Discovering Boolean and Char Data Types
+Now, let's move on to the `boolean` and `char` data types.
+
+The `boolean` data type in Java can hold one of two possible values: `true` or `false`. This data type is widely used in logical expressions and decision-making. Here's a simple example:
+
+    boolean isEarthRound = true;
+    System.out.println(isEarthRound);  // This will print: true
+    
+    boolean isEarthFlat = false;
+    System.out.println(isEarthFlat); // This will print: false
+
+The `char` data type is used to store a single character. Java uses Unicode, allowing a `char` to store any character! Here's how it's done:
+
+    char firstLetterOfAlphabet = 'A'; // A character is always surrounded by single quotes
+    System.out.println(firstLetterOfAlphabet); // This will print: A
+
+
+
 
 
