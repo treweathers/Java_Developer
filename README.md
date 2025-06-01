@@ -74,6 +74,27 @@ Change the text within the System.out.println to "Journey to the stars begins wi
         }
     }
 
+#### Practice #3
+
+    class Solution {
+        public static void main(String[] args) {
+            // Sending a greeting to interstellar explorers
+            System.out.println("Greetings, interstellar explorers!")
+        }
+    }
+
+    solution.java:4: error: ';' expected
+            System.out.println("Greetings, interstellar explorers!")
+                                                                ^
+    1 error
+
+
+    class Solution {
+        public static void main(String[] args) {
+            // Sending a greeting to interstellar explorers
+            System.out.println("Greetings, interstellar explorers!");
+        }
+    }
 
 
 
