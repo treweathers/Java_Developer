@@ -190,9 +190,30 @@ Run the code
         }
     }
 
-#### Practice # 2
+#### Practice #2
+Modify the provided starter code to define the speed of light as a constant that does not change. Remember to follow the proper Java syntax for constants.
 
+    class Solution {
+        public static void main(String[] args) {
+            // Creating a variable for representing the speed of light
+            int speedOfLightKmS = 299792;
+    
+            // Output the speed of light
+            System.out.println("The speed of light is: " + speedOfLightKmS);
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            // Creating a variable for representing the speed of light
+            final int speedOfLightKmS = 299792;
+    
+            // Output the speed of light
+            System.out.println("The speed of light is: " + speedOfLightKmS);
+        }
+    }
 
+#### Practice #3
 
 
 
