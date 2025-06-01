@@ -475,7 +475,7 @@ modify the starter code to check if a spacecraft is moving too quickly for a saf
         }
     }
 
-###### feedback: instructions unclear - left a comment saying output should be false with the same print message! It needed to be true, and the message needed to be changed.
+###### feedback: instructions unclear - left a comment saying output should be false with the same print message! It needed to be true, and the message needed to be changed⚠️.
 
 #### Practice #3
 Your mission is to calculate whether our spacecraft can outrun starlight. Provide the missing logic to complete the code!
@@ -503,3 +503,21 @@ Your mission is to calculate whether our spacecraft can outrun starlight. Provid
 
 #### Practice #4
 
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Assign the distance to the Moon (384400 kilometers) to a variable
+            int distanceToMoon = 384400;
+            // TODO: Assign the distance to Mars (225000000 kilometers) to another variable
+            int distanceToMars = 225000000;
+            // TODO: Compare the distance to the Moon to see if it's less than 1 million kilometers
+            boolean distanceMoon = distanceToMoon < 1000000;
+            // TODO: Check if the distance to Mars is greater than the distance to the Moon
+            boolean distanceMarsMoon = distanceToMars > distanceToMoon;
+            // TODO: Print results of these two comparisons to the console
+            
+            System.out.println("Is the distance to the Moon less than 1 million kilometers? " + distanceMoon);
+            System.out.println("Is the distance to Mars greater than the distance to the Moon? " + distanceMarsMoon);
+        }
+    }
+
+###### feedback: not clear in comments, also in feedback said to be "descriptive" when printing, even though not directly in instrustions, just said to print results⚠️.
