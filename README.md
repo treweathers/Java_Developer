@@ -4,7 +4,7 @@ In Java, we use statements to perform actions, and each statement ends with a se
 
 Look at this simple Java syntax example:
 
-## Java Basics: Syntax, Comments, Semicolons, and Your First Program##
+## Java Basics: Syntax, Comments, Semicolons, and Your First Program
 
 ### 1. Java Syntax Basics
     
