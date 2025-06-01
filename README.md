@@ -64,7 +64,15 @@ You can consider this as an entry point. While words like `public`, `static`, `v
         }
     }
 
+#### Practice #2
+Change the text within the System.out.println to "Journey to the stars begins with Java!"
 
+    class Solution {
+        public static void main(String[] args) {
+            // This line prints a message about space exploration
+            System.out.println("Journey to the stars begins with Java!"); // Please change the message!
+        }
+    }
 
 
 
