@@ -310,6 +310,14 @@ The `char` data type is used to store a single character. Java uses Unicode, all
     char firstLetterOfAlphabet = 'A'; // A character is always surrounded by single quotes
     System.out.println(firstLetterOfAlphabet); // This will print: A
 
+### 3. Exploring String Data Type
+You'll find that `String` is as common in Java as stars in the cosmos. Java treats `String` as a basic data type and uses it to store a sequence of characters - just a text. The string is always surrounded by double quotes.
+
+    String welcome = "Welcome to Java!";
+    System.out.println(welcome); // This will print: Welcome to Java!
+
+What's interesting to note is the immutability of `String` in Java. Once a `String` is created, its value can't be changed.
+
 
 
 
