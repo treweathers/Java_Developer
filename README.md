@@ -411,5 +411,16 @@ For instance, consider this comparison of a spaceship's speed with that of an as
 
 In the code above, we compared `spaceshipSpeed` and `asteroidSpeed` using the `>` operator. The result is `true` because `spaceshipSpeed` is indeed higher than `asteroidSpeed`.
 
+### 2. Exploring == and != Operators
+Let's explore the equal to `(==)` and not equal to `(!=)` operators. These are essential when you need to compare values, such as comparing the current fuel level to the required one:
+
+    int currentFuelLevel = 90;  // current fuel level in %
+    int requiredFuelLevel = 100;  // required fuel level in %
+    
+    boolean isEnoughFuel = currentFuelLevel == requiredFuelLevel;  // this results in 'false'
+    boolean isFuelLow = currentFuelLevel != requiredFuelLevel;  // this results in 'true'
+
+The `==` operator checks whether `currentFuelLevel` equals `requiredFuelLevel`, producing a `false` result. Conversely, the `!=` operator verifies their inequality, returning `true`.
+
 
 
