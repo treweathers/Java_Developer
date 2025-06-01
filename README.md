@@ -165,9 +165,17 @@ Assignment in Java involves allocating or changing a value to a variable using t
     constellations = 77; // We change the value of the variable
     System.out.println(constellations); // We inspect the updated contents. It outputs: 77
 
+## 4. Java Constants
+While the previous section explains how to change the value of the variable, Java also provides a way to define constants, i.e., variables that cannot change their value once assigned. We use the `final` keyword to declare a constant. The naming convention for constants is to use uppercase letters with words separated by underscore `_`.
 
+It is a good practice to declare a value as `final` if you know that it's not going to change for various reasons such as readability, safety (avoid unintentional modifications), and sometimes for performance.
 
+    final int DAYS_IN_WEEK = 7; // We solidify a constant, akin to etching a fact in stone
+    System.out.println(DAYS_IN_WEEK); // We scrutinize our engraved fact. It outputs: 7
+    
+    // DAYS_IN_WEEK = 6; // This will not compile and run
 
+Here, `DAYS_IN_WEEK` serves as a constant, prohibiting alterations once assigned. The value for this variable cannot be changed after it's assigned.
 
 
 
