@@ -57,6 +57,8 @@ You can consider this as an entry point. While words like `public`, `static`, `v
 * 
 
 #### Practice # 1
+Run the code
+
     class Solution {
         public static void main(String[] args) {
             // This command prints a message to the console
@@ -75,6 +77,7 @@ Change the text within the System.out.println to "Journey to the stars begins wi
     }
 
 #### Practice #3
+Find the bug
 
     class Solution {
         public static void main(String[] args) {
