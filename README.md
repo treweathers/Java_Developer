@@ -394,3 +394,22 @@ You have learned much about Java's primitive data types. Write a Java program fr
             char firstLetterOfCosmos = 'C';
         }
     }
+
+## Lesson 4: Comparing the Cosmos: Understanding Java's Comparison Operators
+
+### 1. Exploring Java Comparison Operators
+Imagine piloting a starship in space. Here, destinations depend on evaluating conditions such as the distances to planets. These decisions boil down to comparisons, mirroring situations in programming. In Java, we utilize comparison operators to make such decisions.
+
+Java has six comparison operators, including equal to `(==)`, not equal to `(!=)`, greater than `(>)`, less than`(<)`, greater than or equal to `(>=)`, and less than or equal to `(<=)`. They return `true` or `false`, also known as boolean values.
+
+For instance, consider this comparison of a spaceship's speed with that of an asteroid:
+
+    int spaceshipSpeed = 20000;  // speed in mph
+    int asteroidSpeed = 15000;   // speed in mph
+    System.out.println("Is spaceship faster than an asteroid? " + (spaceshipSpeed > asteroidSpeed));
+    // Prints: Is a spaceship faster than an asteroid? true
+
+In the code above, we compared `spaceshipSpeed` and `asteroidSpeed` using the `>` operator. The result is `true` because `spaceshipSpeed` is indeed higher than `asteroidSpeed`.
+
+
+
