@@ -318,6 +318,16 @@ You'll find that `String` is as common in Java as stars in the cosmos. Java trea
 
 What's interesting to note is the immutability of `String` in Java. Once a `String` is created, its value can't be changed.
 
+### 4. Understanding null
+As we conclude this journey, we will discuss a very special value: the `null` value. `null` means "no value" or "nothing", or "unknown". It's not equivalent to an empty string `("")` or 0.
+
+Here's how you assign `null` to a variable:
+    
+    String unknown = null;
+    System.out.println(unknown);  // This will print: null
+
+Note: as `null` is nothing, you can't perform any operations on it, even though it seems to be a `String` in the example above. You can still print the `null` variable or reassign it to an actual value, but you can't perform any other operations on it; they will cause an error known as `NullPointerException`. But no worries, we will cover this in detail in the next lessons!
+
 
 
 
