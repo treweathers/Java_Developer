@@ -344,7 +344,37 @@ Run the code
         }
     }
 
-Practice #2
+#### Practice #2
+Change the countdownStart variable to a decimal number with a value of 10.5.
 
+    class Solution {
+        public static void main(String[] args) {
+            // Define a variable with 'int' type representing days until the space launch
+            float countdownStart = 10.5f;
+    
+            System.out.println("There are " + countdownStart + " days until the launch.");
+        }
+    }
 
+#### Practice #3
+Run the code, identify the error, and provide the necessary fix.
+
+    class Solution {
+        public static void main(String[] args) {
+            int numOfPlanets = 8;
+            float rocketWeight = 1500.5;
+            String message = "Ready for space exploration!";
+            System.out.println("There are " + numOfPlanets + " known planets.");
+            System.out.println("Our rocket weighs " + rocketWeight + " tons.");
+            System.out.println(message);
+        }
+    }
+    
+    solution.java:4: error: incompatible types: possible lossy conversion from double to float
+            float rocketWeight = 1500.5;
+                                 ^
+    1 error
+    
+#### Practice #4
+You have learned much about Java's primitive data types. Write a Java program from scratch that declares these details using the appropriate data types and prints them out.
 
