@@ -140,6 +140,21 @@ However, there is a shorter way of doing the same - you can create and assign th
 
     int numberOfStars = 88; // creating and assigning the variable with a value
     System.out.println(numberOfStars);
+## 2. Java Naming Conventions
+Just as labeling a box effectively, choosing a name for a Java variable necessitates certain rules and conventions. These ensure that our code remains free of errors and is easy for others to understand.
+
+The variable name should start with a lowercase letter and adhere to the CamelCase convention: if the variable name contains just a single word, all letters should be lowercase; if the variable name contains multiple words, however, the first one should be lowercase, and each of the next ones should start with a capital letter. For example, `age`, `weight`, `myAge`, `firstDayOfWeek`.
+
+Certain characters, such as digits and special characters, are not permissible at the beginning of variable names.
+
+    // Correct variable naming
+    int myAge = 20;
+    int myWeight = 72;
+    int district9Population = 10000;
+    
+    // Incorrect variable naming (commented intentionally)
+    // int 0zero = 0;
+    // int ?questionMark = 1;
 
 
 
