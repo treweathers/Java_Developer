@@ -422,5 +422,15 @@ Let's explore the equal to `(==)` and not equal to `(!=)` operators. These are e
 
 The `==` operator checks whether `currentFuelLevel` equals `requiredFuelLevel`, producing a `false` result. Conversely, the `!=` operator verifies their inequality, returning `true`.
 
+### 3. Exploring <, >, <=, and >= Operators
+Next, let's examine the less than `(<)`, greater than `(>)`, less than or equal to `(<=)`, and greater than or equal to `(>=)` operators. These are primarily used for the comparison of numeric data. Suppose you're observing two planets and want to determine which one is closer. You can use these operators to find out:
+
+    int distanceToPlanetA = 5000; // distance in kms
+    int distanceToPlanetB = 3000; // distance in kms
+    
+    boolean isACloser = distanceToPlanetA < distanceToPlanetB;  // this results in 'false'
+    boolean isBCloserOrSame = distanceToPlanetA >= distanceToPlanetB;  // this results in 'true'
+
+We compared the distances to two planets. Our spaceship isn't closer to planet A, thus `isACloser` yields `false`. However, the spaceship is closer or at an equal distance to planet B, so `isBCloserOrSame` returns `true`.
 
 
