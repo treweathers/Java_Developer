@@ -378,3 +378,19 @@ Run the code, identify the error, and provide the necessary fix.
 #### Practice #4
 You have learned much about Java's primitive data types. Write a Java program from scratch that declares these details using the appropriate data types and prints them out.
 
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Declare a float variable to store the distance from Earth to the Sun in kilometers         - 149600000.0 kilometers
+            float distanceFromEarth = 149600000.0f;
+            // TODO: Declare an int variable to store the number of days Earth takes to orbit the Sun - 365 days
+            int daysToOrbit = 365;
+            // TODO: Print the distance of Earth from the Sun followed by " km from the Sun."
+            System.out.println(distanceFromEarth + " km from the Sun.");
+            // TODO: Print the number of days Earth takes to orbit the Sun, followed by " days to orbit the Sun."
+            System.out.println(daysToOrbit + " days to orbit the Sun.");
+            // TODO: Declare a boolean variable to store the truth about whether space is dark - it is!
+            boolean isSpaceDark = true;
+            // TODO: Use a char variable to represent the first letter of 'Cosmos' - C
+            char firstLetterOfCosmos = 'C';
+        }
+    }
