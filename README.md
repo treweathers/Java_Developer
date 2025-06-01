@@ -248,6 +248,15 @@ It's time to define a constant for our cosmic journey speed. Add the necessary c
         }
     }
 
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Declare a constant for Earth's orbital speed and set its value to 29 km/s
+            final int EARTHS_ORBITAL_SPEED = 29;
+            // TODO: Print out the string "Earth's orbital speed: <speed value> km/s
+            System.out.println("Earth's orbital speed: " + EARTHS_ORBITAL_SPEED + "km/s");
+        }
+    }
+
 
 
 
