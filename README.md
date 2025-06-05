@@ -565,4 +565,12 @@ But, of course, the main application of logical operations is for variables. Her
     // Check if the speed is inside the expected bounds.
     System.out.println(speed > minSpeed && speed < maxSpeed); // Prints: true
 
+### 3. Overflow Phenomenon
+The term **overflow** describes what happens when we exceed the range of an integer variable. This occurs when attempting to store a value larger than what the variable's type can contain:
+
+    int maxInt = Integer.MAX_VALUE; // the maximal integer, equals to 2^31 - 1
+    int overflow = maxInt + 1; // causes an overflow, there is no integer after the maximal one.
+    System.out.println(overflow); // Prints: -2147483648, which is -2^31 - the minimal integer number
+
+Here, maxInt is the maximum value an int can store. When we add one to it, it 'overflows' to the smallest possible integer value! This brings us to the fact that integer values are "looped" under the hood.
 
