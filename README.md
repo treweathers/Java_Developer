@@ -559,3 +559,10 @@ Here, `&&` produces `true` only if both boolean values are `true`. `||` delivers
 
 But, of course, the main application of logical operations is for variables. Here is a quick, simple example of how they can help to make decisions:
 
+    int speed = 60;
+    int minSpeed = 30;
+    int maxSpeed = 70;
+    // Check if the speed is inside the expected bounds.
+    System.out.println(speed > minSpeed && speed < maxSpeed); // Prints: true
+
+
