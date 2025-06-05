@@ -539,3 +539,23 @@ We can perform arithmetic operations — addition `(+)`, subtraction `(-)`, mult
 
 Java allows order alteration using parentheses and provides the modulus `(%)` operation — useful for identifying whether numbers are even or odd!
 
+### 2. Logical Operations Explained
+Logical operators — && (AND), || (OR), ! (NOT) — serve as decision-makers in Java and evaluate to boolean values — true or false. Here's how we can use them with two boolean values:
+
+    System.out.println(true && true); // true
+    System.out.println(true && false); // false
+    System.out.println(false && true); // false
+    System.out.println(false && false); // false
+    
+    System.out.println(true || true); // true
+    System.out.println(true || false); // true
+    System.out.println(false || true); // true
+    System.out.println(false || false); // false
+    
+    System.out.println(!true); // false
+    System.out.println(!false); // true
+
+Here, `&&` produces `true` only if both boolean values are `true`. `||` delivers true if either is `true`. And `!` reverses the boolean value.
+
+But, of course, the main application of logical operations is for variables. Here is a quick, simple example of how they can help to make decisions:
+
