@@ -572,5 +572,5 @@ The term **overflow** describes what happens when we exceed the range of an inte
     int overflow = maxInt + 1; // causes an overflow, there is no integer after the maximal one.
     System.out.println(overflow); // Prints: -2147483648, which is -2^31 - the minimal integer number
 
-Here, maxInt is the maximum value an int can store. When we add one to it, it 'overflows' to the smallest possible integer value! This brings us to the fact that integer values are "looped" under the hood.
+Here, `maxInt` is the maximum value an `int` can store. When we add one to it, it 'overflows' to the smallest possible integer value! This brings us to the fact that integer values are "looped" under the hood.
 
