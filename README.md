@@ -521,3 +521,21 @@ Your mission is to calculate whether our spacecraft can outrun starlight. Provid
     }
 
 ###### feedback: not clear in comments, also in feedback said to be "descriptive" when printing, even though not directly in instrustions, just said to print results⚠️.
+
+
+## Lesson 5: Arithmetic and Logical Operations in Java
+### 1. Arithmetic Operations Uncovered
+Recall from our previous sessions that Java's primitive data types include `int` for whole numbers, `float` for decimal numbers, `boolean` for true/false values, and `char` for single characters. Both `int` and `float` have limitations on their numerical range, which will come into play when we discuss overflow later in this lesson.
+
+We can perform arithmetic operations — addition `(+)`, subtraction `(-)`, multiplication `(*)`, division `(/)`, and modulus - the remainder of the division `(%)` — on numerical types. For example,
+
+    int a = 10;
+    int b = 2;
+    System.out.println(a + b); // Outputs: 12
+    System.out.println(a - b); // Outputs: 8
+    System.out.println(a * b); // Outputs: 20;
+    System.out.println(a / b); // Outputs: 5
+    System.out.println(a % b); // Outputs: 0
+
+Java allows order alteration using parentheses and provides the modulus `(%)` operation — useful for identifying whether numbers are even or odd!
+
