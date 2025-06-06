@@ -1068,8 +1068,6 @@ Write code to make a decision about chasing a comet based on its speed. Remember
 ### 1. Understanding Concatenation
 Think of concatenation as a glue that sticks strings together to form a meaningful sentence. Imagine you have two strings — "Neil" and "Armstrong". We can concatenate these into one string, "Neil Armstrong". Here's how:
 
-    Java
-    Copy to clipboard
     Play
     String firstName = "Neil";
     String lastName = "Armstrong";
@@ -1077,13 +1075,11 @@ Think of concatenation as a glue that sticks strings together to form a meaningf
     
     System.out.println(fullName);  // Output: Neil Armstrong
     
-The '+' operator joins firstName, a space, and lastName to form the fullName string. Looks familiar? Of course! We already implicitly used this technique in our System.out.println statements earlier in the course.
+The '+' operator joins `firstName`, a space, and `lastName` to form the `fullName` string. Looks familiar? Of course! We already implicitly used this technique in our `System.out.println` statements earlier in the course.
 
 ### 2. String Concatenation with '+' Operator in Java
 In Java, the '+' operator can handle different data types when used with strings. Here’s an example:
 
-    Java
-    Copy to clipboard
     Play
     String name = "Alice";
     int apples = 5;
@@ -1095,8 +1091,6 @@ What's truly remarkable here is that Java implicitly converts the integer apples
 ### 3. String Concatenation with 'concat' Method in Java
 Java's String class provides another string concatenation tool — the concat method. Let's examine how we use it to join "Hello, " and "World!":
 
-    Java
-    Copy to clipboard
     Play
     String str1 = "Hello, ";
     String str2 = "World!";
@@ -1110,8 +1104,6 @@ Remember - String instances are immutable in Java, once created, the string cann
 
 Here's a simple example:
 
-    Java
-    Copy to clipboard
     Play
     StringBuilder sb = new StringBuilder();
     sb.append("Hello, ").append("World!")
