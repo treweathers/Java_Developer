@@ -890,6 +890,27 @@ The `ternary operator` serves as a condensed one-line `if-else`, ideal for basic
 
 In the code above, `message` receives `"Signal detected, safe to land!"`, as `detection` is `true`. Otherwise, it'd receive `"No signal detected, abort mission!"`.
 
+#### Practive #1
+Run the code.
+
+    class Solution {
+        public static void main(String[] args) {
+            int starTemperature = 5000; // Temperature in Kelvin
+            String starType;
+    
+            // Determine star type based on temperature
+            if (starTemperature > 3000) {
+                starType = "Red Dwarf";
+            } else if (starTemperature > 1000) {
+                starType = "Brown Dwarf";
+            } else {
+                starType = "Cold, dark Star";
+            }
+    
+            System.out.println("The star is categorized as: " + starType);
+        }
+    }
+
 
 
 
