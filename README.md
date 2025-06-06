@@ -671,5 +671,8 @@ Calibrate our spacecraft's fuel gauge by calculating the remaining fuel after a 
         }
     }
 
+## Lesson 6: Java Journey to the Stars: Navigating Primitive Data Type Conversion
+# 1. Automatic (Implicit) Conversions
+
 
 
