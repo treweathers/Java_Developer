@@ -673,3 +673,13 @@ Calibrate our spacecraft's fuel gauge by calculating the remaining fuel after a 
 
 ## Lesson 6: Java Journey to the Stars: Navigating Primitive Data Type Conversion
 ### 1. Automatic (Implicit) Conversions
+Data type conversion or type casting involves transforming values between different data types. Imagine a transformation from a human (a representation of an integer type) to a spaceship (symbolizing a double type): the integer fits into a double with ease (widening). However, fitting a double into an int (a process of narrowing), necessitates explicit conversion and may result in data loss.
+
+When types are compatible and the target type is larger (similar to a spaceship's spacious cockpit), Java performs the automatic conversion. Here's an example of automatic (implicit) conversion from an int to a double:
+
+    int i = 10;  // an integer 
+    double d = i;  // automatic conversion to double
+    
+    System.out.println("The value of d: " + d);   // Output: The value of d: 10.0
+
+
