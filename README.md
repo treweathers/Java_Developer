@@ -574,3 +574,35 @@ The term **overflow** describes what happens when we exceed the range of an inte
 
 Here, `maxInt` is the maximum value an `int` can store. When we add one to it, it 'overflows' to the smallest possible integer value! This brings us to the fact that integer values are "looped" under the hood.
 
+#### Practice #1
+Run the code.
+
+    class Solution {
+        public static void main(String[] args) {
+            int starsCount = 7;
+            int newStarsDiscovered = 2;
+            System.out.println("Total stars in the sky: " + (starsCount + newStarsDiscovered));
+            System.out.println("Stars left after a black hole event: " + (starsCount - newStarsDiscovered));
+            System.out.println("Stars observed through telescope enhancement: " + (starsCount * newStarsDiscovered));
+            System.out.println("Result of dividing stars into constellations: " + (starsCount / newStarsDiscovered));
+            System.out.println("Is there an odd number of stars? " + ((starsCount + newStarsDiscovered) % 2 != 0));
+        }
+    }
+
+#### Practice #2
+Run the code.
+
+    class Solution {
+        public static void main(String[] args) {
+            // Define the maximum integer value
+            int maxIntVal = Integer.MAX_VALUE;
+            System.out.println(maxIntVal);
+            // Add 10 to the maximum value to demonstrate overflow
+            int result = maxIntVal + 10;
+            // Observe the unexpected result due to overflow
+            System.out.println(result); // What will this print?
+        }
+    }
+
+#### Practice #3
+
