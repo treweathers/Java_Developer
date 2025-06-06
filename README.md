@@ -636,4 +636,24 @@ There might be a logic glitch in the launch sequence that needs your sharp eye. 
 #### Practice #4
 Can you calculate the totals in our cosmic inventory and check our findings against our mission criteria?
 
+    class Solution {
+        public static void main(String[] args) {
+            int starsCounted = 17;
+            int galaxiesCounted = 3;
+            boolean darkMatterFound = false;
+    
+            // TODO: Calculate how many cosmic bodies we've found in total.
+            int totalBodies = starsCounted + galaxiesCounted;
+            System.out.println("Total cosmic bodies counted: " + totalBodies);
+    
+            // TODO: Use a logical AND operation to check: "Found more than 15 stars and the dark matter: " 
+            int minStars = 15;
+            System.out.println(starsCounted > minStars && darkMatterFound == true);
+        }
+    }
+
+#### Practice #5
+Calibrate our spacecraft's fuel gauge by calculating the remaining fuel after a short flight. Determine if there's enough to take us beyond the next nebula. Use math operations and logical comparisons you've learned.
+
+
 
