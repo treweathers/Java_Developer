@@ -768,3 +768,18 @@ Run the code and utilize your new skills in data type conversion to find and fix
 #### Practice #4
 Use the knowledge from our journey to convert different Java primitive types and strings. Follow the steps below using type casting and concatenation!
 
+    class Solution {
+        public static void main(String[] args) {
+            int planetNumber = 7;
+    
+            // TODO: Convert the planetNumber integer to a double using casting.
+            double planetNumberInt = planetNumber;
+            // TODO: Now, convert the new double to a String
+            String planetNumberStr = Double.toString(planetNumberInt);
+            // Printing out the String value after conversion.
+            System.out.println("In our galaxy, the planet count is: " + planetNumberStr);
+        }
+    }
+
+
+
