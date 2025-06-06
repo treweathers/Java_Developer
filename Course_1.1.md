@@ -1096,7 +1096,7 @@ Java's String class provides another string concatenation tool — the `concat` 
     System.out.println(combinedStr);  // Output: Hello, World!
 The `concat` method joins the strings in a manner similar to the '+' operator, but it's designed solely for strings.
 
-### 4. `StringBuilder` in Java
+### 4. 'StringBuilder' in Java
 Remember - `String` instances are immutable in Java, once created, the string cannot be changed. However, there are some nifty tools provided by Java, e.g., `StringBuilder` is a mutable sequence of characters, meaning you can alter its content without creating a new object. It provides an optimized way to concatenate strings, which is particularly useful when concatenating a large number of strings.
 
 Here's a simple example:
