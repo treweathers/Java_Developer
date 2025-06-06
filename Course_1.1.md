@@ -1,6 +1,6 @@
 <h1 align='center'> Course 1: Java Programming for Beginners </h1> 
 
-# Unit 1: Getting Started with Java
+# Course 1.1: Getting Started with Java
 
 In Java, we use statements to perform actions, and each statement ends with a semicolon `(;)`. Java employs curly braces `({ })` to define a block of code.
 
