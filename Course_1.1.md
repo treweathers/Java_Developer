@@ -911,6 +911,38 @@ Run the code.
         }
     }
 
+#### Practice #2
+Change the starter code to use the ternary operator instead of the if-else statement. 
+    
+    class Solution {
+        public static void main(String[] args) {
+            int objectSpeed = 42; // Example speed in km/s
+            
+            // Decide if an object is moving fast using a ternary operator
+            String speedEvaluationMessage = objectSpeed >= 50 ? "Object is moving very fast!" : "Object is moving slowly.";
+            System.out.println(speedEvaluationMessage);
+        }
+    }
+    
+    /*
+    class Solution {
+        public static void main(String[] args) {
+            int objectSpeed = 42; // Example speed in km/s
+    
+            // Decide if an object is moving fast using a ternary operator
+            String speedEvaluationMessage;
+            if (objectSpeed >= 50) {
+                speedEvaluationMessage = "Object is moving very fast!";
+            } else {
+                speedEvaluationMessage = "Object is moving slowly.";
+            }
+            System.out.println(speedEvaluationMessage);
+        }
+    }
+    */
+
+#### Practice #3
+
 
 
 
