@@ -707,3 +707,18 @@ A common type of conversion in Java is converting to and from `String` values. W
     int number = Integer.parseInt(invalidNumber); // Oops! This will throw an error, "25abc" is not a number!
 
 In the conversion to `String`, we use the `Integer.toString(n)` method for `int` type. Other types have similar methods - `Float.toString(f)`, `Double.toString(d)`, etc. For the conversion from `String` to a number, we use the `Integer.parseInt(s)` method. Similarly, `Float.parseFloat(s)` and `Double.parseDouble(s)` are used to obtain `float` and `double` numbers from the string, respectively.
+
+#### Practice #1
+Run the code.
+
+    class Solution {
+        public static void main(String[] args) {
+          // Imagine converting the speed of a spaceship from kilometers per hour (double) to space-units per minute (int)
+          double spaceshipSpeedInKmph = 12450.5; // Spaceship speed in kilometers per hour
+          int spaceshipSpeedInSum = (int) (spaceshipSpeedInKmph / 60); // Explicitly casting to int
+          
+          System.out.println("Spaceship speed converted to space-units per minute: " + spaceshipSpeedInSum); 
+        }
+    }
+
+#### Practice #2
