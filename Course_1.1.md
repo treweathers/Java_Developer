@@ -781,5 +781,23 @@ Use the knowledge from our journey to convert different Java primitive types and
         }
     }
 
+## Lessson 7: Navigating Java Conditional Statements: If-Else, Switch, Ternary Operator
+### 1. If and If-Else Structure
+The structure of `if` and `if-else` blocks is the following:
+
+    if (condition) {
+        // action if condition is true
+    }
+    
+    // and
+    
+    if (condition) {
+        // action if condition is true
+    } else {
+        // action if condition is false
+    }
+
+So, when the provided `condition` is true, we enter the action in the `if` block, and when the `condition` is false, we enter an optional `else` block.
+
 
 
