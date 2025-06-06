@@ -942,6 +942,53 @@ Change the starter code to use the ternary operator instead of the if-else state
     */
 
 #### Practice #3
+Something isn't quite right. Run the code to observe its behavior. Can you determine what needs to be fixed to ensure it follows the proper execution logic for the switch cases?
+
+    class Solution {
+        public static void main(String[] args) {
+            int starBrightness = 2; // Brightness of the observed star on a scale from 1 to 10
+            
+            // Let's use a switch statement to decide what to do based on star brightness
+            switch(starBrightness) {
+                case 1:
+                    System.out.println("Star is too dim, use a bigger telescope.");
+                    break;
+                case 2:
+                    System.out.println("Star could be more visible, try to adjust the lens.");
+                case 3:
+                    System.out.println("Star is fairly bright, let's start the analysis.");
+                    break;
+                default:
+                    System.out.println("This star is so bright, it's visible to the naked eye!");
+            }
+        }
+    }
+    
+    Star could be more visible, try to adjust the lens.
+    Star is fairly bright, let's start the analysis.
+    
+    class Solution {
+        public static void main(String[] args) {
+            int starBrightness = 2; // Brightness of the observed star on a scale from 1 to 10
+            
+            // Let's use a switch statement to decide what to do based on star brightness
+            switch(starBrightness) {
+                case 1:
+                    System.out.println("Star is too dim, use a bigger telescope.");
+                    break;
+                case 2:
+                    System.out.println("Star could be more visible, try to adjust the lens.");
+                    break;
+                case 3:
+                    System.out.println("Star is fairly bright, let's start the analysis.");
+                    break;
+                default:
+                    System.out.println("This star is so bright, it's visible to the naked eye!");
+            }
+        }
+    }
+
+#### Practice #4
 
 
 
