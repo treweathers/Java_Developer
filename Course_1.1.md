@@ -799,5 +799,97 @@ The structure of `if` and `if-else` blocks is the following:
 
 So, when the provided `condition` is true, we enter the action in the `if` block, and when the `condition` is false, we enter an optional `else` block.
 
+### 2. Exploring the Interstellar Cloud of Java If-Else Statement
+An if statement is simple yet powerful, instructing the computer to perform actions only under specific conditions. Let's imagine deciding to land on a planet with breathable air:
+
+    int oxygenLevel = 78; // The level of oxygen on the planet
+    
+    if (oxygenLevel > 20) {
+        System.out.println("Planet has breathable air!"); // Oxygen level is suitable
+    } else {
+        System.out.println("Oxygen level too low!"); // Oxygen level is not high enough
+    }
+    // The code prints: Planet has breathable air!
+
+In the example above, the statement if (oxygenLevel > 20) checks if the oxygen level exceeds 20. If the condition proves true, it prints: "Planet has breathable air!". If it's false, else guides us to an alternative command, printing: "Oxygen level too low!".
+
+## 3. Multiple conditions: Else If Statement
+For multiple conditions, we rely on else if:
+
+    int oxygenLevel = 58;
+    if (oxygenLevel > 70) {
+        System.out.println("Excellent Oxygen level!");
+    } else if (oxygenLevel > 50) {
+        System.out.println("Oxygen level is acceptable.");
+    } else {
+        System.out.println("Oxygen level is too low!");
+    }
+    // The code prints: Oxygen level is acceptable.
+
+The else if keyword provides alternate paths until a suitable one is found, ensuring we react appropriately to varying oxygen levels. Once the first condition is met, the program ignores all remaining else if conditions below.
+
+## 4. Delving Into the Constellation of Java's Switch Statement
+A switch statement enables us to navigate multiple outcomes based on the value of a variable. Let's envision visiting different planets, each requiring a unique set of preparations:
+
+    int planetNumber = 3; // The chosen planet number
+    
+    switch (planetNumber) {
+        case 1:
+            System.out.println("Gearing up for Planet 1!"); // Case for planet 1
+            break;
+        case 2:
+            System.out.println("Preparing for Planet 2!"); // Case for planet 2
+            break;
+        case 3:
+            System.out.println("Get ready for Planet 3!"); // Case for planet 3
+            break;
+        default:
+            System.out.println("Resting at the spaceship."); // Default case
+    }
+    // The code prints: Get ready for Planet 3!
+
+In the code above, each case corresponds to a planetary number. The default command indicates no particular planet has been selected.
+
+Note the break statement at the end of each case operation - it's required for the correct execution flow. Otherwise, the case will go down further to the next case scenario. So, break is used to finish the switch execution when the value has matched some case and processed all the required actions.
+
+For example, the code below will print two statements to the console:
+
+    int planetNumber = 3; // The chosen planet number
+    
+    switch (planetNumber) {
+        case 1:
+            System.out.println("Gearing up for Planet 1!"); // Case for planet 1
+            break;
+        case 2:
+            System.out.println("Preparing for Planet 2!"); // Case for planet 2
+            break;
+        case 3:
+            System.out.println("Get ready for Planet 3!"); // Case for planet 3
+            // Missing break here!
+        default:
+            System.out.println("Resting at the spaceship."); // Default case
+    }
+    // The code prints:
+    // Get ready for Planet 3!
+    // Resting at the spaceship.
+
+This code will print both "Get ready for Planet 3!" and "Resting at the spaceship." messages! Be careful!
+
+## 5. Unraveling the Enigmatic Java Ternary Operator
+The ternary operator serves as a condensed one-line if-else, ideal for basic condition checks. The structure of the operator is the following:
+
+    // if condition is true, then do 'action1', otherwise - do 'action2'
+    result = condition ? action1 : action2;
+    
+    Consider it an evaluative measure of signal presence before landing:
+    
+    boolean detection = true; // Whether a signal can be detected
+    
+    String message = detection ? "Signal detected, safe to land!" : "No signal detected, abort mission!";
+    System.out.println(message); // Prints: "Signal detected, safe to land!"
+
+In the code above, message receives "Signal detected, safe to land!", as detection is true. Otherwise, it'd receive "No signal detected, abort mission!".
+
+
 
 
