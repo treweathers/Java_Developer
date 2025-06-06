@@ -1110,6 +1110,86 @@ In the above code, we first created a `StringBuilder` object, then used the `app
 
 Compared to using the '+' operator or `concat` method, `StringBuilder` can significantly improve performance when concatenating large amounts of data. It's your go-to choice when you need efficient and flexible string manipulation!
 
+#### Practice #1
+Run the code.
+
+    class Solution {
+        public static void main(String[] args) {
+            // Using + operator to concatenate parts of a greeting message
+            String greeting = "Hello, " + "Java " + "programmer!";
+            System.out.println(greeting);
+    
+            // Using StringBuilder to concatenate parts of a greeting message
+            StringBuilder greetingSb = new StringBuilder();
+            greetingSb.append("Hello, ").append("Java ").append("programmer!");
+            
+            System.out.println(greetingSb.toString());
+        }
+    }
+
+#### Practice #2
+Modify the starter code by changing the use of the + operator to StringBuilder for string concatenation. We can do it, let's go!
+
+    class Solution {
+        public static void main(String[] args) {
+            String socialMessage = "Hello, " + "Explorer! " + "Hope you're enjoying the Java Journey to the Stars course.";
+            
+            System.out.println(socialMessage);
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            StringBuilder socialMessage = new StringBuilder();
+            
+            socialMessage.append("Hello, ").append("Explorer! ").append("Hope you're enjoying the Java Journey to the Stars course.");
+            
+            System.out.println(socialMessage);
+        }
+    }
+
+#### Practice #3
+Now, try adding a piece of code that uses concatenation to create a report about space discoveries. Then, add excitement to the report by using a different method of concatenation.
+
+    class Solution {
+        public static void main(String[] args) {
+            String spaceExplorer = "Cosmo";
+            int discoveredPlanets = 7;
+            
+            // TODO: Use the '+' operator to concatenate spaceExplorer, discoveredPlanets and helper message strings to create a report.
+            String report1 = spaceExplorer + discoveredPlanets + " is promising!"; // Replace this with your concatenation code using '+'
+    
+            String excitement = " This is amazing!";
+            
+            // TODO: Complete the following line to concatenate the excitement message to the report using the 'concat' method.
+            String report2 = report1.concat(excitement);
+            
+            System.out.println(report2);
+        }
+    }
+
+###### feedback: be clear about non-technical things wanted like non-specific "helpful" messages⚠️
+
+#### Practice #4
+Combine your knowledge of concatenation and strings to craft a message that celebrates the moons of the giant planets. Use a StringBuilder or just a + operator to construct the final output.
+
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Declare and initialize variables 'planet1', 'planet2' - planet names.
+            String planet1 = "Jupiter";
+            String planet2 = " Mars";
+            // TODO: Define two more integers - the number of moons each planet has.
+            int planet1Moons = 95;
+            int planet2Moons = 2;
+            // TODO: Use the StringBuilder or + operator to append the planet names and the total number of moons.
+            StringBuilder planetNames = new StringBuilder();
+            planetNames.append(planet1).append(" and" + planet2 + " have ").append(planet1Moons + planet2Moons + " moons!");
+            // TODO: Display the final message about the total moons of these giant planets.
+            System.out.println(planetNames);
+        }
+    }
+
+
 
 
 
