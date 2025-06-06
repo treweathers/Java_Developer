@@ -989,6 +989,84 @@ Something isn't quite right. Run the code to observe its behavior. Can you deter
     }
 
 #### Practice #4
+Run the existing diagnostic code and fix the issue to ensure we get an accurate count of the moons.
+
+    class Solution {
+        public static void main(String[] args) {
+            int numberOfMoons = 2;  // Number of moons observed on a new planet
+    
+            if (numberOfMoons < 1) {
+                System.out.println("No moons to explore here.");
+            } elif (numberOfMoons < 3) {
+                System.out.println("A few moons detected!");
+            } else {
+                System.out.println("Wow, that's a lot of moons!");
+            }
+        }
+    }
+    
+    solution.java:7: error: ';' expected
+            } elif (numberOfMoons < 3) {
+                                      ^
+    solution.java:9: error: 'else' without 'if'
+            } else {
+              ^
+    2 errors
+    
+    class Solution {
+        public static void main(String[] args) {
+            int numberOfMoons = 2;  // Number of moons observed on a new planet
+    
+            if (numberOfMoons < 1) {
+                System.out.println("No moons to explore here.");
+            } else if (numberOfMoons < 3) {
+                System.out.println("A few moons detected!");
+            } else {
+                System.out.println("Wow, that's a lot of moons!");
+            }
+        }
+    }
+
+#### Practice #5
+Fill in the missing conditions and print statements in the provided if-else block.
+
+    class Solution {
+        public static void main(String[] args) {
+            int cloudCoveragePercentage = 30; // Amount of cloud cover expected
+            
+            if (cloudCoveragePercentage < 20) { // TODO: check if the coverage percentage is less than 20
+                // Print message for clear skies
+                System.out.println("clear skies!");
+            } else if (cloudCoveragePercentage < 50) { // TODO: check if the coverage percentage is less than 50
+                // Print message for partly cloudy skies
+                System.out.println("partly cloudy skies, sigh.");
+            } else {
+                // Print message for too cloudy skies
+                System.out.println("way too cloudy judy...");
+            }
+        }
+    }
+
+#### Practice #6
+Write code to make a decision about chasing a comet based on its speed. Remember the ternary operator from our lesson? Let it guide your spaceship's actions!
+
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Define a variable to store the comet's speed in km/s
+            int cometSpeed = 100;
+            
+            // TODO: Use the ternary operator to decide what action to take based on the comet's speed
+            // and store the result in a variable
+            // Check if the comet's speed is less than 50 - if so, save the "Chasing comet!" message, otherwise - "Comet too fast, let it go!".
+            String speed = cometSpeed < 50 ? "Chasing comet!" : "Comet too fast, let it go!";
+            // TODO: Print out the action to take
+            System.out.println(speed);
+        }
+    }
+
+
+
+
 
 
 
