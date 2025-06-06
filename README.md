@@ -654,6 +654,22 @@ Can you calculate the totals in our cosmic inventory and check our findings agai
 
 #### Practice #5
 Calibrate our spacecraft's fuel gauge by calculating the remaining fuel after a short flight. Determine if there's enough to take us beyond the next nebula. Use math operations and logical comparisons you've learned.
+    
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Declare and initialize variables for fuel capacity (1500 gallons), consumption (120 gallons/hour), and flight duration (2 hours)
+            int fuelCapacity = 1500;
+            int fuelConsumption = 120;
+            int flightDuration = 2;
+            // TODO: Calculate the remaining fuel after the flight
+            int remainingFuel = fuelCapacity - (fuelConsumption * flightDuration);
+            // TODO: Use a logical operation to determine if the remaining fuel is more than half of the fuel capacity
+            boolean remainingCapacity = remainingFuel > (0.5 * fuelCapacity);
+            
+            // TODO: Print out the result in a format: "Enough fuel for the next journey? true/false"
+            System.out.println("Enough fuel for the next journey? " + remainingCapacity);
+        }
+    }
 
 
 
