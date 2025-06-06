@@ -682,7 +682,7 @@ When types are compatible and the target type is larger (similar to a spaceship'
     
     System.out.println("The value of d: " + d);   // Output: The value of d: 10.0
 
-### 2.Manual (Explicit) Conversions
+### 2. Manual (Explicit) Conversions
 Just like squeezing a spaceship into a human, there are times when a larger value must fit into a smaller type. This situation necessitates explicit casting. Take a look at how we cast a `double` to an `int`:
 
     double d = 10.25; // a double number
