@@ -7,3 +7,7 @@
 ## Unit 5: Java String Manipulation for Beginners
 ## Unit 6: Writing Functions using Java
 ## Unit 7: Object-Oriented Programming in Java
+
+<h1 align='center'> Course 2:  </h1> 
+
+## Unit 1:
