@@ -813,7 +813,7 @@ An `if` statement is simple yet powerful, instructing the computer to perform ac
 
 In the example above, the statement `if (oxygenLevel > 20)` checks if the oxygen level exceeds 20. If the condition proves `true`, it prints: `"Planet has breathable air!"`. If it's `false`, `else` guides us to an alternative command, printing: `"Oxygen level too low!"`.
 
-## 3. Multiple conditions: Else If Statement
+### 3. Multiple conditions: Else If Statement
 For multiple conditions, we rely on `else if`:
 
     int oxygenLevel = 58;
@@ -828,7 +828,7 @@ For multiple conditions, we rely on `else if`:
 
 The `else if` keyword provides alternate paths until a suitable one is found, ensuring we react appropriately to varying oxygen levels. Once the first condition is met, the program ignores all remaining `else if` conditions below.
 
-## 4. Delving Into the Constellation of Java's Switch Statement
+### 4. Delving Into the Constellation of Java's Switch Statement
 A `switch` statement enables us to navigate multiple outcomes based on the value of a variable. Let's envision visiting different planets, each requiring a unique set of preparations:
 
     int planetNumber = 3; // The chosen planet number
@@ -875,7 +875,7 @@ For example, the code below will print two statements to the console:
 
 This code will print both `"Get ready for Planet 3!"` and `"Resting at the spaceship."` messages! Be careful!
 
-## 5. Unraveling the Enigmatic Java Ternary Operator
+### 5. Unraveling the Enigmatic Java Ternary Operator
 The `ternary operator` serves as a condensed one-line `if-else`, ideal for basic condition checks. The structure of the operator is the following:
 
     // if condition is true, then do 'action1', otherwise - do 'action2'
