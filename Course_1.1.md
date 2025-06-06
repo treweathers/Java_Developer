@@ -682,4 +682,28 @@ When types are compatible and the target type is larger (similar to a spaceship'
     
     System.out.println("The value of d: " + d);   // Output: The value of d: 10.0
 
+### 2.Manual (Explicit) Conversions
+Just like squeezing a spaceship into a human, there are times when a larger value must fit into a smaller type. This situation necessitates explicit casting. Take a look at how we cast a `double` to an `int`:
 
+    double d = 10.25; // a double number
+    int i = (int) d;  // casting the double to int
+    
+    System.out.println("The value of i: " + i);  // Output: The value of i: 10
+
+Notice how the decimal part of `10.25` is truncated during the casting process, leaving just `10` as a result.
+
+### 3. Converting to and from Strings
+A common type of conversion in Java is converting to and from `String` values. We often need to convert numbers to strings for output or parse strings as numbers for computation.
+
+    int ten = 10; // an integer with value 10
+    String tenString = Integer.toString(ten); // A string with value "10"
+    System.out.println("The value of tenString: " + tenString);    // Output: The value of tenString: 10
+    
+    String twentyFiveString = "25";
+    int twentyFive = Integer.parseInt(twentyFiveString);
+    System.out.println("The value of twentyFive: " + twentyFive);    // Output: The value of twentyFive: 25
+    
+    String invalidNumber = "25abc";
+    int number = Integer.parseInt(invalidNumber); // Oops! This will throw an error, "25abc" is not a number!
+
+In the conversion to `String`, we use the `Integer.toString(n)` method for `int` type. Other types have similar methods - `Float.toString(f)`, `Double.toString(d)`, etc. For the conversion from `String` to a number, we use the `Integer.parseInt(s)` method. Similarly, `Float.parseFloat(s)` and `Double.parseDouble(s)` are used to obtain `float` and `double` numbers from the string, respectively.
