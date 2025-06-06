@@ -634,5 +634,6 @@ There might be a logic glitch in the launch sequence that needs your sharp eye. 
         }
 
 #### Practice #4
+Can you calculate the totals in our cosmic inventory and check our findings against our mission criteria?
 
 
