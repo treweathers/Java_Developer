@@ -722,3 +722,5 @@ Run the code.
     }
 
 #### Practice #2
+The star temperature reading is currently a double, but mission control needs it as text. Change the starter code to convert the double value into a String.
+
