@@ -395,7 +395,7 @@ You have learned much about Java's primitive data types. Write a Java program fr
         }
     }
 
-## Lesson 4: Comparing the Cosmos: Understanding Java's Comparison Operators
+## Lesson 4: Understanding Java's Comparison Operators
 
 ### 1. Exploring Java Comparison Operators
 Imagine piloting a starship in space. Here, destinations depend on evaluating conditions such as the distances to planets. These decisions boil down to comparisons, mirroring situations in programming. In Java, we utilize comparison operators to make such decisions.
@@ -671,7 +671,7 @@ Calibrate our spacecraft's fuel gauge by calculating the remaining fuel after a 
         }
     }
 
-## Lesson 6: Java Journey to the Stars: Navigating Primitive Data Type Conversion
+## Lesson 6: Navigating Primitive Data Type Conversion
 ### 1. Automatic (Implicit) Conversions
 Data type conversion or **type casting** involves transforming values between different data types. Imagine a transformation from a human (a representation of an integer type) to a spaceship (symbolizing a double type): the integer fits into a double with ease (widening). However, fitting a double into an `int` (a process of narrowing), necessitates explicit conversion and may result in data loss.
 
@@ -799,7 +799,7 @@ The structure of `if` and `if-else` blocks is the following:
 
 So, when the provided `condition` is true, we enter the action in the `if` block, and when the `condition` is false, we enter an optional `else` block.
 
-### 2. Exploring the Interstellar Cloud of Java If-Else Statement
+### 2. Java If-Else Statement
 An `if` statement is simple yet powerful, instructing the computer to perform actions only under specific conditions. Let's imagine deciding to land on a planet with breathable air:
 
     int oxygenLevel = 78; // The level of oxygen on the planet
@@ -828,7 +828,7 @@ For multiple conditions, we rely on `else if`:
 
 The `else if` keyword provides alternate paths until a suitable one is found, ensuring we react appropriately to varying oxygen levels. Once the first condition is met, the program ignores all remaining `else if` conditions below.
 
-### 4. Delving Into the Constellation of Java's Switch Statement
+### 4. Java's Switch Statement
 A `switch` statement enables us to navigate multiple outcomes based on the value of a variable. Let's envision visiting different planets, each requiring a unique set of preparations:
 
     int planetNumber = 3; // The chosen planet number
@@ -875,7 +875,7 @@ For example, the code below will print two statements to the console:
 
 This code will print both `"Get ready for Planet 3!"` and `"Resting at the spaceship."` messages! Be careful!
 
-### 5. Unraveling the Enigmatic Java Ternary Operator
+### 5. Java Ternary Operator
 The `ternary operator` serves as a condensed one-line `if-else`, ideal for basic condition checks. The structure of the operator is the following:
 
     // if condition is true, then do 'action1', otherwise - do 'action2'
