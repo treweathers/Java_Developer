@@ -881,7 +881,7 @@ The `ternary operator` serves as a condensed one-line `if-else`, ideal for basic
     // if condition is true, then do 'action1', otherwise - do 'action2'
     result = condition ? action1 : action2;
     
-    Consider it an evaluative measure of signal presence before landing:
+Consider it an evaluative measure of signal presence before landing:
     
     boolean detection = true; // Whether a signal can be detected
     
