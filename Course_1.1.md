@@ -738,5 +738,21 @@ The star temperature reading is currently a double, but mission control needs it
     }
 
 #### Practice #3
+Run the code and utilize your new skills in data type conversion to find and fix the issue. 
 
+    class Solution {
+        public static void main(String[] args) {
+            double starDistance = 142.5; // Distance in light years as a double
+            int roundedDistance = starDistance; // There's an error related to types here
+            
+            String message = "The star is " + roundedDistance + " light years away.";
+            System.out.println(message); // Is the printed message right?
+        }
+    }
 
+    solution.java:4: error: incompatible types: possible lossy conversion from double to int
+            int roundedDistance = starDistance; // There's an error related to types here
+                                  ^
+    1 error
+
+    
