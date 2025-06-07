@@ -2,7 +2,7 @@
 
 ## Course 1.1: Getting Started with Java: 8 units✅
 ## Course 1.2: Learning Simple Data Structures in Java: 5 units⏳
-## Course 1.3: Iterations and Loops in Java:🔜
+## Course 1.3: Iterations and Loops in Java: 🔜
 ## Course 1.4: Mastering Debugging with Java
 ## Course 1.5: Java String Manipulation for Beginners
 ## Course 1.6: Writing Functions using Java
