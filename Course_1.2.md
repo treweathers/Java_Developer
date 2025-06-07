@@ -794,12 +794,102 @@ After the above operations, `"Comet"` is removed from the `HashSet`, `isEmpty` i
 `HashSet` excels over arrays or `ArrayLists` when working with unique elements — because of its ability to ward off duplicates. However, it's unsuitable for situations that require index-based access. `HashSet` only holds non-primitive types, unlike arrays, which support both. Deciding when to use `HashSet`, `ArrayList`, or arrays is based on your specific requirements.
 
 #### Practice #1
+Run the code.
 
+    import java.util.HashSet;
+    
+    class Solution {
+        public static void main(String[] args) {
+            HashSet<String> planets = new HashSet<>();
+            planets.add("Earth");
+            planets.add("Mars");
+            planets.add("Venus");
+            planets.add("Venus");
+            System.out.println("Number of unique planets: " + planets.size());
+            System.out.println("Unique planets: " + planets);
+            System.out.println(planets.contains("Earth"));
+        }
+    }
 
 #### Practice #2
+Remove an element from a collection. Specifically, we have a set of celestial bodies, and we realize we don't need the "Asteroid Belt" in our collection. Your job is to modify the starter code to remove the "Asteroid Belt" before we print out the celestial bodies.
+
+    import java.util.HashSet;
+    
+    class Solution {
+        public static void main(String[] args) {
+            HashSet<String> celestialBodies = new HashSet<>();
+            celestialBodies.add("Planet");
+            celestialBodies.add("Dwarf Planet");
+            celestialBodies.add("Moon");
+            celestialBodies.add("Asteroid Belt");
+    
+            // TODO: Remove the "Asteroid Belt" from the HashSet
+            celestialBodies.remove("Asteroid Belt");
+            System.out.println(celestialBodies);
+        }
+    }
+
+
 #### Practice #3
+Can you figure out how to check for the presence of "Mars" in our planetary exploration set? Remember the offerings of HashSet and fill in the blank.
+
+    class Solution {
+        public static void main(String[] args) {
+            java.util.HashSet<String> planets = new java.util.HashSet<>();
+            planets.add("Earth");
+            planets.add("Mars");
+            planets.add("Venus");
+            
+            // TODO: Check if "Mars" is part of the HashSet and, if so,
+            // then print out a message about it to the console
+            System.out.println("Is Mars present in the set? " + planets.contains("Mars"));
+        }
+    }
+###### feedback: to be clear, this message would print even if not present, so the instructions were stated incorrectly mauybe say "print out a message about if "Mars" is part of the hashet" not "if so" prior implying only printing if it is present.‼️
+
 #### Practice #4
+Your task is to track the celestial objects we've observed. Are you ready to update our log? I've started the log for you, but you'll need to add a unique space object to our HashSet.
+
+    import java.util.HashSet;
+    
+    class Solution {
+        public static void main(String[] args) {
+            HashSet<String> spaceObservations = new HashSet<>();
+            spaceObservations.add("Planet");
+            spaceObservations.add("Black Hole");
+            spaceObservations.add("Galaxy");
+            // TODO: Add another unique space object to our HashSet that is not already present
+            spaceObservations.add("Asteroid");
+            // TODO: Print whether our HashSet contains the `"Galaxy"` element, using built-in operations
+            System.out.println(spaceObservations.contains("Galaxy"));
+            // TODO: Print the size of our HashSet
+            System.out.println(spaceObservations.size());
+        }
+    }
+
 #### Practice #5
+Create a catalog of unique space objects — but be careful. Space does not appreciate repetitions. Write the code to manage your set of celestial discoveries.
+
+    import java.util.HashSet;
+    
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Create a HashSet to store unique space objects - Black Hole, Nebula, and Quasar
+            HashSet<String> spaceObjects = new HashSet<>();
+            spaceObjects.add("Black Hole");
+            spaceObjects.add("Nebula");
+            spaceObjects.add("Quasar");
+            // TODO: There's been a mistake! Remove an incorrectly added Nebula space object from the set.
+            spaceObjects.remove("Nebula");
+            // TODO: Display whether the removed object is still in the set (it should not be)
+            System.out.println("Is Nebula still present in the set? " + spaceObjects.contains("Nebula"));
+            // TODO: Print out the total count of unique space objects in your catalog
+            System.out.println(spaceObjects.size());
+        }
+    }
+
+###### feedback: instructions suggested there would be some sort of duplication in the exercise. This was just adding and removing an element - one that was not duplicated.‼️
 
 
 
