@@ -678,7 +678,42 @@ Notice that roles like "Biologist", "Geologist", and "Astronomer" are now the ke
     }
 
 #### Practice #3
+Our crew management system has encountered a bug resulting from a misunderstanding of how Java's HashMap handles non-existent values. Can you correct the code to ensure that we correctly process the "Xenobiologist" role?
+
+import java.util.HashMap;
+
+    class Solution {
+        public static void main(String[] args) {
+            HashMap<String, String> crewRoles = new HashMap<>();
+            
+            crewRoles.put("Biologist", "Dr. Xenon");
+            crewRoles.put("Astrophysicist", "Dr. Comet");
+            
+            // Incorrect handling of null values from the HashMap Get method
+            String xenobiologist = crewRoles.get("Xenobiologist");
+            System.out.println("Xenobiologist's name: " + xenobiologist); // Causes NullPointerException
+        }
+    }
+
+    import java.util.HashMap;
+    
+    class Solution {
+        public static void main(String[] args) {
+            HashMap<String, String> crewRoles = new HashMap<>();
+            
+            crewRoles.put("Biologist", "Dr. Xenon");
+            crewRoles.put("Astrophysicist", "Dr. Comet");
+            
+            // Incorrect handling of null values from the HashMap Get method
+            System.out.println("Xenobiologist's name: " + crewRoles.getOrDefault("Xenobiologist", "Sorry, unknown role")); // Causes NullPointerException
+        }
+    }
+
+###### feedback: stop requiring optional things for correctness, said null incorrect when really it wasn't even, still adjusted to how typically done  (removing string declaration and placing the method inside the print statement replacing the string name), but was not told to add a "user friendly message." It was still correct.⚠️
+
+
 #### Practice #4
+
 #### Practice #5
 
 ## Lesson 5
