@@ -231,7 +231,7 @@ Let's see the difference between how you compare two values with primitive and c
 
     int x = 5;
     int y = 5;
-System.out.println(x == y); // Returns: true
+    System.out.println(x == y); // Returns: true
 With class types, the `==` operator checks the memory locations of two objects, not values. In this case, you'll need to use `.equals()` or `intValue()`:
 
     Integer x = 500;
