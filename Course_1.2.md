@@ -426,6 +426,68 @@ See? Fairly simple!
 ### 4. Comparing ArrayLists with Arrays of Primitive Types
 `ArrayLists` can grow or shrink flexibly. On the other hand, arrays have a fixed size. Thus, if you're dealing with changeable elements (like our dynamic crew), opt for an `ArrayList`. But for fixed-sized elements, like a preplanned list of planets to visit, an array will suffice.
 
+#### Practice #1
+Run the code.
+
+    import java.util.*;
+    
+    class Solution {
+        public static void main(String[] args) {
+            List<String> crewJobs = new ArrayList<>();
+            crewJobs.add("Navigator"); // Adding a crew job
+            crewJobs.add("Scientist"); // Adding another crew job
+    
+            // Access and print the job of the first crew member
+            System.out.println("First job in the crew: " + crewJobs.get(0));
+    
+            // Finding out and printing the number of jobs
+            System.out.println("Total jobs in the crew: " + crewJobs.size());
+        }
+    }
+
+#### Practice #2
+Currently, the log updates the temperature for the first day. Can you modify the code to update the temperature for the second day instead? Remember, positions in the ArrayList start from 0.
+
+    import java.util.*;
+    
+    class Solution {
+        public static void main(String[] args) {
+            List<Float> temperatures = new ArrayList<>();
+            temperatures.add(18.5f);
+            temperatures.add(17.3f);
+            temperatures.add(19.0f);
+    
+            // TODO: Increase yesterday's temperature by 1.1 degrees
+            float newTemp = temperatures.get(0) + 1.1f;
+            temperatures.set(0, newTemp);
+    
+            System.out.println("New temperatures: " + temperatures);
+        }
+    }
+    
+    import java.util.*;
+    
+    class Solution {
+        public static void main(String[] args) {
+            List<Float> temperatures = new ArrayList<>();
+            temperatures.add(18.5f);
+            temperatures.add(17.3f);
+            temperatures.add(19.0f);
+    
+            // TODO: Increase yesterday's temperature by 1.1 degrees
+            float newTemp = temperatures.get(1) + 1.1f;
+            temperatures.set(1, newTemp);
+    
+            System.out.println("New temperatures: " + temperatures);
+        }
+    }
+
+#### Practice #3
+
+
+
+#### Practice #4
+#### Practice #5
 
 
 
