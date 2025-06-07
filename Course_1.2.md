@@ -61,9 +61,6 @@ As we used a single index to access elements in a one-dimensional array, we need
 
 Defining multidimensional arrays can be done in a similar way:
 
-Java
-Copy to clipboard
-Play
-int[][] spaceships;                  // Declare a multidimensional array of integers
-spaceships = new int[3][4];          // Initialize the array with 3 arrays, 4 elements each
-spaceships[1][0] = 5;                // Setting an element in the created array
+    int[][] spaceships;                  // Declare a multidimensional array of integers
+    spaceships = new int[3][4];          // Initialize the array with 3 arrays, 4 elements each
+    spaceships[1][0] = 5;                // Setting an element in the created array
