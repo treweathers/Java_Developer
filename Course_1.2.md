@@ -624,6 +624,63 @@ Let's show these in the following example:
         System.out.println("Do we have a Navigator? " + spaceshipCrew.containsKey("Navigator"));
         // Outputs: "Do we have a Navigator? false"
 
+#### Practice #1
+Run the code.
+
+    import java.util.HashMap;
+    
+    class Solution {
+        public static void main(String[] args) {
+            HashMap<String, String> spaceshipRoles = new HashMap<>();
+            spaceshipRoles.put("Zoe", "Pilot");
+            spaceshipRoles.put("Jayne", "Mercenary");
+            spaceshipRoles.put("Kaylee", "Mechanic");
+            System.out.println("Kaylee's role: " + spaceshipRoles.get("Kaylee"));
+            System.out.println("Do we have a Doctor? " + spaceshipRoles.containsKey("Doctor"));
+        }
+    }
+
+#### Practice #2
+Update the code to handle a non-existent crew member. Please change the code to retrieve the role of "Pilot", returning "Unknown role" in case this role doesn't exist in our roles' HashMap.
+
+Notice that roles like "Biologist", "Geologist", and "Astronomer" are now the keys, and the crew members' names like "Zara", "Li", and "Omar" are the values.
+
+    import java.util.HashMap;
+    
+    class Solution {
+        public static void main(String[] args) {
+            HashMap<String, String> crewRoles = new HashMap<>();
+            crewRoles.put("Biologist", "Zara");
+            crewRoles.put("Geologist", "Li");
+            crewRoles.put("Astronomer", "Omar");
+    
+            // TODO: Use getOrDefault to retrieve the name for the role "Pilot" 
+            // and output "Unknown role" if it doesn't exist.
+            System.out.println("The Biologist is " + crewRoles.get("Biologist") + ".");
+        }
+    }
+    
+    
+    
+    import java.util.HashMap;
+    
+    class Solution {
+        public static void main(String[] args) {
+            HashMap<String, String> crewRoles = new HashMap<>();
+            crewRoles.put("Biologist", "Zara");
+            crewRoles.put("Geologist", "Li");
+            crewRoles.put("Astronomer", "Omar");
+    
+            // TODO: Use getOrDefault to retrieve the name for the role "Pilot" 
+            // and output "Unknown role" if it doesn't exist.
+            System.out.println("The Pilot is " + crewRoles.getOrDefault("Pilot", "Unknown role") + ".");
+        }
+    }
+
+#### Practice #3
+#### Practice #4
+#### Practice #5
+
 ## Lesson 5
 ### 1. 
 
