@@ -177,4 +177,68 @@ Write Java code to initialize a multidimensional array representing storage for 
         }
     }
 
+## Lesson 2: Java's Building Blocks: Primitive Types vs. Class Types
+### 1. Dive into Primitive Types in Java
+Primitive types in Java are the most fundamental form of data. Here are some examples:
+    
+    int myAge = 10; // integer
+    float pi = 3.14f; // decimal number
+    char firstInitial = 'A'; // single character
+For each primitive type in Java, there's a corresponding class type. These instances convert regular data, such as int, float, or char, into objects with more capabilities:
+
+    Integer ageObject = 10;
+    Float piObject = 3.14f;
+    Character initialObject = 'A';
+They look similar to primitive types at first glance, huh? But they act almost entirely differently!
+
+### 2. Unlocking Differences: Comparisons
+Primitive and class types may seem similar, yet they differ significantly in terms of memory usage, efficiency, and value comparisons. In fact, primitive type is just a value (5, 3.14, 'A'). Class type, however, is an object that holds the value. On top of holding the value, the object provides several additional properties, methods, and characteristics.
+
+Here is a quick comparison of primitive and class types:
+
+* Class types take more memory, as they not only hold a value but also hold a few additional properties
+* Class types can be less time-effective
+* Class types are more powerful, providing more functionality for each type instance
+* Class types can hold an additional null value (meaning "no value")
+* Java is an Object-Oriented language, with class types allowing it to cover most of the needs, so they are more commonly used, especially in collections
+
+### 3, Quick Dive: Auto-boxing & Auto-unboxing
+Java compiler supports auto-boxing and auto-unboxing that allows seamless transitions between primitive types and class types. Let's observe below:
+
+    int a = 10; // this is a primitive `int` type
+    Integer aBoxed = a; // auto-boxing: int to Integer
+    System.out.println(aBoxed); // prints: 10
+
+    Integer bBoxed = 20; // this is a class type
+    int b = bBoxed; // auto-unboxing: Integer to int
+    System.out.println(b); // prints: 20
+In this code, a auto-boxes from int to Integer, while bBoxed auto-unboxes from Integer to int. This saves us from manual conversions and calling .intValue() on class types in most places!
+
+### 4. Justifying Use of Class Types Over Primitive Types
+In Java, Class Types' additional capabilities have various use cases. Consider how only Class types can use built-in methods from Java's object class like .toString(). The .toString() converts our numeric or character data into a string, allowing us to use this data in ways Primitive Types don’t support:
+
+    Integer numInt = 10;
+    System.out.println(numInt.toString()); // Prints: 10
+    System.out.println(numInt.toString().length()); // Prints: 2
+    
+    int numPrim = 10;
+    System.out.println(numPrim.toString()); // Error: int cannot be dereferenced
+    System.out.println(numPrim.length()); // Error: int cannot be dereferenced
+Class Types also open the portal to Object-Oriented Programming in Java. So, while Primitive types handle basic tasks elegantly, Class types bring new areas within our reach!
+
+### 5. Primitive and Class Types: Values Comparison
+Let's see the difference between how you compare two values with primitive and class types. Here is how you compare the primitives:
+
+    int x = 5;
+    int y = 5;
+System.out.println(x == y); // Returns: true
+With class types, the == operator checks the memory locations of two objects, not values. In this case, you'll need to use .equals() or intValue():
+
+    Integer x = 500;
+    Integer y = 500;
+    
+    System.out.println(x == y); // Returns: false
+    System.out.println(x.equals(y)); // Returns: true
+    System.out.println(x.intValue() == y.intValue()); // Returns: true
+Bingo! x == y returns false while x.equals(y) returns true.
 
