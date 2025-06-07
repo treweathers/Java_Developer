@@ -39,7 +39,7 @@ An array in Java has a `length` property that indicates the number of elements i
     int[] a = {1, 2, 3, 4, 5};
     System.out.println(a.length); // Output: 5
     System.out.println(a[a.length - 1]); // Output: 5 - the last element
-Here, `a.length gives` us the size of our array, which is 5. When working with arrays, remember to specify the size during creation and avoid accessing non-existent indices.
+Here, `a.length` gives us the size of our array, which is 5. When working with arrays, remember to specify the size during creation and avoid accessing non-existent indices.
 
 On top of that, you can use the `Arrays.toString()` method to convert the array to a string. See it in action:
 
@@ -87,7 +87,7 @@ Run the code.
     }
 
 #### Practice #2
-Run the code
+Run the code.
 
     Class Solution {
         public static void main(String[] args) {
@@ -105,7 +105,76 @@ Run the code
     }
 
 #### Practice #3
+Adjust the given code to print the number of tennis balls in the last storage compartment by using the array's length property.
 
+    class Solution {
+        public static void main(String[] args) {
+            int[] tennisBalls = {50, 60, 70, 80, 90};
+            // TODO: Access the last compartment's tennis balls using the array's length property
+            System.out.println(tennisBalls[2]);
+        }
+    }
 
+    class Solution {
+        public static void main(String[] args) {
+            int[] tennisBalls = {50, 60, 70, 80, 90};
+            // TODO: Access the last compartment's tennis balls using the array's length property
+            System.out.println(tennisBalls[tennisBalls.length - 1]);
+        }
+    }
 #### Practice #4
+There seems to be a slight hiccup when attempting to display the inventory as a neat string representation. Can you spot the bug and fix it
+
+    import java.util.*;
+    
+    class Solution {
+        public static void main(String[] args) {
+            int[] equipmentQuantities = { 5, 7, 4, 9, 1 };
+            System.out.println(equipmentQuantities); // Attempting to output the multidimensional array
+        }
+    }
+    
+    import java.util.*;
+    
+    class Solution {
+        public static void main(String[] args) {
+            int[] equipmentQuantities = { 5, 7, 4, 9, 1 };
+            System.out.println(Arrays.toString(equipmentQuantities)); // Attempting to output the multidimensional array
+        }
+    }
+
 #### Practice #5
+Implement the missing piece of code to count the different types of balls and retrieve a specific type from our collection.
+
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Create an array to represent the quantity of four types of sports balls (4 elements in the array)
+            // Let's say we have 3 footballs, 5 basketballs, 2 volleyballs, 4 tennis balls
+            int array[] = {3, 5, 2, 4};
+            // TODO: Print the message "Total number of sports balls: " followed by the total count
+            System.out.println("Total number of sports balls: " + array.length);
+            // TODO: Access and print the message "Number of volleyballs: " followed by the count of the third item in the array
+            System.out.println("Number of volleyballs: " + array[2]);
+        }
+    }
+
+###### feedback: asking for "total count" for the sports balls is confusing, the total count of balls is equal to the sum, maybe state as total types of balls or something of this nature‼️
+
+#### Practice #6
+Write Java code to initialize a multidimensional array representing storage for soccer balls and tennis rackets from different brands and print the total number for specific items.
+
+    class Solution {
+        public static void main(String[] args) {
+            // Initialize a 2D array of integers named "sportsInventory", where the first sub-array stores
+            // [0] - soccer balls, [1] - tennis rackets
+            // Each array holds the quantity for different brands: [Nike, Adidas, Wilson]
+            int[][] sportsInventory = { {40, 70, 0}, {25, 5, 10} };
+    
+            // TODO: Print the quantity of Nike soccer balls (1st element in the 1st sub-array)
+            System.out.println(sportsInventory[0][0]);
+            // TODO: Print the quantity of Wilson tennis rackets (3rd element in the 2nd sub-array) 
+            System.out.println(sportsInventory[1][2]);
+        }
+    }
+
+
