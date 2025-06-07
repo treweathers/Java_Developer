@@ -288,6 +288,69 @@ Next, let's refine the equality check in our banking example. Instead of using t
     }
 
 #### Practice #3
+Here's a piece of code designed to verify the equality of two transaction amounts. However, it contains a bug, preventing it from doing so accurately. Determine the issue and fix it to ensure the comparison works correctly.
+
+    class Solution {
+        public static void main(String[] args) {
+            Integer accountBalanceBoxed = 12000;
+            Integer withdrawAmountBoxed = 12000;
+            
+            if (accountBalanceBoxed == withdrawAmountBoxed) {
+                System.out.println("Transaction Successful: Balance and Withdrawal amounts are equal.");
+            } else {
+                System.out.println("Transaction Failed: Balance and Withdrawal amounts are not equal.");
+            }
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            Integer accountBalanceBoxed = 12000;
+            Integer withdrawAmountBoxed = 12000;
+            
+            if (accountBalanceBoxed.intValue() == withdrawAmountBoxed.intValue()) {
+                System.out.println("Transaction Successful: Balance and Withdrawal amounts are equal.");
+            } else {
+                System.out.println("Transaction Failed: Balance and Withdrawal amounts are not equal.");
+            }
+        }
+    }
+
 #### Practice #4
+Represent your bank account balance as a class type and print out the string length of it.
+
+    class Solution {
+        public static void main(String[] args) {
+            // Define a bank account balance as a primitive type
+            float accountBalancePrimitive = 1000.75f;
+            
+            // TODO: Convert the primitive account balance to a class type and assign it
+            Float accountBalanceInteger = accountBalancePrimitive;
+            // TODO: Print the class type balance to the console
+            System.out.println(accountBalanceInteger);
+            // TODO: Print the length of the string representation of the class type balance
+            System.out.println(accountBalanceInteger.toString().length());
+            // Hint: You can use 'toString()' and then 'length()' method on the class type
+        }
+    }
+
 #### Practice #5
+Can you manage an account balance using Java class types writing a program that simulates an account balance withdrawal?
+
+Remember about built-in auto-boxing and auto-unboxing techniques, they make the code look much prettier.
+
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Declare an Integer variable for account balance and initialize it with a value
+            Integer accountBalanceInteger = 15000;
+            // TODO: Declare a primitive int variable for the withdrawal amount and initialize it with a value
+            int withdrawlAmountInt = 5000;
+            // TODO: Perform a withdrawal by subtracting the withdrawal amount from the account balance (consider auto-unboxing and auto-boxing)
+            Integer accountBalance = accountBalanceInteger - withdrawlAmountInt;
+            // TODO: Print the new account balance as a string
+            System.out.println(accountBalance.toString());
+        }
+    }
+
+
 
