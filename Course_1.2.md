@@ -749,7 +749,7 @@ Create a HashMap to track the roles and ages of your crew members, and display a
         }
     }
 
-## Lesson 5
+## Lesson 5: HashSet in Java
 ### 1. Constructing a HashSet
 `HashSet`, which is a part of Java's Collection framework, behaves like a set of unique elements. However, underneath the surface, its mechanism resembles that of HashMap's. Just like a locker in a spaceship that houses only exclusive components, a `HashSet` only stores unique elements.
 
