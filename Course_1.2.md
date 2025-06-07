@@ -572,7 +572,7 @@ Your mission is to create a starship crew list. To do this, you'll need to write
         }
     }
 
-## Lesson 4
+## Lesson 4: Navigating through Java's HashMaps: Keys to Efficient Data Storage
 ### 1. 
 
 ## Lesson 5
