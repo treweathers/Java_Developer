@@ -730,9 +730,79 @@ We've mustered an inventory list for our spaceship's supplies, but it seems we'v
     }
 
 #### Practice #5
+Create a HashMap to track the roles and ages of your crew members, and display a specific member's age (if the key doesn't exist, return the age of 0 instead).
+
+    import java.util.HashMap;
+    
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Initialize a HashMap to keep track of the crew members' roles and ages.
+            HashMap <String, Integer> crewRoles = new HashMap<>();
+            // TODO: Add a few crew members to the HashMap with their roles as keys and ages as values.
+            crewRoles.put("Biologist", 21);
+            crewRoles.put("Astrophysicist", 22);
+            // TODO: Print the overall size of the mission crew
+            System.out.println(crewRoles.size());
+            // TODO: Retrieve and display the age of the Biochemist.
+            System.out.println(crewRoles.getOrDefault("Biochemist", 0));
+            // If there is no Biochemist, return the age of 0
+        }
+    }
 
 ## Lesson 5
-### 1. 
+### 1. Constructing a HashSet
+HashSet, which is a part of Java's Collection framework, behaves like a set of unique elements. However, underneath the surface, its mechanism resembles that of HashMap's. Just like a locker in a spaceship that houses only exclusive components, a HashSet only stores unique elements.
+
+Constructing and adding the names of space rocks to our HashSet is a straightforward process, thanks to the new HashSet<>() and add() methods:
+
+Java
+Copy to clipboard
+Play
+HashSet<String> spaceObjects = new HashSet<>();
+spaceObjects.add("Asteroid");
+spaceObjects.add("Meteor");
+spaceObjects.add("Comet");
+System.out.println(spaceObjects); // Output: [Asteroid, Comet, Meteor]
+
+spaceObjects.add("Meteor"); // adding a duplicate element
+System.out.println(spaceObjects); // Output: [Asteroid, Comet, Meteor]
+// The duplicate element wasn't added
+The first three lines add three different strings to the HashSet. If we attempt to add "Meteor" again, it won't have any effect since duplicates aren't permitted, as shown in the example.
+
+Accessing and Inspecting HashSet Elements
+HashSet doesn't allow direct access to elements by index or whatsoever. However, we can search for a specific element using the contains() method:
+
+Java
+Copy to clipboard
+Play
+boolean isCometPresent = spaceObjects.contains("Comet");
+System.out.println("Is Comet present in the set? " + isCometPresent); // Output: "Is Comet present in the set? true"
+isCometPresent will be true as "Comet" is a part of the hash set we created earlier. You can remove an element through remove() and use isEmpty() and size() methods to inspect the state of the HashSet.
+
+Here is an example:
+
+Java
+Copy to clipboard
+Play
+HashSet<String> spaceObjects = new HashSet<>();
+spaceObjects.add("Asteroid");
+spaceObjects.add("Meteor");
+spaceObjects.add("Comet");
+
+System.out.println("Is Comet present in the set? " + spaceObjects.contains("Comet"));
+// Output: "Is Comet present in the set? true"
+spaceObjects.remove("Comet");
+System.out.println("Is Comet present in the set? " + spaceObjects.contains("Comet"));
+// Output: "Is Comet present in the set? false"
+
+System.out.println("Is set empty? " + spaceObjects.isEmpty()); // Output: "Is set empty? false"
+System.out.println(spaceObjects.size()); // Output: 2            
+After the above operations, "Comet" is removed from the HashSet, isEmpty is false since there are still elements left, and size reflects the number of elements in the HashSet.
+
+Comparing HashSet to Other Structures
+HashSet excels over arrays or ArrayLists when working with unique elements — because of its ability to ward off duplicates. However, it's unsuitable for situations that require index-based access. HashSet only holds non-primitive types, unlike arrays, which support both. Deciding when to use HashSet, ArrayList, or arrays is based on your specific requirements.
+
+
 
 
 
