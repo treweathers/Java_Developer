@@ -555,6 +555,28 @@ Add the missing crew roles that are crucial for any space mission to the list, t
 ###### feedback: did not specify an order and code provided scinetist first, but them tell me to correc to make sure commander comes first?⚠️
 
 #### Practice #5
+Your mission is to create a starship crew list. To do this, you'll need to write code from scratch that adds crew members to an ArrayList and greet the captain. Don't forget to count your crew!
+
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Create a new ArrayList to hold the starship crew members.
+            List<String> crewMembers= new ArrayList<>();
+            // TODO: Add the name of the captain to the crew list.
+            crewMembers.add("Captain Kirk");
+            // TODO: Add the name of an engineer to the crew list.
+            crewMembers.add("Howard Wolowitz");
+            // TODO: Greet the captain using their position in the list.
+            System.out.println("Welcome aboard " + crewMembers.get(0));
+            // TODO: Display the total number of crew members aboard the starship.
+            System.out.println(crewMembers.size());
+        }
+    }
+
+## Lesson 4
+### 1. 
+
+## Lesson 5
+### 1. 
 
 
 
