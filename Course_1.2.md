@@ -257,6 +257,36 @@ Run the code.
     }
 
 #### Practice #2
+Next, let's refine the equality check in our banking example. Instead of using the .intValue() method, use the equals() method from the Integer class to compare depositAmount directly with 5000.
+ 
+    class Solution {
+      public static void main(String[] args) {
+        // Using class types with auto-boxing
+        Integer accountBalance = 15000;
+        Integer depositAmount = 5000;
+    
+        // Check if the deposit amount equals 5000
+        if (depositAmount.intValue() == 5000) {
+          accountBalance = accountBalance + depositAmount;
+          System.out.println("New account balance: " + accountBalance);
+        }
+      }
+    }
+    
+    class Solution {
+      public static void main(String[] args) {
+        // Using class types with auto-boxing
+        Integer accountBalance = 15000;
+        Integer depositAmount = 5000;
+    
+        // Check if the deposit amount equals 5000
+        if (depositAmount.equals(5000)) {
+          accountBalance = accountBalance + depositAmount;
+          System.out.println("New account balance: " + accountBalance);
+        }
+      }
+    }
+
 #### Practice #3
 #### Practice #4
 #### Practice #5
