@@ -483,10 +483,77 @@ Currently, the log updates the temperature for the first day. Can you modify the
     }
 
 #### Practice #3
+correct the starship's crew list compiler. Currently, it exhibits strange behavior when updating a crew member's role. Use your knowledge of handling crew rosters to identify and fix the issue.
 
-
+    import java.util.*;
+    
+    class Solution {
+        public static void main(String[] args) {
+            List<String> starshipCrew = new ArrayList<>();
+            starshipCrew.add("Captain Kirk");
+            starshipCrew.add("Spock");
+            starshipCrew.add("Dr. McCoy");
+    
+            // TODO: Replace 'Spock' with 'Scotty'
+            starshipCrew.set("Spock", "Scotty");
+    
+            System.out.println("Welcome aboard the Starship, our crew members are: " + starshipCrew);
+        }
+    }
+    
+    solution.java:11: error: method set in interface List<E> cannot be applied to given types;
+            starshipCrew.set("Spock", "Scotty");
+                        ^
+      required: int,String
+      found:    String,String
+      reason: argument mismatch; String cannot be converted to int
+      where E is a type-variable:
+        E extends Object declared in interface List
+    1 error
+    
+    
+    import java.util.*;
+    
+    class Solution {
+        public static void main(String[] args) {
+            List<String> starshipCrew = new ArrayList<>();
+            starshipCrew.add("Captain Kirk");
+            starshipCrew.add("Spock");
+            starshipCrew.add("Dr. McCoy");
+    
+            // TODO: Replace 'Spock' with 'Scotty'
+            starshipCrew.set(1, "Scotty");
+    
+            System.out.println("Welcome aboard the Starship, our crew members are: " + starshipCrew);
+        }
+    }
 
 #### Practice #4
+Add the missing crew roles that are crucial for any space mission to the list, then remove the role of the navigation expert, as their assignment has changed. Display the updated list of roles.
+
+    import java.util.ArrayList;
+    import java.util.List;
+    
+    class Solution {
+        public static void main(String[] args) {
+            // Define a new ArrayList to manage crew roles
+            List<String> crewRoles = new ArrayList<>();
+            
+            // TODO: Add the role of the leader of a space mission ("Commander").
+            // TODO: Add the role required for navigating and steering the spacecraft ("Navigator").
+            crewRoles.add("Commander");
+            crewRoles.add("Navigator");
+            crewRoles.add("Scientist");
+            
+            // TODO: Remove the role of the navigation expert ("Navigator") using its index position.
+            crewRoles.remove(1);
+            // Print the new list of crew roles
+            System.out.println(crewRoles); // Finish the code to see the output
+        }
+    }
+
+###### feedback: did not specify an order and code provided scinetist first, but them tell me to correc to make sure commander comes first?⚠️
+
 #### Practice #5
 
 
