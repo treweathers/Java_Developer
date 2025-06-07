@@ -713,6 +713,21 @@ import java.util.HashMap;
 
 
 #### Practice #4
+We've mustered an inventory list for our spaceship's supplies, but it seems we've forgotten to add some items. Could you initialize our supplies HashMap and add a couple of key-value pairs according to the scenario?
+
+    import java.util.HashMap;
+    
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Initialize a HashMap `foodSupplies` to keep an inventory of spaceship food supplies
+            HashMap <String, Integer> foodSupplies = new HashMap<>();
+            // TODO: Add two items with their quantity to the inventory
+            foodSupplies.put("soup", 20);
+            foodSupplies.put("casserole", 1);
+            // Printing the current inventory of food supplies
+            System.out.println("Food Supplies Inventory: " + foodSupplies);
+        }
+    }
 
 #### Practice #5
 
