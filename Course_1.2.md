@@ -596,7 +596,7 @@ Adding entries to a `HashMap` is done with `put(key, value)`. If `put()` is used
     System.out.println(spaceshipCrew); // Outputs {Captain=35, Engineer=28}
 
 ### 3. Accessing Elements in HashMaps
-Accessing a `HashMap` involves using the `get(key)` method with a unique key. This method returns the value for the specified key or` null` if there is no value stored for this key. For cases when you need some other default value rather than `null`, you can use `getOrDefault(key, default)` that returns a `default` value if the key doesn't exist.
+Accessing a `HashMap` involves using the `get(key)` method with a unique key. This method returns the value for the specified key or `null` if there is no value stored for this key. For cases when you need some other default value rather than `null`, you can use `getOrDefault(key, default)` that returns a `default` value if the key doesn't exist.
 
 Let's see how we can retrieve the engineer's age:
 
@@ -614,6 +614,7 @@ You can see that `get()` for the existent key returned just the value, while for
 * `size()`: returns the count of key-value pairs
 * `clear()`: clears all key-value pairs
 * `containsKey()`: check if a certain key exists in the map
+
 Let's show these in the following example:
 
         HashMap<String, Integer> spaceshipCrew = new HashMap<>();
