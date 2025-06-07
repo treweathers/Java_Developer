@@ -352,5 +352,89 @@ Remember about built-in auto-boxing and auto-unboxing techniques, they make the 
         }
     }
 
+## Lesson 3: ArrayLists
+Creating an ArrayList in Java
+ArrayLists are akin to a flexible roster of interstellar explorers; their size changes as we encounter or lose crew members. ArrayLists, part of Java's Collections Framework, elevate arrays to another level by providing more flexibility.
+
+Constructing an ArrayList is akin to assembling a crew list. As shown, we declare a variable of type ArrayList:
+
+Java
+Copy to clipboard
+Play
+List<Integer> crewMembers = new ArrayList<>(); // creating an empty list
+List<Integer> members = Arrays.asList(1, 2, 3, 4, 5); // creating a pre-defined list
+Here:
+
+List<Integer> is a general type for all lists of integers
+crewMembers is a list name
+new ArrayList<>() creates an instance of the list of integers. Note the <> part denoting that ArrayList can be of any type (Float, String, etc.), but we already specified the type when mentioning it'd be List<Integer> at the beginning of the definition.
+Arrays.asList declares a pre-defined list of integers.
+Did you notice we used List<Integer> as a type, not ArrayList<Integer>? This is called abstraction, as List<Integer> is an interface for all lists. There is no need to understand it in detail for now, though - we'll cover it in the next courses!
+
+Accessing ArrayList Elements
+Now, let's engage with our crew. ArrayLists provide methods such as:
+
+add(element) - to add a new element to the end of the list.
+get(int index) - for accessing element at the given position index, starting from 0, as in arrays.
+set(index, value) - for updating the value at the given position index, with a new value.
+remove(index) - remove the element at the given position index.
+size() - is used to determine how many elements are in the list.
+Java
+Copy to clipboard
+Play
+crewMembers.add(101); // Add a crew member
+crewMembers.add(102); // Add another crew member
+
+System.out.println(crewMembers.get(0)); // Output: 101. Retrieves the first crew member
+System.out.println(crewMembers.size()); // Output: 2. Finds the total number of crew members
+System.out.println(crewMembers); // Output: [101, 102]
+
+// Removing the 2nd element, the `crewMembers` list now contains a single element 101
+crewMembers.remove(1);
+System.out.println(crewMembers); // Output: [101]
+Multidimensional ArrayLists
+Now, let's add another dimension to our ArrayList, creating a roster of crew members. This is akin to building a multidimensional ArrayList in Java. Let's say we're grouping our crew members based on the tasks they do.
+
+Just as we created a multidimensional array of integers before, we can create an ArrayList of ArrayLists. Essentially, each element of the outer ArrayList can hold another ArrayList, and these nested ArrayLists can also have different sizes (which is not possible for multidimensional arrays):
+
+Java
+Copy to clipboard
+Play
+// Step 1: Create the inner ArrayLists
+List<String> pilots = new ArrayList<>(); // First group, the pilots
+pilots.add("Sarah");
+pilots.add("James");
+pilots.add("John");
+
+List<String> engineers = new ArrayList<>(); // Second group, the engineers
+engineers.add("Nina");
+engineers.add("Tom");
+
+// Step 2: Add these groups to an outer ArrayList
+List<List<String>> crewGroups = new ArrayList<>(); // The crew groups
+crewGroups.add(pilots); // Adding the pilot group
+crewGroups.add(engineers); // Adding the engineer group
+
+// Let's see our crew groupings
+System.out.println(crewGroups); // Output: [[Sarah, James, John], [Nina, Tom]]
+This piece of code defines two groups: one for pilots and another for engineers. Then these groups are added to an ArrayList called crewGroups. Each item of crewGroups is an ArrayList itself, therefore achieving the multidimensional structure. Printing crewGroups should give you [[Sarah, James, John], [Nina, Tom]], showing our well-arranged crew groups, ready for interstellar exploration! You can notice that nested arrays have different sizes - 3 and 2, respectively, which wasn't possible with multidimensional arrays before.
+
+Another way of doing the same thing in a shorter way is using Arrays.asList:
+
+Java
+Copy to clipboard
+Play
+List<List<String>> crewGroups = Arrays.asList(
+    Arrays.asList("Sarah", "James", "John"),
+    Arrays.asList("Nina", "Tom")
+);
+System.out.println(crewGroups); // Output: [[Sarah, James, John], [Nina, Tom]]
+See? Fairly simple!
+
+Comparing ArrayLists with Arrays of Primitive Types
+ArrayLists can grow or shrink flexibly. On the other hand, arrays have a fixed size. Thus, if you're dealing with changeable elements (like our dynamic crew), opt for an ArrayList. But for fixed-sized elements, like a preplanned list of planets to visit, an array will suffice.
+
+
+
 
 
