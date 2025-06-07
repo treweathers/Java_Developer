@@ -64,3 +64,48 @@ Defining multidimensional arrays can be done in a similar way:
     int[][] spaceships;                  // Declare a multidimensional array of integers
     spaceships = new int[3][4];          // Initialize the array with 3 arrays, 4 elements each
     spaceships[1][0] = 5;                // Setting an element in the created array
+
+#### Practice #1
+Run the code.
+
+    import java.util.Arrays;
+    
+    class Solution {
+        public static void main(String[] args) {
+            int[] sportsInventory = {7, 8, 10, 3, 6}; // Represents inventory for 5 sports: soccer balls, tennis rackets, cricket bats, basketballs, volleyball
+            
+             // Print out the whole array
+             System.out.println("Sports inventory: " + Arrays.toString(sportsInventory));
+    
+            // Print out the number of items for soccer balls (index 0)
+            System.out.println("Soccer balls in inventory: " + sportsInventory[0]);
+            
+            // Finding and printing the total types of items in sports inventory
+            int totalTypes = sportsInventory.length;
+            System.out.println("Total types of sports items in the inventory: " + totalTypes);
+        }
+    }
+
+#### Practice #2
+Run the code
+
+    Class Solution {
+        public static void main(String[] args) {
+            // Creating a 2D array with quantities of different types of sports equipment.
+            // The first array contains quantities of footballs, the second array - for basketballs, and the third - for volleyballs.
+            int[][] equipmentStorage = {
+                {15, 20}, // quantities of footballs
+                {12, 25}, // quantities of basketballs
+                {18, 30} // quantities of volleyballs
+            };
+          
+            // Print out the quantity of footballs in storage without using arithmetic operations
+            System.out.println("Footballs in storage - Size 1: " + equipmentStorage[0][0] + ", Size 5: " + equipmentStorage[0][1]);
+        }
+    }
+
+#### Practice #3
+
+
+#### Practice #4
+#### Practice #5
