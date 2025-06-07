@@ -354,7 +354,7 @@ Remember about built-in auto-boxing and auto-unboxing techniques, they make the 
 
 ## Lesson 3: ArrayLists
 ### 1. Creating an ArrayList in Java
-`ArrayList`s are akin to a flexible roster of interstellar explorers; their size changes as we encounter or lose crew members. `ArrayLists`, part of Java's `Collections Framework`, elevate arrays to another level by providing more flexibility.
+`ArrayLists` are akin to a flexible roster of interstellar explorers; their size changes as we encounter or lose crew members. `ArrayLists`, part of Java's `Collections Framework`, elevate arrays to another level by providing more flexibility.
 
 Constructing an `ArrayList` is akin to assembling a crew list. As shown, we declare a variable of type `ArrayList`:
 
