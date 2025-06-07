@@ -574,16 +574,16 @@ Your mission is to create a starship crew list. To do this, you'll need to write
 
 ## Lesson 4: Navigating through Java's HashMaps: Keys to Efficient Data Storage
 ### 1. Creating HashMaps in Java
-Creating a HashMap involves declaring its data type and initializing it. Just like an ArrayList, HashMaps can only hold object types. Here's a HashMap that maps our spaceship crew's names (String) to their ages (Integer).
+Creating a `HashMap` involves declaring its data type and initializing it. Just like an `ArrayList`, `HashMaps` can only hold object types. Here's a `HashMap` that maps our spaceship crew's names (`String`) to their ages (`Integer`).
 
     HashMap<String, Integer> spaceshipCrew = new HashMap<>();
     System.out.println(spaceshipCrew); // Prints out: {}
-    The HashMap is empty for now, represented by {}.
+The `HashMap` is empty for now, represented by `{}`.
 
 ### 2. Managing Key-Value Pairs
 In our spaceship, different crew members have different roles. These roles can be linked to the crew members' ages.
 
-Adding entries to a HashMap is done with put(key, value). If put() is used with an already existing key, the old value gets replaced. remove(key) allows us to exclude entries from our HashMap.
+Adding entries to a `HashMap` is done with `put(key, value)`. If `put()` is used with an already existing key, the old value gets replaced. `remove(key)` allows us to exclude entries from our `HashMap`.
 
     HashMap<String, Integer> spaceshipCrew = new HashMap<>();
     spaceshipCrew.put("Captain", 35); // Assigning age 35 for key "Captain"
@@ -596,7 +596,7 @@ Adding entries to a HashMap is done with put(key, value). If put() is used with 
     System.out.println(spaceshipCrew); // Outputs {Captain=35, Engineer=28}
 
 ### 3. Accessing Elements in HashMaps
-Accessing a HashMap involves using the get(key) method with a unique key. This method returns the value for the specified key or null if there is no value stored for this key. For cases when you need some other default value rather than null, you can use getOrDefault(key, default) that returns a default value if the key doesn't exist.
+Accessing a `HashMap` involves using the `get(key)` method with a unique key. This method returns the value for the specified key or` null` if there is no value stored for this key. For cases when you need some other default value rather than `null`, you can use `getOrDefault(key, default)` that returns a `default` value if the key doesn't exist.
 
 Let's see how we can retrieve the engineer's age:
 
@@ -606,22 +606,22 @@ Let's see how we can retrieve the engineer's age:
     System.out.println("Engineer age: " + spaceshipCrew.get("Engineer")); // Outputs: "Engineer age: 30"
     System.out.println("Artist age: " + spaceshipCrew.get("Artist")); // Outputs: "Artist age: null"
     System.out.println("Artist age or default: " + spaceshipCrew.getOrDefault("Artist", 0)); // Outputs: "Artist age or default: 0"
-You can see that get() for the existent key returned just the value, while for the non-existent key "Artist", it returned null. In the meantime, getOrDefault() returned the default value 0 that we provided as a parameter.
+You can see that `get()` for the existent key returned just the value, while for the non-existent key `"Artist"`, it returned `null`. In the meantime, `getOrDefault()` returned the default value `0` that we provided as a parameter.
 
 ### 4. Exploring HashMap Properties & Methods
-HashMaps provide useful methods such as:
+`HashMaps` provide useful methods such as:
 
-    size(): returns the count of key-value pairs
-    clear(): clears all key-value pairs
-    containsKey(): check if a certain key exists in the map
-    Let's show these in the following example:
-    
-    HashMap<String, Integer> spaceshipCrew = new HashMap<>();
-    spaceshipCrew.put("Captain", 35);
-    spaceshipCrew.put("Engineer", 30);
-    System.out.println("Crew size: " + spaceshipCrew.size()); // Outputs: "Crew size: 2"
-    System.out.println("Do we have a Navigator? " + spaceshipCrew.containsKey("Navigator"));
-    // Outputs: "Do we have a Navigator? false"
+* `size()`: returns the count of key-value pairs
+* `clear()`: clears all key-value pairs
+* `containsKey()`: check if a certain key exists in the map
+Let's show these in the following example:
+
+        HashMap<String, Integer> spaceshipCrew = new HashMap<>();
+        spaceshipCrew.put("Captain", 35);
+        spaceshipCrew.put("Engineer", 30);
+        System.out.println("Crew size: " + spaceshipCrew.size()); // Outputs: "Crew size: 2"
+        System.out.println("Do we have a Navigator? " + spaceshipCrew.containsKey("Navigator"));
+        // Outputs: "Do we have a Navigator? false"
 
 ## Lesson 5
 ### 1. 
