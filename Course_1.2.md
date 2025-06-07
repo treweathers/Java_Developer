@@ -242,3 +242,22 @@ With class types, the `==` operator checks the memory locations of two objects, 
     System.out.println(x.intValue() == y.intValue()); // Returns: true
 Bingo! `x == y` returns `false` while `x.equals(y)` returns `true`.
 
+#### Practice #1
+Run the code.
+
+    class Solution {
+        public static void main(String[] args) {
+            Integer accountBalance = 5000;
+            Integer depositAmount = 1500;
+            
+            // Updating account balance using class types and methods
+            accountBalance = accountBalance + depositAmount;
+            System.out.println("New account balance: " + accountBalance.toString());
+        }
+    }
+
+#### Practice #2
+#### Practice #3
+#### Practice #4
+#### Practice #5
+
