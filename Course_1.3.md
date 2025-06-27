@@ -13,22 +13,22 @@ Here's the syntax:
         // Some task to do
     }
 This loop does the following:
+* First, we do the initialization
+* Then, while the condition is true, we keep executing the task inside the loop body
+* After each iteration, we execute post-iteration actions that change the state in some way
+* Now, let's demonstrate this with code that prints numbers 1 through 5:
 
-First, we do the initialization
-Then, while the condition is true, we keep executing the task inside the loop body
-After each iteration, we execute post-iteration actions that change the state in some way
-Now, let's demonstrate this with code that prints numbers 1 through 5:
+        for (int i = 1; i <= 5; i++) {
+            // The following command will print the number i
+            System.out.println(i);
+        }
+        // Prints:
+        // 1
+        // 2
+        // 3
+        // 4
+        // 5
 
-    for (int i = 1; i <= 5; i++) {
-        // The following command will print the number i
-        System.out.println(i);
-    }
-    // Prints:
-    // 1
-    // 2
-    // 3
-    // 4
-    // 5
 Here, we defined an int variable i, assigned it to 1 first, and then repeated System.out.println(i); while i <= 5, incrementing i by 1 after every iteration. By the way, i++ is a short form for i += 1, which is i = i + 1 - so it's just adding 1 to the current value of i, but in a short way! This operation is called increment.
 
 ### 2. Enhanced For Loop
