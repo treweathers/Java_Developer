@@ -36,21 +36,18 @@ Now, remember flipping pancakes? You pour one pancake, let it cook, then pour th
 
 Here's an example of printing all elements of an array:
 
-Java
-Copy to clipboard
-Play
-int[] numbers = {5, 4, 3, 2, 1};
-
-// The loop below will take each element num from numbers and print it
-for (int num: numbers) {
-    System.out.println(num);
-}
-// Prints:
-// 5
-// 4
-// 3
-// 2
-// 1
+    int[] numbers = {5, 4, 3, 2, 1};
+    
+    // The loop below will take each element num from numbers and print it
+    for (int num: numbers) {
+        System.out.println(num);
+    }
+    // Prints:
+    // 5
+    // 4
+    // 3
+    // 2
+    // 1
 Quite the pancake flipper, isn't it?
 
 ### 3. Difference Between the Basic For Loop and the Enhanced For Loop
