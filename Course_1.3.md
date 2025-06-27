@@ -86,6 +86,25 @@ Let's illustrate with both loops printing numbers from an array:
     // 5
 
 #### Practice #1
+Run the code.
+    
+    class Solution {
+        public static void main(String[] args) {
+            // Create an array representing planets in the solar system
+            String[] planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
+            
+            // Using basic for-loop to iterate through all planets
+            for (int i = 0; i < planets.length; i++) {
+                System.out.println("Visiting planet: " + planets[i]);
+            }
+            System.out.println();
+            
+            // Use enhanced for loop to visit each planet and print its name
+            for (String planet : planets) {
+                System.out.println("Visiting planet: " + planet);
+            }
+        }
+    }
 
 #### Practice #2
 
