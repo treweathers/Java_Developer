@@ -5,7 +5,7 @@
 
 ### 1. Understanding the Basic For Loop in Java
 Understanding the Basic For Loop in Java
-Imagine lining up your favorite planet toys in order. You take one, put it in line, and repeat until you run out of toys. This is precisely how the basic for loop works in Java!
+Imagine lining up your favorite planet toys in order. You take one, put it in line, and repeat until you run out of toys. This is precisely how the basic `for` loop works in Java!
 
 Here's the syntax:
 
@@ -13,9 +13,9 @@ Here's the syntax:
         // Some task to do
     }
 This loop does the following:
-* First, we do the initialization
-* Then, while the condition is true, we keep executing the task inside the loop body
-* After each iteration, we execute post-iteration actions that change the state in some way
+* First, we do the `initialization`
+* Then, while the `condition` is true, we keep executing the `task` inside the loop body
+* After each iteration, we execute `post-iteration` actions that change the state in some way
 * Now, let's demonstrate this with code that prints numbers 1 through 5:
 
         for (int i = 1; i <= 5; i++) {
@@ -29,10 +29,10 @@ This loop does the following:
         // 4
         // 5
 
-Here, we defined an int variable i, assigned it to 1 first, and then repeated System.out.println(i); while i <= 5, incrementing i by 1 after every iteration. By the way, i++ is a short form for i += 1, which is i = i + 1 - so it's just adding 1 to the current value of i, but in a short way! This operation is called increment.
+Here, we defined an `int` variable `i`, assigned it to `1` first, and then repeated `System.out.println(i);` while `i <= 5`, incrementing `i` by `1` after every iteration. By the way, `i++` is a short form for `i += 1`, which is `i = i + 1` - so it's just adding `1` to the current value of i, but in a short way! This operation is called increment.
 
 ### 2. Enhanced For Loop
-Now, remember flipping pancakes? You pour one pancake, let it cook, then pour the next one, continuing until the batter is finished. Guess what? The enhanced for loop operates in a similar fashion!
+Now, remember flipping pancakes? You pour one pancake, let it cook, then pour the next one, continuing until the batter is finished. Guess what? The enhanced `for` loop operates in a similar fashion!
 
 Here's an example of printing all elements of an array:
 
@@ -51,7 +51,7 @@ Here's an example of printing all elements of an array:
 Quite the pancake flipper, isn't it?
 
 ### 3. Difference Between the Basic For Loop and the Enhanced For Loop
-You'd typically use a basic for loop when you need to perform a task a specific number of times. In contrast, an enhanced for loop is your go-to when you have a collection (like an array, list, map, or set) and need to perform an action for each item in that collection.
+You'd typically use a basic `for` loop when you need to perform a task a specific number of times. In contrast, an enhanced `for` loop is your go-to when you have a collection (like an array, list, map, or set) and need to perform an action for each item in that collection.
 
 Let's illustrate with both loops printing numbers from an array:
 
