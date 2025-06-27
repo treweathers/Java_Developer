@@ -107,6 +107,25 @@ Run the code.
     }
 
 #### Practice #2
+Instead of using the enhanced for loop, switch to a basic for loop and list the planets with their ordinal numbers (1, 2, ..., 9). 
+
+    class Solution {
+        public static void main(String[] args) {
+            String[] planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
+            for (String planet : planets) {
+                System.out.println("Exploring planet: " + planet);
+            }
+        }
+    }
+
+    class Solution {
+        public static void main(String[] args) {
+            String[] planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
+            for (int i = 0; i < planets.length; i++) {
+                System.out.println(i+1 + " - Exploring planet: " + planets[i]);
+            }
+        }
+    }
 
 #### Practice #3
 
