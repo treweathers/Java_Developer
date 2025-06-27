@@ -70,7 +70,7 @@ Let's illustrate with both loops printing numbers from an array:
     // 3
     // 4
     // 5
-##### Enhanced for loop:
+###### Enhanced for loop:
 
     // This loop will print all numbers from the numbers array, directly taking each of them
     int[] numbers = {1, 2, 3, 4, 5};
@@ -85,8 +85,13 @@ Let's illustrate with both loops printing numbers from an array:
     // 4
     // 5
 
-#### Practice 1
-#### Practice 2
-#### Practice 3
-#### Practice 4
-#### Practice 5
+#### Practice #1
+
+#### Practice #2
+
+#### Practice #3
+
+#### Practice #4
+
+#### Practice #5
+
