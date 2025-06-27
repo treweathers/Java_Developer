@@ -128,8 +128,36 @@ Instead of using the enhanced for loop, switch to a basic for loop and list the 
     }
 
 #### Practice #3
+Investigate the following code and correct the spaceship's course so we can visit every planet in our array. 
+
+    class Solution {
+        public static void main(String[] args) {
+            int[] distancesFromSun = {1, 2, 3, 4, 5, 6, 7, 8};
+    
+            for (int i = 0; i <= distancesFromSun.length; i--) {
+                System.out.println(distancesFromSun[i]);
+            }
+        }
+    }
+    
+    Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 8
+    	at Solution.main(solution.java:6)
+    
+    Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 8 out of bounds for length 8
+    	at Solution.main(solution.java:6)
+    
+    class Solution {
+        public static void main(String[] args) {
+            int[] distancesFromSun = {1, 2, 3, 4, 5, 6, 7, 8};
+    
+            for (int i = 0; i < distancesFromSun.length; i++) {
+                System.out.println(distancesFromSun[i]);
+            }
+        }
+    }
 
 #### Practice #4
+
 
 #### Practice #5
 
