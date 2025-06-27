@@ -157,7 +157,22 @@ Investigate the following code and correct the spaceship's course so we can visi
     }
 
 #### Practice #4
+We're going to practice using the enhanced for loop. Let's explore the solar system, one loop at a time.
 
+    class Solution {
+        public static void main(String[] args) {
+            // Array of planet names in our solar system for space exploration analogy
+            String[] planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
+            
+            for (String planet : planets) {
+               System.out.println("Visiting planet: " + planet);
+            }
+            // TODO: Write an enhanced for loop to traverse the array 'planets'
+            // TODO: Inside the loop, print "Exploring the planet: " followed by the planet name.
+        }
+    }
 
 #### Practice #5
+Write code that visits each planet in our solar system, but now in reversed order.
+
 
