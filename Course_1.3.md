@@ -267,3 +267,28 @@ Run the code.
         }
     }
 
+#### Practice #2
+Change the starter code so the loop starts at mission day 1 and increases to day 5. This alteration will require updating the loop condition and the mission day progression within the while loop construct.
+
+    class Solution {
+        public static void main(String[] args) {
+            // Initialize missionDay with day 5 of our space exploration
+            int missionDay = 5;
+            while (missionDay >= 1) { // Loop from mission day 5 to day 1
+                System.out.println("Spacecraft is orbiting on Day " + missionDay);
+                missionDay--; // Move to the previous mission day
+            }
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            // Initialize missionDay with day 5 of our space exploration
+            int missionDay = 1;
+            while (missionDay <= 5) { // Loop from mission day 5 to day 1
+                System.out.println("Spacecraft is orbiting on Day " + missionDay);
+                missionDay++; // Move to the previous mission day
+            }
+        }
+    }
+
