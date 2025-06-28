@@ -292,3 +292,35 @@ Change the starter code so the loop starts at mission day 1 and increases to day
         }
     }
 
+#### Practice #3
+Can you spot the malfunction and correct the code?
+
+    class Solution {
+        public static void main(String[] args) {
+            int fuelLevel = 5;
+            do {
+                System.out.println("Current fuel level: " + fuelLevel + " units.");
+            } while (fuelLevel > 0); 
+    
+            int astronautsToBoard = 3;
+            while (astronautsToBoard > 0) {
+                System.out.println(astronautsToBoard + " astronauts remaining to board.");
+            }
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            int fuelLevel = 5;
+            do {
+                System.out.println("Current fuel level: " + fuelLevel + " units.");
+                fuelLevel--;
+            } while (fuelLevel > 0); 
+    
+            int astronautsToBoard = 3;
+            while (astronautsToBoard > 0) {
+                System.out.println(astronautsToBoard + " astronauts remaining to board.");
+                astronautsToBoard--;
+            }
+        }
+    }
