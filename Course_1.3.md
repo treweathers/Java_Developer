@@ -470,3 +470,56 @@ In another setting, consider a space game. As long as you have life points (repr
     
     // Displays the final score when the game ends.
     System.out.println("Game Over. Your score is " + score);
+
+#### Practice #1
+Run the code.
+
+class Solution {
+    public static void main(String[] args) {
+        for (int planet = 1; planet <= 5; planet++) {
+            if (planet % 2 == 0) {
+                System.out.println("Planet " + planet + " has water!");
+            } else {
+                System.out.println("Planet " + planet + " is dry.");
+            }
+        }
+    }
+}
+
+#### Practice #2
+Convert the for loop in the starter code to a while loop to practice controlling your program's flow with a different type of loop. Ensure you maintain the same logic when scanning rock samples suitable for analysis.
+
+    class Solution {
+        public static void main(String[] args) {
+            // Astronaut's task is to report the area of rock samples that are multiples of 4
+            int rockSample = 1;
+            while (rockSample <= 8) {
+                if (rockSample % 4 == 0) {
+                    System.out.println("Rock sample " + rockSample + " is suitable for analysis.");
+                }
+                rockSample++;
+            }
+        }
+    }
+
+#### Practice #3
+The probe should increase its thruster burn every third day. Can you find the miscalculation in the days and fix it so that the probe can complete its 30-day journey correctly?
+
+class Solution {
+    public static void main(String[] args) {
+        int spaceProbeDistance = 0;
+        int day = 1;
+
+        while (spaceProbeDistance <= 30) { // Simulate distance check for 30 days
+            if (day % 3 == 0) {
+                spaceProbeDistance += 3;
+                System.out.println("Day " + day + ": Increased thruster burn. Distance: " + spaceProbeDistance);
+            } else {
+                spaceProbeDistance += 1;
+                System.out.println("Day " + day + ": Standard thruster burn. Distance: " + spaceProbeDistance);
+                day++;
+            }
+        }
+    }
+}
+
