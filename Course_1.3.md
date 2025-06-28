@@ -558,3 +558,27 @@ In the main code, find the spot to determine if it's a good day for a spacewalk.
             }
         }
     }
+
+#### Practice #5
+Write a Java program that loops through days, checks the temperature, and prints whether it's suitable for exploration.
+
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Set an array of temperatures during the week (7 elements)
+            int [] temperatures = {11, 22, 33, 44, 55, 66, 77};
+            // TODO: Use a for loop to go through each day of the week
+            for (int i = 0; i <= temperatures.length - 1; i++) {
+                if (temperatures[i] <= 24) {
+                    System.out.println("Day " + i + " with temp " + temperatures[i] + " is good");
+                } else {
+                    System.out.println("Day " + i + " with temp " + temperatures[i] + " ain''t great");
+                } 
+           }
+            
+                // TODO: Use an if-else statement to check if the temperature is too high for exploration
+                // Let's assume the temperature is too high if it's more than 24 degrees Celsius
+                
+                // TODO: Print the day and whether it's too hot or suitable for exploration
+        }
+    }
+
