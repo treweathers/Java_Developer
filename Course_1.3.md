@@ -190,7 +190,7 @@ Write code that visits each planet in our solar system, but now in reversed orde
     }
 
 
-## Lesson 2: For Loops and Beyond
+## Lesson 2: Java Space Loops: Mastering While and Do-While
 ### 1. Introduction to 'while' Loops
 Loops automate repetitive tasks, like spiraling around a galaxy until a specific star is spotted. Imagine a race track: our code is the runner, circling laps (repeating the same block of code) until the required number of laps (loop's condition) is completed.
 
