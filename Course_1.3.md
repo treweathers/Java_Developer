@@ -194,14 +194,14 @@ Write code that visits each planet in our solar system, but now in reversed orde
 ### 1. Introduction to 'while' Loops
 Loops automate repetitive tasks, like spiraling around a galaxy until a specific star is spotted. Imagine a race track: our code is the runner, circling laps (repeating the same block of code) until the required number of laps (loop's condition) is completed.
 
-A Java while loop repeatedly executes a block of code as long as its given condition remains true.
+A Java `while` loop repeatedly executes a block of code as long as its given condition remains true.
 
-Here is the while loop's structure:
+Here is the `while` loop's structure:
 
     while (condition) {
         do some action
     }
-Here's a simple while loop example that counts down from 5 to 0:
+Here's a simple `while` loop example that counts down from 5 to 0:
 
     int countdown = 5;
     while (countdown >= 0) {
@@ -216,17 +216,17 @@ Here's a simple while loop example that counts down from 5 to 0:
     // 2
     // 1
     // 0
-Notice the decrementing command countdown--? Without it, our code would become an infinite loop, circling around indefinitely. Be cautious!
+Notice the decrementing command `countdown--`? Without it, our code would become an infinite loop, circling around indefinitely. Be cautious!
 
 ### 2. Journey with the 'do-while' Loop
-Do-while loops execute a block of code once and continue repeating it until the condition becomes false. The syntax is slightly different:
+`Do-while` loops execute a block of code once and continue repeating it until the condition becomes false. The syntax is slightly different:
 
     do {
         // code executed at least once
     } while (condition);
 This loop fits perfectly into scenarios that require at least one execution of the code before checking conditions.
 
-Here's a simple do-while loop example that counts down from 5 to 0:
+Here's a simple `do-while` loop example that counts down from 5 to 0:
 
     int countdown = 5;
     do {
@@ -243,4 +243,4 @@ Here's a simple do-while loop example that counts down from 5 to 0:
     // 0
 
 ### 3.'while' vs. 'do-while': When to Use Which One
-Use a while loop when the execution of the code depends on the condition. Use a do-while loop when you are sure about running it at least once and checking the condition thereafter.
+Use a `while` loop when the execution of the code depends on the condition. Use a `do-while` loop when you are sure about running it at least once and checking the condition thereafter.
