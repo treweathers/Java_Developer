@@ -324,3 +324,26 @@ Can you spot the malfunction and correct the code?
             }
         }
     }
+
+    class Solution {
+        public static void main(String[] args) {
+            // While loop for counting down until liftoff
+            
+            int liftoffCount = 5;
+            while (liftoffCount >= 0) { // TODO: Write the condition for continuing the countdown
+                System.out.println(liftoffCount + " seconds.");
+                liftoffCount--;
+                // TODO: Print the log message with the current countdown status
+                // TODO: What else needs to be done after each countdown print to prevent an infinite loop?
+            }
+            
+            // Do-while loop for simulating at least one orbit around a planet
+            int orbitsCompleted = 0;
+            do {
+                // TODO: Print out the completion of the first orbit.
+                System.out.println(orbitsCompleted + " orbits completed.");
+                orbitsCompleted++;
+            } while (orbitsCompleted < 1);
+        }
+    }
+
