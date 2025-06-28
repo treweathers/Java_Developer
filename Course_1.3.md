@@ -326,7 +326,7 @@ Can you spot the malfunction and correct the code?
     }
 
 
-#### Practice 4
+#### Practice #4
 Add the code necessary to initiate the liftoff countdown and execute an orbit maneuver. Remember what ensures that the loop does not run indefinitely and how to guarantee at least one successful orbit completion.
 
     class Solution {
