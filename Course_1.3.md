@@ -430,7 +430,7 @@ In a similar fashion, an `if-else` statement can be applied within a `while` loo
     // 4 is not divisible by 3.
     // 5 is not divisible by 3.
     // 6 is divisible by 3.
-### 3. Real-life Examples
+### 4. Real-life Examples
 Picture this scenario: you've prepared a shopping list (an array). As you proceed through the market (akin to the `for` loop), you check items (the `if` condition) off your list. If discounts are available, you purchase the luxury goods; if not, you buy them only if they're essential.
 
     String[] shoppingList = {"Potatoes", "Tomatoes", "Luxury Martian Rice"};
