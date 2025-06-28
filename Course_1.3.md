@@ -244,3 +244,26 @@ Here's a simple `do-while` loop example that counts down from 5 to 0:
 
 ### 3.'while' vs. 'do-while': When to Use Which One
 Use a `while` loop when the execution of the code depends on the condition. Use a `do-while` loop when you are sure about running it at least once and checking the condition thereafter.
+
+#### Practice #1
+Run the code.
+
+    class Solution {
+        public static void main(String[] args) {
+            // A "while" loop to count up to 5 stars, like a sensor detecting celestial objects
+            int starsCounted = 0;
+            while (starsCounted < 5) {
+                System.out.println("Star " + (starsCounted + 1) + " spotted!");
+                starsCounted++;
+            }
+            
+            // A "do-while" loop to simulate automatic space probe activation
+            // and power reserve management
+            int probeBattery = 3;
+            do {
+                System.out.println("Space probe is active. Checking systems. Battery level: " + probeBattery);
+                probeBattery--;
+            } while (probeBattery > 0);
+        }
+    }
+
