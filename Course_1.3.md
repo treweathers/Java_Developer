@@ -352,3 +352,16 @@ Add the code necessary to initiate the liftoff countdown and execute an orbit ma
     }
 #### Practice #5
 Write a program from scratch that simulates the collection of stars in space until you have 5? Your ship's dashboard will display the number of stars you have collected after each loop!
+
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Declare a variable to keep track of how many stars have been collected
+            int starsCollected = 0;
+            // TODO: Write a while loop that collects stars until you have 5 of them.
+            while (starsCollected <= 5) {
+                System.out.println("There are " + starsCollected + " stars collected");
+                starsCollected++;
+            }
+            // Inside the loop, print out the current count of stars collected, then increment the count.
+        }
+    }
