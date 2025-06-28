@@ -347,3 +347,26 @@ Can you spot the malfunction and correct the code?
         }
     }
 
+#### Practice 4
+Add the code necessary to initiate the liftoff countdown and execute an orbit maneuver. Remember what ensures that the loop does not run indefinitely and how to guarantee at least one successful orbit completion.
+
+    class Solution {
+        public static void main(String[] args) {
+            // While loop for counting down until liftoff
+            int liftoffCount = 5;
+            while (_____) { // TODO: Write the condition for continuing the countdown
+                // TODO: Print the log message with the current countdown status
+                // TODO: What else needs to be done after each countdown print to prevent an infinite loop?
+            }
+            
+            // Do-while loop for simulating at least one orbit around a planet
+            int orbitsCompleted = 0;
+            do {
+                // TODO: Print out the completion of the first orbit.
+                orbitsCompleted++;
+            } while (orbitsCompleted < 1);
+        }
+    }
+
+#### Practice #5
+Write a program from scratch that simulates the collection of stars in space until you have 5? Your ship's dashboard will display the number of stars you have collected after each loop!
