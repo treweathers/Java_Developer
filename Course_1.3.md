@@ -541,3 +541,20 @@ The probe should increase its thruster burn every third day. Can you find the mi
         }
     }
 
+#### Practice #4
+In the main code, find the spot to determine if it's a good day for a spacewalk. Remember, acceptable conditions range between 18 and 22 degrees. Your task awaits!
+
+    class Solution {
+        public static void main(String[] args) {
+            int[] temperatures = {21, 19, 20, 22, 18, 17, 19};
+            for (int temp : temperatures) {
+                if(temp >= 18 && temp <= 22) {
+                    System.out.println(temp + " degrees - Get out now.");
+                }
+                // TODO: Check if the temperature is between 18 and 22 degrees and print the appropriate message.
+                else {
+                System.out.println(temp + " degrees - Better stay inside the station.");
+                }
+            }
+        }
+    }
