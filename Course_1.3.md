@@ -505,21 +505,39 @@ Convert the for loop in the starter code to a while loop to practice controlling
 #### Practice #3
 The probe should increase its thruster burn every third day. Can you find the miscalculation in the days and fix it so that the probe can complete its 30-day journey correctly?
 
-class Solution {
-    public static void main(String[] args) {
-        int spaceProbeDistance = 0;
-        int day = 1;
-
-        while (spaceProbeDistance <= 30) { // Simulate distance check for 30 days
-            if (day % 3 == 0) {
-                spaceProbeDistance += 3;
-                System.out.println("Day " + day + ": Increased thruster burn. Distance: " + spaceProbeDistance);
-            } else {
-                spaceProbeDistance += 1;
-                System.out.println("Day " + day + ": Standard thruster burn. Distance: " + spaceProbeDistance);
+    class Solution {
+        public static void main(String[] args) {
+            int spaceProbeDistance = 0;
+            int day = 1;
+    
+            while (spaceProbeDistance <= 30) { // Simulate distance check for 30 days
+                if (day % 3 == 0) {
+                    spaceProbeDistance += 3;
+                    System.out.println("Day " + day + ": Increased thruster burn. Distance: " + spaceProbeDistance);
+                } else {
+                    spaceProbeDistance += 1;
+                    System.out.println("Day " + day + ": Standard thruster burn. Distance: " + spaceProbeDistance);
+                    day++;
+                }
+            }
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            int spaceProbeDistance = 0;
+            int day = 1;
+    
+            while (spaceProbeDistance <= 30) { // Simulate distance check for 30 days
+                if (day % 3 == 0) {
+                    spaceProbeDistance += 3;
+                    System.out.println("Day " + day + ": Increased thruster burn. Distance: " + spaceProbeDistance);
+                } else {
+                    spaceProbeDistance += 1;
+                    System.out.println("Day " + day + ": Standard thruster burn. Distance: " + spaceProbeDistance);
+                }
                 day++;
             }
         }
     }
-}
 
