@@ -354,7 +354,9 @@ Add the code necessary to initiate the liftoff countdown and execute an orbit ma
         public static void main(String[] args) {
             // While loop for counting down until liftoff
             int liftoffCount = 5;
-            while (_____) { // TODO: Write the condition for continuing the countdown
+            while (liftoffCount >= 0) { // TODO: Write the condition for continuing the countdown
+            System.out.println(liftoffCount + " seconds");
+            liftoffCount--;
                 // TODO: Print the log message with the current countdown status
                 // TODO: What else needs to be done after each countdown print to prevent an infinite loop?
             }
@@ -363,10 +365,10 @@ Add the code necessary to initiate the liftoff countdown and execute an orbit ma
             int orbitsCompleted = 0;
             do {
                 // TODO: Print out the completion of the first orbit.
+                System.out.println("There are " + orbitsCompleted + " orbits completed");
                 orbitsCompleted++;
             } while (orbitsCompleted < 1);
         }
     }
-
 #### Practice #5
 Write a program from scratch that simulates the collection of stars in space until you have 5? Your ship's dashboard will display the number of stars you have collected after each loop!
