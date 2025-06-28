@@ -365,3 +365,108 @@ Write a program from scratch that simulates the collection of stars in space unt
             // Inside the loop, print out the current count of stars collected, then increment the count.
         }
     }
+
+## Lesson 3: Navigating Conditional Asteroids: Java Loops and Decisions
+### 1. Reviewing Java Loop Structures
+Before charging forward, it's essential to revisit the foundation: loops. Within the vast cosmos of Java, we've navigated two primary types of loops: the `for` and `while` loops.
+
+A `for` loop iterates a predetermined number of times, much like a reliable spaceship following a set route:
+
+    for (int i = 0; i < 5; i++) { // Iterates five times
+        System.out.println(i); // Prints 0 to 4
+    }
+The `while` loop, on the other hand, repeats actions until a specified condition turns false:
+
+    int i = 0;
+    while (i < 5) { // Condition for the loop to continue
+        System.out.println(i); // Prints 0 to 4
+        i++; // Increment the counter
+    }
+### 2. Reviewing Java Conditional Statements
+Let's now revisit the `if-else` construct, which is Java's machinery for making decisions.
+
+    int asteroidsDistance = 10;
+    
+    if (asteroidsDistance > 15) { // If this condition is true
+        System.out.println("Navigate through the asteroids."); // This line executes
+    } else {
+        System.out.println("Steer clear of the asteroids."); // Else, this line executes
+    }
+The `if-else` statement enables the spaceship to decide whether to navigate through the asteroids based on their distance.
+
+### 3. Combining Loops and Conditional Statements
+Next, consider how the for loop integrates with an if-else statement:
+
+    for (int i = 0; i < 6; i++) { // Our loop will iterate 6 times
+        if (i % 2 == 0) { // If the number is divisible by 2 (Even)
+            System.out.println(i + " is even."); // It'll print "X is even."
+        } else { // If not divisible by 2 (Odd)
+            System.out.println(i + " is odd."); // It'll print "X is odd."
+        }
+    }
+    // Prints:
+    // 0 is even.
+    // 1 is odd.
+    // 2 is even.
+    // 3 is odd.
+    // 4 is even.
+    // 5 is odd.
+In a similar fashion, an `if-else` statement can be applied within a `while` loop:
+
+    int i = 0;
+    while (i < 7) { // Our loop will iterate 10 times
+        if (i % 3 == 0) { // If the number is divisible by 3
+            System.out.println(i + " is divisible by 3."); // It'll print "X is divisible by 3."
+        } else { // If not divisible by 3
+            System.out.println(i + " is not divisible by 3."); // It'll print "X is not divisible by 3."
+        }
+        i++; // Increments the counter.
+    }
+    // Prints:
+    // 0 is divisible by 3.
+    // 1 is not divisible by 3.
+    // 2 is not divisible by 3.
+    // 3 is divisible by 3.
+    // 4 is not divisible by 3.
+    // 5 is not divisible by 3.
+    // 6 is divisible by 3.
+### 3. Real-life Examples
+Picture this scenario: you've prepared a shopping list (an array). As you proceed through the market (akin to the `for` loop), you check items (the `if` condition) off your list. If discounts are available, you purchase the luxury goods; if not, you buy them only if they're essential.
+
+    String[] shoppingList = {"Potatoes", "Tomatoes", "Luxury Martian Rice"};
+    boolean discount = true;
+    
+    for (String item : shoppingList) { // Iterating over the shopping list
+        // If a discount is available on a luxury item, it will be purchased.
+        // Else, if it's an essential item, it will be purchased.
+        // Otherwise, the luxury item will be skipped.
+        if (item.equals("Luxury Martian Rice") && discount) {
+            System.out.println("Buy " + item + " with discount.");
+        } else if (!item.equals("Luxury Martian Rice")) {
+            System.out.println("Buy essential " + item);
+        } else {
+            System.out.println("No discount. Skip " + item);
+        }
+    }
+In another setting, consider a space game. As long as you have life points (represented by a `while` loop), your points increase if you hit an alien (an `if` condition)!
+
+    int score = 0;
+    int lifePoints = 5;
+    
+    while (lifePoints > 0) { // As long as life-points remain
+        // Random generator for hit (true) or miss (false)
+        boolean isAlienHit = Math.random() > 0.5;
+    
+        // If you hit, it awards 10 points.
+        // If you missed, it deducts a life point.
+        if (isAlienHit) {
+            System.out.println("Alien vessel hit! +10 points");
+            score += 10;
+        } else {
+            System.out.println("Missed! -1 life point");
+            lifePoints -= 1;
+        }
+    }
+    
+    // Displays the final score when the game ends.
+    System.out.println("Game Over. Your score is " + score);
