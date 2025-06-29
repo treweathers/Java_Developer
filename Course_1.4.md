@@ -333,7 +333,71 @@ Fixed
     }
 
 ## Lesson 3: Java Logical Errors
-### 1.
+### 1. Understanding Logical Errors
+Logical errors can be likened to an instance where you follow a recipe to the letter, measuring all ingredients precisely, only to end up with a dish that doesn't taste as expected. In programming terms, the syntax of your code is flawless, and the program runs without any glitches, but the output isn't what you intended.
+
+Let's explore an example in Java:
+    
+    int width = 5;
+    int height = 10;
+    int area = width + height; //logical error
+    System.out.println("Area of the rectangle: " + area);
+In this instance, we have mistakenly added the `width` and `height` of a rectangle, but the area of a rectangle should be calculated by multiplying them. Although the program runs without any error, it yields an incorrect output. Thus, this is a logical error.
+
+### 2. Common Logical Errors in Java
+You may encounter several common logical errors:
+
+* **Off-by-One Error**: This type of error typically occurs in loop control, where you may start or finish a loop one iteration too early or too late.
+    
+        int[] numbers = {1, 2, 3, 4, 5};
+        for (int i = 1; i <= numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+This loop should print the integers 1 to 5 (a total of 5 integers) but ends up with a runtime error accessing the non-existing index `numbers.length` due to an Off-by-One Error.
+
+* **Infinite Loop**: These occur when a loop's exit condition is never met, causing the program to run the loop indefinitely.
+
+        int number = 0;
+        while (number < 10) {
+            System.out.println(number);
+        }
+The above loop is an example of an infinite loop. The exit condition (`number < 10`) will always remain constant, as the `number` doesn't change inside the loop, leading to an infinite loop.
+
+* **Division by Zero**: Be cautious about the denominator in division operations. If the denominator is zero, it will turn your program into a black hole!
+    
+        int a = 5;
+        int b = 5;
+        int divisor = a - b;
+        int dividend = 5;
+        int quotient = dividend / divisor;
+The above code, in which you attempt to divide a number by zero, is an example of a logical error that causes a runtime error.
+
+### 3. Addressing Logical Errors
+Debugging to find a logical error involves thinking through your code, adding debug output (via `System.out.println` or using IDE debugging tools), analyzing this output, and reasoning out why it is behaving in such a manner. Here are the corrected versions of the errors we just mentioned:
+
+* Off-by-One Error:
+
+        int[] numbers = {1, 2, 3, 4, 5};
+        for (int i = 1; i < numbers.length; i++) {
+            System.out.println(i); // debugging output - helped us to see that we are entering the loop with `i = numbers.length` that's not expected
+            System.out.println(numbers[i]);
+        }
+* Infinite Loop:
+
+        int number = 0;
+        while (number < 10) {
+            System.out.println(number); // this print statement itself was a great debugging mechanism, we could see the number doesn't change
+            number++; // adding the missing statement
+        }
+* Division by Zero:
+
+        int a = 5;
+        int b = 5;
+        int divisor = a - b;
+        int dividend = 5;
+        System.out.println("Dividing " + dividend + " by "  + divisor); // Adding a debug statement to see that we are dividing by 0
+        int quotient = dividend / (divisor + 1);
+
 
 ## Lesson 4:
 ### 2.
