@@ -239,6 +239,25 @@ Such formatting substantially improves data readability.
 This example is pretty advanced, so don't hesitate to ask me to clarify it if you need any help!
 
 #### Practice #1
+Run the code.
+
+class Solution {
+    public static void main(String[] args) {
+        // Create a formatted String for a students grade report.
+        String studentName = "Alice";
+        int mathsGrade = 85;
+        int scienceGrade = 90;
+        int artGrade = 75;
+
+        // Format and print the report card for the student
+        String reportCard = String.format("| %-14s | %-3d | %-3d | %-3d |", 
+                                          studentName, mathsGrade, scienceGrade, artGrade);
+        System.out.println("| Name           | Mth | Sci | Art |");
+        System.out.println("----------------------------------");
+        System.out.println(reportCard);
+    }
+}
+
 
 #### Practice #2
 #### Practice #3
