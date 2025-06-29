@@ -923,6 +923,24 @@ Run the code.
     }
 
 #### Practice #3
+Please change the code so that it skips not just ride number 7, but also ride number 8. Use what you've learned about the continue statement and logical operators to make this happen.
+
+    class Solution {
+        public static void main(String[] args) {
+            // A tiny merry-go-round loop:
+            for (int rideNumber = 1; rideNumber <= 10; rideNumber++) {
+                if (rideNumber == 7 || rideNumber == 8) { // We want to skip ride number 7.
+                    continue; // We use 'continue' to skip to the next ride.
+                }
+                if (rideNumber == 9) { // We want to stop the loop at ride number 9.
+                    System.out.println("Ride " + rideNumber + " is so fun, let's end on a high note!");
+                    break; // We use 'break' to stop the loop prematurely.
+                }
+                System.out.println("Enjoying ride number: " + rideNumber);
+            }
+        }
+    }
+
 #### Practice #4
 #### Practice #5
 #### Practice #6
