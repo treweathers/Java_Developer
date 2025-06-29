@@ -332,7 +332,7 @@ Fixed
         }
     }
 
-## Lesson 3:
+## Lesson 3: Java Logical Errors
 ### 1.
 
 ## Lesson 4:
