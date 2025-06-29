@@ -474,17 +474,17 @@ In another setting, consider a space game. As long as you have life points (repr
 #### Practice #1
 Run the code.
 
-class Solution {
-    public static void main(String[] args) {
-        for (int planet = 1; planet <= 5; planet++) {
-            if (planet % 2 == 0) {
-                System.out.println("Planet " + planet + " has water!");
-            } else {
-                System.out.println("Planet " + planet + " is dry.");
+    class Solution {
+        public static void main(String[] args) {
+            for (int planet = 1; planet <= 5; planet++) {
+                if (planet % 2 == 0) {
+                    System.out.println("Planet " + planet + " has water!");
+                } else {
+                    System.out.println("Planet " + planet + " is dry.");
+                }
             }
         }
     }
-}
 
 #### Practice #2
 Convert the for loop in the starter code to a while loop to practice controlling your program's flow with a different type of loop. Ensure you maintain the same logic when scanning rock samples suitable for analysis.
@@ -713,5 +713,79 @@ Transform the loop that prints our meal tasks from a for-in-collection loop into
     }
 
 #### Practice #3
+We've accidentally mixed up something in our code. They're not displaying in the order we planned. Identify the issue in our meal planning code and fix it.
+
+    class Solution {
+        public static void main(String[] args) {
+            String[] daysOfWeek = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+            String[] mealsOfTheDay = {"Breakfast", "Lunch", "Dinner"};
+    
+            // Outer loop for days of the week
+            for (int i = 0; i < daysOfWeek.length; i++) {
+                // Inner loop for each meal of the day
+                for (int j = 0; j < mealsOfTheDay.length; j++) {
+                    System.out.println("Day: " + daysOfWeek[j] + ", Meal: " + mealsOfTheDay[i]);
+                }
+            }
+        }
+    }
+    
+    Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+    	at Solution.main(solution.java:10)
+    
+     class Solution {
+        public static void main(String[] args) {
+            String[] daysOfWeek = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+            String[] mealsOfTheDay = {"Breakfast", "Lunch", "Dinner"};
+    
+            // Outer loop for days of the week
+            for (int i = 0; i < daysOfWeek.length; i++) {
+                // Inner loop for each meal of the day
+                for (int j = 0; j < mealsOfTheDay.length; j++) {
+                    System.out.println("Day: " + daysOfWeek[i] + ", Meal: " + mealsOfTheDay[j]);
+                }
+            }
+        }
+    }
+
 #### Practice #4
+A piece of code has mysteriously vanished. I need your help to add code that will print tasks for each meal of the day. Can you code the missing part where we loop through the tasks and output them?
+
+    class Solution {
+        public static void main(String[] args) {
+            String[] meals = {"Breakfast", "Lunch", "Dinner"};
+            String[] tasks = {"Plan", "Cook"};
+            
+            int i = 0;
+            for (String meal : meals) {
+                if (i < meals.length) {
+                // TODO: Loop through the tasks and output "<Task> <Meal>", e.g. "Plan Breakfast"
+            }
+            int j = 0;
+            for (String task: tasks) {
+                if (j < tasks.length) {
+                    System.out.println(task + " " + meal);
+                }
+                }
+            }
+        }
+    }
+
+
 #### Practice #5
+Create a Java program that prints out the tasks needed to plan and prepare each meal of the day, utilizing nested loops to accomplish the task.
+
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Create an array containing the names of each meal of the day
+            String [] daysOfWeek = {"Breakfast", "Lunch", "Dinner"};
+            // TODO: Create an array containing the names of tasks for meal planning
+            String [] mealsOfDay = {"Plan", "Prepare", "Cook"};
+            // TODO: Use a nested loop to iterate over each meal and its associated tasks and print them
+            for (int i = 0; i < daysOfWeek.length; i++) {
+                for (int j = 0; j < mealsOfDay.length; j++) {
+                    System.out.println(mealsOfDay[j] + " " + daysOfWeek[i]);
+                }
+            }
+        }
+    }
