@@ -882,7 +882,24 @@ Meanwhile, let's introduce 'continue' in a similar setup.
 
 
 #### Practice #1
+Run the code.
+
+    class Solution {
+        public static void main(String[] args) {
+            for (int spin = 1; spin <= 10; spin++) {
+                if (spin == 5) {
+                    continue;
+                }
+                if (spin == 9) {
+                    break;
+                }
+                System.out.println("The carousel has spun " + spin + " times");
+            }
+        }
+    }
+
 #### Practice #2
+
 #### Practice #3
 #### Practice #4
 #### Practice #5
