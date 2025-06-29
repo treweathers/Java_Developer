@@ -159,4 +159,58 @@ Fixed
     }
      
 
-## Lesson 2: 
+## Lesson 2: Java's Puzzling Punctuation
+### 1.  Unmasking Syntax Errors
+**Syntax errors**, or parsing errors, are the most common type of errors you'll encounter as a beginner programmer. They occur when the Java compiler finds any non-conformity with the language syntax, such as forgetting a semicolon at the end of a statement or making a spelling error in a variable name. Here's an example:
+
+
+    public class Solution {
+        public static void main(String[] args) {
+            System.out.println("Hello, Java Galaxy")
+        }
+    }
+In this Java snippet, the absence of a semicolon at the end of the `System.out.println()` statement causes a syntax error, which prevents the program from compiling. The good news is that Java will tell you where the error lies! Here is the compilation output for this program:
+
+Markdown
+
+    Solution.java:3: error: ';' expected
+            System.out.println("Hello, Java Galaxy")
+                                                    ^
+    1 error
+### 2. Decoding the Types of Syntax Errors
+Syntax errors can manifest in several ways. Here, we'll discuss the most frequently encountered types:
+
+* **Variable Declaration Errors**: These occur when a variable isn't properly declared or used, as demonstrated in this snippet:
+
+        int myVariable = 100;
+        System.out.println(myVarible); // Typo in a variable name
+* **Missing Symbols**: Often resulting from a missing semicolon or unmatched brackets, braces, or parentheses. This example showcases what such an error might look like:
+
+
+        int x = 10 // missing semicolon (;)
+        System.out.println(x);
+* **Illegal Type Usage**: Using the correct data type for your variable is always mandatory; choosing the wrong type will result in a syntax error. For example:
+
+        String number = 10; // 10 is an int, not a String.
+* **Illegal start of type**: This error occurs when a statement begins without the necessary keyword or the correct structure.
+
+        public class Main {
+            public static void main(String[] args) {
+                public static void anotherMain() { } // You cannot create method inside another method
+            }
+        }
+Understanding these types will help us detect and rectify errors more efficiently.
+
+### 3. Patching Up Syntax Errors
+The journey to resolving a syntax error begins with systemically locating and understanding it. The CodeSignal IDE assists this process by marking errors with a red underline, similar to spell-checkers in word processors.
+
+We can correct our previous example by simply adding a semicolon at the end of the print statement:
+
+    public class Main {
+        public static void main(String[] args) {
+            System.out.println("Hello, Java Galaxy");
+        }
+    }
+Having made this correction, our program will run without any issues. This example underscores the importance of meticulously cross-checking our code for potential syntax errors before we execute the compile command.
+
+
