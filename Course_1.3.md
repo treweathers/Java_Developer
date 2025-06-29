@@ -903,3 +903,4 @@ Run the code.
 #### Practice #3
 #### Practice #4
 #### Practice #5
+#### Practice #6
