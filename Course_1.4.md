@@ -522,9 +522,50 @@ Fixed
     }
 
 #### Practice #4
+Please review the code and correct the error so we can generate an accurate report of the total number of moons.
 
+Original
+
+    class Solution {
+        public static void main(String[] args) {
+            // Array representing the approximate number of moons for each planet in the solar system
+            int[] moonsForEachPlanet = {0, 0, 1, 2, 79, 82, 27, 14}; // Correct data for moon count
+            int totalMoons = 0;
+    
+            // Loop to sum the moons for each planet
+            for (int moonCount : moonsForEachPlanet) {
+                totalMoons += moonsForEachPlanet[moonCount];
+            }
+          
+            // Output total moons in the solar system
+            System.out.println("Total moons in the solar system: " + totalMoons);
+        }
+    }
+
+Error
+
+    Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 79 out of bounds for length 8
+    	at Solution.main(solution.java:9)
+
+Fixed
+
+    class Solution {
+        public static void main(String[] args) {
+            // Array representing the approximate number of moons for each planet in the solar system
+            int[] moonsForEachPlanet = {0, 0, 1, 2, 79, 82, 27, 14}; // Correct data for moon count
+            int totalMoons = 0;
+    
+            // Loop to sum the moons for each planet
+            for (int i = 0; i < moonsForEachPlanet.length; i++) {
+                totalMoons += moonsForEachPlanet[i];
+            }
+          
+            // Output total moons in the solar system
+            System.out.println("Total moons in the solar system: " + totalMoons);
+        }
+    }
 
 ## Lesson 4:
-### 2.
+### 1.
 
 
