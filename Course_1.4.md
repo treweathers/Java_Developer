@@ -55,6 +55,7 @@ This message shows that we attempted to access index `5` in an array of length `
 
 #### Practice #1
 Review it carefully, identify the error, and fix it. Check the console for clues!
+
 Original
 
     class Solution {
@@ -81,6 +82,7 @@ Fixed
     }
 #### Practice #2
 Can you find and fix the problem so we can continue stargazing?
+
 Original
 
     class Solution {
@@ -107,6 +109,7 @@ Fixed
     }
 #### Practice #3
 There's a bug when we attempt to access one of the compartments. Could you help us identify and fix the issue so that we can inspect the contents safely?
+
 Original
 
     class Solution {
