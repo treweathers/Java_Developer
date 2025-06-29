@@ -565,7 +565,73 @@ Fixed
         }
     }
 
-## Lesson 4:
-### 1.
+## Lesson 4: Navigating Through Try, Catch, and Finally Blocks
+### 1. Diving into Java Exceptions
+Much like asteroids in space, anomalies can occur while coding. Java handles these unexpected events, termed as `exceptions`, to ensure that your program sails smoothly. In the Java cosmos, we differentiate between the cosmic boulders or `Errors` (common occurrences) and space pirates or `Exceptions` (real issues that warrant our intervention). Today, we will meet and conquer the mischief-makers, the `Unchecked Exceptions`:
+
+    public class Main {
+        public static void main(String[] args) {
+            int[] myArray = new int[]{1, 2, 3};
+            System.out.println(myArray[5]); // Oops! We're trying to access the 6th element of an array with only 3 elements. Result: An exception!
+        }
+    }
+You'll see an `ArrayIndexOutOfBoundsException`, signifying an invalid array index access.
+
+### 2. Enter the Try Block
+Every spaceship requires a safety mechanism, and so do our Java programs. Let's meet the try block that wraps the segment of code that could potentially raise an exception.
+
+    try {
+        // code that may cause an exception
+    }
+If an exception occurs within the try block, the program control hops right out of the block.
+
+The `catch` block catches and handles any anomalies or exceptions that our `try` block might throw up. It functions in tandem with the `try` block.
+
+    try {
+        // code that may cause an exception
+    } catch (ExceptionType exc) {
+       // code to handle the exception (variable 'exc')
+    }
+Here's the `catch` block in action:
+
+    try {
+        int[] myArray = new int[]{1, 2, 3};
+        System.out.println(myArray[5]); // Oops! Unchecked exception: ArrayIndexOutOfBoundsException
+    } catch (ArrayIndexOutOfBoundsException e) {
+        System.out.println("Caught a cosmic hurdle! Avoided an invalid array index access.\nError message: " + e.getMessage());
+    }
+    // Prints: Caught a cosmic hurdle! Avoided an invalid array index access.
+// Error message: Index 5 out of bounds for length 3
+Our `catch` block waits, ready to swoop in, and voila! It handles the exception smoothly.
+
+### 3. Familiarizing with the Finally Block
+The `finally` block executes code persistently, irrespective of whether we have caught an exception or not. Consider `finally` as some kind of cleanup - actions that need to be executed at the end, no matter if the exception happened or not.
+
+Here's its structure and application:
+
+    try {
+        // code that may cause an exception
+    } catch (ExceptionType e) {
+       // code to handle the exception
+    } finally {
+        // persistent code
+    }
+And here is an example:
+
+    try {
+        int[] myArray = new int[]{1, 2, 3};
+        System.out.println(myArray[5]); // Oops! We're trying to access the 6th element of an array with only 3 elements. Result: An exception!
+    } catch (ArrayIndexOutOfBoundsException e) {
+        System.out.println("Caught a cosmic hurdle! Avoided an invalid array index access.\n Error message: " + e.getMessage());
+    } finally {
+        System.out.println("Ready for the next hurdle! This code always runs.");
+    }
+    // Prints:
+    // Caught a cosmic hurdle! Avoided an invalid array index access.
+    // Error message: Index 5 out of bounds for length 3
+    // Ready for the next hurdle! This code always runs.
+If the exception doesn't happen (e.g. if we correctly printed `myArray[2]` in the `try` block), the message `Ready for the next hurdle! This code always runs.` would still be printed.
+
+
 
 
