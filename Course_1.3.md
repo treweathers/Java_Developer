@@ -582,3 +582,93 @@ Write a Java program that loops through days, checks the temperature, and prints
         }
     }
 
+## Lesson 4: Understanding Nested Loops
+### 1. Nested Loops: The Basics
+Imagine each day involves multiple tasks like cooking and eating for each meal: breakfast, lunch, and dinner. Here, the meals represent the outer loop, and the tasks represent the inner loop. Similarly, in Java, we can write a `for` or `while` loop (inner loop) inside another `for` or `while` loop (outer loop).
+
+    for (initialization; condition; iteration) {
+        // outer loop code
+        for (initialization; condition; iteration) {
+            // inner loop code
+        }
+    }
+Evaluate the condition of the outer loop. If it's true, enter the loop and complete the iterations of the inner loop before proceeding to the next iteration of the outer loop.
+
+### 2. Java Nested 'for' Loops
+Writing nested `for` loops in Java is simple. To demonstrate, let's print a 5x5 star pattern using nested loops:
+
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j <= i; j++) {
+            System.out.print("* "); // print "* "
+        }
+        System.out.println(); // move to the next line
+    }
+    // Prints:
+    // *
+    // * *
+    // * * *
+    // * * * *
+    // * * * * * 
+Here, the outer loop governs the rows, while the inner one controls columns. The result: a diagonal pattern of stars printed on the console!
+
+### 3. Java Nested 'while' Loops
+Nested `while` loops function similarly to nested `for` loops. The following example prints five sequences, each descending from 5 to 1:
+
+    int i = 5;
+    while (i > 0) {
+        int j = i;
+        while (j > 0) {
+            System.out.print(j + " "); // print number
+            j--; // decrement the value of j
+        }
+        System.out.println(); // move to the next line
+        i--; // decrement the value of i
+    }
+    // Prints:
+    // 5 4 3 2 1
+    // 4 3 2 1
+    // 3 2 1
+    // 2 1 
+    // 1 
+Upon executing this, you'll see five lines, containing decreasing numbers, as shown in the comment.
+
+### 4. Advanced Tasks with Nested Loops
+Nested loops are particularly useful for tasks such as traversing multi-dimensional arrays and performing complex searches.
+
+Given a 2D array, let's print all elements using nested loops:
+
+    int[][] intArray = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    
+    for (int i = 0; i < intArray.length; i++) { // iterates over rows
+        for (int j = 0; j < intArray[i].length; j++) { // iterates over columns
+            System.out.print(intArray[i][j] + " "); // prints each element
+        }
+        System.out.println(); // moves to the next line
+    }
+    // Prints:
+    // 1 2 3
+    // 4 5 6
+    // 7 8 9
+To search for a number in a 2D array, nested loops work superbly. Here's a demonstration that searches for the number 7:
+
+    int[][] intArray = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int searchNumber = 7;
+    boolean isFound = false;
+    
+    for (int i = 0; i < intArray.length; i++) { // iterates over rows
+        for (int j = 0; j < intArray[i].length; j++) { // iterates over columns
+            if (intArray[i][j] == searchNumber) {
+                System.out.println("Number " + searchNumber + " found at [" + i + ", " + j + "]");
+                isFound = true;
+            }
+        }
+    }
+    
+    if (!isFound) {
+        System.out.println("Number " + searchNumber + " not found in the array.");
+    }
+    // Prints: Number 7 found at [2, 0]
+When we run the code, our nested loops find the number `7` in the third row.
+
+### 5. Quick Nested Loops Tips and Warnings
+Though nested loops are extraordinarily powerful, be sure to avoid common pitfalls such as infinite loops (ensure your loop will eventually exit). Remember, the proper controls and conditional statements are significant.
