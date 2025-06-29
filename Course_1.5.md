@@ -344,3 +344,7 @@ Create a nicely formatted report card header with left alignment and a record li
 
 
 #### Practice #5
+Craft a neatly formatted report for a student's grades using the formatting skills you've just learned. Your output should line up the student’s name and grades in their respective columns.
+
+
+ 
