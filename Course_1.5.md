@@ -320,6 +320,27 @@ The provided code contains a small mistake — can you identify and correct it s
 #### Practice #4
 Create a nicely formatted report card header with left alignment and a record line with right alignment.
 
+	class Solution {
+	    public static void main(String[] args) {
+	        // Academic report card formatted display for a student
+	        String studentName = "Leo";
+	        String subject1 = "History"; // TODO: Align this subject to the left with a width of 9
+	        System.out.printf("Subject 1: %-9s ", subject1);
+	        String subject2 = "Math";
+	        String subject3 = "Science";
+	        int grade1 = 87;
+	        int grade2 = 75; // TODO: Format this grade to align to the right, adding spaces to the left to a width of 7
+	        System.out.printf("Grade 2: %7s ", grade2);
+	        int grade3 = 92;
+	        
+	        // Use of String formatting to align text and numbers neatly
+	        System.out.printf("| %-9s | %-7s | %-7s | %-7s |\n", "Student", subject1, subject2, subject3);
+	        System.out.printf("| %-9s | %-7s | %7d | %7d |\n", studentName, grade1, grade2, grade3);
+	        
+	    }
+	}
+
+###### feedback: there was an error coming from the provided code (last line System.out.printf() - and the _____ had to be replaced with text alignment. Not sure if this was deliberate. Also, did not turn out 'neat', was quite unhinged actually⚠️.
 
 
 #### Practice #5
