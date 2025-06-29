@@ -789,3 +789,100 @@ Create a Java program that prints out the tasks needed to plan and prepare each 
             }
         }
     }
+
+## Lesson 5: Navigating Loop Control: Mastering Break and Continue in Java
+### 1. Break Statement
+Think of the `break` command as representing the moment the music stops during a game of musical chairs, prompting you to exit the loop. It ends the loop regardless of the loop's original condition.
+
+Here is a quick example:
+
+    for (int i = 0; i < 10; i++) {
+        if(i == 7) { // When `i` reaches 7
+            System.out.println("7 found! Break!"); // Message before the break
+            break; // Terminating the loop
+        }
+        System.out.println("Number: " + i); // Print i until we hit "break"
+    }
+    // Prints:
+    // Number: 0
+    // Number: 1
+    // Number: 2
+    // Number: 3
+    // Number: 4
+    // Number: 5
+    // Number: 6
+    // 7 found! Break!
+Our loop operates on numbers from 0 to 6 and breaks when it reaches 7, taking an early exit and skipping all remaining iterations.
+
+### 2. Continue Statement
+The keyword `continue` in Java is analogous to skipping a boring view during a walk. It disregards the current loop iteration and jumps ahead to the next one.
+
+Here is an example:
+
+    for (int j = 1; j <= 10; j++) {
+        if (j == 4 || j == 7) { // Skip the 4th and 7th buildings
+            continue;
+        }
+        System.out.println("Admiring building number: " + j); // Continue with the rest
+    }
+    // Prints:
+    // Admiring building number: 1
+    // Admiring building number: 2
+    // Admiring building number: 3
+    // Admiring building number: 5
+    // Admiring building number: 6
+    // Admiring building number: 8
+    // Admiring building number: 9
+    // Admiring building number: 10
+Our output presents admiration logs for all buildings except numbers 4 and 7, which our `continue` statement omits.
+
+### 3. Break and Continue in Nested Loops
+Nested loops, like a spiral galaxy with numerous orbits, are loops within loops. Even in these spinning spirals, `break` and `continue` function distinctly. It is important to mention that both `break` and `continue` will exit/skip only the corresponding inner loop, not affecting the outer loop. Let's illustrate this with a couple of examples.
+
+Consider a nested loop running on a `5x5` grid.
+
+    for (int i = 1; i <= 5; i++) {
+        System.out.print(i + ": ");
+        for (int j = 1; j <= 5; j++) {
+            if (i == 3 && j == 3) {
+                // break the inner loop
+                break;
+            }
+            System.out.print(j + " ");
+        }
+        System.out.println();
+    }
+    // Prints:
+    // 1: 1 2 3 4 5
+    // 2: 1 2 3 4 5
+    // 3: 1 2
+    // 4: 1 2 3 4 5
+    // 5: 1 2 3 4 5
+Here, `break` ends the inner loop when `i` and `j` both equal `3`. Thus, when `i` becomes 3, the inner loop runs only up to `j = 2` and then breaks. However, the outer loop continues until `i = 5`.
+
+Meanwhile, let's introduce 'continue' in a similar setup.
+
+    for (int i = 1; i <= 5; i++) {
+        System.out.print(i + ": ");
+        for (int j = 1; j <= 5; j++) {
+            if (i == 3 && j == 3) {
+                continue;
+            }
+            System.out.print(j + " ");
+        }
+        System.out.println();
+    }
+    // Prints:
+    // 1: 1 2 3 4 5
+    // 2: 1 2 3 4 5
+    // 3: 1 2 4 5
+    // 4: 1 2 3 4 5
+    // 5: 1 2 3 4 5
+`continue`, once it meets the `i == 3 && j == 3` condition, skips the rest of the code inside its loop and instantly moves to the next iteration. In this case, it means we skip printing `j` when both `i` and `j` are equal to `3`.
+
+
+#### Practice #1
+#### Practice #2
+#### Practice #3
+#### Practice #4
+#### Practice #5
