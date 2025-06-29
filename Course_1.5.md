@@ -279,30 +279,47 @@ Adjust the formatting of the report card in the code to widen the scores column.
 #### Practice #3
 The provided code contains a small mistake — can you identify and correct it so that the report prints without any errors?
 
-class Solution {
-    public static void main(String[] args) {
-        String studentName = "Alex";
-        int mathGrade = 85;
-        int scienceGrade = 90;
-        int artGrade = 75;
-        
-        String reportCard = String.format("Student: %d | Math: %d | Science: %d | Art: %d",
-                                          studentName, mathGrade, scienceGrade, artGrade);
-
-        System.out.println(reportCard);
-    }
-}
-
-Exception in thread "main" java.util.IllegalFormatConversionException: d != java.lang.String
-	at java.base/java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4710)
-	at java.base/java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:3248)
-	at java.base/java.util.Formatter$FormatSpecifier.print(Formatter.java:3203)
-	at java.base/java.util.Formatter.format(Formatter.java:2801)
-	at java.base/java.util.Formatter.format(Formatter.java:2738)
-	at java.base/java.lang.String.format(String.java:4481)
-	at Solution.main(solution.java:8)
-
- 
+	class Solution {
+	    public static void main(String[] args) {
+	        String studentName = "Alex";
+	        int mathGrade = 85;
+	        int scienceGrade = 90;
+	        int artGrade = 75;
+	        
+	        String reportCard = String.format("Student: %d | Math: %d | Science: %d | Art: %d",
+	                                          studentName, mathGrade, scienceGrade, artGrade);
+	
+	        System.out.println(reportCard);
+	    }
+	}
+	
+	Exception in thread "main" java.util.IllegalFormatConversionException: d != java.lang.String
+		at java.base/java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4710)
+		at java.base/java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:3248)
+		at java.base/java.util.Formatter$FormatSpecifier.print(Formatter.java:3203)
+		at java.base/java.util.Formatter.format(Formatter.java:2801)
+		at java.base/java.util.Formatter.format(Formatter.java:2738)
+		at java.base/java.lang.String.format(String.java:4481)
+		at Solution.main(solution.java:8)
+	
+	class Solution {
+	    public static void main(String[] args) {
+	        String studentName = "Alex";
+	        int mathGrade = 85;
+	        int scienceGrade = 90;
+	        int artGrade = 75;
+	        
+	        String reportCard = String.format("Student: %s | Math: %d | Science: %d | Art: %d",
+	                                          studentName, mathGrade, scienceGrade, artGrade);
+	
+	        System.out.println(reportCard);
+	    }
+	}
+	 
 
 #### Practice #4
+Create a nicely formatted report card header with left alignment and a record line with right alignment.
+
+
+
 #### Practice #5
