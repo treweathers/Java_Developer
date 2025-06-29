@@ -1,7 +1,8 @@
 <h1 align='center'> Course 1: Java Programming for Beginners </h1> 
 
 # Course 1.5: Java String Manipulation for Beginners
-## Lesson 1: Revising String Concatenation
+## Lesson 1: Java String Operations: Concatenation, Comparison, and Essential Methods
+### 1. Revising String Concatenation
 We already know what concatenation is and how it works, but worth revising it quickly! Concatenation means joining things together and is a crucial string operation. In Java, we accomplish this with the `+` operator or using `StringBuilder`.
     
     String hello = "Hello, ";
