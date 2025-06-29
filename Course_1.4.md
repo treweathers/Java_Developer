@@ -159,5 +159,4 @@ Fixed
     }
      
 
-#### Practice #5
-#### Practice #6
+### Lesson 2: 
