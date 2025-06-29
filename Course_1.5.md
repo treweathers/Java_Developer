@@ -360,6 +360,6 @@ Craft a neatly formatted report for a student's grades using the formatting skil
 	    }
 	}
 
-| Name      | Math  | Science   | Art  |
-| Lucy      | 85    | 90        | 87   |
+	| Name      | Math  | Science   | Art  |
+	| Lucy      | 85    | 90        | 87   |
  
