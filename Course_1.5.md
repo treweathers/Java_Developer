@@ -52,3 +52,37 @@ Now, let's explore the other common String methods:
       String sentence = " Hello, World!   ";
       String trimmedSentence = sentence.trim(); // "Hello, World!"
 
+#### Practice #1
+Run the code.
+
+    class Solution {
+        public static void main(String[] args) {
+            String bookTitle = "The Adventures of Cosmo";
+            String author = "Coder Kid";
+            String librarySection = "Children's Books";
+            
+            String catalogEntry = bookTitle + " by " + author + " - " + librarySection;
+            System.out.println(catalogEntry);
+        }
+    }
+
+#### Practice #2
+Run the code.
+
+    class Solution {
+        public static void main(String[] args) {
+            String bookTitle1 = "The Cosmic Code";
+            String bookTitle2 = "Quantum Cosmos";
+    
+            System.out.println("Book titles are: \"" + bookTitle1 + "\" and \"" + bookTitle2 + "\"");
+            System.out.println("Titles are the same? " + bookTitle1.equals(bookTitle2));
+            System.out.println("Alphabetical comparison result: " + bookTitle1.compareTo(bookTitle2));
+        }
+    }
+
+#### Practice #3
+
+
+#### Practice #4
+#### Practice #5
+#### Practice #6
