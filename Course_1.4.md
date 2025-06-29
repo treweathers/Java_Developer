@@ -734,7 +734,7 @@ Create a Java program that anticipates and handles out-of-bounds issues when acc
         }
     }
 
-###### feedback: said "doesn't actually trigger an out-of-bounds exception, so the catch block never runs," but didn't specify needed to trigger the esception, just that the finally block executes (as it always does)⚠️.
+###### feedback: said "doesn't actually trigger an out-of-bounds exception, so the catch block never runs," but didn't specify needed to trigger the esception, just that the finally block executes (as it always does)‼️.
 
 
 
