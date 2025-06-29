@@ -672,3 +672,26 @@ When we run the code, our nested loops find the number `7` in the third row.
 
 ### 5. Quick Nested Loops Tips and Warnings
 Though nested loops are extraordinarily powerful, be sure to avoid common pitfalls such as infinite loops (ensure your loop will eventually exit). Remember, the proper controls and conditional statements are significant.
+
+#### Practice #1
+Run the code.
+
+    class Solution {
+        public static void main(String[] args) {
+            // Daily meal preparation routine for three days
+            String[] days = {"Monday", "Tuesday", "Wednesday"};
+            String[] meals = {"Breakfast", "Lunch", "Dinner"};
+    
+            for (int i = 0; i < days.length; i++) {
+                System.out.println("Day: " + days[i]);
+                for (int j = 0; j < meals.length; j++) {
+                    System.out.println(" - Preparing " + meals[j]);
+                }
+            }
+        }
+    }
+
+#### Practice #2
+#### Practice #3
+#### Practice #4
+#### Practice #5
