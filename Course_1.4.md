@@ -1,7 +1,7 @@
 <h1 align='center'> Course 1: Java Programming for Beginners </h1> 
 
 # Course 1.4: Mastering Debugging with Java
-## Lesson 1: 
+## Lesson 1: Decoding Java Space Signals: Understanding Error Messages
 
 ### 1. Introduction to Error Messages
 Error messages in `Java` are crucial signals of problems in our code. Typically, an error message contains three key parts: the type of error, the location of the error (class name and line number), and a brief error description.
