@@ -398,6 +398,131 @@ Debugging to find a logical error involves thinking through your code, adding de
         System.out.println("Dividing " + dividend + " by "  + divisor); // Adding a debug statement to see that we are dividing by 0
         int quotient = dividend / (divisor + 1);
 
+#### Practice #1
+We have a small snippet that calculates and displays the total number of cookies available. There's a bug causing it to show an incorrect amount. Can you find and fix it?
+
+Original
+
+    class Solution {
+        public static void main(String[] args) {
+            int cookiesInStorage = 10; // the number of cookies in the storage
+            int cookiesBakedToday = 3;
+            int cookiesTotal = cookiesInStorage - cookiesBakedToday;
+            System.out.println("Total cookies we have: " + cookiesTotal);
+        }
+    }
+
+Error
+
+    Total cookies we have: 7
+
+Fixed
+
+    class Solution {
+        public static void main(String[] args) {
+            int cookiesInStorage = 10; // the number of cookies in the storage
+            int cookiesBakedToday = 3;
+            int cookiesTotal = cookiesInStorage + cookiesBakedToday;
+            System.out.println("Total cookies we have: " + cookiesTotal);
+        }
+    }
+
+#### Practice #2
+t calculates the total number of space objects in the solar system, given the count of planets and moons. Run the code, identify the bug that causes an incorrect result, and fix it.
+
+Original
+
+    class Solution {
+        public static void main(String[] args) {
+            int numberOfPlanets = 8;
+            int numberOfMoons = 182;
+            
+            // There is an issue with the following line
+            int totalSpaceObjects = numberOfPlanets * numberOfMoons; // This should calculate total space objects
+            
+            System.out.println('Total space objects in the solar system: ' + totalSpaceObjects);
+        }
+    }
+
+Error
+
+    solution.java:9: error: unclosed character literal
+            System.out.println('Total space objects in the solar system: ' + totalSpaceObjects);
+                               ^
+    solution.java:9: error: ';' expected
+            System.out.println('Total space objects in the solar system: ' + totalSpaceObjects);
+                                           ^
+    solution.java:9: error: ';' expected
+            System.out.println('Total space objects in the solar system: ' + totalSpaceObjects);
+                                                      ^
+    solution.java:9: error: ';' expected
+            System.out.println('Total space objects in the solar system: ' + totalSpaceObjects);
+                                                                ^
+    solution.java:9: error: unclosed character literal
+            System.out.println('Total space objects in the solar system: ' + totalSpaceObjects);
+                                                                         ^
+    solution.java:9: error: not a statement
+            System.out.println('Total space objects in the solar system: ' + totalSpaceObjects);
+                                                                             ^
+    solution.java:9: error: ';' expected
+            System.out.println('Total space objects in the solar system: ' + totalSpaceObjects);
+                                                                                              ^
+    7 errors
+
+Fixed
+
+    class Solution {
+        public static void main(String[] args) {
+            int numberOfPlanets = 8;
+            int numberOfMoons = 182;
+            
+            // There is an issue with the following line
+            int totalSpaceObjects = numberOfPlanets + numberOfMoons; // This should calculate total space objects
+            
+            System.out.println("Total space objects in the solar system: " + totalSpaceObjects);
+        }
+    }
+
+#### Practice #3
+Calculate the average distance of these 3 planets from the sun. Run the given code and see if it displays the correct average. There might be a small bug preventing the accurate calculation!
+
+Original
+
+    class Solution {
+        public static void main(String[] args) {
+            int planetDistances[] = {58, 108, 150}; // Distances in millions of kilometers
+            int totalDistance = 0;
+            
+            for (int i = 0; i <= planetDistances.length; i++) {
+                totalDistance += planetDistances[i];
+            }
+            int averageDistance = totalDistance / planetDistances.length;
+            System.out.println("The average distance of the planets from the sun is: " + averageDistance + " million kilometers");
+        }
+    }
+
+Error
+
+    Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+    	at Solution.main(solution.java:7)
+
+Fixed
+
+    class Solution {
+        public static void main(String[] args) {
+            int planetDistances[] = {58, 108, 150}; // Distances in millions of kilometers
+            int totalDistance = 0;
+            
+            for (int i = 0; i < planetDistances.length; i++) {
+                totalDistance += planetDistances[i];
+            }
+            int averageDistance = totalDistance / planetDistances.length;
+            System.out.println("The average distance of the planets from the sun is: " + averageDistance + " million kilometers");
+        }
+    }
+
+#### Practice #4
+
 
 ## Lesson 4:
 ### 2.
