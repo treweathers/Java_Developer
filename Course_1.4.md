@@ -52,3 +52,112 @@ This program results in an `ArrayIndexOutOfBoundsException:`
     Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 3
         at Solution.main(Solution.java:4)
 This message shows that we attempted to access index `5` in an array of length `3`. Doing so caused a runtime error at line `4` in `Solution.java`.
+
+#### Practice #1
+Review it carefully, identify the error, and fix it. Check the console for clues!
+Original
+
+    class Solution {
+        public static void main(String[] args) {
+            String message = "We have " + (2 + 2) + " rovers exploring Mars!;
+            System.out.println(message);
+        }
+    }
+
+Error
+
+    solution.java:3: error: unclosed string literal
+            String message = "We have " + (2 + 2) + " rovers exploring Mars!;
+                                                    ^
+    1 error
+
+Fixed
+
+    class Solution {
+        public static void main(String[] args) {
+            String message = "We have " + (2 + 2) + " rovers exploring Mars!";
+            System.out.println(message);
+        }
+    }
+#### Practice #2
+Can you find and fix the problem so we can continue stargazing?
+Original
+
+    class Solution {
+        public static void main(String[] args) {
+            int starsInGalaxy = 1000000000
+            System.out.println("There are " + starsInGalaxy + " stars in the Milky Way Galaxy.");
+        }
+    }
+
+Error
+
+    solution.java:3: error: ';' expected
+            int starsInGalaxy = 1000000000
+                                          ^
+    1 error
+
+Fixed
+
+    class Solution {
+        public static void main(String[] args) {
+            int starsInGalaxy = 1000000000;
+            System.out.println("There are " + starsInGalaxy + " stars in the Milky Way Galaxy.");
+        }
+    }
+#### Practice #3
+There's a bug when we attempt to access one of the compartments. Could you help us identify and fix the issue so that we can inspect the contents safely?
+Original
+
+    class Solution {
+        public static void main(String[] args) {
+            int[] storageCompartment = {5, 10, 15};
+            System.out.println(storageCompartment[3]); // Access the last element of the array
+        }
+    }
+
+Error
+
+    Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+    	at Solution.main(solution.java:4)
+
+Fixed
+
+    class Solution {
+        public static void main(String[] args) {
+            int[] storageCompartment = {5, 10, 15};
+            System.out.println(storageCompartment[2]); // Access the last element of the array
+        }
+    }
+
+#### Practice #4
+Ensure that the distress signal can be sent without errors. Please review the code and correct any issues so that communication is clear.
+
+Original
+
+    class Solution {
+        public static void main(String[] args) {
+            int value = 3;
+            String spaceMessage = value == 3 ? null : "Hey, this is a message from Space!";
+            System.out.println(spaceMessage.length()); // Process the space message
+        }
+    }
+
+Error
+
+    Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.length()" because "<local2>" is null
+    	at Solution.main(solution.java:5)
+
+Fixed
+    
+    class Solution {
+        public static void main(String[] args) {
+            int value = 3;
+            String spaceMessage = value == 3 ? null : "Hey, this is a message from Space!";
+            System.out.println(spaceMessage);
+        }
+    }
+     
+
+#### Practice #5
+#### Practice #6
