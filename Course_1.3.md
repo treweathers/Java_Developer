@@ -942,5 +942,47 @@ Please change the code so that it skips not just ride number 7, but also ride nu
     }
 
 #### Practice #4
+On your amusement park adventure, make sure to skip the closed rides and decide when to take a break. Write the code to accomplish this!
+
+    class Solution {
+        public static void main(String[] args) {
+            // Amusement Park Rides Carousel
+            int totalRides = 10;
+            int ride = 1;
+            while (ride <= totalRides) {
+                // TODO: Skip the closed ride #4
+                if (ride == 4) {
+                    ride++;
+                    continue;
+                }
+    
+                // TODO: Take a break and exit the carousel ride loop after ride #7
+                if (ride > 7) {
+                    break;
+                }
+                System.out.println("Enjoying ride number: " + ride);
+                ride++;
+      
+            }
+        }
+    }
+
 #### Practice #5
+Complete a loop condition and a statement inside a nested loop on your own?
+
+    class Solution {
+        public static void main(String[] args) {
+            for (int i = 1; i <= 4; i++) {
+                for (int j = 1; j <= 4; j++) {
+                    // TODO: Add a condition and control statement to skip the rest of the loop when 'j' is equal to 'i'.
+                    if (j == i) {
+                        break;
+                    }
+                    System.out.print(i + "" + j + " ");
+                }
+                System.out.println(); // Move to next line
+            }
+        }
+    }
+
 #### Practice #6
