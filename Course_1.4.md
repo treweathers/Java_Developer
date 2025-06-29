@@ -601,7 +601,7 @@ Here's the `catch` block in action:
         System.out.println("Caught a cosmic hurdle! Avoided an invalid array index access.\nError message: " + e.getMessage());
     }
     // Prints: Caught a cosmic hurdle! Avoided an invalid array index access.
-// Error message: Index 5 out of bounds for length 3
+    // Error message: Index 5 out of bounds for length 3
 Our `catch` block waits, ready to swoop in, and voila! It handles the exception smoothly.
 
 ### 3. Familiarizing with the Finally Block
