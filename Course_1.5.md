@@ -241,25 +241,41 @@ This example is pretty advanced, so don't hesitate to ask me to clarify it if yo
 #### Practice #1
 Run the code.
 
-class Solution {
-    public static void main(String[] args) {
-        // Create a formatted String for a students grade report.
-        String studentName = "Alice";
-        int mathsGrade = 85;
-        int scienceGrade = 90;
-        int artGrade = 75;
-
-        // Format and print the report card for the student
-        String reportCard = String.format("| %-14s | %-3d | %-3d | %-3d |", 
-                                          studentName, mathsGrade, scienceGrade, artGrade);
-        System.out.println("| Name           | Mth | Sci | Art |");
-        System.out.println("----------------------------------");
-        System.out.println(reportCard);
+    class Solution {
+        public static void main(String[] args) {
+            // Create a formatted String for a students grade report.
+            String studentName = "Alice";
+            int mathsGrade = 85;
+            int scienceGrade = 90;
+            int artGrade = 75;
+    
+            // Format and print the report card for the student
+            String reportCard = String.format("| %-14s | %-3d | %-3d | %-3d |", 
+                                              studentName, mathsGrade, scienceGrade, artGrade);
+            System.out.println("| Name           | Mth | Sci | Art |");
+            System.out.println("----------------------------------");
+            System.out.println(reportCard);
+        }
     }
-}
 
 
 #### Practice #2
+Adjust the formatting of the report card in the code to widen the scores column. Change the field width from 8 to 7 for the scores in math, science, and history subjects.
+
+    class Solution {
+        public static void main(String[] args) {
+            String studentName = "Lucy";
+            int mathScore = 88;
+            int scienceScore = 91;
+            int historyScore = 76;
+    
+            // Using `printf` to format and print the report card directly to the console
+            System.out.printf("| %-10s | %-7s | %-7s | %-7s |\n", "Name", "Math", "Science", "History");
+            System.out.printf("| %-10s | %-7d | %-7d | %-7d |\n", studentName, mathScore, scienceScore, historyScore);
+        }
+    }
+
+
 #### Practice #3
 #### Practice #4
 #### Practice #5
