@@ -179,3 +179,62 @@ Create a catalog entry for your favorite book in the library system. Remember to
             System.out.println(catalogEntryU + " " + catalogEntryL);
         }
     }
+
+## Lesson 2: String Formatting in Java: Enhancing Readability of Your Data
+### 1. Fundamentals of String Formatting in Java
+Our journey begins with understanding the concept of String formatting. This concept reshapes the way we view a string. In Java, it's somewhat akin to enhancing the appearance of existing data. Specifically, format strings are tools we use to 'dress up' our data. These strings employ a delimiter `%`, along with flags, width, and precision specifications to format the data. A simple example can illustrate this concept quite well:
+
+    String name = "Tom";
+    String greeting = String.format("Hello, %s!", name);
+    System.out.println(greeting);  // Prints: Hello, Tom!
+In this instance, we used `%s` - a placeholder for a string - that gets replaced by the string `Tom`.
+
+The other available options include:
+
+* `%d` - integer number
+* `%f` - float number
+
+### 2. Control Over Formatting With Width and Precision
+Let's explore how `width` and `precision` can further refine the display of our string. `Width` allows us to define a minimum number of characters, while precision sets the limit on the number of decimal digits or characters in a string:
+
+    int number = 123;
+    double percentage = 90.32167;
+    
+    // `%5d` specifies a minimum width of 5 characters for an integer, adding extra whitespaces to the beginning
+    // `%-5d` is the same as `%5d`, but whitespaces are now added to the end of the number
+    // `%.2f` limits the output to 2 decimal digits for a float number
+    String formatted = String.format("Number: %5d, Percentage: %.2f", number, percentage);
+    System.out.println(formatted);  // Prints: Number:   123, Percentage: 90.32
+    String formattedRight = String.format("Number: %-5d, Percentage: %.2f", number, percentage);
+    System.out.println(formattedRight);  // Prints: Number: 123  , Percentage: 90.32
+In this case, additional spaces for `number` are padded to print 5 characters (even though the number has just 3 digits), and `percentage` is truncated to two decimal places. When we use `formattedRight` and `%-5d`, extra whitespaces are added to the right instead.
+
+### 3. Padding and Aligning Strings
+To enhance the data display, we can adjust alignment and padding, filling extra spaces with specific characters. In this example, we fill the additional spaces with `0`:
+
+    int number = 10;
+    // `%05d` specifies the number will be returned with 5 characters in it, extra digits will be filled with 0
+    String formatted = String.format("Number [%05d]", number);
+    System.out.println(formatted); // Prints: Number [00010]
+This is particularly useful when numbers need to align to the right and have the same number of digits.
+
+### 4. Use of 'printf' and 'String.format' for Formatting
+Java provides `printf`, an alternative to `String.format`, for string formatting. `printf` is similar to `String.format`, but it prints directly to the console. Here's how it works:
+
+    int number = 123;
+    System.out.printf("Number: [%05d]", number);  // Prints: Number: [00123]
+
+### 5. Real-world Examples and Applications of String Formatting
+To wrap up, let's consider a practical application of string formatting. Suppose we need to print a report on students' grades in a table-like structure:
+
+    String header = String.format("| %-10s | %-5s | %-5s | %-5s |", "Name", "Math", "Sci", "Art");
+    String johnData = String.format("| %-10s | %-5d | %-5d | %-5d |", "John", 78, 82, 94);
+    String annaData = String.format("| %-10s | %-5d | %-5d | %-5d |", "Anna", 92, 87, 88);
+    
+    System.out.println(header);   // Prints: | Name       | Math  | Sci   | Art   |
+    System.out.println(johnData); // Prints: | John       | 78    | 82    | 94    |
+    System.out.println(annaData); // Prints: | Anna       | 92    | 87    | 88    |
+Such formatting substantially improves data readability.
+
+This example is pretty advanced, so don't hesitate to ask me to clarify it if you need any help!
+
