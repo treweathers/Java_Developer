@@ -692,6 +692,26 @@ Run the code.
     }
 
 #### Practice #2
+Transform the loop that prints our meal tasks from a for-in-collection loop into a while loop (while (condition) { ... }). Remember to keep the number of tasks constant and to maintain the same output format.
+
+    class Solution {
+        public static void main(String[] args) {
+            String[] meals = {"Breakfast", "Lunch", "Dinner"};
+            String[] tasks = {"Plan", "Cook", "Eat"};
+    
+            int i = 0;
+            while (i < meals.length) {
+                System.out.println("For " + meals[i] + ":");
+                i++;
+                int j = 0;
+                while (j < tasks.length) {
+                    System.out.println("- " + tasks[j]);
+                    j++;
+                }
+            }
+        }
+    }
+
 #### Practice #3
 #### Practice #4
 #### Practice #5
