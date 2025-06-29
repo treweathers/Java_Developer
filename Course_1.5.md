@@ -346,5 +346,20 @@ Create a nicely formatted report card header with left alignment and a record li
 #### Practice #5
 Craft a neatly formatted report for a student's grades using the formatting skills you've just learned. Your output should line up the student’s name and grades in their respective columns.
 
+	class Solution {
+	    public static void main(String[] args) {
+	        // Grading and report card formatting for a student
+	        String studentName = "Lucy";
+	        int mathGrade = 85;
+	        int scienceGrade = 90;
+	        int artGrade = 87;
+	        System.out.println("| Name      | Math  | Science   | Art  |");
+	        System.out.printf("| %-9s | %-5d | %-9d | %-5d|", studentName, mathGrade, scienceGrade, artGrade);
+	        // TODO: Use String formatting to align the name and grades in a single line for a report card
+	        // Outputs should look like this: | Name       | Math  | Science | Art    |
+	    }
+	}
 
+| Name      | Math  | Science   | Art  |
+| Lucy      | 85    | 90        | 87   |
  
