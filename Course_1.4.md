@@ -632,6 +632,110 @@ And here is an example:
     // Ready for the next hurdle! This code always runs.
 If the exception doesn't happen (e.g. if we correctly printed `myArray[2]` in the `try` block), the message `Ready for the next hurdle! This code always runs.` would still be printed.
 
+#### Practice #1
+Run the code.
+
+    class Solution {
+        public static void main(String[] args) {
+            int[] planets = {100, 200, 300}; // Represents the distance of planets in space units
+            
+            try {
+                int distance = planets[3]; // Trying to access the 4th planet, which does not exist
+                System.out.println("Distance: " + distance + " space units");
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Oops! We have encountered an unknown planet.");
+            } finally {
+                System.out.println("Exploration complete. Returning to Earth."); // This code runs regardless of the exception
+            }
+        }
+    }
+
+#### Practice #2
+Now, adjust your code so that navigating to the last star won't throw an exception. This small change will demonstrate that the finally block executes regardless of what occurs.
+
+Original
+
+    class Solution {
+        public static void main(String[] args) {
+            try {
+                int[] starCoordinates = {100, 200, 300};
+                System.out.println("The third star is at position: " + starCoordinates[3]);
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Error: Attempted to travel beyond galaxy limits!");
+            } finally {
+                System.out.println("Navigation systems recalibrated. Ready for the next adventure!");
+            }
+        }
+    }
+
+Error
+
+    Error: Attempted to travel beyond galaxy limits!
+    Navigation systems recalibrated. Ready for the next adventure!
+
+Fixed
+
+    class Solution {
+        public static void main(String[] args) {
+            try {
+                int[] starCoordinates = {100, 200, 300};
+                System.out.println("The third star is at position: " + starCoordinates[2]);
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Error: Attempted to travel beyond galaxy limits!");
+            } finally {
+                System.out.println("Navigation systems recalibrated. Ready for the next adventure!");
+            }
+        }
+    }
+
+#### Practice #3
+Add a catch block to handle an exception if our array access goes out of bounds, ensuring smooth space travel.
+    
+    class Solution {
+        public static void main(String[] args) {
+            int stellarSpeed = 5;
+            int[] spaceRoutes = new int[]{8, 2, 4};
+            
+            try {
+                System.out.println(spaceRoutes[stellarSpeed]); // Trying to access an invalid index
+            } // TODO: Handle an out-of-bounds access in the array
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            int stellarSpeed = 5;
+            int[] spaceRoutes = new int[]{8, 2, 4};
+            
+            try {
+                System.out.println(spaceRoutes[stellarSpeed]); // Trying to access an invalid index
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Error! Attempted to go nonexistent planet!");
+            }// TODO: Handle an out-of-bounds access in the array
+        }
+    }
+
+#### Practice #4
+Create a Java program that anticipates and handles out-of-bounds issues when accessing array elements. Remember to use a try-catch block to manage the exception and add a finally block that always executes.
+
+    class Solution {
+        public static void main(String[] args) {
+            int[] spaceRocks = {3, 7, 5};
+            try {
+                System.out.println(spaceRocks[3]);
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Error! Attemped to go to nonexistent planet!");
+            } finally {
+                System.out.println("Home sweet home. Mission complete.");
+            }
+            // TODO: Implement a try block to attempt accessing an index of the `spaceRocks` array
+            // TODO: Catch the potential ArrayIndexOutOfBoundsException thrown
+            // TODO: Add a 'finally' block that logs a message regardless of the exception outcome
+        }
+    }
+
+###### feedback: said "doesn't actually trigger an out-of-bounds exception, so the catch block never runs," but didn't specify needed to trigger the esception, just that the finally block executes (as it always does)⚠️.
+
 
 
 
