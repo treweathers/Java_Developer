@@ -899,6 +899,28 @@ Run the code.
     }
 
 #### Practice #2
+Run the code.
+
+    class Solution {
+        public static void main(String[] args) {
+            int ride = 1;
+            while (ride <= 5) {
+                if (ride == 2) {
+                    ride++;
+                    continue;
+                }
+                System.out.println("Riding attraction number: " + ride);
+                for (int turn = 1; turn <= 3; turn++) {
+                    if (ride == 4) {
+                        System.out.println("Wow, that's intense! Let's do a different ride.");
+                        break;
+                    }
+                    System.out.println("Turn " + turn + " on attraction " + ride);
+                }
+                ride++;
+            }
+        }
+    }
 
 #### Practice #3
 #### Practice #4
