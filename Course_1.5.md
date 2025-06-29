@@ -146,6 +146,36 @@ Run the code and use what you've learned to fix it.
 ###### feedback: says not working as intended, but is working perfectly, just not technically corrrect in method of comparing strings. Should have used methods and not standard comparison operators. Output is exactly the same⚠️.
 
 #### Practice #5
+Let's try cataloging a book by completing the code to give it an entry and display it correctly.
 
-
+    class Solution {
+        public static void main(String[] args) {
+            String author = "J.K. Rowling";
+            String title = "Harry Potter";
+            // TODO: Concatenate title and author in uppercase using + operator and store it in catalogEntry.
+            String catalogEntry = title.toUpperCase() + " BY " + author.toUpperCase();
+            // TODO: Print out the catalog display, replacing the last word "ROWLING" with "R...".
+            System.out.println(catalogEntry.substring(0, 20) + "R...");
+            // The output should be: HARRY POTTER BY J.K. R...
+        }
+    }
 #### Practice #6
+Create a catalog entry for your favorite book in the library system. Remember to concatenate the title, the word 'by', and the author's name. Then, convert the entry to uppercase and calculate its length. Display the final catalog entry with its character count!
+
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Declare a string variable for the book title and initialize it with your favorite book's title.
+            String title = "Divergent";
+            // TODO: Declare a string variable for the book author's name.
+            String author = "Veronica Roth";
+            // TODO: Concatenate the book title, the word 'by', and the author's name into one string.
+            // For example: Cosmic Java by Raj Comet
+            String catalogEntry = title + " by " + author;
+            // TODO: Convert the entire string to uppercase - this way we obtain the catalog entry name
+            String catalogEntryU = catalogEntry.toUpperCase();
+            // TODO: Calculate the length of the entire string.
+            int catalogEntryL = catalogEntryU.length();
+            // TODO: Print out the catalog entry in uppercase and its character length.
+            System.out.println(catalogEntryU + " " + catalogEntryL);
+        }
+    }
