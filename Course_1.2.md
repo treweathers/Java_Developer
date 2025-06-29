@@ -552,7 +552,7 @@ Add the missing crew roles that are crucial for any space mission to the list, t
         }
     }
 
-###### feedback: did not specify an order and code provided scinetist first, but them tell me to correc to make sure commander comes first?⚠️
+###### feedback: did not specify an order and code provided scinetist first, but them tell me to correct to make sure commander comes first?⚠️
 
 #### Practice #5
 Your mission is to create a starship crew list. To do this, you'll need to write code from scratch that adds crew members to an ArrayList and greet the captain. Don't forget to count your crew!
