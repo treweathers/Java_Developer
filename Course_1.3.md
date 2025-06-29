@@ -986,3 +986,28 @@ Complete a loop condition and a statement inside a nested loop on your own?
     }
 
 #### Practice #6
+Write a program for controlling amusement park rides! Remember to skip a certain ride that's under maintenance and close the park after reaching a specific ride number.
+
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Create a loop for the amusement park rides from 1 to 10
+            int totalRides = 10;
+            int ride = 1;
+            for (ride = 1; ride < totalRides; ride++) {
+                if (ride == 6) {
+                    continue;
+                }
+                if (ride == 9) {
+                    break;
+                }
+                System.out.println( "Enjoying ride number: " + ride);
+            }
+            // TODO: Skip ride #6, it's under maintenance right now
+            // TODO: End your trip early when reaching ride #9
+            // TODO: Print out the ride numbers that visitors enjoy on the way
+        }
+    }
+
+
+
+
