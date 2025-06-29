@@ -216,4 +216,126 @@ We can correct our previous example by simply adding a semicolon at the end of t
     }
 Having made this correction, our program will run without any issues. This example underscores the importance of meticulously cross-checking our code for potential syntax errors before we execute the compile command.
 
+#### Practice #1
+Help us debug the code so we can receive status updates from mission control once again. Run the code, check the output, and see if you can spot and fix the mistake.
+
+Original
+
+    class Solution {
+        public static void main(String[] args) {
+            int missionControl = 3
+            System.out.println("Virtual space mission control center status: " + missionControl);
+        }
+    }
+
+Error
+
+    solution.java:3: error: ';' expected
+            int missionControl = 3
+                                  ^
+    1 error
+
+Fixed
+    
+    class Solution {
+        public static void main(String[] args) {
+            int missionControl = 3;
+            System.out.println("Virtual space mission control center status: " + missionControl);
+        }
+    }
+
+#### Practice #2
+Identify the correct number of syntax errors to fix in our code module. But Houston, we have a problem! The code is ready to compile, but it appears we've omitted some vital code symbols somewhere within the module. Run diagnostics and correct the issue, ensuring every sequence is complete and our program launches successfully into the Java Galaxy!
+
+Original
+
+    class Solution {
+        public static void main(String args) {
+            int numOfErrors = 3;
+            System.out.println("Number of syntax errors to fix: " + numOfErrors);
+        }
+    }
+
+Error
+
+    Error: Main method not found in class Solution, please define the main method as:
+       public static void main(String[] args)
+    or a JavaFX application class must extend javafx.application.Application
+
+Fixed
+
+    class Solution {
+        public static void main(String[] args) {
+            int numOfErrors = 3;
+            System.out.println("Number of syntax errors to fix: " + numOfErrors);
+        }
+    }
+
+#### Practice #3
+Check the code and ensure all stars are logged. Something small is amiss. Can you spot and fix it?
+
+Original
+
+    class Solution {
+        public static void main(String[] args) {
+            int starsInGalaxy = 1000000;
+            System.out.println(startsInGalaxy);
+        }
+    }
+
+Error
+
+    solution.java:4: error: cannot find symbol
+            System.out.println(startsInGalaxy);
+                               ^
+      symbol:   variable startsInGalaxy
+      location: class Solution
+    1 error
+
+Fixed
+
+    class Solution {
+        public static void main(String[] args) {
+            int starsInGalaxy = 1000000;
+            System.out.println(starsInGalaxy);
+        }
+    }
+
+#### Practice #4
+A syntax mishap is preventing it from compiling. Your mission is to examine the code and rectify the error so that the program operates flawlessly.
+
+Original
+
+    class Solution {
+        public static void main(String[] args) {
+            int starsInGalaxy = 1000000; // Counting stars
+            (System.out.println(starsInGalaxy))()
+        }
+    }
+
+Error
+
+    solution.java:4: error: not a statement
+            (System.out.println(starsInGalaxy))()
+            ^
+    solution.java:4: error: ';' expected
+            (System.out.println(starsInGalaxy))()
+                                               ^
+    2 errors
+
+Fixed
+
+    class Solution {
+        public static void main(String[] args) {
+            int starsInGalaxy = 1000000; // Counting stars
+            System.out.println(starsInGalaxy);
+        }
+    }
+
+## Lesson 3:
+### 1.
+
+## Lesson 4:
+### 2.
+
 
