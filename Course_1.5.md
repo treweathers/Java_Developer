@@ -81,8 +81,71 @@ Run the code.
     }
 
 #### Practice #3
+Modify the given code to print not the raw compareTo result but a textual human-readable explanation instead. Remember - when the compareTo result is 0 - strings are equal, when it is negative - the first string is alphabetically smaller, and when it is positive - the first string is alphabetically larger.
 
+    class Solution {
+        public static void main(String[] args) {
+            String bookTitle = "Cosmic Java";
+            String anotherTitle = "Astronomy for Dummies";
+            int titleComparison = bookTitle.compareTo(anotherTitle);
+    
+            // Output the comparison result
+            if (titleComparison == 0) {
+                System.out.println("book titles are equal alphabetically!");
+            }
+            else if (titleComparison < 0)
+            {
+                System.out.println(bookTitle + " is less than " + anotherTitle + " alphabetically");
+            }
+            else  {
+                System.out.println(bookTitle + " is more than "+ anotherTitle + " alphabetically");
+            }
+            // TODO: Change the output to print explanation like "'<Title 1>' comes before '<Title 2>' alphabetically" instead
+        }
+    }
 
 #### Practice #4
+Run the code and use what you've learned to fix it.
+
+    class Solution {
+        public static void main(String[] args) {
+            String bookTitle = "Cosmic Java";
+            String modifiedTitle = bookTitle.toUpperCase().substring(0, 6) + " Adventures";
+            String anotherBookTitle = "COSMOS Java";
+            
+            System.out.println(anotherBookTitle);       
+            System.out.println(modifiedTitle);
+            if (modifiedTitle == anotherBookTitle) {
+                System.out.println("Both titles are the same.");
+            } else {
+                System.out.println("Titles are different.");
+            }
+        }
+    }
+    
+    COSMOS Java
+    COSMIC Adventures
+    Titles are different.
+    
+    class Solution {
+        public static void main(String[] args) {
+            String bookTitle = "Cosmic Java";
+            String modifiedTitle = bookTitle.toUpperCase().substring(0, 6) + " Adventures";
+            String anotherBookTitle = "COSMOS Java";
+            
+            System.out.println(anotherBookTitle);       
+            System.out.println(modifiedTitle);
+            if (modifiedTitle.equals(anotherBookTitle)) {
+                System.out.println("Both titles are the same.");
+            } else {
+                System.out.println("Titles are different.");
+            }
+        }
+    }
+
+###### feedback: says not working as intended, but is working perfectly, just not technically corrrect in method of comparing strings. Should have used methods and not standard comparison operators. Output is exactly the same⚠️.
+
 #### Practice #5
+
+
 #### Practice #6
