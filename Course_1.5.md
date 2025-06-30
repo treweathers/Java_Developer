@@ -607,3 +607,53 @@ Now, put your knowledge to the test by writing a program that filters a forbidde
 	}
 
 
+## Lesson 5: Splitting and Joining in Java for Text Wizards
+### 1. Understanding String Splitting in Java
+In Java, the `split()` method divides a string into several substrings based on a delimiter — a character that separates words. It stores these substrings into an array. Here's an example to clarify:
+
+	// Our original sentence
+	String sentence = "I love programming.";
+	
+	// Let's split it into individual words
+	String[] words = sentence.split(" "); // Now words = ["I", "love", "programming."]
+	System.out.println(Arrays.toString(words)); // [I, love, programming.]
+In this snippet, we have a sentence that we divide into separate words using the `split()` method with a space as the delimiter. The results are stored in the array `words`.
+
+### 2. Mastering String Joining
+The `join()` method merges an array of strings back into a single string using a specified delimiter. It is the reverse of the `split()` method. Here's how it works:
+
+	// Our original words
+	String[] words = {"programming", "I" "love"};
+	
+	// Let's join the words into a new sentence
+	String sentence = String.join(" ", words);
+	
+	// Now "sentence" is "programming I love"
+In the example above, we took an array of words and combined them into a single string, using a space as the delimiter.
+
+### 3. Combining Splitting and Joining
+You can combine `split()` and `join()` to rearrange sentences. For instance, let's take `"I love programming"` and rearrange it to `"programming love I"`:
+
+	String sentence = "I love programming.";
+	
+	// Split the sentence into words
+	String[] words = sentence.split(" ");
+	
+	// Swap the first and third words
+	String tempWord = words[0];
+	words[0] = words[2];
+	words[2] = tempWord;
+	
+	// The `words` is ["programming", "love", "I"] now
+	
+	// Join the words back into a sentence
+	String newSentence = String.join(" ", words);
+	
+	System.out.println(newSentence); // Output: "programming love I"
+In this example, we first split the sentence into words. Next, we swapped the first and last words, and, finally, we joined them back into a new sentence.
+
+In fact, `String.join` is so flexible that it even allows to specify all parts to join one by one:
+
+	System.out.println(String.join(" ", "See", "how", "you", "can", "join", "any", "number", "of", "words!"));
+	// Output: See how you can join any number of words!
+It's very useful at times!
