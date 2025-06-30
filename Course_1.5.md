@@ -592,5 +592,18 @@ Your task is to check whether a message contains a specific word in any letter c
 	}
 
 #### Practice #5
+Now, put your knowledge to the test by writing a program that filters a forbidden word from a chat message, replacing it with asterisks.
+
+	class Solution {
+	    public static void main(String[] args) {
+	        String message = "The quick brown fox jumps over the lazy dog.";
+	        String forbiddenWord = "lazy";
+	        // TODO: Check if the message contains the forbidden word.
+	        System.out.println(message.contains(forbiddenWord));
+	        // TODO: If it does, replace the forbidden word with "****".
+	        System.out.println(message.replace(forbiddenWord, "****"));
+	        // TODO: Print the censored message.
+	    }
+	}
 
 
