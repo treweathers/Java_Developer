@@ -363,3 +363,66 @@ Craft a neatly formatted report for a student's grades using the formatting skil
 	| Name      | Math  | Science   | Art  |
 	| Lucy      | 85    | 90        | 87   |
  
+## Lesson 3: Mastering Special Character Sequences
+### 1. Introduction to Special Character Sequences
+Escape sequences are characters prefixed with a backslash (`\`), which triggers unique behavior in subsequent characters. They're incredibly handy for commanding line breaks, adding tab spaces, or including a backslash or quotes in a string.
+
+Here's an example of the newline character (`\n`) in action:
+	
+	public class HelloWorld {
+	    public static void main(String[] args) {
+	        System.out.println("Programming is fun!\nLet's learn Java together.");
+	    }
+	    // Output:
+	    // Programming is fun!
+	    // Let's learn Java together.
+	}
+The output appears on two separate lines!
+
+### 2. Understanding Newline Character
+Think of `\n` as your in-code line breaker. It efficiently splits the output, enhancing readability. Here's how it works:
+
+	class Main {
+	  public static void main(String[] args) {
+	    System.out.println("Java\nProgramming");
+	    // Output:
+	    // Java
+	    // Programming
+	  }
+	}
+The output breaks "Java" and "Programming" into separate lines, all thanks to `\n`.
+
+### 3. Exploring Tab and Backslash Characters
+To insert a tab space, we use `\t`. It's useful for aligning the output or creating separations in your text.
+
+Check out this example:
+
+	class Main {
+	  public static void main(String[] args) {
+	    System.out.println("Java\tProgramming");
+	    // Output: Java     Programming (with a tab space between)
+	  }
+	}
+If you need to include a backslash in your string, you'll have to use `\\`.
+
+	class Main {
+	  public static void main(String[] args) {
+	    System.out.println("Java\\Programming");
+	  }
+	  // Output: Java\Programming
+	}
+Note that there's a backslash in the output because we used `\\`. Also, note that just using a single backslash inside the string will not work and will cause a compilation error - because the backslash is a special character.
+
+### 4. Working with Quotes in Strings
+Do you wish to include quotes inside a string or inside a char? Here's how. JavaScript provides `\"` and `\'` for double and single quotes, respectively. Take a look for yourself:
+
+	class Main {
+	  public static void main(String[] args) {
+	    System.out.println("Java \"Programming\" is fun");
+	    System.out.println("It's okay to say \'Java is cool!\'");
+	  }
+	  // Output:
+	  // Java "Programming" is fun
+	  // It's okay to say 'Java is cool!'
+	}
+The output clearly illustrates how `\"` and `\'` help infuse strings with quotes!
