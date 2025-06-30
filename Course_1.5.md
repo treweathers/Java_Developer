@@ -534,6 +534,21 @@ Replacing specific characters within strings is simple with the `replace()` meth
 	System.out.println(str.replace("apples", "oranges")); // Output: "Apples are sweet. I love oranges!"
 From modifying file paths to correcting user inputs, this replacement method effortlessly incorporates changes!
 
+#### Practice #1
+Run the code.
 
+	class Solution {
+	    public static void main(String[] args) {
+	        String chatMessage = "I love coding. Coding is fun!";
+	        String filteredMessage = chatMessage.replace("Coding", "Java");
+	        
+	        System.out.println(filteredMessage); // Output: "I love coding. Java is fun!"
+	    }
+	}
+
+#### Practice #2
+#### Practice #3
+#### Practice #4
+#### Practice #5
 
 
