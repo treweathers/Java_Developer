@@ -316,3 +316,73 @@ You are tasked with creating a greeting system for our virtual office environmen
             // TODO: Test your welcome method with a name and the day of the week
         }
     }
+
+## Lesson 3: Java's Built-In Functions
+### 1. Types of Built-In Functions
+Built-in functions are like freebies in Java. They are built-in and ready to use. You just call them, and they respond, making your programming life easier!
+
+Java offers a wide range of built-in functions that mostly fit under three categories — Math, String, and Array. Let's dive in!
+
+### 2. Built-in Functions: Mathematical Functions
+Java's `Math` class is your calculator. Key functions include:
+
+* `Math.max(a, b)`: It resolves the "which number is greater" debate! For example, `Math.max(8, 10) = 10`.
+
+* `Math.pow(a, b)`: Raises `a` to the power `b`. For example, `Math.pow(2, 3) = 8.0`, as 
+  ^3 = 8.0 as 2^3 = 8.
+
+* `Math.sqrt(a)`: Calculates the square root of a. For example, `Math.sqrt(16) = 4`, as 
+sqrt(16) = 4
+
+*` Math.random()`: Returns a float random number from `0.0` to `1.0`, adding an element of surprise.
+
+### 3. Built-in Functions: String Manipulation Functions
+Java strings carry built-in methods for manipulation:
+
+* `str.length()`: Measures the size of string `str`. For example, `"Hello!".length() = 5`.
+
+* `str.charAt(index)`: Finds the character at the index-th location of string str. For example, `"Hello!".charAt(0) = 'H'`.
+
+* `str.substring(startIndex, endIndex)`: Carves out a part of the narrative `str` from `startIndex` (inclusive) to `endIndex` (exclusive). For example, `"Hello".substring(1, 3) = "el"`.
+
+* `str.concat(anotherStr)`: Merges `str` and `anotherStr` into one string. For example, `"Hello".concat(" world") = "Hello world"`.
+
+* `str.equals(anotherStr)`: Checks if `str` and `anotherStr` match completely. For example, `"Hello".equals("Hello") = true`.
+
+### 4. Built-in Functions: Array Functions
+Java arrays come with built-in functions:
+
+* `Arrays.toString(arr)`: Translates `arr` into a string.
+* `Arrays.sort(arr)`: Organizes `arr` in ascending order, much like arranging books alphabetically. For example,
+
+        int[] a = {5, 2, 4, 3, 1};
+        Arrays.sort(a);
+        System.out.println(Arrays.toString(a)); // Output: [1, 2, 3, 4, 5]
+### 5. Using Built-in Functions
+Let's get hands-on with a sample code:
+
+    import java.util.Arrays;
+    
+    public class Main {
+        public static void main(String[] args) {
+            // Math functions in action
+            System.out.println(Math.max(5, 10));  // prints 10
+            System.out.println(Math.pow(3, 2));  // prints 9.0
+            System.out.println(Math.sqrt(16));   // prints 4.0
+            System.out.println(Math.random());   // prints a random number
+    
+            // String functions at work
+            String str1 = "Hello", str2 = " World!";
+            System.out.println(str1.length());         // prints 5
+            System.out.println(str1.charAt(1));        // prints 'e'
+            System.out.println(str2.substring(1, 4));  // prints 'Wor'
+            System.out.println(str1.concat(str2));     // prints 'Hello World!'
+            System.out.println(str1.equals(str2));     // prints false
+    
+            // Array functions used
+            int[] arr = {7, 2, 10, 5, 3};
+            Arrays.sort(arr);
+            System.out.println(Arrays.toString(arr));  // prints '[2, 3, 5, 7, 10]'
+        }
+    }
+Copy this into your environment or the CodeSignal IDE and run it to get a hands-on understanding of Java's built-in functions.
