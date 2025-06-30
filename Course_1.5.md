@@ -657,3 +657,32 @@ In fact, `String.join` is so flexible that it even allows to specify all parts t
 	System.out.println(String.join(" ", "See", "how", "you", "can", "join", "any", "number", "of", "words!"));
 	// Output: See how you can join any number of words!
 It's very useful at times!
+
+#### Practice #1
+Run the code.
+
+class Solution {
+    public static void main(String[] args) {
+        // Quote by Frank Zappa about books needing formatting
+        String quote = "So many books, so little time.";
+        
+        // Split the quote into words using space as the delimiter
+        String[] words = quote.split(" ");
+        
+        // Join the words into a sentence
+        String joinedQuote = String.join(" ", words);
+        
+        // Remove the comma from the joined sentence        
+        String formattedQuote = joinedQuote.replace(",", ""); 
+        
+        // Print the formatted quote
+        System.out.println(formattedQuote); // prints "So many books so little time."
+    }
+}
+
+#### Practice #2
+
+
+#### Practice #3
+#### Practice #4
+#### Practice #5
