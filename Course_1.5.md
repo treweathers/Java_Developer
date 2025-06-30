@@ -756,6 +756,19 @@ Here's a piece of code that's supposed to rearrange a sentence but isn't giving 
 #### Practice #4
 Take the provided snippet and complete the code where marked with TODO. Remember, splitting strings is crucial for text analysis!
 
-
+	class Solution {
+	    public static void main(String[] args) {
+	        String bookQuote = "To be or not to be that is the question";
+	
+	        // TODO: Use the split method to divide the quote into individual words and store them in an array.
+	        String [] words = bookQuote.split(" ");
+	        // TODO: Replace the last word ("question") with the word "boolean"
+	        String tempWord = words[9];
+	        words[9] = "boolean";
+	        // TODO: Use the join method to recreate the quote from the array of words.
+	        String formattedQuote = String.join(" ", words);
+	        System.out.println(formattedQuote); // Should print "To be or not to be that is the boolean"
+	    }
+	}
 
 #### Practice #5
