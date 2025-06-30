@@ -224,4 +224,95 @@ The `add()` function adapts its action according to the number of arguments. Bea
 ### 3. Importance of Function Overloading
 Function overloading enables us to code in a straightforward and efficient manner. It's like having pets of different species, but all sharing a common name based on their type. Overloading clusters with similar tasks under one function name improves both readability and organization.
 
+#### Practice #1
+Run the code.
 
+    class Solution {
+        static void print() {
+            System.out.println("The office is open!");
+        }
+        
+        static void print(int hours) {
+            System.out.println("The office is open for " + hours + " hours today.");
+        }
+    
+        public static void main(String[] args) {
+            print();
+            print(8);
+        }
+    }
+
+#### Practice #2
+The given code contains two overridden implementations of checkNumber - Modify the checkNumber function variation that takes a double value to fill in the implementation there. Let's see overriding in action!
+
+    class Solution {
+        static String checkNumber(int number) {
+            if (number > 0) {
+                return "Positive";
+            } else if (number < 0) {
+                return "Negative";
+            } else {
+                return "Zero";
+            }
+        }
+    
+        static String checkNumber(double number) {
+            // This function should to the same as `checkNumber(int)`, but now for `double`
+          if (number > 0) {
+                return "Positive";
+            } else if (number < 0) {
+                return "Negative";
+            } else {
+                return "Zero";
+            }
+        }
+    
+        public static void main(String[] args) {
+            System.out.println(checkNumber(10)); // Positive
+            System.out.println(checkNumber(-0.5)); // Negative
+            System.out.println(checkNumber(0)); // Zero
+            System.out.println(checkNumber(0.0)); // Zero
+            System.out.println(checkNumber(0.1)); // Positive
+        }
+    }
+
+#### Practice #3
+Define an overloaded function to display the tool's name in our office environment code.
+
+    class Solution {
+        // Print with overloading for different office tool names
+        static void printToolName(String toolName) {
+            System.out.println("The name of the tool is: " + toolName);
+        }
+        
+        // TODO: Overload the printToolName function to accept a toolName and its quantity.
+        // Print how many units of the tool the office has.
+        static void printToolName(String tool, int tools) {
+          System.out.println("The amount of tool units is: " + tools + ", that is a " + tool);
+      }
+        public static void main(String[] args) {
+          printToolName("Stapler");
+          // The below call should print "The office has 2 units of Whiteboard"
+          printToolName("Whiteboard", 2);
+        }
+    }
+
+#### Practice #4
+You are tasked with creating a greeting system for our virtual office environment. Write the complete code to overload a method that welcomes employees differently, depending on whether it's just their name or both their name and the day of the week.
+
+    class Solution {
+        // TODO: Create an overloaded method to welcome an employee by name
+        public static String welcome(String name){
+            return "Welcome " + name + " to this job!";                
+        }
+        // TODO: Overload the welcome method to include a greeting that also prints the day of the week
+        public static String welcome(String name, String dayOfWeek){
+            return "Welcome " + name + " to this job on " + dayOfWeek + "!";                
+        }
+        public static void main(String[] args) {
+            // TODO: Test your welcome method with just a name
+            System.out.println(welcome("Tre"));
+            System.out.println(welcome("Beautiful", "Monday"));
+            // TODO: Test your welcome method with a name and the day of the week
+        }
+}
