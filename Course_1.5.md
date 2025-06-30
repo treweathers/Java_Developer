@@ -426,3 +426,22 @@ Do you wish to include quotes inside a string or inside a char? Here's how. Java
 	  // It's okay to say 'Java is cool!'
 	}
 The output clearly illustrates how `\"` and `\'` help infuse strings with quotes!
+
+#### Practice #1
+Run the code.
+
+	class Solution {
+	    public static void main(String[] args) {
+	        // Below String represents a simple formatted text editing
+	        // that might be seen in a document editor.
+	        // It uses the newline and tab special character sequences.
+	        System.out.println("Title:\tJava String Manipulation\n\nContent:\n\tJava strings are powerful.\n\tThey can contain \"special characters\" like newline (\\n) and tab (\\t).");
+	    }
+	}
+
+#### Practice #2
+
+
+#### Practice #3
+#### Practice #4
+#### Practice #5
