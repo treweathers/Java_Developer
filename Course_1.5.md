@@ -564,7 +564,33 @@ Modify the code to replace another phrase in the message. This time, change the 
 	}
 
 #### Practice #3
+You may have noticed that some chat messages with smiles aren't displaying correctly on the screen. Can you identify and rectify the issue in this code snippet? Ensure all smiles are moderated correctly.
+
+	class Solution {
+	    public static void main(String[] args) {
+	        String chatMessage = "I love coding with CodeSignal!! :-) Coding is fun :-)";
+	        
+	        String moderatedMessage = chatMessage.replace(":-)", "[smiley]");
+	
+	        System.out.println(moderatedMessage);
+	    }
+	}
+
 #### Practice #4
+Your task is to check whether a message contains a specific word in any letter case and then replace it with the correct case. Fill in the blanks to complete this operation.
+
+	class Solution {
+	    public static void main(String[] args) {
+	        String chatMessage = "Java is cool! But sometimes, java can be challenging.";
+	
+	        // TODO: Add a condition to check if 'chatMessage' contains the word "java"
+	        System.out.println(chatMessage.contains("java"));
+	        // TODO: If it does contain, add a line to replace all occurrences of this word "java" with "Java"
+	        System.out.println(chatMessage.replace("java", "Java"));
+	        // Should replace and output: "Java is cool! But sometimes, Java can be challenging."
+	    }
+	}
+
 #### Practice #5
 
 
