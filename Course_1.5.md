@@ -508,5 +508,32 @@ You need to format a document title and sections using special character sequenc
 	    }
 	}
 
-## Lesson 4: 
+## Lesson 4: Search and Replace in Java
+### 1. String Searching: The 'indexOf' and 'lastIndexOf' Methods
+Our exploration begins with a string search. Java provides the `indexOf()` and `lastIndexOf()` methods. `indexOf()` returns the index of the first occurrence of a substring, while `lastIndexOf()` yields the index of the last.
+
+	String str = "Hello, CodeSignal learners!";
+	System.out.println(str.indexOf("CodeSignal")); // Output: 7, as str[7:16] = "CodeSignal"
+In this example, the term `"CodeSignal"` begins at index 7 in our string.
+
+	String str = "CodeSignal is fun. I love CodeSignal!";
+	System.out.println(str.lastIndexOf("CodeSignal")); // Output: 27
+Notice how `"CodeSignal"` starts at index 27 in the last occurrence within our string. Efficient, isn't it?
+
+### 2. Checking Substring Existence: The 'contains' Method
+The `contains()` method confirms whether a string contains a specific sequence of characters, regardless of its location.
+
+	String str = "Welcome to CodeSignal!";
+	System.out.println(str.contains("CodeSignal")); // Output: true
+This shows that `"CodeSignal"` indeed exists within our string. These practical methods empower us to tackle real-life situations!
+
+### 3. String Replacement: The 'replace' method
+Replacing specific characters within strings is simple with the `replace()` method. `replace()` substitutes all occurrences of the provided string and replaces it with another string.
+
+	String str = "Apples are sweet. I love apples!";
+	System.out.println(str.replace("apples", "oranges")); // Output: "Apples are sweet. I love oranges!"
+From modifying file paths to correcting user inputs, this replacement method effortlessly incorporates changes!
+
+
+
 
