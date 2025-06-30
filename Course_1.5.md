@@ -440,8 +440,73 @@ Run the code.
 	}
 
 #### Practice #2
+Your task is to include quotes around the provided proverb and the author's name in the code below. Ensure you use escape sequences correctly. Include quotes before the word The, and after step.
 
+	class Solution {
+	    public static void main(String[] args) {
+	        // Printing a proverb with a newline for formatting
+	        System.out.println("\"The journey of a thousand miles begins with a single step.\"\n- Author");
+	    }
+	}
 
 #### Practice #3
+Can you spot the bug and fix it? The code is intended to display the title and proverb on separate lines and include specific special characters.
+
+	class Solution {
+	    public static void main(String[] args) {
+	        System.out.println("Document Title: "The Cosmic Code"\nFamous Proverb: To the stars, through difficulties \ through learning Java.");
+	    }
+	}
+	
+	solution.java:3: error: ')' or ',' expected
+	        System.out.println("Document Title: "The Cosmic Code"\nFamous Proverb: To the stars, through difficulties \ through learning Java.");
+	                                             ^
+	solution.java:3: error: ';' expected
+	        System.out.println("Document Title: "The Cosmic Code"\nFamous Proverb: To the stars, through difficulties \ through learning Java.");
+	                                                       ^
+	solution.java:3: error: illegal escape character
+	        System.out.println("Document Title: "The Cosmic Code"\nFamous Proverb: To the stars, through difficulties \ through learning Java.");
+	                                                                                                                   ^
+	solution.java:3: error: not a statement
+	        System.out.println("Document Title: "The Cosmic Code"\nFamous Proverb: To the stars, through difficulties \ through learning Java.");
+	                                                        ^
+	4 errors
+	
+	class Solution {
+	    public static void main(String[] args) {
+	        System.out.println("Document Title: \"The Cosmic Code\"\nFamous Proverb: To the stars, through difficulties \\ through learning Java.");
+	    }
+	}
+
 #### Practice #4
+Create a message titled "Java String Manipulation Guide" with a properly formatted document title, newline, and tabbed date using special character sequences.
+
+	class Solution {
+	    public static void main(String[] args) {
+	      // TODO: Add a line of code that prints a formatted document title with a special sequence for a newline and then a tabbed date
+	      // Output example:
+	      //
+	      // Document Title: "Java String Manipulation Guide"
+	      //     Date: 2023-04-01
+	      System.out.println("Document Title: \"Java String Manipulation Guide\"\n\t Date: 2023-04-01");
+	    }
+	}
+
 #### Practice #5
+You need to format a document title and sections using special character sequences, such as newlines (\n) and tabs (\t), to make them look organized. Remember what you've learned about \n and \t. It's all up to you to write the code from scratch!
+
+	class Solution {
+	    public static void main(String[] args) {
+	        // TODO: Display the document title, followed by sections with appropriate tabulations and a conclusion, all separated by newlines.
+	        System.out.println("Title: Java String Manipulations \n\t - Introduction \n\t - Special Characters \n\t - Practice Exercises \n Conclusion: Mastery of Java strings!");
+	        // Here is an example of the output:
+	        // Title: Java String Manipulations
+	        //     - Introduction
+	        //     - Special Characters
+	        //     - Practice Exercises
+	        // Conclusion: Mastery of Java strings!        
+	    }
+	}
+
+## Lesson 4: 
+
