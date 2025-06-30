@@ -547,6 +547,22 @@ Run the code.
 	}
 
 #### Practice #2
+Modify the code to replace another phrase in the message. This time, change the word "refrain" to "avoid" using the replace() method.
+
+	class Solution {
+	    public static void main(String[] args) {
+	        // A message in an online chat room:
+	        String message = "Java is fun, but please refrain from using bad words.";
+	
+	        // Moderating the chat by finding and replacing inappropriate language:
+	        String moderatedMessage = message.replace("bad words", "****");
+	        // Do one more change to replace "refrain" with "avoid"
+	        String moderatedMessage2 = moderatedMessage.replace("refrain", "avoid");
+	        // Display the moderated message:
+	        System.out.println(moderatedMessage2);
+	    }
+	}
+
 #### Practice #3
 #### Practice #4
 #### Practice #5
