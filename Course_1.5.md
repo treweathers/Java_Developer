@@ -772,3 +772,17 @@ Take the provided snippet and complete the code where marked with TODO. Remember
 	}
 
 #### Practice #5
+You're almost a master at manipulating strings, Space Voyager! Your final challenge is to extract a fragment from a famous quote. Begin by identifying the last three individual words and use what you've learned about string joining to unite them into a new snippet.
+
+	class Solution {
+	    public static void main(String[] args) {
+	        String quote = "To be, or not to be: that is the question.";
+	
+	        // TODO: Split the quotation into an array of words
+	        String [] words = quote.split(" ");
+	        // TODO: Use String.join() to concatenate the last three words into a short snippet
+	        String joinedWords = String.join( " ", words[7], words[8], words[9]);
+	        // TODO: Now, print out the snippet of the joined three last words
+	        System.out.println(joinedWords);
+	    }
+	}
