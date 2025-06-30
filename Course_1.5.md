@@ -180,6 +180,8 @@ Create a catalog entry for your favorite book in the library system. Remember to
         }
     }
 
+###### feedback: was this the one with gramatically incorrect output?⚠️
+
 ## Lesson 2: String Formatting in Java: Enhancing Readability of Your Data
 ### 1. Fundamentals of String Formatting in Java
 Our journey begins with understanding the concept of String formatting. This concept reshapes the way we view a string. In Java, it's somewhat akin to enhancing the appearance of existing data. Specifically, format strings are tools we use to 'dress up' our data. These strings employ a delimiter `%`, along with flags, width, and precision specifications to format the data. A simple example can illustrate this concept quite well:
@@ -661,28 +663,99 @@ It's very useful at times!
 #### Practice #1
 Run the code.
 
-class Solution {
-    public static void main(String[] args) {
-        // Quote by Frank Zappa about books needing formatting
-        String quote = "So many books, so little time.";
-        
-        // Split the quote into words using space as the delimiter
-        String[] words = quote.split(" ");
-        
-        // Join the words into a sentence
-        String joinedQuote = String.join(" ", words);
-        
-        // Remove the comma from the joined sentence        
-        String formattedQuote = joinedQuote.replace(",", ""); 
-        
-        // Print the formatted quote
-        System.out.println(formattedQuote); // prints "So many books so little time."
-    }
-}
+	class Solution {
+	    public static void main(String[] args) {
+	        // Quote by Frank Zappa about books needing formatting
+	        String quote = "So many books, so little time.";
+	        
+	        // Split the quote into words using space as the delimiter
+	        String[] words = quote.split(" ");
+	        
+	        // Join the words into a sentence
+	        String joinedQuote = String.join(" ", words);
+	        
+	        // Remove the comma from the joined sentence        
+	        String formattedQuote = joinedQuote.replace(",", ""); 
+	        
+	        // Print the formatted quote
+	        System.out.println(formattedQuote); // prints "So many books so little time."
+	    }
+	}
 
 #### Practice #2
+Adjust the formatting of the quote in the provided starter code by changing the delimiter in the join() method. Replace the dash (" - ") with a comma followed by a space (", "), which is more conventional for lists in sentences. Apply your new knowledge of string joining to polish the quote.
 
+	class Solution {
+	    public static void main(String[] args) {
+	        // Quote by Frank Zappa about books needing formatting
+	        String quote = "So many books, so little time.";
+	        
+	        // Split the quote into words using space as the delimiter
+	        String[] words = quote.split(" ");
+	        
+	        // Join the words using a dash to emphasize pause for an editorial effect
+	        String reformattedQuote = String.join(", ", words);
+	        
+	        // Print the reformatted quote
+	        System.out.println(reformattedQuote); // prints "So - many - books, - so - little - time."
+	    }
+	}
+
+###### feedback: gramatically incorrect output⚠️
 
 #### Practice #3
+Here's a piece of code that's supposed to rearrange a sentence but isn't giving us the output we’d expect. Can you spot what might be wrong and fix it? Remember, you can execute the code to see how it behaves!
+
+	class Solution {
+	    public static void main(String[] args) {
+	        // A list of words to form a book-related sentence
+	        String[] words = {"books", "are", "the", "treasure"};
+	
+	        // Joining the words to form a grammatical sentence with a period at the end
+	        String sentence = String.join(" ", words) + ".";
+	
+	        // Printing the sentence
+	        System.out.println(sentence);
+	        
+	        // Now let's rearrange the sentence to say "treasure books are the"
+	        String[] rearrangedWords = {words[3], words[0], words[1], words[2]};
+	
+	        // Joining the rearranged words
+	        String rearrangedSentence = String.join("", rearrangedWords);
+	
+	        // Printing the rearranged sentence
+	        System.out.println(rearrangedSentence);
+	    }
+	}
+	
+	books are the treasure.
+	treasurebooksarethe
+	
+	class Solution {
+	    public static void main(String[] args) {
+	        // A list of words to form a book-related sentence
+	        String[] words = {"books", "are", "the", "treasure"};
+	
+	        // Joining the words to form a grammatical sentence with a period at the end
+	        String sentence = String.join(" ", words) + ".";
+	
+	        // Printing the sentence
+	        System.out.println(sentence);
+	        
+	        // Now let's rearrange the sentence to say "treasure books are the"
+	        String[] rearrangedWords = {words[3], words[0], words[1], words[2]};
+	
+	        // Joining the rearranged words
+	        String rearrangedSentence = String.join(" ", rearrangedWords);
+	
+	        // Printing the rearranged sentence
+	        System.out.println(rearrangedSentence);
+	    }
+	}
+
 #### Practice #4
+Take the provided snippet and complete the code where marked with TODO. Remember, splitting strings is crucial for text analysis!
+
+
+
 #### Practice #5
