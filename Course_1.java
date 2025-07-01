@@ -1,5 +1,6 @@
 //Course 1: Java Programming for Beginners
 
+//COURSE 1.1: Getting Started with Java
 //LESSON 1: Java Basics: Syntax, Comments, Semicolons, and Your First Program
 //Practice #1
     class Solution {
@@ -85,10 +86,6 @@
             System.out.println(planetsInSolarSystem);
         }
     }
-
-
-//Course 1.1: Getting Started with Java
-
 
 //Course 1.2: Learning Simple Data Structures in Java
 
