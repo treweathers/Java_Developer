@@ -462,8 +462,46 @@ In the main class, we will call both constructors like this:
       }
     }
 
-####
-####
-####
-####
-####
+#### Practice #1
+Run the code.
+
+#### Practice #2
+Your task is to enhance the Car constructor we've developed by implementing constructor overloading.
+
+Implement a new Car constructor with only model and year specified, setting the default color "White", benefitting our car manufacturing process during instances where a color preference is not indicated.
+
+At the end, create an instance of the Car class using the new constructor, and print all class fields to make sure everything has been set correctly.
+
+    class Car {
+        String model;
+        String color;
+        int year;
+    
+        // Constructor with parameters
+        Car(String model, String color, int year) {
+            this.model = model;
+            this.color = color;
+            this.year = year;
+        }
+    
+        // Add an overloaded constructor here
+         Car(String model, int year) {
+            this.model = model;
+            this.color = "White";
+            this.year = year;
+        } 
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            Car myCar = new Car("Sedan", "Red", 2021);
+            System.out.println(myCar.model + " - " + myCar.color + " - " + myCar.year);  // prints: Sedan - Red - 2021
+            // TODO: create a new class instance calling the newly created constructor, and print all class attributes
+            Car myCar2 = new Car("Honda", 2022);
+            System.out.println(myCar2.model + " - " + myCar2.color + " - " + myCar2.year);
+        }
+    }
+
+#### Practice #3
+#### Practice #4
+#### Practice #5
