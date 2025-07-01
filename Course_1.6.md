@@ -745,28 +745,83 @@ Enhance the Employee ID validation in the checkEmployeeID method to include an u
 #### Practice #3
 The age validation system in our Employee Management System is malfunctioning. Can you find the bug and fix the code so that it properly throws and handles an exception when an invalid age is entered?
 
-class Solution {
-    static void validateAge(int age) {
-        if (age < 0) {
-            throw new IllegalAccessException("Age cannot be negative");
+    class Solution {
+        static void validateAge(int age) {
+            if (age < 0) {
+                throw new IllegalAccessException("Age cannot be negative");
+            }
+        }
+    
+        public static void main(String[] args) {
+            try {
+                validateAge(-5);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Caught an exception: " + e.getMessage());
+            }
         }
     }
-
-    public static void main(String[] args) {
-        try {
-            validateAge(-5);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Caught an exception: " + e.getMessage());
+    
+    solution.java:4: error: unreported exception IllegalAccessException; must be caught or declared to be thrown
+                throw new IllegalAccessException("Age cannot be negative");
+                ^
+    1 error
+    
+    class Solution {
+        static void validateAge(int age) {
+            if (age < 0) {
+                throw new IllegalArgumentException("Age cannot be negative");
+            }
+            System.out.println("Age is " + age);
+        }
+    
+        public static void main(String[] args) {
+            try {
+                validateAge(-5);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Caught an exception: " + e.getMessage());
+            }
         }
     }
-}
-
-solution.java:4: error: unreported exception IllegalAccessException; must be caught or declared to be thrown
-            throw new IllegalAccessException("Age cannot be negative");
-            ^
-1 error
-
-
 
 #### Practice #4
+Now, it's time to ensure that our Employee Management System handles situations correctly. Please add the missing code to check and handle invalid employee ages.
+
+    class Solution {
+        static void checkEmployeeAge(int age) {
+            // TODO: Add code that checks if the employee is under 18
+            if(age < 18){
+                throw new IllegalArgumentException("Employee is underage");
+            }
+            // Throw an IllegalArgumentException exception with a message if the employee is underage
+        }
+    
+        public static void main(String[] args) {
+            // Here, we're trying to check the validity of the employee's age.
+            try {
+                checkEmployeeAge(16); // This will throw an exception as the age is not valid
+            } catch (IllegalArgumentException e) {
+                System.out.println("Caught an exception: " + e.getMessage());
+                // TODO: Add code to catch the exception and print a message with the error.
+            }
+        }
+    }
+
 #### Practice #5
+You are running an employee management system and you need to access the employee IDs from an array. Write code to access an ID and handle the case where it doesn't exist using exception handling.
+
+    class Solution {
+        public static void main(String[] args) {
+            int[] employeeIds = {101, 102, 103};
+    
+            // TODO: Try accessing an employee ID that might not exist in the array
+            try {
+                int employee = employeeIds[5];
+            }
+            catch (ArrayIndexOutOfBoundsException e){
+                System.out.println("Employee Id does not exist");
+            }
+            // TODO: Catch the ArrayIndexOutOfBoundsException exception that occurs if the index is out of bounds and print an error message
+        }
+    }
+
+
