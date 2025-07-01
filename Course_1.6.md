@@ -684,7 +684,7 @@ Take a look at the example:
 The `processArray()` method throws an `ArrayIndexOutOfBoundsException` that goes unhandled, resulting in a program crash.
 
 ### 4. Differences Between RuntimeException and Exception
-Java classifies exceptions as either `RuntimeExceptions` (unchecked) or other `Exceptions` (checked). Unchecked exceptions, like the `IllegalArgumentExceptio`n that we've seen already, don't require the `throws` declaration in the function signature. Checked exceptions, however, do require checking at compile time to ensure proper catching or declaration. Here is an example:
+Java classifies exceptions as either `RuntimeExceptions` (unchecked) or other `Exceptions` (checked). Unchecked exceptions, like the `IllegalArgumentException` that we've seen already, don't require the `throws` declaration in the function signature. Checked exceptions, however, do require checking at compile time to ensure proper catching or declaration. Here is an example:
 
     public class Main {
       public static void main(String[] args) {
