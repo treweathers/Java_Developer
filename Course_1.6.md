@@ -629,5 +629,74 @@ In this lesson, you've discovered how function chaining and managing multiple re
         }
     }
 
-## Lesson 5:
-### 1. 
+## Lesson 5: Exception Handling in Functions
+### 1. Throwing Exceptions
+In Java, we manually throw exceptions using the `throw` keyword, much like throwing a ball. This practice is useful for pre-empting known errors. There are different types of exceptions, but here is a small example throwing `IllegalArgumentException` when the provided name is `null`.
+
+    public class Main {
+        static void greet(String name) { 
+            if (name == null) {
+                // We cannot greet a person without a name
+                throw new IllegalArgumentException("Name cannot be null"); // Exception thrown here
+            }
+            System.out.println("Hi, " + name);
+        }
+    
+        public static void main(String[] args) {
+            greet("John"); // Output: Hi, John
+            greet(null); // throws an Exception and interrupts the program's execution
+        }
+    }
+We throw an `IllegalArgumentException` when `name` is `null`, interrupting the program's execution.
+
+### 2. Catching Exceptions: try-catch Block
+The `try-catch` block manages exceptions. In the code below, an attempt to access a nonexistent array index triggers an `ArrayIndexOutOfBoundsException`. Our `try-catch` block then catches this exception.
+
+    public class Main {
+        public static void main(String[] args) {
+            int[] numbers = {1, 2, 3};
+            try {
+                System.out.println(numbers[5]);  // Attempting to access non-existent index 5
+                // ArrayIndexOutOfBoundsException is triggered, we should handle it to avoid our program to fail
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("That index does not exist in the array. Error: " + e.getMessage()); // Handling the exception
+                // e.getMessage() is used to get the exception error message
+            }
+        }
+    }
+### 3. Exception Propagation: What Happens If an Exception is Not Caught?
+Without a `try-catch` block, an exception propagates upward through the method stack until a `catch` block catches it. If none is found, the program crashes and the console throws the error.
+
+Take a look at the example:
+
+    public class Main {
+        public static void processArray() {
+            int[] numbers = {1, 2, 3};
+            System.out.println(numbers[5]); // Attempting to access non-existent index 5, throws an ArrayIndexOutOfBoundsException
+            // We do not handle the exception inside `processArray()` procedure, so it goes further
+        }
+    
+        public static void main(String[] args) {
+            processArray();
+            // The exception is not handled neither by `processArray()` nor by `main()`, so the program crashes
+        }
+    }
+The `processArray()` method throws an `ArrayIndexOutOfBoundsException` that goes unhandled, resulting in a program crash.
+
+### 4. Differences Between RuntimeException and Exception
+Java classifies exceptions as either `RuntimeExceptions` (unchecked) or other `Exceptions` (checked). Unchecked exceptions, like the `IllegalArgumentExceptio`n that we've seen already, don't require the `throws` declaration in the function signature. Checked exceptions, however, do require checking at compile time to ensure proper catching or declaration. Here is an example:
+
+    public class Main {
+      public static void main(String[] args) {
+        throwRuntimeException();
+      }
+      
+      public static void throwRuntimeException() {
+        throw new RuntimeException("This is a RuntimeException"); // RuntimeException thrown here. Doesn't need to be declared or caught
+      }
+    
+      public static void throwException() throws Exception { // Must declare that it throws an Exception
+        throw new Exception("This is an Exception"); // Exception thrown here
+      }
+    }
+Checked exceptions like `Exception`, require either handling or declaration. Unchecked exceptions do not require a `throws` declaration.
