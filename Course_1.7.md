@@ -856,9 +856,8 @@ Create a Car class with private attributes and provide public getter and setter 
             // TODO: Set the year of myCar to 2021
             myCar.setYear(2021);
             // TODO: Print the model name and year of myCar to the console
-            System.out.println(myCar.getModel() + myCar.getYear());
+            System.out.println(myCar.getModel() + " " + myCar.getYear());
         }
     }
-
 
 
