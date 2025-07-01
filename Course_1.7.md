@@ -462,8 +462,238 @@ In the main class, we will call both constructors like this:
       }
     }
 
-####
-####
-####
-####
-####
+#### Practice #1
+Run the code.
+
+    class Car {
+        String color;
+        String model;
+        boolean isElectric;
+    
+        // Car class constructor
+        Car(String color, String model, boolean isElectric) {
+            this.color = color;
+            this.model = model;
+            this.isElectric = isElectric;
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            Car familyCar = new Car("Red", "SUV", false);
+            System.out.println("Family Car - Model: " + familyCar.model + ", Color: " + familyCar.color + ", Electric: " + familyCar.isElectric);
+        }
+    }
+
+#### Practice #2
+Your task is to enhance the Car constructor we've developed by implementing constructor overloading.
+
+Implement a new Car constructor with only model and year specified, setting the default color "White", benefitting our car manufacturing process during instances where a color preference is not indicated.
+
+At the end, create an instance of the Car class using the new constructor, and print all class fields to make sure everything has been set correctly.
+
+    class Car {
+        String model;
+        String color;
+        int year;
+    
+        // Constructor with parameters
+        Car(String model, String color, int year) {
+            this.model = model;
+            this.color = color;
+            this.year = year;
+        }
+    
+        // Add an overloaded constructor here
+         Car(String model, int year) {
+            this.model = model;
+            this.color = "White";
+            this.year = year;
+        } 
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            Car myCar = new Car("Sedan", "Red", 2021);
+            System.out.println(myCar.model + " - " + myCar.color + " - " + myCar.year);  // prints: Sedan - Red - 2021
+            // TODO: create a new class instance calling the newly created constructor, and print all class attributes
+            Car myCar2 = new Car("Honda", 2022);
+            System.out.println(myCar2.model + " - " + myCar2.color + " - " + myCar2.year);
+        }
+    }
+
+#### Practice #3
+Great job so far! On our car manufacturing line, there appears to be a small glitch: one car isn't displaying the correct model and year. Can you figure out what's going wrong and get our cars rolling out perfectly again?
+
+    class Car {
+      String model;
+      int year;
+    
+      // Car class constructor with model and year
+      Car(String model, int year) {
+        model = model;
+        year = year;
+      }
+    }
+    
+    class Solution {
+      public static void main(String[] args) {
+        // Create a Car object called 'myCar' using the constructor
+        Car myCar = new Car("Toyota Camry", 2021);
+        
+        System.out.println("Model: " + myCar.model + " - Year: " + myCar.year);
+      }
+    }
+    
+    class Car {
+      String model;
+      int year;
+    
+      // Car class constructor with model and year
+      Car(String model, int year) {
+        model = model;
+        year = year;
+      }
+    }
+    
+    class Solution {
+      public static void main(String[] args) {
+        // Create a Car object called 'myCar' using the constructor
+        Car myCar = new Car("Toyota Camry", 2021);
+        
+        System.out.println("Model: " + myCar.model + " - Year: " + myCar.year);
+      }
+    }
+    
+    class Car {
+      String model;
+      int year;
+    
+      // Car class constructor with model and year
+      Car(String model, int year) {
+        this.model = model;
+        this.year = year;
+      }
+    }
+    
+    class Solution {
+      public static void main(String[] args) {
+        // Create a Car object called 'myCar' using the constructor
+        Car myCar = new Car("Toyota Camry", 2021);
+        
+        System.out.println("Model: " + myCar.model + " - Year: " + myCar.year);
+      }
+    }
+
+#### Practice #4
+Fill in the missing constructor code that initializes your car's model and year.
+
+    class Car {
+        String model;
+        int year;
+    
+        // TODO: Define the constructor to initialize the car's model and year.
+        Car(String model, int year) {
+            this.model = model;
+            this.year = year;
+        }
+        String displayInfo() {
+            return "Model: " + model + ", Year: " + year;
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            Car myCar = new Car("Thunder", 2021); // Create a Car object using the constructor
+            System.out.println(myCar.displayInfo()); // This should print the car's info
+        }
+    }
+
+#### Practice #5
+Now, let's build a Car class from scratch. Remember, the Car class needs a constructor that sets the car's model and color. Then, in your Solution class, create an object of Car with your favorite car model and color, and print them out.
+
+    class Car {
+      // TODO: Declare attributes for model and color
+      String model;
+      String color;
+      // TODO: Create a constructor to initialize model and color
+      Car(String model, String color) {
+        this.model = model;
+        this.color = color;
+      }
+    }
+    
+    class Solution {
+      public static void main(String[] args) {
+        // TODO: Create a Car object with your chosen model and color, then print out its details
+        Car newCar = new Car("Camry", "Transparent");
+        System.out.println("My car is a " + newCar.color + " " + newCar.model);
+      }
+    }
+
+## Lesson 4: Java's Building Blocks: Encapsulation of Attributes and Methods
+### 1. Understanding the 'private' Keyword in Java
+Java uses the private modifier to limit the visibility of class attributes. A private attribute can be accessed only within its specific class.
+
+Java
+Copy to clipboard
+Play
+public class MyRobot {
+    private String robotName; // This attribute can be accessed within the MyRobot class only
+}
+In the MyRobot class mentioned above, robotName is a private attribute, which implies it can be directly accessed only within the MyRobot class.
+
+Getters and Setters in Java
+Getters and setters, also known as accessors and mutators, respectively, allow us to read and modify private attributes from outside the class.
+
+Getters are used to obtain (or get) the value of a private attribute.
+
+Java
+Copy to clipboard
+Play
+public class MyRobot {
+    private String robotName;
+    
+    public String getRobotName() { // Getter method for RobotName
+        return robotName;  // Returns current robot name
+    }
+}
+Setters are used to change (or set) the value of a private attribute.
+
+Java
+Copy to clipboard
+Play
+public class MyRobot {
+    private String robotName;
+    
+    public void setRobotName(String newRobotName) { // Setter method for RobotName
+        this.robotName = newRobotName;  // Sets the robot name to new value
+    }
+}
+Getters and setters form a controlled passage to access and modify the object's hidden internal state. If you want your private variable to be non-editable - you don't include setter in your class, if you don't want it to be accessible - you don't include getter.
+
+Putting It All Together: Encapsulating Class Attributes and Methods
+Let's consolidate these insights with an example.
+
+Java
+Copy to clipboard
+Play
+public class MyRobot {
+    private String robotName;
+    
+    public String getRobotName() {
+        return this.robotName;  // Fetches current robotName
+    }
+    
+    public void setRobotName(String newRobotName) {
+        this.robotName = newRobotName;  // Changes current robotName to new input
+    }
+}
+
+MyRobot robot = new MyRobot(); // Initialize an object, bot, of the class MyRobot
+// robot.robotName = "R2-D2"; // This fails, you can't access a private field directly
+robot.setRobotName("Bot-202"); // Sets robotName to "Bot-202"
+System.out.println(robot.getRobotName());  // Gets robotName and prints it
+In this example, setRobotName() sets a new name for our MyRobot object while getRobotName() retrieves the current name. You can modify and access robotName in a controlled, safe manner.
+
+
