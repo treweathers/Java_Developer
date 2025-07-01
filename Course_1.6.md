@@ -700,3 +700,73 @@ Java classifies exceptions as either `RuntimeExceptions` (unchecked) or other `E
       }
     }
 Checked exceptions like `Exception`, require either handling or declaration. Unchecked exceptions do not require a `throws` declaration.
+
+#### Practice #1
+Run the code.
+
+    class Solution {
+        static void checkEmployeeId(int employeeNumber) {
+            try {
+                int idCode = 1000 / employeeNumber; // May cause ArithmeticException if employeeNumber is 0
+                System.out.println("Employee ID is valid: " + idCode);
+            } catch (ArithmeticException e) {
+                System.out.println("Error: Employee number cannot be zero.");
+            }
+        }
+      
+        public static void main(String[] args) {
+            checkEmployeeId(0); // Pass a 0 to simulate division by zero scenario
+        }
+    }
+
+#### Practice #2
+Enhance the Employee ID validation in the checkEmployeeID method to include an upper limit. Adapt the condition to throw an exception for IDs greater than 10000. 
+
+    class Solution {
+        static void checkEmployeeID(int employeeID) throws IllegalArgumentException {
+            if(employeeID <= 0) {
+                throw new IllegalArgumentException("Employee ID must be greater than 0.");
+            }
+            else if(employeeID >= 10000) {
+                throw new IllegalArgumentException("Employee ID must be less than 10000.");
+            }
+            System.out.println("Employee ID is valid.");
+        }
+    
+        public static void main(String[] args) {
+            try {
+                checkEmployeeID(10001);
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
+#### Practice #3
+The age validation system in our Employee Management System is malfunctioning. Can you find the bug and fix the code so that it properly throws and handles an exception when an invalid age is entered?
+
+class Solution {
+    static void validateAge(int age) {
+        if (age < 0) {
+            throw new IllegalAccessException("Age cannot be negative");
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            validateAge(-5);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Caught an exception: " + e.getMessage());
+        }
+    }
+}
+
+solution.java:4: error: unreported exception IllegalAccessException; must be caught or declared to be thrown
+            throw new IllegalAccessException("Age cannot be negative");
+            ^
+1 error
+
+
+
+#### Practice #4
+#### Practice #5
