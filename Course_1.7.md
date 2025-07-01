@@ -684,4 +684,181 @@ Let's consolidate these insights with an example.
     System.out.println(robot.getRobotName());  // Gets robotName and prints it
 In this example, `setRobotName()` sets a new name for our `MyRobot` object while `getRobotName()` retrieves the current name. You can modify and access `robotName` in a controlled, safe manner.
 
+#### Practice #1
+Run the code.
+
+    class Vehicle {
+        private String engineStatus = "off";  // Encapsulated vehicle's engine attribute
+        
+        public String getEngineStatus() {      // Getter for engine status
+            return engineStatus;               // Returns current engine status
+        }
+        
+        public void setEngineStatus(String status) {  // Setter for engine status
+            this.engineStatus = status;               // Updates engine status
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            Vehicle car = new Vehicle();              // Creating a new vehicle object, car.
+            car.setEngineStatus("on");               // Starting the car's engine
+            System.out.println("The engine is " + car.getEngineStatus()); // Displaying the engine status
+        }
+    }
+
+#### Practice #2
+Your task is to update the setLicensePlate method in the Vehicle class to prevent the assignment of an empty string or the value "INVALID" to the license plate. Use conditional logic to ensure that if the new plate value is empty or equals "INVALID", the identifier "UNKNOWN" will be assigned instead.
+
+    class Vehicle {
+        private String licensePlate;
+      
+        public String getLicensePlate() {
+            return licensePlate;
+        }
+      
+        public void setLicensePlate(String newPlate) {
+            if (newPlate.equals("")) {
+                // TODO: Complete the condition for "INVALID" and assign "UNKNOWN" if needed
+                this.licensePlate = "UNKNOWN";
+            } else if (newPlate.equals("INVALID")) {
+                this.licensePlate = "UNKNOWN";
+            } else {
+                this.licensePlate = newPlate;
+            }
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            Vehicle myCar = new Vehicle();
+            myCar.setLicensePlate("XYZ 1234");
+            System.out.println(myCar.getLicensePlate());
+        }
+    }
+
+#### Practice #3
+Let's proceed to debug some code next. There’s a small mistake in this code that pertains to setting the model of a car. Identify and correct it to ensure the Car class functions as intended.
+
+    class Car {
+        private String model;
+        private int year;
+            
+        public Car(String model, int year) {
+            this.model = model;
+            this.year = year;
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+          Car car = new Car("Tesla Model X", 2022);
+          System.out.println("Model: " + car.model);
+        }
+    }
+    
+    
+    solution.java:14: error: model has private access in Car
+          System.out.println("Model: " + car.model);
+                                            ^
+    1 error
+    
+    
+    class Car {
+        private String model;
+        private int year;
+        public String getModel() {
+            return this.model;
+        }
+        public void setModel(String newModel) {
+            this.model = newModel;
+        }
+        public void setYear(int newYear) {
+            this.year = newYear;
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+          Car car = new Car();
+          car.setModel("Tesla Model X");
+          car.setYear(2022);
+          System.out.println("Model: " + car.getModel() );
+        }
+    }
+
+#### Practice #4
+Add code to manage car details. Implement methods to set and get the car's manufacturing year.
+
+    class Car {
+        private String model;
+        private int year;
+        
+        public String getModel() {
+            return model;
+        }
+        
+        public void setModel(String newModel) {
+            model = newModel;
+        }
+        
+        // TODO: Write a method to return the car's year
+        public int getYear() {
+            return this.year;
+        }
+        public void setYear(int newYear) {
+            this.year = newYear;
+        }
+        // TODO: Write a method to assign a new year to the car
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            Car myCar = new Car();
+            myCar.setModel("Tesla Model S");
+            // TODO: set the car year. Assume year is 2022
+            myCar.setYear(1999);
+            System.out.println("This is the year, my year " + myCar.getYear());
+            // TODO: Display the car model and year
+        }
+    }
+
+#### Practice #5
+Create a Car class with private attributes and provide public getter and setter methods to access them. Remember to follow good encapsulation practices and control how these attributes are accessed and modified.
+
+    class Car {
+        // TODO: Declare private attributes for the Car class (model name as a String, year as an int)
+        private String model;
+        private int year;
+        // TODO: Define a public getter method for the model name
+        public String getModel() {
+            return this.model;
+        }
+        // TODO: Define a public setter method for the model name
+        public void setModel (String newModel) {
+            this.model = newModel;
+        }
+        // TODO: Define a public getter method for the year
+        public int getYear() {
+            return this.year;
+        }
+        // TODO: Define a public setter method for the year
+        public void setYear (int newYear) {
+            this.year = newYear;
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            Car myCar = new Car();
+            // TODO: Set the model name of myCar to "Tesla Model S"
+            myCar.setModel("Tesla Model 5");
+            // TODO: Set the year of myCar to 2021
+            myCar.setYear(2021);
+            // TODO: Print the model name and year of myCar to the console
+            System.out.println(myCar.getModel() + myCar.getYear());
+        }
+    }
+
+
 
