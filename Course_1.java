@@ -1,6 +1,6 @@
 //Course 1: Java Programming for Beginners
 
-//LESSON 1
+//LESSON 1: Java Basics: Syntax, Comments, Semicolons, and Your First Program
 //Practice #1
     class Solution {
         public static void main(String[] args) {
