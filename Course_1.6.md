@@ -385,3 +385,80 @@ Let's get hands-on with a sample code:
         }
     }
 Copy this into your environment or the CodeSignal IDE and run it to get a hands-on understanding of Java's built-in functions.
+
+#### Practice #1
+Run the code.
+
+    class Solution {
+        public static void main(String[] args) {
+            // Given a square's side length, calculate its area using the Math.pow function
+            double sideLength = 5;
+            double area = Math.pow(sideLength, 2);
+    
+            // Output the area of the square as a double
+            String info = "The area of the square with side length " + sideLength + " is " + area + " square units.";
+            System.out.println(info);
+        }
+    }
+
+#### Practice #2
+Now, take the given code and transform the areaOfCircle method into the diameterOfCircle method using Java's Math.sqrt() function based on the area you have calculated. Your goal is to calculate the diameter of the circle from its area. Remember to update both the method name and the output message accordingly.
+
+Note: the diameter of the circle equals  2 * sqrt(area/π)
+
+    class Solution {
+        // A simple method to calculate the area of a circle
+        static double areaOfCircle(double radius) {
+            return Math.PI * Math.pow(radius, 2);
+        }
+    
+        public static void main(String[] args) {
+            // Let's assume the radius of our cosmic circle is 7.5
+            double radius = 7.5;
+            System.out.println("The area of a circle with radius " + radius + " is: " + areaOfCircle(radius));
+        }
+    }
+    
+    class Solution {
+        // A simple method to calculate the area of a circle
+        static double areaOfCircle(double radius) {
+            return Math.PI * Math.pow(radius, 2);
+        }
+    
+        static double diameterOfCircle(double radius) {
+            return 2 * Math.sqrt((areaOfCircle(radius) / Math.PI));
+        }
+        
+        public static void main(String[] args) {
+            // Let's assume the radius of our cosmic circle is 7.5
+            double radius = 7.5;
+            System.out.println("The diameter of a circle with radius " + radius + " is: " + diameterOfCircle(radius));
+        }
+    
+    }
+
+#### Practice #3
+Try to write a line of Java code using the Math function to find the larger of two galaxy populations and create a string that states which galaxy has the greater population.
+
+    class Solution {
+        public static void main(String[] args) {
+            // The universe is vast and full of numbers. Let's explore with Java functions!
+            int galaxyOnePopulation = 1000000;
+            int galaxyTwoPopulation = 2000000;
+            
+            // TODO: Write a line of code to find which galaxy population is greater and build a message string.
+            System.out.println("The galaxy with a greater population has " + Math.max(galaxyOnePopulation, galaxyTwoPopulation) + " inhabitants");/* TODO: finish this message */
+            // Finding the distance to the Andromeda galaxy in light-years as a String.
+            double andromedaDistance = 2.537e6; // 2.537 million light years
+            String distanceText = String.valueOf(andromedaDistance);
+            
+            // Using String.concat to create an information string about the distance to Andromeda galaxy
+            String info = "The Andromeda galaxy is " /* TODO: Use a String method to add distance and unit */ + ".";
+            String information = info.concat(distanceText);
+            System.out.println(information);
+        }
+    }
+
+###### feedback: did not include instructions to add the word "inhabitants", also includeD "TO-DO" to concat in the middle of a string, making it seem like it should be there instead of on a new line in a new variable.‼️
+
+#### Practice #4
