@@ -526,3 +526,36 @@ You can just return a `List` from the function, and it can handle any number of 
         return Arrays.asList(rand.nextInt(6) + 1, rand.nextInt(6) + 1);  // returns a list of two element the dice throws
     }
 Here, we created an `ArrayList` of two elements and provided it as a return value - easy and simple! You can access returned elements using the `ArrayList::get` method after that.
+
+#### Practice #1
+Run the code.
+
+import java.util.*;
+
+    class Solution {
+        public static void main(String[] args) {
+            List<Integer> diceRolls = throwTwoDice();
+            System.out.println(getHighestRoll(diceRolls));  // prints the higher number of two dice rolls
+        }
+        
+        static List<Integer> throwTwoDice() {
+            return Arrays.asList(rollDice(), rollDice());
+        }
+        
+        static int rollDice() {
+            return (int) (Math.random() * 6) + 1;
+        }
+        
+        static int getHighestRoll(List<Integer> rolls) {
+            return Math.max(rolls.get(0), rolls.get(1));
+        }
+    }
+
+#### Practice #2
+Modify the diceRoll function to return a List containing two roll values. The first roll value is already generated, your task is to generate the second one in the same way and return both values as a result. Update the function to chain these actions using Java's capabilities for handling multiple values.
+
+
+
+
+#### Practice #3
+#### Practice #4
