@@ -17,16 +17,6 @@
     class Solution {
         public static void main(String[] args) {
             // Creating a variable for representing the speed of light
-            int speedOfLightKmS = 299792;
-    
-            // Output the speed of light
-            System.out.println("The speed of light is: " + speedOfLightKmS);
-        }
-    }
-    
-    class Solution {
-        public static void main(String[] args) {
-            // Creating a variable for representing the speed of light
             final int speedOfLightKmS = 299792;
     
             // Output the speed of light
@@ -39,32 +29,13 @@
         public static void main(String[] args) {
             int earthOrbitRadius = 149600000; // in kilometers
             System.out.println("The Earth's orbit radius is " + earthOrbitRadius + " kilometers.");
-    
-            int 8planets = 8;
-            System.out.println("There are " + 8planets + " planets in the Solar System.");
-        }
-    }
-
-    class Solution {
-        public static void main(String[] args) {
-            int earthOrbitRadius = 149600000; // in kilometers
-            System.out.println("The Earth's orbit radius is " + earthOrbitRadius + " kilometers.");
-    
+            //this was int 8planets = 8; - same for the print statement
             int planets8 = 8;
             System.out.println("There are " + planets8 + " planets in the Solar System.");
         }
     }
 
 //Practice #4: It's time to define a constant for our cosmic journey speed. Add the necessary code to ensure our spaceship's dashboard displays all the crucial information.
-    class Solution {
-        public static void main(String[] args) {
-            // TODO: Declare a constant for Earth's orbital speed and set its value to 29 km/s
-            int planetsInSolarSystem = 8; // Number of planets in the solar system
-            // TODO: Print out the string "Earth's orbital speed: <speed value> km/s
-            System.out.println("Number of planets: " + planetsInSolarSystem);
-        }
-    }
-
     class Solution {
         public static void main(String[] args) {
             // TODO: Declare a constant for Earth's orbital speed and set its value to 29 km/s
