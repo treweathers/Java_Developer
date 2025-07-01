@@ -554,8 +554,21 @@ import java.util.*;
 #### Practice #2
 Modify the diceRoll function to return a List containing two roll values. The first roll value is already generated, your task is to generate the second one in the same way and return both values as a result. Update the function to chain these actions using Java's capabilities for handling multiple values.
 
+import java.util.Arrays;
+import java.util.List;
 
-
+class Solution {
+    static List<Integer> diceRoll() {
+        int roll = (int) (Math.random() * 6) + 1;  // simulates a dice roll
+        int roll2 = (int) (Math.random() * 6) + 1;
+        return Arrays.asList(roll, roll2);
+    }
+    
+    public static void main(String[] args) {
+        List <Integer> rolls = diceRoll();
+        System.out.println("Dice rolls: " + rolls);
+    }
+}
 
 #### Practice #3
 #### Practice #4
