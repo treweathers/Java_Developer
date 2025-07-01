@@ -946,3 +946,32 @@ Inheritance allows the creation of a new class based on an existing one. The new
     dog.eat(); // Prints: eating dog food...
 The `Dog` class inherits the `eat()` method from the `Animal` class. Note the `@Override` annotation - it's optional, but it helps you understand that the method has actually been overridden and the behavior has been changed from the default behavior in the base class `Animal`.
 
+#### Practice #1
+Run the code.
+
+    class Solution {
+        abstract static class Animal {
+            abstract void eat();  // An abstract method for eating
+    
+            void breathe() {      // A concrete method for breathing
+                System.out.println("Breathing...");
+            }
+        }
+    
+        static class Lion extends Animal {
+            void eat() {         // Overriding the abstract method with Lion's way of eating
+                System.out.println("Eating...");
+            }
+        }
+    
+        public static void main(String[] args) {
+            Lion lion = new Lion();
+            lion.eat();          // Will print "Eating..."
+            lion.breathe();      // Will print "Breathing..."
+        }
+    }
+
+#### Practice #2
+#### Practice #3
+#### Practice #4
+#### Practice #5
