@@ -323,3 +323,28 @@ Create a new CellPhone object and call its method to simulate making a call.
     }
 
 #### Practice #5
+Create a CellPhone class with attributes and methods that allow it to dial and hang up a call. This will test your understanding of classes, attributes, and methods in Java.
+
+    class CellPhone {
+        // TODO: Define attributes for the brand and model of the phone
+        String brand = "iPhone";
+        String model = "4";
+        // TODO: Create a method `callDial` taking a parameter `long phoneNumber`
+        // to simulate dialing a phone number (just print a message to the console)
+        void callDial (long phoneNumber) {
+            System.out.println("Dialing " + phoneNumber + " on my " + brand + model);
+        }    
+        // TODO: Create a method `hangUp` to simulate ending a call (just print a message to the console)
+        void hangUp () {
+            System.out.println("Hanging up...");
+        }  
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Create an instance of CellPhone and use it to dial a number and then hang up
+            CellPhone dial = new CellPhone();
+            dial.callDial(+1-234-456-7890);
+            dial.hangUp();
+        }
+    }
