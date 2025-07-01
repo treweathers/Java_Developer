@@ -206,3 +206,31 @@ Methods can interact with and modify class attributes. This can be illustrated w
         System.out.println("Model updated to " + newModel);
     }
 Here, the `this` keyword refers to the current instance of the class object. It means that we are setting the `model` field in the current `CellPhone` class object to `newModel`.
+
+#### Practice #1
+Run the code.
+
+    // CellPhone class with Class Attributes and Methods.
+    class CellPhone {
+        String brand = "Galaxy";
+        String model = "S21";
+        final String chargerType = "Type-C";
+    
+        void makeCall() {
+            System.out.println("Calling from " + brand + " " + model + " using " + chargerType + " charger...");
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            CellPhone myPhone = new CellPhone();
+            myPhone.makeCall(); // Invoking the method to simulate making a call.
+        }
+    }
+
+#### Practice #2
+Enhance the CellPhone class by adding an attribute that represents the software version. Then, create a simple updateSoftware method to change this version. This will demonstrate how methods can modify class attributes.
+
+#### Practice #3
+#### Practice #4
+#### Practice #5
