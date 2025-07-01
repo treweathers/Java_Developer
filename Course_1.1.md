@@ -177,7 +177,7 @@ It is a good practice to declare a value as `final` if you know that it's not go
 
 Here, `DAYS_IN_WEEK` serves as a constant, prohibiting alterations once assigned. The value for this variable cannot be changed after it's assigned.
 
-#### Practice # 1
+#### Practice #1
 Run the code
 
     class Solution {
