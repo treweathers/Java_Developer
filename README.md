@@ -10,9 +10,9 @@
 
 <h1 align='center'> Course 2:  </h1> 
 
-## Course 1.1:
+## Course 2.1:
 
 <h1 align='center'> Course 3:  </h1> 
 
-## Course 1.1:
+## Course 3.1:
 
