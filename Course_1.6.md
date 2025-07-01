@@ -601,6 +601,8 @@ Directly apply function chaining in our board game scenario. Implement the missi
         }
     }
 
+###### feedback: Didn't tell us how to add to list, had to look up proper way⚠️.
+
 #### Practice #4
 In this lesson, you've discovered how function chaining and managing multiple return values with lists operate in Java. Now, it's time for you to roll up your sleeves and dive into writing some code on your own.
 
