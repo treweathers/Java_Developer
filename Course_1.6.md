@@ -328,8 +328,7 @@ Java's `Math` class is your calculator. Key functions include:
 
 * `Math.max(a, b)`: It resolves the "which number is greater" debate! For example, `Math.max(8, 10) = 10`.
 
-* `Math.pow(a, b)`: Raises `a` to the power `b`. For example, `Math.pow(2, 3) = 8.0`, as 
-  ^3 = 8.0 as 2^3 = 8.
+* `Math.pow(a, b)`: Raises `a` to the power `b`. For example, `Math.pow(2, 3) = 8.0`, as 2^3 = 8.
 
 * `Math.sqrt(a)`: Calculates the square root of a. For example, `Math.sqrt(16) = 4`, as 
 sqrt(16) = 4
