@@ -604,6 +604,28 @@ Directly apply function chaining in our board game scenario. Implement the missi
 #### Practice #4
 In this lesson, you've discovered how function chaining and managing multiple return values with lists operate in Java. Now, it's time for you to roll up your sleeves and dive into writing some code on your own.
 
-Your objective is to perform a sequence of operations on a given number. Specifically, you will need to double this number and then add seven to the outcome. Your mission involves creating the appropriate functions and then chaining them together to unveil the "lucky number."
+    Your objective is to perform a sequence of operations on a given number. Specifically, you will need to double this number and then add seven to the outcome. Your mission involves creating the appropriate functions and then chaining them together to unveil the "lucky number."
+    
+    class Solution {
+        // TODO: Create a function that doubles the integer number passed to it.
+        static double doubled(double a) {
+            return a + a;
+        }
+        // TODO: Create a function that adds 7 to the integer number passed to it.
+        static double seven(double a) {
+            return a + 7;
+        }
+        // TODO: Create a function `luckyNumber` that chains the doubling and adding seven operations for a given integer number.
+        // Given `x`, the function should return `2 * x + 7`
+        static double luckyNumber(double a) {
+            return seven(doubled(a));
+        }
+        public static void main(String[] args) {
+            // TODO: Call the method that calculates the lucky number and print it out.
+            // Provide number 3 as an integer parameter
+            System.out.println(luckyNumber(3));
+        }
+    }
 
-
+## Lesson 5:
+### 1. 
