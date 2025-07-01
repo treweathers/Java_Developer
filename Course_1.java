@@ -1,7 +1,59 @@
-//Course 1: Java Programming for Beginners
-
 //COURSE 1.1: Getting Started with Java
 //LESSON 1: Java Basics: Syntax, Comments, Semicolons, and Your First Program
+//Practice # 1
+    class Solution {
+        public static void main(String[] args) {
+            // This command prints a message to the console
+            System.out.println("Greetings from the stars, Java Explorer!");
+        }
+    }
+//Practice #2: Change the text within the System.out.println to "Journey to the stars begins with Java!"
+    class Solution {
+        public static void main(String[] args) {
+            // This line prints a message about space exploration
+            System.out.println("Journey to the stars begins with Java!"); // Please change the message!
+        }
+    }
+//Practice #3: Find the bug
+    class Solution {
+        public static void main(String[] args) {
+            // Sending a greeting to interstellar explorers
+            System.out.println("Greetings, interstellar explorers!")
+        }
+    }
+
+
+    solution.java:4: error: ';' expected
+            System.out.println("Greetings, interstellar explorers!")
+                                                                ^
+    1 error
+
+
+    class Solution {
+        public static void main(String[] args) {
+            // Sending a greeting to interstellar explorers
+            System.out.println("Greetings, interstellar explorers!");
+        }
+    }
+//Practice #4: Complete the code to broadcast your greeting across the cosmos!
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Print a welcome message for new space explorers learning Java.
+            System.out.println("Welcome new space explorers learning Java!");
+        }
+    }
+//Practice #5: Start the countdown for the launch of our virtual spacecraft. Remember, every Java program starts with a class and a main method.
+    // TODO: Declare a class named 'Solution' (other class names won't work)
+    // Make sure NOT to make your class 'public'
+    class Solution {
+         // TODO: Inside your class, define the main 'public static void main' method that Java looks for
+         public static void main(String[] args) {
+            // TODO: Use a print statement to display a message "3, 2, 1... Lift off!" to the console
+            System.out.println("3, 2, 1... Lift off!");
+         }
+    }
+
+//LESSON 2: Java Variables: Storing Data on Our Journey to the Stars
 //Practice #1
     class Solution {
         public static void main(String[] args) {
@@ -53,6 +105,8 @@
             System.out.println(planetsInSolarSystem);
         }
     }
+
+//LESSON 3:
 
 //Course 1.2: Learning Simple Data Structures in Java
 
