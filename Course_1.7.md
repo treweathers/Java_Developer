@@ -25,7 +25,7 @@ Objects perform actions (or stop them) through methods. A method is a set of ins
       }
     }
 ### 4. Using the Class and its Method
-Now, we create an object and call our method`.` To invoke a method, we use dot notation . on the object, followed by the method name and parentheses:
+Now, we create an object and call our method. To invoke a method, we use dot notation `.` on the object, followed by the method name and parentheses:
 
     class MyClass {
       // showMessage method
