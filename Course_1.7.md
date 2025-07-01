@@ -301,4 +301,25 @@ Your mission is to ensure your CellPhone is functional for interstellar communic
     }
 
 #### Practice #4
+Create a new CellPhone object and call its method to simulate making a call.
+
+    class CellPhone {
+        String brand = "TechPhone";
+        String model = "X2";
+        final String chargerType = "Micro-USB";
+    
+        // TODO: Write a method 'makeCall' to simulate making a phone call 
+        void makeCall() {
+            System.out.println("Making a phone call with the " + brand + model + " using a " + chargerType + "charger.");
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Create a CellPhone object and call the 'makeCall' method
+            CellPhone newCall = new CellPhone();
+            newCall.makeCall();
+        }
+    }
+
 #### Practice #5
