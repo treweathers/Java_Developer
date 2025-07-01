@@ -12,7 +12,6 @@
             System.out.println("The universe is approximately " + universeAge + " billion years old.");
         }
     }
-
 //Practice #2: Modify the provided starter code to define the speed of light as a constant that does not change. Remember to follow the proper Java syntax for constants.
     class Solution {
         public static void main(String[] args) {
@@ -23,7 +22,6 @@
             System.out.println("The speed of light is: " + speedOfLightKmS);
         }
     }
-
 //Practice #3: Your mission is to find and fix the bug. Happy debugging!
     class Solution {
         public static void main(String[] args) {
@@ -34,7 +32,6 @@
             System.out.println("There are " + planets8 + " planets in the Solar System.");
         }
     }
-
 //Practice #4: It's time to define a constant for our cosmic journey speed. Add the necessary code to ensure our spaceship's dashboard displays all the crucial information.
     class Solution {
         public static void main(String[] args) {
@@ -44,7 +41,6 @@
             System.out.println("Earth's orbital speed: " + EARTHS_ORBITAL_SPEED + "km/s");
         }
     }
-
 //Practice #5: Let's recap the variables and constants related to our cosmic journey. Create a new constant to represent Earth's orbital speed and a variable for the number of planets, then display their values. Ready to blast off?
     class Solution {
         public static void main(String[] args) {
