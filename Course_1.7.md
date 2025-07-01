@@ -503,5 +503,66 @@ At the end, create an instance of the Car class using the new constructor, and p
     }
 
 #### Practice #3
+Great job so far! On our car manufacturing line, there appears to be a small glitch: one car isn't displaying the correct model and year. Can you figure out what's going wrong and get our cars rolling out perfectly again?
+
+    class Car {
+      String model;
+      int year;
+    
+      // Car class constructor with model and year
+      Car(String model, int year) {
+        model = model;
+        year = year;
+      }
+    }
+    
+    class Solution {
+      public static void main(String[] args) {
+        // Create a Car object called 'myCar' using the constructor
+        Car myCar = new Car("Toyota Camry", 2021);
+        
+        System.out.println("Model: " + myCar.model + " - Year: " + myCar.year);
+      }
+    }
+    
+    class Car {
+      String model;
+      int year;
+    
+      // Car class constructor with model and year
+      Car(String model, int year) {
+        model = model;
+        year = year;
+      }
+    }
+    
+    class Solution {
+      public static void main(String[] args) {
+        // Create a Car object called 'myCar' using the constructor
+        Car myCar = new Car("Toyota Camry", 2021);
+        
+        System.out.println("Model: " + myCar.model + " - Year: " + myCar.year);
+      }
+    }
+    
+    class Car {
+      String model;
+      int year;
+    
+      // Car class constructor with model and year
+      Car(String model, int year) {
+        this.model = model;
+        this.year = year;
+      }
+    }
+    
+    class Solution {
+      public static void main(String[] args) {
+        // Create a Car object called 'myCar' using the constructor
+        Car myCar = new Car("Toyota Camry", 2021);
+        
+        System.out.println("Model: " + myCar.model + " - Year: " + myCar.year);
+      }
+    }
 #### Practice #4
 #### Practice #5
