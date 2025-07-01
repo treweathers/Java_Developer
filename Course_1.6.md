@@ -554,21 +554,56 @@ import java.util.*;
 #### Practice #2
 Modify the diceRoll function to return a List containing two roll values. The first roll value is already generated, your task is to generate the second one in the same way and return both values as a result. Update the function to chain these actions using Java's capabilities for handling multiple values.
 
-import java.util.Arrays;
-import java.util.List;
-
-class Solution {
-    static List<Integer> diceRoll() {
-        int roll = (int) (Math.random() * 6) + 1;  // simulates a dice roll
-        int roll2 = (int) (Math.random() * 6) + 1;
-        return Arrays.asList(roll, roll2);
-    }
+    import java.util.Arrays;
+    import java.util.List;
     
-    public static void main(String[] args) {
-        List <Integer> rolls = diceRoll();
-        System.out.println("Dice rolls: " + rolls);
+    class Solution {
+        static List<Integer> diceRoll() {
+            int roll = (int) (Math.random() * 6) + 1;  // simulates a dice roll
+            int roll2 = (int) (Math.random() * 6) + 1;
+            return Arrays.asList(roll, roll2);
+        }
+        
+        public static void main(String[] args) {
+            List <Integer> rolls = diceRoll();
+            System.out.println("Dice rolls: " + rolls);
+        }
     }
-}
 
 #### Practice #3
+Directly apply function chaining in our board game scenario. Implement the missing pieces of code to calculate and store both the average and its square in a List.
+
+    import java.util.List;
+    import java.util.ArrayList;
+    import java.util.Arrays;
+    
+    class Solution {
+        static double average(double a, double b) {
+            return (a + b) / 2.0; // calculates the average of two numbers
+        }
+        static double square(double a) {
+            return (a * a);
+        }
+        static double squareOfAverage(double a, double b) {
+            return square(average(a, b));
+        }
+        static List<Double> calculateResults(double a, double b) {
+            List<Double> results = new ArrayList<>();
+            double avg = average(a, b);
+            // TODO: Add the square of the average to the results list
+            results.add(squareOfAverage(a, b));
+            // TODO: return a List containing the average and the square of the average
+            return Arrays.asList(avg, squareOfAverage(a, b));
+        }
+        public static void main(String[] args) {
+            // TODO: Call calculateResults and print the average and square of the average.
+            System.out.println(calculateResults(average(3, 3), square(3)) );
+        }
+    }
+
 #### Practice #4
+In this lesson, you've discovered how function chaining and managing multiple return values with lists operate in Java. Now, it's time for you to roll up your sleeves and dive into writing some code on your own.
+
+Your objective is to perform a sequence of operations on a given number. Specifically, you will need to double this number and then add seven to the outcome. Your mission involves creating the appropriate functions and then chaining them together to unveil the "lucky number."
+
+
