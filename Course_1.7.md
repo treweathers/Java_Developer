@@ -590,3 +590,25 @@ Fill in the missing constructor code that initializes your car's model and year.
     }
 
 #### Practice #5
+Now, let's build a Car class from scratch. Remember, the Car class needs a constructor that sets the car's model and color. Then, in your Solution class, create an object of Car with your favorite car model and color, and print them out.
+
+    class Car {
+      // TODO: Declare attributes for model and color
+      String model;
+      String color;
+      // TODO: Create a constructor to initialize model and color
+      Car(String model, String color) {
+        this.model = model;
+        this.color = color;
+      }
+    }
+    
+    class Solution {
+      public static void main(String[] args) {
+        // TODO: Create a Car object with your chosen model and color, then print out its details
+        Car newCar = new Car("Camry", "Transparent");
+        System.out.println("My car is a " + newCar.color + " " + newCar.model);
+      }
+    }
+
+## Lesson 4:
