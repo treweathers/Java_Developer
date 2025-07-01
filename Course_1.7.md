@@ -348,3 +348,118 @@ Create a CellPhone class with attributes and methods that allow it to dial and h
             dial.hangUp();
         }
     }
+
+## Lesson 3: An Introduction to Java Constructors
+### 1. The Syntax of Constructors
+Constructors in Java adhere to some specific rules. The name of a constructor must be the same as the class name. Like a method, a constructor has a body enclosed between curly braces `{ }`. A constructor looks like this:
+
+    public class Dog {
+      
+      String breed; // Attribute 1
+      int age; // Attribute 2
+      
+      // Dog class constructor
+      Dog(String breed, int age) {
+        this.breed = breed; // Initialize attribute 1
+        this.age = age; // Initialize attribute 2
+        System.out.println("Initialized Dog class with breed=" + this.breed + " and age=" + this.age);
+      } 
+    }
+In this example, `Dog` is a constructor, taking two parameters - a `String` breed and an `int` age. The `this` keyword refers to the current instance. So `this.breed` refers to the breed attribute of the current dog object, and similarly for age.
+
+### 2. How to Use Constructors
+Constructors help us instantiate a class or create an object from a class. They set initial values for object attributes and carry out other functions that are necessary to create the object. Once a constructor is defined, it is automatically called when an object is created.
+
+Here is an example of creating a Dog object, `fido` from the Dog class using a constructor.
+
+    public class Solution {
+      public static void main(String[] args) {
+    
+        // Create 'fido' using the Dog class constructor
+        Dog fido = new Dog("Alsatian", 5); // Prints: Initialized Dog class with breed=Alsatian and age=5
+        
+        System.out.println(fido.breed);  // prints: Alsatian
+        System.out.println(fido.age);  // prints: 5
+      }
+    }
+The expression `Dog fido = new Dog("Alsatian", 5);` follows the format `Class object = new Class(args);`, which creates the `fido` object. It also prints the statement we left in the constructor in the previous section, showing the constructor has actually been called.
+
+### 3. Types of Constructors in Java
+There are two main types of constructors in Java:
+
+1. **No-argument constructor**: A constructor that does not take any parameters. Also known as default constructor.
+
+        public class Dog {
+          
+          String breed;
+          int age;
+          
+          // no-argument constructor
+          Dog() {
+            breed = "Unknown";
+            age = 0;
+          }
+        }
+In this example, if no breed and age are provided when creating a new Dog object, the object will have the breed "Unknown" and age 0.
+
+2. **Parameterized constructor**: A constructor that has parameters.
+
+        public class Dog {
+          
+          String breed;
+          int age;
+          
+          // parameterized constructor
+          Dog(String breed, int age) {
+            this.breed = breed;
+            this.age = age;
+          }
+        }
+Just like in our first example, the parameterized constructor takes breed and age parameters when you create a new Dog object.
+
+### 4. Brief Introduction to Constructor Overloading
+Java supports multiple constructors with distinct parameters. This technique is called constructor overloading. The number and the type of parameters differentiate these constructors.
+
+Here's a `Dog` class featuring constructor overloading:
+
+    public class Dog {
+      String breed;
+      int age;
+      
+      // no-arg constructor
+      Dog() {
+        breed = "Unknown";
+        age = 0;
+      } 
+       
+      // parameterized constructor
+      Dog(String breed, int age) {
+        this.breed = breed;
+        this.age = age;
+      } 
+       
+      // age-only constructor
+      Dog(int age) {
+        this.age = age;
+        breed = "Unknown";
+      }
+    }
+In the main class, we will call both constructors like this:
+
+    public class Solution {
+      public static void main(String[] args) {
+        Dog dog1 = new Dog("Husky", 3);
+        System.out.println(dog1.breed);  // prints: Husky
+        System.out.println(dog1.age);  // prints: 3
+    
+        Dog dog2 = new Dog(10);
+        System.out.println(dog2.breed);  // prints: Unknown
+        System.out.println(dog2.age);  // prints: 10
+    
+        Dog dog3 = new Dog();
+        System.out.println(dog3.breed); // prints: Unknown
+        System.out.println(dog3.age); // prints: 0
+      }
+    }
+
+####
