@@ -564,5 +564,29 @@ Great job so far! On our car manufacturing line, there appears to be a small gli
         System.out.println("Model: " + myCar.model + " - Year: " + myCar.year);
       }
     }
+
 #### Practice #4
+Fill in the missing constructor code that initializes your car's model and year.
+
+    class Car {
+        String model;
+        int year;
+    
+        // TODO: Define the constructor to initialize the car's model and year.
+        Car(String model, int year) {
+            this.model = model;
+            this.year = year;
+        }
+        String displayInfo() {
+            return "Model: " + model + ", Year: " + year;
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            Car myCar = new Car("Thunder", 2021); // Create a Car object using the constructor
+            System.out.println(myCar.displayInfo()); // This should print the car's info
+        }
+    }
+
 #### Practice #5
