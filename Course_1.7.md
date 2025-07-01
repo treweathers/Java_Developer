@@ -633,67 +633,55 @@ Now, let's build a Car class from scratch. Remember, the Car class needs a const
 
 ## Lesson 4: Java's Building Blocks: Encapsulation of Attributes and Methods
 ### 1. Understanding the 'private' Keyword in Java
-Java uses the private modifier to limit the visibility of class attributes. A private attribute can be accessed only within its specific class.
+Java uses the `private` modifier to limit the visibility of class attributes. A `private` attribute can be accessed only within its specific class.
 
-Java
-Copy to clipboard
-Play
-public class MyRobot {
-    private String robotName; // This attribute can be accessed within the MyRobot class only
-}
-In the MyRobot class mentioned above, robotName is a private attribute, which implies it can be directly accessed only within the MyRobot class.
+    public class MyRobot {
+        private String robotName; // This attribute can be accessed within the MyRobot class only
+    }
+In the `MyRobot` class mentioned above, `robotName` is a private attribute, which implies it can be directly accessed only within the `MyRobot` class.
 
-Getters and Setters in Java
+### 2. Getters and Setters in Java
 Getters and setters, also known as accessors and mutators, respectively, allow us to read and modify private attributes from outside the class.
 
 Getters are used to obtain (or get) the value of a private attribute.
 
-Java
-Copy to clipboard
-Play
-public class MyRobot {
-    private String robotName;
-    
-    public String getRobotName() { // Getter method for RobotName
-        return robotName;  // Returns current robot name
+    public class MyRobot {
+        private String robotName;
+        
+        public String getRobotName() { // Getter method for RobotName
+            return robotName;  // Returns current robot name
+        }
     }
-}
 Setters are used to change (or set) the value of a private attribute.
-
-Java
-Copy to clipboard
-Play
-public class MyRobot {
-    private String robotName;
     
-    public void setRobotName(String newRobotName) { // Setter method for RobotName
-        this.robotName = newRobotName;  // Sets the robot name to new value
+    public class MyRobot {
+        private String robotName;
+        
+        public void setRobotName(String newRobotName) { // Setter method for RobotName
+            this.robotName = newRobotName;  // Sets the robot name to new value
+        }
     }
-}
 Getters and setters form a controlled passage to access and modify the object's hidden internal state. If you want your private variable to be non-editable - you don't include setter in your class, if you don't want it to be accessible - you don't include getter.
 
-Putting It All Together: Encapsulating Class Attributes and Methods
+### 3. Putting It All Together: Encapsulating Class Attributes and Methods
 Let's consolidate these insights with an example.
 
-Java
-Copy to clipboard
-Play
-public class MyRobot {
-    private String robotName;
-    
-    public String getRobotName() {
-        return this.robotName;  // Fetches current robotName
+    public class MyRobot {
+        private String robotName;
+        
+        public String getRobotName() {
+            return this.robotName;  // Fetches current robotName
+        }
+        
+        public void setRobotName(String newRobotName) {
+            this.robotName = newRobotName;  // Changes current robotName to new input
+        }
     }
     
-    public void setRobotName(String newRobotName) {
-        this.robotName = newRobotName;  // Changes current robotName to new input
-    }
-}
-
-MyRobot robot = new MyRobot(); // Initialize an object, bot, of the class MyRobot
-// robot.robotName = "R2-D2"; // This fails, you can't access a private field directly
-robot.setRobotName("Bot-202"); // Sets robotName to "Bot-202"
-System.out.println(robot.getRobotName());  // Gets robotName and prints it
-In this example, setRobotName() sets a new name for our MyRobot object while getRobotName() retrieves the current name. You can modify and access robotName in a controlled, safe manner.
+    MyRobot robot = new MyRobot(); // Initialize an object, bot, of the class MyRobot
+    // robot.robotName = "R2-D2"; // This fails, you can't access a private field directly
+    robot.setRobotName("Bot-202"); // Sets robotName to "Bot-202"
+    System.out.println(robot.getRobotName());  // Gets robotName and prints it
+In this example, `setRobotName()` sets a new name for our `MyRobot` object while `getRobotName()` retrieves the current name. You can modify and access `robotName` in a controlled, safe manner.
 
 
