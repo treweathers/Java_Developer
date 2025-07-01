@@ -860,4 +860,89 @@ Create a Car class with private attributes and provide public getter and setter 
         }
     }
 
+## Lesson 5: Mastering Interfaces, Abstract Classes, and Simple Inheritance in Java
+### 1. Diving into Interfaces
+Think of an Interface as a contract or a set of guidelines. A class can follow these guidelines or `implement` the interface. In this case, we have an interface, `FootballPlayer`, which represents the behaviors of a football player such as `dribble()`, `pass()`, and `shoot()`.
+
+    interface FootballPlayer {
+        void dribble();
+        void pass();
+        void shoot();
+    }
+
+### 2. Implementing Interfaces
+To follow an Interface, a class needs to `implement` it. This action necessitates the definition of all its methods. So, we create a `Forward` class that promises to adhere to our `FootballPlayer` interface:
+
+    class Forward implements FootballPlayer {
+        // Dribbling like a forward player
+        public void dribble() {
+            System.out.println("Dribbling forward...");
+        }
+    
+        // Passing pattern of a forward player
+        public void pass() {
+            System.out.println("Passing to a teammate...");
+        }
+    
+        // How a forward player takes a shot
+        public void shoot() {
+            System.out.println("Shooting towards the goal...");
+        }
+    }
+Here, the `Forward` class is following the rules set by the `FootballPlayer` interface. If the `Forward` class does not implement one of the required methods, Java will throw an error.
+
+### 3. Exploring Abstract Classes
+Abstract classes serve as blueprints for other classes. They can't be instantiated but can provide a skeleton upon which to build. Let's demonstrate this with an `Animal` abstract class:
+
+    abstract class Animal {
+        // How the animal eats: this method has not been implemented yet
+        abstract void eat();
+    
+        void breathe() { // All animals breathe
+            System.out.println("Breathing...");
+        }
+    }
+
+In the `Animal` class, we declare `eat()` as an abstract method, meaning subclasses must provide their own implementation. `breathe()` is a standard method, which all subclasses will inherit.
+
+### 4. Inheriting from Abstract Classes
+To `extend` an abstract class, a class must implement its abstract methods. Here's a `Lion` class that extends `Animal`:
+
+    class Lion extends Animal {
+        void eat() { // Lion's way of eating
+            System.out.println("Eating meat...");
+        }
+    }
+The `Lion` class inherits `breathe()` from the `Animal` class and provides its own implementation of `eat()`. We can also define a different class, `Giraffe`, that defines the `eat()` method differently:
+
+    class Giraffe extends Animal {
+        void eat() { // Giraffe's way of eating
+            System.out.println("Eating leaves...");
+        }
+    }
+Both of these classes, however, will have a default implementation of the `breathe()` method, defined in the abstract class.
+
+### 5. Simple Inheritance in Java
+Inheritance allows the creation of a new class based on an existing one. The new class inherits the fields and methods of the existing class. Here's an example in which `Dog` extends `Animal`:
+
+    class Animal {
+       void eat() {
+          System.out.println("eating...");
+       }
+    }
+    
+    class Dog extends Animal {
+        @Override
+        void eat() {
+            System.out.println("eating dog food...");
+        }
+    
+        void bark() {
+              System.out.println("barking...");
+        }
+    }
+    
+    Dog dog = new Dog();
+    dog.eat(); // Prints: eating dog food...
+The `Dog` class inherits the `eat()` method from the `Animal` class. Note the `@Override` annotation - it's optional, but it helps you understand that the method has actually been overridden and the behavior has been changed from the default behavior in the base class `Animal`.
 
