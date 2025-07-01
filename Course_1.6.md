@@ -462,3 +462,20 @@ Try to write a line of Java code using the Math function to find the larger of t
 ###### feedback: did not include instructions to add the word "inhabitants", also includeD "TO-DO" to concat in the middle of a string, making it seem like it should be there instead of on a new line in a new variable.‼️
 
 #### Practice #4
+Write a program that computes the area of a square with a given side length, identifies the greater count of galaxies observed, and calculates the square root of an area to simulate space exploration measurements.
+
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Calculate the area of a square where the side length is 4.0 light-years using the appropriate Math.pow() function.
+            double squareArea = Math.pow(4, 2);
+            // TODO: Determine the greater number of galaxies observed between two given counts using the correct Math.max() function.
+            double galaxyOne = 1000;
+            double galaxyTwo = 1001;
+            double galaxies = Math.max(galaxyOne, galaxyTwo);
+            // TODO: Compute the side of a square given its area, using a Math.sqrt() function.
+            double squareSide = Math.sqrt(squareArea);
+            // TODO: Print out the calculated values with descriptive messages.
+            System.out.println("The area of the square is " + squareArea + " and the value of the greater galaxy is " + galaxies + " and the side of the square is " + squareSide);
+        }
+    }
+
