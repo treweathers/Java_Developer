@@ -231,6 +231,74 @@ Run the code.
 #### Practice #2
 Enhance the CellPhone class by adding an attribute that represents the software version. Then, create a simple updateSoftware method to change this version. This will demonstrate how methods can modify class attributes.
 
+    class CellPhone {
+        String brand = "AnyBrand";
+        String model = "AnyModel";
+        final String chargerType = "MicroUSB";
+        String softwareVersion = "v1.0"; // New attribute for software version
+        void updateSoftware(String newSoftware) {
+            this.softwareVersion = newSoftware;
+        }
+        // Create a method to update the softwareVersion here        
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            CellPhone myPhone = new CellPhone();
+            // Update `myPhone`s software version using the method you created
+            myPhone.updateSoftware("v2.0");
+            System.out.println(myPhone.softwareVersion);
+        }
+    }
+
 #### Practice #3
+Your mission is to ensure your CellPhone is functional for interstellar communication. There's a slight problem: the code responsible for initiating calls is not using the model and brand variables correctly. Run the code and apply your fresh Java skills to resolve this, ensuring that the phone identifies itself properly when initiating a transmission!
+
+    class CellPhone {
+        String brand = "GadgetCo";
+        String model = "SuperPhone";
+        final String chargerType = "Type-C";
+    
+        void makeCall() {
+            System.out.println("Making a call with the " + callModel + " by " + callBrand + "...");
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            CellPhone myPhone = new CellPhone();
+            myPhone.makeCall();
+        }
+    }
+    
+    solution.java:7: error: cannot find symbol
+            System.out.println("Making a call with the " + callModel + " by " + callBrand + "...");
+                                                           ^
+      symbol:   variable callModel
+      location: class CellPhone
+    solution.java:7: error: cannot find symbol
+            System.out.println("Making a call with the " + callModel + " by " + callBrand + "...");
+                                                                                ^
+      symbol:   variable callBrand
+      location: class CellPhone
+    2 errors
+    
+    class CellPhone {
+        String brand = "GadgetCo";
+        String model = "SuperPhone";
+        final String chargerType = "Type-C";
+    
+        void makeCall() {
+            System.out.println("Making a call with the " + model + " by " + brand + "...");
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            CellPhone myPhone = new CellPhone();
+            myPhone.makeCall();
+        }
+    }
+
 #### Practice #4
 #### Practice #5
