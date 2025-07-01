@@ -157,3 +157,52 @@ Write a Car class with a method to imitate the sound of a horn; then create a Ca
             // TODO: Call the method you defined in the Car class to imitate a horn sound.
         }
     }
+
+## Lesson 2: Class Attributes and Methods in Java
+### 1. Understanding Class Attributes
+Class `attributes` symbolize an object's properties. For instance, the attributes of a `CellPhone` might be its `brand` and `model`:
+
+    public class CellPhone {
+        public String brand; // Brand of the phone
+        public String model; // Model of the phone
+    }
+Sometimes, attributes remain constant after initial set-up. The `final` keyword aids in creating such attributes. Let's add a `chargerType` attribute, which will be constant:
+
+    public class CellPhone {
+        public String brand;
+        public String model;
+        public final String chargerType = "Type-C"; // A constant attribute
+    }
+### 2. Understanding Class Methods
+`Methods` are a class's behaviors, while `attributes` are its properties. For our `CellPhone`, a `callDial` method might be used to start a phone call:
+
+    public class CellPhone {
+        public String brand = "iPhone";
+        public String model = "15 Pro Max";
+        public final String chargerType = "Type-C";
+    
+        public void callDial(long phoneNumber) {
+            // Calling the given phone number, including class attributes
+            System.out.println("Dialing " + phoneNumber + " from my " + brand + " " + model);
+        }
+    }
+Just as we humans can perform various tasks, our objects can possess more than one method. For instance, let's add another method, `hangUp`:
+
+    public void hangUp() {
+        // Call has ended
+        System.out.println("Call ended.");
+    }
+To run this code, we can instantiate a class and call a method for the created instance:
+
+    CellPhone cellPhone = new CellPhone();
+    cellPhone.callDial("+1-212-456-7890"); // Prints: Dialing +1-212-456-7890 from my iPhone 15 Pro Max
+    cellPhone.hangUp(); // Prints: Call ended.
+### 3. Modifying Class Attributes
+Methods can interact with and modify class attributes. This can be illustrated with an `updateModel` method that updates the `model`:
+
+    public void updateModel(String newModel) {
+        // Updating the model attribute
+        this.model = newModel;
+        System.out.println("Model updated to " + newModel);
+    }
+Here, the `this` keyword refers to the current instance of the class object. It means that we are setting the `model` field in the current `CellPhone` class object to `newModel`.
