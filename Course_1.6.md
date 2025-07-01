@@ -479,3 +479,50 @@ Write a program that computes the area of a square with a given side length, ide
         }
     }
 
+## Lesson 4: Chaining Functions and Juggling Multiple Return Values in Java
+### 1. Understanding Function Chaining
+Let's demystify "Function Chaining". Have you ever prepared a cup of coffee? You sequentially boil water, brew coffee, and add cream. Now, imagine these steps as functions: `doubleNumber()` and `addFive()`. If we chain these functions together, we have our `doubleAndAddFive()` function — an apt illustration of function chaining!
+
+Take a look:
+
+    public static int doubleNumber(int number) {
+        return number * 2;  // doubles the input
+    }
+    
+    public static int addFive(int number) {
+        return number + 5;  // adds 5 to the input
+    }
+    
+    public static int doubleAndAddFive(int number) {
+        return addFive(doubleNumber(number));  // calls doubleNumber first, then addFive
+    }
+In `doubleAndAddFive()`, `doubleNumber()` is called first, and then its result fuels `addFive()`. That's function chaining!
+
+### 2. Hands-on with Function Chaining
+Now, let's dip our toes into function chaining. Consider the task of finding the square root of the `sum` of two numbers. We call sum() inside `sqrtOfSum()`, feeding its result to `sqrt()`.
+
+    public static void main(String[] args) {
+        System.out.println(sqrtOfSum(25, 25));  // prints the square root of the sum
+    }
+    
+    static int sum(int a, int b) {
+        return a + b;  // returns the sum
+    }
+    
+    static double sqrt(int number) {
+        return Math.sqrt(number);  // returns the square root
+    }
+    
+    static double sqrtOfSum(int a, int b) {
+        return sqrt(sum(a, b)); // calls sum first, then sqrt
+    }
+### 3. Dealing with Multiple Return Values
+Consider this scenario: a board game where `throwDice()` simulates the throw of two dice and returns both results. But how do you return both values from the function? This is where Java's List class saves the day!
+
+You can just return a `List` from the function, and it can handle any number of values in it. Let's see on example:
+
+    static List<Integer> throwDice() {
+        Random rand = new Random();
+        return Arrays.asList(rand.nextInt(6) + 1, rand.nextInt(6) + 1);  // returns a list of two element the dice throws
+    }
+Here, we created an `ArrayList` of two elements and provided it as a return value - easy and simple! You can access returned elements using the `ArrayList::get` method after that.
