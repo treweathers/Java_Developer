@@ -1,4 +1,6 @@
 //Course 1: Java Programming for Beginners
+
+//LESSON 1
 //Practice #1
     class Solution {
         public static void main(String[] args) {
