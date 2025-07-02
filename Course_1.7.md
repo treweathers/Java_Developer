@@ -1148,7 +1148,7 @@ Child classes can also override inherited attributes. For instance, `CellPhone` 
     }
 Here, `Smartphone` overrides the `hasTouchScreen` attribute to reflect its unique capabilities accurately.
 
-#### 4. Understanding 'protected' in Java
+### 4. Understanding 'protected' in Java
 The `protected` identifier in Java serves as a mid-point between `private` and `public`. When marked `protected`, an attribute becomes accessible within all subclasses.
 
     public class CellPhone {
