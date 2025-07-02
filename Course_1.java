@@ -918,6 +918,455 @@
 
 
 //Course 1.3: Iterations and Loops in Java
+//LESSON 1: For Loops and Beyond
+//#### Practice #1  
+    class Solution65 {
+        public static void main(String[] args) {
+            // Create an array representing planets in the solar system
+            String[] planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
+            
+            // Using basic for-loop to iterate through all planets
+            for (int i = 0; i < planets.length; i++) {
+                System.out.println("Visiting planet: " + planets[i]);
+            }
+            System.out.println();
+            
+            // Use enhanced for loop to visit each planet and print its name
+            for (String planet : planets) {
+                System.out.println("Visiting planet: " + planet);
+            }
+        }
+    }
+//#### Practice #2: Instead of using the enhanced for loop, switch to a basic for loop and list the planets with their ordinal numbers (1, 2, ..., 9). 
+/* original
+    class Solution {
+        public static void main(String[] args) {
+            String[] planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
+            for (String planet : planets) {
+                System.out.println("Exploring planet: " + planet);
+            }
+        }
+    }
+*/
+    class Solution66 {
+        public static void main(String[] args) {
+            String[] planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
+            for (int i = 0; i < planets.length; i++) {
+                System.out.println(i+1 + " - Exploring planet: " + planets[i]);
+            }
+        }
+    }
+//#### Practice #3: Investigate the following code and correct the spaceship's course so we can visit every planet in our array.  
+    class Solution67 {
+        public static void main(String[] args) {
+            int[] distancesFromSun = {1, 2, 3, 4, 5, 6, 7, 8};
+            //needed to change i-- to i++
+            for (int i = 0; i < distancesFromSun.length; i++) {
+                System.out.println(distancesFromSun[i]);
+            }
+        }
+    }
+//#### Practice #4: We're going to practice using the enhanced for loop. Let's explore the solar system, one loop at a time.
+    class Solution68 {
+        public static void main(String[] args) {
+            // Array of planet names in our solar system for space exploration analogy
+            String[] planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
+            
+            for (String planet : planets) {
+               System.out.println("Visiting planet: " + planet);
+            }
+            // TODO: Write an enhanced for loop to traverse the array 'planets'
+            // TODO: Inside the loop, print "Exploring the planet: " followed by the planet name.
+        }
+    }
+//#### Practice #5: Write code that visits each planet in our solar system, but now in reversed order.
+    class Solution69 {
+        public static void main(String[] args) {
+            // TODO: Create an array with the names of the planets of our solar system
+            // Here is the list of planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
+            String [] planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
+            // TODO: Use a basic for loop to visit (print the name of) each planet, **in reversed order**
+            // Neptune should go first, then Uranus, etc.
+            // Hint: for decrementing the variable in the loop, use `i--`, which is the same as `i = i - 1`
+            for (int i = planets.length - 1; i >= 0;  i--) {
+                System.out.println("Visiting: " + planets[i]);
+            }
+        }
+    }
+
+//LESSON 2: Java Space Loops: Mastering While and Do-While
+//Practice #1
+    class Solution70 {
+        public static void main(String[] args) {
+            // A "while" loop to count up to 5 stars, like a sensor detecting celestial objects
+            int starsCounted = 0;
+            while (starsCounted < 5) {
+                System.out.println("Star " + (starsCounted + 1) + " spotted!");
+                starsCounted++;
+            }
+            
+            // A "do-while" loop to simulate automatic space probe activation
+            // and power reserve management
+            int probeBattery = 3;
+            do {
+                System.out.println("Space probe is active. Checking systems. Battery level: " + probeBattery);
+                probeBattery--;
+            } while (probeBattery > 0);
+        }
+    }
+//#### Practice #2: Change the starter code so the loop starts at mission day 1 and increases to day 5. This alteration will require updating the loop condition and the mission day progression within the while loop construct.
+    class Solution71 {
+        public static void main(String[] args) {
+            // Initialize missionDay with day 5 of our space exploration
+            int missionDay = 1;
+            while (missionDay <= 5) { // Loop from mission day 5 to day 1
+                System.out.println("Spacecraft is orbiting on Day " + missionDay);
+                missionDay++; // Move to the previous mission day
+            }
+        }
+    }
+//#### Practice #3: Can you spot the malfunction and correct the code?
+    class Solution72 {
+        public static void main(String[] args) {
+            int fuelLevel = 5;
+            do {
+                System.out.println("Current fuel level: " + fuelLevel + " units.");
+            } while (fuelLevel > 0); 
+    
+            int astronautsToBoard = 3;
+            while (astronautsToBoard > 0) {
+                System.out.println(astronautsToBoard + " astronauts remaining to board.");
+            }
+        }
+    }
+    class Solution {
+        public static void main(String[] args) {
+            int fuelLevel = 5;
+            do {
+                System.out.println("Current fuel level: " + fuelLevel + " units.");
+                fuelLevel--;
+            } while (fuelLevel > 0); 
+    
+            int astronautsToBoard = 3;
+            while (astronautsToBoard > 0) {
+                System.out.println(astronautsToBoard + " astronauts remaining to board.");
+                astronautsToBoard--;
+            }
+        }
+    }
+//#### Practice #4: Add the code necessary to initiate the liftoff countdown and execute an orbit maneuver. Remember what ensures that the loop does not run indefinitely and how to guarantee at least one successful orbit completion.
+    class Solution73 {
+        public static void main(String[] args) {
+            // While loop for counting down until liftoff
+            
+            int liftoffCount = 5;
+            while (liftoffCount >= 0) { // TODO: Write the condition for continuing the countdown
+                System.out.println(liftoffCount + " seconds.");
+                liftoffCount--;
+                // TODO: Print the log message with the current countdown status
+                // TODO: What else needs to be done after each countdown print to prevent an infinite loop?
+            }
+            
+            // Do-while loop for simulating at least one orbit around a planet
+            int orbitsCompleted = 0;
+            do {
+                // TODO: Print out the completion of the first orbit.
+                System.out.println(orbitsCompleted + " orbits completed.");
+                orbitsCompleted++;
+            } while (orbitsCompleted < 1);
+        }
+    }
+//#### Practice #5: Write a program from scratch that simulates the collection of stars in space until you have 5? Your ship's dashboard will display the number of stars you have collected after each loop!
+    class Solution74 {
+        public static void main(String[] args) {
+            // TODO: Declare a variable to keep track of how many stars have been collected
+            int starsCollected = 0;
+            // TODO: Write a while loop that collects stars until you have 5 of them.
+            while (starsCollected <= 5) {
+                System.out.println("There are " + starsCollected + " stars collected");
+                starsCollected++;
+            }
+            // Inside the loop, print out the current count of stars collected, then increment the count.
+        }
+    }
+
+//LESSON 3: Navigating Conditional Asteroids: Java Loops and Decisions
+//#### Practice #1: Run the code.
+    class Solution75 {
+        public static void main(String[] args) {
+            for (int planet = 1; planet <= 5; planet++) {
+                if (planet % 2 == 0) {
+                    System.out.println("Planet " + planet + " has water!");
+                } else {
+                    System.out.println("Planet " + planet + " is dry.");
+                }
+            }
+        }
+    }
+//#### Practice #2: Convert the for loop in the starter code to a while loop to practice controlling your program's flow with a different type of loop. Ensure you maintain the same logic when scanning rock samples suitable for analysis.
+    class Solution76 {
+        public static void main(String[] args) {
+            // Astronaut's task is to report the area of rock samples that are multiples of 4
+            int rockSample = 1;
+            while (rockSample <= 8) {
+                if (rockSample % 4 == 0) {
+                    System.out.println("Rock sample " + rockSample + " is suitable for analysis.");
+                }
+                rockSample++;
+            }
+        }
+    }
+//#### Practice #3: The probe should increase its thruster burn every third day. Can you find the miscalculation in the days and fix it so that the probe can complete its 30-day journey correctly?
+    class Solution77 {
+        public static void main(String[] args) {
+            int spaceProbeDistance = 0;
+            int day = 1;
+    
+            while (spaceProbeDistance <= 30) { // Simulate distance check for 30 days
+                if (day % 3 == 0) {
+                    spaceProbeDistance += 3;
+                    System.out.println("Day " + day + ": Increased thruster burn. Distance: " + spaceProbeDistance);
+                } else {
+                    spaceProbeDistance += 1;
+                    System.out.println("Day " + day + ": Standard thruster burn. Distance: " + spaceProbeDistance);
+                }
+                //this needed to be on the outside oof the conditional statement, was inside else block
+                day++;
+            }
+        }
+    }
+//#### Practice #4: In the main code, find the spot to determine if it's a good day for a spacewalk. Remember, acceptable conditions range between 18 and 22 degrees. Your task awaits!
+    class Solution78 {
+        public static void main(String[] args) {
+            int[] temperatures = {21, 19, 20, 22, 18, 17, 19};
+            for (int temp : temperatures) {
+                if(temp >= 18 && temp <= 22) {
+                    System.out.println(temp + " degrees - Get out now.");
+                }
+                // TODO: Check if the temperature is between 18 and 22 degrees and print the appropriate message.
+                else {
+                System.out.println(temp + " degrees - Better stay inside the station.");
+                }
+            }
+        }
+    }
+//#### Practice #5: Write a Java program that loops through days, checks the temperature, and prints whether it's suitable for exploration.
+    class Solution79 {
+        public static void main(String[] args) {
+            // TODO: Set an array of temperatures during the week (7 elements)
+            int [] temperatures = {11, 22, 33, 44, 55, 66, 77};
+            // TODO: Use a for loop to go through each day of the week
+            for (int i = 0; i <= temperatures.length - 1; i++) {
+                if (temperatures[i] <= 24) {
+                    System.out.println("Day " + i + " with temp " + temperatures[i] + " is good");
+                } else {
+                    System.out.println("Day " + i + " with temp " + temperatures[i] + " ain''t great");
+                } 
+           }
+            
+                // TODO: Use an if-else statement to check if the temperature is too high for exploration
+                // Let's assume the temperature is too high if it's more than 24 degrees Celsius
+                
+                // TODO: Print the day and whether it's too hot or suitable for exploration
+        }
+    }
+
+//LESSON 4: Understanding Nested Loops
+//#### Practice #1
+    class Solution80 {
+        public static void main(String[] args) {
+            // Daily meal preparation routine for three days
+            String[] days = {"Monday", "Tuesday", "Wednesday"};
+            String[] meals = {"Breakfast", "Lunch", "Dinner"};
+    
+            for (int i = 0; i < days.length; i++) {
+                System.out.println("Day: " + days[i]);
+                for (int j = 0; j < meals.length; j++) {
+                    System.out.println(" - Preparing " + meals[j]);
+                }
+            }
+        }
+    }
+//#### Practice #2: Transform the loop that prints our meal tasks from a for-in-collection loop into a while loop (while (condition) { ... }). Remember to keep the number of tasks constant and to maintain the same output format.
+    class Solution81 {
+        public static void main(String[] args) {
+            String[] meals = {"Breakfast", "Lunch", "Dinner"};
+            String[] tasks = {"Plan", "Cook", "Eat"};
+    
+            int i = 0;
+            while (i < meals.length) {
+                System.out.println("For " + meals[i] + ":");
+                i++;
+                int j = 0;
+                while (j < tasks.length) {
+                    System.out.println("- " + tasks[j]);
+                    j++;
+                }
+            }
+        }
+    }
+//#### Practice #3: We've accidentally mixed up something in our code. They're not displaying in the order we planned. Identify the issue in our meal planning code and fix it.
+    class Solution82 {
+        public static void main(String[] args) {
+            String[] daysOfWeek = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+            String[] mealsOfTheDay = {"Breakfast", "Lunch", "Dinner"};
+    
+            // Outer loop for days of the week
+            for (int i = 0; i < daysOfWeek.length; i++) {
+                // Inner loop for each meal of the day
+                for (int j = 0; j < mealsOfTheDay.length; j++) {
+                    //needed to switch [i] and [j]
+                    System.out.println("Day: " + daysOfWeek[i] + ", Meal: " + mealsOfTheDay[j]);
+                }
+            }
+        }
+    }
+//#### Practice #4: A piece of code has mysteriously vanished. I need your help to add code that will print tasks for each meal of the day. Can you code the missing part where we loop through the tasks and output them?
+    class Solution83 {
+        public static void main(String[] args) {
+            String[] meals = {"Breakfast", "Lunch", "Dinner"};
+            String[] tasks = {"Plan", "Cook"};
+            
+            int i = 0;
+            for (String meal : meals) {
+                if (i < meals.length) {
+                // TODO: Loop through the tasks and output "<Task> <Meal>", e.g. "Plan Breakfast"
+            }
+            int j = 0;
+            for (String task: tasks) {
+                if (j < tasks.length) {
+                    System.out.println(task + " " + meal);
+                }
+                }
+            }
+        }
+    }
+//#### Practice #5: Create a Java program that prints out the tasks needed to plan and prepare each meal of the day, utilizing nested loops to accomplish the task.
+    class Solution84 {
+        public static void main(String[] args) {
+            // TODO: Create an array containing the names of each meal of the day
+            String [] daysOfWeek = {"Breakfast", "Lunch", "Dinner"};
+            // TODO: Create an array containing the names of tasks for meal planning
+            String [] mealsOfDay = {"Plan", "Prepare", "Cook"};
+            // TODO: Use a nested loop to iterate over each meal and its associated tasks and print them
+            for (int i = 0; i < daysOfWeek.length; i++) {
+                for (int j = 0; j < mealsOfDay.length; j++) {
+                    System.out.println(mealsOfDay[j] + " " + daysOfWeek[i]);
+                }
+            }
+        }
+    }
+
+//LESSON 5: Navigating Loop Control: Mastering Break and Continue in Java
+//#### Practice #1
+    class Solution85 {
+        public static void main(String[] args) {
+            for (int spin = 1; spin <= 10; spin++) {
+                if (spin == 5) {
+                    continue;
+                }
+                if (spin == 9) {
+                    break;
+                }
+                System.out.println("The carousel has spun " + spin + " times");
+            }
+        }
+    }
+//#### Practice #2
+    class Solution86 {
+        public static void main(String[] args) {
+            int ride = 1;
+            while (ride <= 5) {
+                if (ride == 2) {
+                    ride++;
+                    continue;
+                }
+                System.out.println("Riding attraction number: " + ride);
+                for (int turn = 1; turn <= 3; turn++) {
+                    if (ride == 4) {
+                        System.out.println("Wow, that's intense! Let's do a different ride.");
+                        break;
+                    }
+                    System.out.println("Turn " + turn + " on attraction " + ride);
+                }
+                ride++;
+            }
+        }
+    }
+//#### Practice #3: Please change the code so that it skips not just ride number 7, but also ride number 8. Use what you've learned about the continue statement and logical operators to make this happen.
+    class Solution87 {
+        public static void main(String[] args) {
+            // A tiny merry-go-round loop:
+            for (int rideNumber = 1; rideNumber <= 10; rideNumber++) {
+                if (rideNumber == 7 || rideNumber == 8) { // We want to skip ride number 7.
+                    continue; // We use 'continue' to skip to the next ride.
+                }
+                if (rideNumber == 9) { // We want to stop the loop at ride number 9.
+                    System.out.println("Ride " + rideNumber + " is so fun, let's end on a high note!");
+                    break; // We use 'break' to stop the loop prematurely.
+                }
+                System.out.println("Enjoying ride number: " + rideNumber);
+            }
+        }
+    }
+//#### Practice #4: On your amusement park adventure, make sure to skip the closed rides and decide when to take a break. Write the code to accomplish this!
+    class Solution88 {
+        public static void main(String[] args) {
+            // Amusement Park Rides Carousel
+            int totalRides = 10;
+            int ride = 1;
+            while (ride <= totalRides) {
+                // TODO: Skip the closed ride #4
+                if (ride == 4) {
+                    ride++;
+                    continue;
+                }
+    
+                // TODO: Take a break and exit the carousel ride loop after ride #7
+                if (ride > 7) {
+                    break;
+                }
+                System.out.println("Enjoying ride number: " + ride);
+                ride++;
+      
+            }
+        }
+    }
+//#### Practice #5: Complete a loop condition and a statement inside a nested loop on your own?
+    class Solution89 {
+        public static void main(String[] args) {
+            for (int i = 1; i <= 4; i++) {
+                for (int j = 1; j <= 4; j++) {
+                    // TODO: Add a condition and control statement to skip the rest of the loop when 'j' is equal to 'i'.
+                    if (j == i) {
+                        break;
+                    }
+                    System.out.print(i + "" + j + " ");
+                }
+                System.out.println(); // Move to next line
+            }
+        }
+    }
+//#### Practice #6: Write a program for controlling amusement park rides! Remember to skip a certain ride that's under maintenance and close the park after reaching a specific ride number.
+    class Solution90 {
+        public static void main(String[] args) {
+            // TODO: Create a loop for the amusement park rides from 1 to 10
+            int totalRides = 10;
+            int ride = 1;
+            for (ride = 1; ride < totalRides; ride++) {
+                if (ride == 6) {
+                    continue;
+                }
+                if (ride == 9) {
+                    break;
+                }
+                System.out.println( "Enjoying ride number: " + ride);
+            }
+            // TODO: Skip ride #6, it's under maintenance right now
+            // TODO: End your trip early when reaching ride #9
+            // TODO: Print out the ride numbers that visitors enjoy on the way
+        }
+    }
 
 
 //Course 1.4: Mastering Debugging with Java
