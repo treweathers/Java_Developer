@@ -6,9 +6,9 @@
 ## Course 1.4: Mastering Debugging with Java: 4 units✅
 ## Course 1.5: Java String Manipulation for Beginners: 5 units✅
 ## Course 1.6: Writing Functions using Java: 5 units✅
-## Course 1.7: Object-Oriented Programming in Java: 6 units⏳
+## Course 1.7: Object-Oriented Programming in Java: 6 units✅
 
-<h1 align='center'> Course 2:  </h1> 
+<h1 align='center'> Course 2:⏳  </h1> 
 
 ## Course 2.1:
 

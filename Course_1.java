@@ -524,6 +524,397 @@
 
 
 //Course 1.2: Learning Simple Data Structures in Java
+//LESSON 1: Exploring Java Arrays: Creation, Accessing, and Properties
+//#### Practice #1: Run the code.
+//  import java.util.Arrays;
+    class Solution39 {
+        public static void main(String[] args) {
+            int[] sportsInventory = {7, 8, 10, 3, 6}; // Represents inventory for 5 sports: soccer balls, tennis rackets, cricket bats, basketballs, volleyball
+            
+             // Print out the whole array
+             System.out.println("Sports inventory: " + Arrays.toString(sportsInventory));
+    
+            // Print out the number of items for soccer balls (index 0)
+            System.out.println("Soccer balls in inventory: " + sportsInventory[0]);
+            
+            // Finding and printing the total types of items in sports inventory
+            int totalTypes = sportsInventory.length;
+            System.out.println("Total types of sports items in the inventory: " + totalTypes);
+        }
+    }
+//#### Practice #2
+    class Solution40 {
+        public static void main(String[] args) {
+            // Creating a 2D array with quantities of different types of sports equipment.
+            // The first array contains quantities of footballs, the second array - for basketballs, and the third - for volleyballs.
+            int[][] equipmentStorage = {
+                {15, 20}, // quantities of footballs
+                {12, 25}, // quantities of basketballs
+                {18, 30} // quantities of volleyballs
+            };
+          
+            // Print out the quantity of footballs in storage without using arithmetic operations
+            System.out.println("Footballs in storage - Size 1: " + equipmentStorage[0][0] + ", Size 5: " + equipmentStorage[0][1]);
+        }
+    }
+//### Practice #3: Adjust the given code to print the number of tennis balls in the last storage compartment by using the array's length property.
+    class Solution41 {
+        public static void main(String[] args) {
+            int[] tennisBalls = {50, 60, 70, 80, 90};
+            // TODO: Access the last compartment's tennis balls using the array's length property
+            System.out.println(tennisBalls[tennisBalls.length - 1]);
+        }
+    }
+//#### Practice #4: There seems to be a slight hiccup when attempting to display the inventory as a neat string representation. Can you spot the bug and fix it
+//  import java.util.*;
+    class Solution42 {
+        public static void main(String[] args) {
+            int[] equipmentQuantities = { 5, 7, 4, 9, 1 };
+            //needed to add Arrays.toString before (equipmentQuantities)
+            System.out.println(Arrays.toString(equipmentQuantities)); // Attempting to output the multidimensional array
+        }
+    }
+//#### Practice #5: Implement the missing piece of code to count the different types of balls and retrieve a specific type from our collection.
+    class Solution43 {
+        public static void main(String[] args) {
+            // TODO: Create an array to represent the quantity of four types of sports balls (4 elements in the array)
+            // Let's say we have 3 footballs, 5 basketballs, 2 volleyballs, 4 tennis balls
+            int array[] = {3, 5, 2, 4};
+            // TODO: Print the message "Total number of sports balls: " followed by the total count
+            System.out.println("Total number of sports balls: " + array.length);
+            // TODO: Access and print the message "Number of volleyballs: " followed by the count of the third item in the array
+            System.out.println("Number of volleyballs: " + array[2]);
+        }
+    }
+//#### Practice #6: Write Java code to initialize a multidimensional array representing storage for soccer balls and tennis rackets from different brands and print the total number for specific items.
+    class Solution44 {
+        public static void main(String[] args) {
+            // Initialize a 2D array of integers named "sportsInventory", where the first sub-array stores
+            // [0] - soccer balls, [1] - tennis rackets
+            // Each array holds the quantity for different brands: [Nike, Adidas, Wilson]
+            int[][] sportsInventory = { {40, 70, 0}, {25, 5, 10} };
+    
+            // TODO: Print the quantity of Nike soccer balls (1st element in the 1st sub-array)
+            System.out.println(sportsInventory[0][0]);
+            // TODO: Print the quantity of Wilson tennis rackets (3rd element in the 2nd sub-array) 
+            System.out.println(sportsInventory[1][2]);
+        }
+    }
+
+//LESSON 2: Java's Building Blocks: Primitive Types vs. Class Types
+//#### Practice #1
+    class Solution45 {
+        public static void main(String[] args) {
+            Integer accountBalance = 5000;
+            Integer depositAmount = 1500;
+            
+            // Updating account balance using class types and methods
+            accountBalance = accountBalance + depositAmount;
+            System.out.println("New account balance: " + accountBalance.toString());
+        }
+    }
+//#### Practice #2: Next, let's refine the equality check in our banking example. Instead of using the .intValue() method, use the equals() method from the Integer class to compare depositAmount directly with 5000.
+/* original
+    class Solution {
+      public static void main(String[] args) {
+        // Using class types with auto-boxing
+        Integer accountBalance = 15000;
+        Integer depositAmount = 5000;
+    
+        // Check if the deposit amount equals 5000
+        if (depositAmount.intValue() == 5000) {
+          accountBalance = accountBalance + depositAmount;
+          System.out.println("New account balance: " + accountBalance);
+        }
+      }
+    }
+*/   
+    class Solution46 {
+      public static void main(String[] args) {
+        // Using class types with auto-boxing
+        Integer accountBalance = 15000;
+        Integer depositAmount = 5000;
+    
+        // Check if the deposit amount equals 5000
+        if (depositAmount.equals(5000)) {
+          accountBalance = accountBalance + depositAmount;
+          System.out.println("New account balance: " + accountBalance);
+        }
+      }
+    }
+//#### Practice #3: Here's a piece of code designed to verify the equality of two transaction amounts. However, it contains a bug, preventing it from doing so accurately. Determine the issue and fix it to ensure the comparison works correctly.
+    class Solution47 {
+        public static void main(String[] args) {
+            Integer accountBalanceBoxed = 12000;
+            Integer withdrawAmountBoxed = 12000;
+            //needed to add.intValu()  to accountBalanceBoxed and withdrawAmountBoxed
+            if (accountBalanceBoxed.intValue() == withdrawAmountBoxed.intValue()) {
+                System.out.println("Transaction Successful: Balance and Withdrawal amounts are equal.");
+            } else {
+                System.out.println("Transaction Failed: Balance and Withdrawal amounts are not equal.");
+            }
+        }
+    }
+//#### Practice #4: Represent your bank account balance as a class type and print out the string length of it.
+    class Solution48 {
+        public static void main(String[] args) {
+            // Define a bank account balance as a primitive type
+            float accountBalancePrimitive = 1000.75f;
+            
+            // TODO: Convert the primitive account balance to a class type and assign it
+            Float accountBalanceInteger = accountBalancePrimitive;
+            // TODO: Print the class type balance to the console
+            System.out.println(accountBalanceInteger);
+            // TODO: Print the length of the string representation of the class type balance
+            System.out.println(accountBalanceInteger.toString().length());
+            // Hint: You can use 'toString()' and then 'length()' method on the class type
+        }
+    }
+//#### Practice #5: Can you manage an account balance using Java class types writing a program that simulates an account balance withdrawal? Remember about built-in auto-boxing and auto-unboxing techniques, they make the code look much prettier.
+    class Solution49 {
+        public static void main(String[] args) {
+            // TODO: Declare an Integer variable for account balance and initialize it with a value
+            Integer accountBalanceInteger = 15000;
+            // TODO: Declare a primitive int variable for the withdrawal amount and initialize it with a value
+            int withdrawlAmountInt = 5000;
+            // TODO: Perform a withdrawal by subtracting the withdrawal amount from the account balance (consider auto-unboxing and auto-boxing)
+            Integer accountBalance = accountBalanceInteger - withdrawlAmountInt;
+            // TODO: Print the new account balance as a string
+            System.out.println(accountBalance.toString());
+        }
+    }
+
+//LESSON 3: ArrayLists 
+//#### Practice #1
+//  import java.util.*;
+    class Solution50 {
+        public static void main(String[] args) {
+            List<String> crewJobs = new ArrayList<>();
+            crewJobs.add("Navigator"); // Adding a crew job
+            crewJobs.add("Scientist"); // Adding another crew job
+    
+            // Access and print the job of the first crew member
+            System.out.println("First job in the crew: " + crewJobs.get(0));
+    
+            // Finding out and printing the number of jobs
+            System.out.println("Total jobs in the crew: " + crewJobs.size());
+        }
+    }
+//#### Practice #2: Currently, the log updates the temperature for the first day. Can you modify the code to update the temperature for the second day instead? Remember, positions in the ArrayList start from 0.
+//  import java.util.*;
+    class Solution51 {
+        public static void main(String[] args) {
+            List<Float> temperatures = new ArrayList<>();
+            temperatures.add(18.5f);
+            temperatures.add(17.3f);
+            temperatures.add(19.0f);
+    
+            // TODO: Increase yesterday's temperature by 1.1 degrees
+            float newTemp = temperatures.get(1) + 1.1f;
+            temperatures.set(1, newTemp);
+    
+            System.out.println("New temperatures: " + temperatures);
+        }
+    }
+//#### Practice #3: correct the starship's crew list compiler. Currently, it exhibits strange behavior when updating a crew member's role. Use your knowledge of handling crew rosters to identify and fix the issue.
+//  import java.util.*;
+    class Solution52 {
+        public static void main(String[] args) {
+            List<String> starshipCrew = new ArrayList<>();
+            starshipCrew.add("Captain Kirk");
+            starshipCrew.add("Spock");
+            starshipCrew.add("Dr. McCoy");
+    
+            // TODO: Replace 'Spock' with 'Scotty'
+            // needed to replace "Spock" with 1
+            starshipCrew.set(1, "Scotty");
+    
+            System.out.println("Welcome aboard the Starship, our crew members are: " + starshipCrew);
+        }
+    }
+//#### Practice #4: Add the missing crew roles that are crucial for any space mission to the list, then remove the role of the navigation expert, as their assignment has changed. Display the updated list of roles.
+//  import java.util.ArrayList;
+//  import java.util.List;
+    class Solution53 {
+        public static void main(String[] args) {
+            // Define a new ArrayList to manage crew roles
+            List<String> crewRoles = new ArrayList<>();
+            
+            // TODO: Add the role of the leader of a space mission ("Commander").
+            // TODO: Add the role required for navigating and steering the spacecraft ("Navigator").
+            crewRoles.add("Commander");
+            crewRoles.add("Navigator");
+            crewRoles.add("Scientist");
+            
+            // TODO: Remove the role of the navigation expert ("Navigator") using its index position.
+            crewRoles.remove(1);
+            // Print the new list of crew roles
+            System.out.println(crewRoles); // Finish the code to see the output
+        }
+    }
+//#### Practice #5: Your mission is to create a starship crew list. To do this, you'll need to write code from scratch that adds crew members to an ArrayList and greet the captain. Don't forget to count your crew!
+    class Solution54 {
+        public static void main(String[] args) {
+            // TODO: Create a new ArrayList to hold the starship crew members.
+            List<String> crewMembers= new ArrayList<>();
+            // TODO: Add the name of the captain to the crew list.
+            crewMembers.add("Captain Kirk");
+            // TODO: Add the name of an engineer to the crew list.
+            crewMembers.add("Howard Wolowitz");
+            // TODO: Greet the captain using their position in the list.
+            System.out.println("Welcome aboard " + crewMembers.get(0));
+            // TODO: Display the total number of crew members aboard the starship.
+            System.out.println(crewMembers.size());
+        }
+    }
+
+//LESSON 4: Navigating through Java's HashMaps: Keys to Efficient Data Storage
+//#### Practice #1
+//  import java.util.HashMap;
+    class Solution55 {
+        public static void main(String[] args) {
+            HashMap<String, String> spaceshipRoles = new HashMap<>();
+            spaceshipRoles.put("Zoe", "Pilot");
+            spaceshipRoles.put("Jayne", "Mercenary");
+            spaceshipRoles.put("Kaylee", "Mechanic");
+            System.out.println("Kaylee's role: " + spaceshipRoles.get("Kaylee"));
+            System.out.println("Do we have a Doctor? " + spaceshipRoles.containsKey("Doctor"));
+        }
+    }
+//#### Practice #2: Update the code to handle a non-existent crew member. Please change the code to retrieve the role of "Pilot", returning "Unknown role" in case this role doesn't exist in our roles' HashMap.. Notice that roles like "Biologist", "Geologist", and "Astronomer" are now the keys, and the crew members' names like "Zara", "Li", and "Omar" are the values.
+//  import java.util.HashMap;
+    class Solution56 {
+        public static void main(String[] args) {
+            HashMap<String, String> crewRoles = new HashMap<>();
+            crewRoles.put("Biologist", "Zara");
+            crewRoles.put("Geologist", "Li");
+            crewRoles.put("Astronomer", "Omar");
+    
+            // TODO: Use getOrDefault to retrieve the name for the role "Pilot" 
+            // and output "Unknown role" if it doesn't exist.
+            System.out.println("The Pilot is " + crewRoles.getOrDefault("Pilot", "Unknown role") + ".");
+        }
+    }
+//#### Practice #3: Our crew management system has encountered a bug resulting from a misunderstanding of how Java's HashMap handles non-existent values. Can you correct the code to ensure that we correctly process the "Xenobiologist" role?
+//  import java.util.HashMap;
+    class Solution57 {
+        public static void main(String[] args) {
+            HashMap<String, String> crewRoles = new HashMap<>();
+            
+            crewRoles.put("Biologist", "Dr. Xenon");
+            crewRoles.put("Astrophysicist", "Dr. Comet");
+            
+            // Incorrect handling of null values from the HashMap Get method
+            // needed to add crewRoles.getOrDefault( and add , "Sorry, unknown role")
+            System.out.println("Xenobiologist's name: " + crewRoles.getOrDefault("Xenobiologist", "Sorry, unknown role")); // Causes NullPointerException
+        }
+    }
+//#### Practice #4: We've mustered an inventory list for our spaceship's supplies, but it seems we've forgotten to add some items. Could you initialize our supplies HashMap and add a couple of key-value pairs according to the scenario?
+//  import java.util.HashMap;
+    class Solution58 {
+        public static void main(String[] args) {
+            // TODO: Initialize a HashMap `foodSupplies` to keep an inventory of spaceship food supplies
+            HashMap <String, Integer> foodSupplies = new HashMap<>();
+            // TODO: Add two items with their quantity to the inventory
+            foodSupplies.put("soup", 20);
+            foodSupplies.put("casserole", 1);
+            // Printing the current inventory of food supplies
+            System.out.println("Food Supplies Inventory: " + foodSupplies);
+        }
+    }
+//#### Practice #5: Create a HashMap to track the roles and ages of your crew members, and display a specific member's age (if the key doesn't exist, return the age of 0 instead).
+//  import java.util.HashMap;
+    class Solution59 {
+        public static void main(String[] args) {
+            // TODO: Initialize a HashMap to keep track of the crew members' roles and ages.
+            HashMap <String, Integer> crewRoles = new HashMap<>();
+            // TODO: Add a few crew members to the HashMap with their roles as keys and ages as values.
+            crewRoles.put("Biologist", 21);
+            crewRoles.put("Astrophysicist", 22);
+            // TODO: Print the overall size of the mission crew
+            System.out.println(crewRoles.size());
+            // TODO: Retrieve and display the age of the Biochemist.
+            System.out.println(crewRoles.getOrDefault("Biochemist", 0));
+            // If there is no Biochemist, return the age of 0
+        }
+    }
+
+//LESSON 5: HashSet in Java
+//#### Practice #1
+//  import java.util.HashSet;
+    class Solution60 {
+        public static void main(String[] args) {
+            HashSet<String> planets = new HashSet<>();
+            planets.add("Earth");
+            planets.add("Mars");
+            planets.add("Venus");
+            planets.add("Venus");
+            System.out.println("Number of unique planets: " + planets.size());
+            System.out.println("Unique planets: " + planets);
+            System.out.println(planets.contains("Earth"));
+        }
+    }
+//#### Practice #2: Remove an element from a collection. Specifically, we have a set of celestial bodies, and we realize we don't need the "Asteroid Belt" in our collection. Your job is to modify the starter code to remove the "Asteroid Belt" before we print out the celestial bodies.
+//  import java.util.HashSet;
+    class Solution61 {
+        public static void main(String[] args) {
+            HashSet<String> celestialBodies = new HashSet<>();
+            celestialBodies.add("Planet");
+            celestialBodies.add("Dwarf Planet");
+            celestialBodies.add("Moon");
+            celestialBodies.add("Asteroid Belt");
+    
+            // TODO: Remove the "Asteroid Belt" from the HashSet
+            celestialBodies.remove("Asteroid Belt");
+            System.out.println(celestialBodies);
+        }
+    }
+//#### Practice #3: Can you figure out how to check for the presence of "Mars" in our planetary exploration set? Remember the offerings of HashSet and fill in the blank.
+    class Solution62 {
+        public static void main(String[] args) {
+            java.util.HashSet<String> planets = new java.util.HashSet<>();
+            planets.add("Earth");
+            planets.add("Mars");
+            planets.add("Venus");
+            
+            // TODO: Check if "Mars" is part of the HashSet and, if so,
+            // then print out a message about it to the console
+            System.out.println("Is Mars present in the set? " + planets.contains("Mars"));
+        }
+    }
+//#### Practice #4: Your task is to track the celestial objects we've observed. Are you ready to update our log? I've started the log for you, but you'll need to add a unique space object to our HashSet.
+//  import java.util.HashSet;
+    class Solution63 {
+        public static void main(String[] args) {
+            HashSet<String> spaceObservations = new HashSet<>();
+            spaceObservations.add("Planet");
+            spaceObservations.add("Black Hole");
+            spaceObservations.add("Galaxy");
+            // TODO: Add another unique space object to our HashSet that is not already present
+            spaceObservations.add("Asteroid");
+            // TODO: Print whether our HashSet contains the `"Galaxy"` element, using built-in operations
+            System.out.println(spaceObservations.contains("Galaxy"));
+            // TODO: Print the size of our HashSet
+            System.out.println(spaceObservations.size());
+        }
+    }
+//#### Practice #5: Create a catalog of unique space objects — but be careful. Space does not appreciate repetitions. Write the code to manage your set of celestial discoveries.
+//  import java.util.HashSet;
+    class Solution64 {
+        public static void main(String[] args) {
+            // TODO: Create a HashSet to store unique space objects - Black Hole, Nebula, and Quasar
+            HashSet<String> spaceObjects = new HashSet<>();
+            spaceObjects.add("Black Hole");
+            spaceObjects.add("Nebula");
+            spaceObjects.add("Quasar");
+            // TODO: There's been a mistake! Remove an incorrectly added Nebula space object from the set.
+            spaceObjects.remove("Nebula");
+            // TODO: Display whether the removed object is still in the set (it should not be)
+            System.out.println("Is Nebula still present in the set? " + spaceObjects.contains("Nebula"));
+            // TODO: Print out the total count of unique space objects in your catalog
+            System.out.println(spaceObjects.size());
+        }
+    }
 
 
 //Course 1.3: Iterations and Loops in Java
