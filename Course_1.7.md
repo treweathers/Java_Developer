@@ -1006,8 +1006,80 @@ We have two classes, Zebra and Lion, each having their own eat() method. However
     }
 
 #### Practice #3
+There appears to be an error preventing it from running correctly. Your mission is to identify and fix this error to ensure the Lion class behaves as intended in our virtual savanna. Test your code to confirm the solution.
+
+    abstract class Animal { // An example of an abstract class
+      void breathe() {
+        System.out.println("Breathing...");
+      }
+    
+      void eat();
+    }
+    
+    class Lion extends Animal { // Class extending an abstract class
+      void eat() {
+        System.out.println("Eating meat...");
+      }
+    }
+    
+    class Solution {
+      public static void main(String[] args) {
+        Lion simba = new Lion(); // Creating an instance of Lion
+        simba.breathe(); // Inherited from Animal class
+        simba.eat(); // Supposed to implement an abstract method from Animal class
+      }
+    }
+    
+    solution.java:6: error: missing method body, or declare abstract
+      void eat();
+           ^
+    1 error
+    
+    abstract class Animal { // An example of an abstract class
+      void breathe() {
+        System.out.println("Breathing...");
+      }
+    
+      abstract void eat();
+    }
+    
+    class Lion extends Animal { // Class extending an abstract class
+      void eat() {
+        System.out.println("Eating meat...");
+      }
+    }
+    
+    class Solution {
+      public static void main(String[] args) {
+        Lion simba = new Lion(); // Creating an instance of Lion
+        simba.breathe(); // Inherited from Animal class
+        simba.eat(); // Supposed to implement an abstract method from Animal class
+      }
+    }
 
 #### Practice #4
+Define the behavior of the Lion class. Implement the specific way a lion satisfies its hunger in the wild.
+
+    abstract class Animal {
+        // TODO: define an abstract `eat()` method with no parameters
+        abstract void eat();    
+        // Each animal will implement this method
+    }
+    
+    class Lion extends Animal {
+        // TODO: Implement the `eat()` method to express
+        // how a lion eats in the wild using a print statement.
+        public void eat() {
+            System.out.println("Eating meat...");
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            Lion king = new Lion();
+            king.eat(); // Output: Lion is eating meat.
+        }
+    }
 
 #### Practice #5
 
