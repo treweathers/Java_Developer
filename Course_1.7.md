@@ -1106,5 +1106,63 @@ Create an abstract class Animal with an abstract method eat and a concrete metho
         }
     }
 
-## Lesson 6:
-### 1. 
+## Lesson 6: Java Inheritance: Mastering Method and Attribute Overriding
+### 1. Recap of Inheritance
+Inheritance in Java allows a class, referred to as a child, to 'inherit' properties and behaviors from another class, the parent. This is achieved using the keyword `extends`.
+
+    public class Smartphone extends CellPhone {}
+In this example, `Smartphone` inherits all aspects of `CellPhone`.
+
+### 2. Overriding Methods in Inheritance
+Overriding enables a child class to customize inherited methods. When a child class declares a method that is already present in the parent class, we refer to this as method overriding.
+
+Here's an example of how `Smartphone` overrides a method in `CellPhone`:
+
+    public class CellPhone {
+        // A method in parent class
+        public void displayBatteryStatus() {
+            System.out.println("Battery status displayed with an icon.");
+        }
+    }
+    
+    public class Smartphone extends CellPhone {
+        // Method overridden in child class
+        @Override
+        public void displayBatteryStatus() {
+            System.out.println("Battery status displayed as a percentage.");
+        }
+    }
+In this case, `Smartphone` overrides the `displayBatteryStatus` method to implement a unique action.
+
+### 3. Overriding Attributes in Inheritance
+Child classes can also override inherited attributes. For instance, `CellPhone` possesses an attribute named `hasTouchScreen`, which is set to `false`. In contrast, `Smartphone` changes this attribute as it does feature a touchscreen.
+
+    public class CellPhone {
+        // An attribute in the parent class
+        public boolean hasTouchScreen = false;
+    }
+    
+    public class Smartphone extends CellPhone {
+        // The same attribute overridden in the child class
+        public boolean hasTouchScreen = true;
+    }
+Here, `Smartphone` overrides the `hasTouchScreen` attribute to reflect its unique capabilities accurately.
+
+#### 4. Understanding 'protected' in Java
+The `protected` identifier in Java serves as a mid-point between `private` and `public`. When marked `protected`, an attribute becomes accessible within all subclasses.
+
+    public class CellPhone {
+        // Protected attribute in parent class
+        protected boolean hasPhysicalKeypad = true;
+    }
+    
+    public class Smartphone extends CellPhone {
+        // The protected attribute overridden in the child class
+        protected boolean hasPhysicalKeypad = false;
+    }
+    
+    CellPhone phone = new CellPhone();
+    System.out.println(phone.hasPhysicalKeypad); // Error! Can't directly access protected field
+In this scenario, `Smartphone` is allowed to access and override the `protected` attribute `hasPhysicalKeypad`. At the same time, just directly accessing the same field, or accessing it from a non-inherited class, doesn't work.
+
+
