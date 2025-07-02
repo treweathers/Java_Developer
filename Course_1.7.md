@@ -972,6 +972,42 @@ Run the code.
     }
 
 #### Practice #2
+We have two classes, Zebra and Lion, each having their own eat() method. However, to make things more organized, please unite these two classes under an interface Animal containing a single method eat(), to make these classes have a common ground.
+
+    // Main class named 'Solution'
+    class Solution {
+        public static void main(String[] args) {
+            Zebra zebra = new Zebra();
+            zebra.eat();
+    
+            Lion lion = new Lion();
+            lion.eat();
+        }
+    }
+    
+    interface Animal {
+         void eat();
+    }
+    
+    // 'Zebra' class
+    class Zebra implements Animal {
+        // Implement the 'eat' method for 'Zebra'
+        public void eat() {
+            System.out.println("Eating tall grass in the savanna...");
+        }
+    }
+    
+    // 'Lion' class
+    class Lion implements Animal {
+        // Implement the 'eat' method for 'Lion'
+        public void eat() {
+            System.out.println("Eating meat...");
+        }
+    }
+
 #### Practice #3
+
 #### Practice #4
+
 #### Practice #5
+
