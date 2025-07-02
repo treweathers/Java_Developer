@@ -1084,3 +1084,27 @@ Define the behavior of the Lion class. Implement the specific way a lion satisfi
 #### Practice #5
 Create an abstract class Animal with an abstract method eat and a concrete method breathe. Then, create a class Giraffe that extends Animal and implements eat. Have the Giraffe munch on some leaves and breathe the fresh savanna air!
 
+    class Solution {
+        public static void main(String[] args) {
+            Giraffe g = new Giraffe();
+            g.eat();
+            g.breathe();
+        }
+    }
+    
+    // TODO: Create an abstract class named 'Animal'. It should have an abstract method 'eat' and a concrete method 'breathe'.
+    abstract class Animal {
+        abstract void eat();
+        public void breathe() {
+            System.out.println("Breathing...");
+        }
+    }
+    // TODO: Create a class named 'Giraffe' that extends 'Animal'. Provide an implementation for the 'eat' method.
+    class Giraffe extends Animal {
+        public void eat() {
+            System.out.println("Eating...");
+        }
+    }
+
+## Lesson 6:
+### 1. 
