@@ -1082,4 +1082,5 @@ Define the behavior of the Lion class. Implement the specific way a lion satisfi
     }
 
 #### Practice #5
+Create an abstract class Animal with an abstract method eat and a concrete method breathe. Then, create a class Giraffe that extends Animal and implements eat. Have the Giraffe munch on some leaves and breathe the fresh savanna air!
 
