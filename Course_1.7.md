@@ -1165,4 +1165,150 @@ The `protected` identifier in Java serves as a mid-point between `private` and `
     System.out.println(phone.hasPhysicalKeypad); // Error! Can't directly access protected field
 In this scenario, `Smartphone` is allowed to access and override the `protected` attribute `hasPhysicalKeypad`. At the same time, just directly accessing the same field, or accessing it from a non-inherited class, doesn't work.
 
+#### Practice #1
+Run the code.
 
+    class BasicCellPhone {
+        protected String batteryType = "Removable";
+        
+        public void powerOn() {
+            System.out.println("Basic CellPhone powering on with " + batteryType + " battery.");
+        }
+    }
+    
+    class CellPhone extends BasicCellPhone {
+        protected String batteryType = "Non-removable";
+        
+        // Overrides powerOn method from BasicCellPhone
+        public void powerOn() {
+            System.out.println("Smartphone powering on with " + batteryType + " battery.");
+        }
+    }
+        
+    class Solution {
+        public static void main(String[] args) {
+            CellPhone myPhone = new CellPhone();
+            myPhone.powerOn(); // Displays: Smartphone powering on with Non-removable battery.
+        }
+    }
+
+#### Practice #2
+Please change the display method's access level in the Smartphone class to public, allowing it to override the parent class’s display method and to be called from outside the class hierarchy.
+
+    class CellPhone {
+        protected void display() {
+            System.out.println("Basic cell phone display.");
+        }
+    }
+        
+    class Smartphone extends CellPhone {
+        public void display() {
+            System.out.println("Smartphone with HD display.");
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            CellPhone myPhone = new CellPhone();
+            myPhone.display();
+            Smartphone mySmartphone = new Smartphone();
+            // This call should print "Smartphone with HD display." after your update
+            mySmartphone.display();
+        }
+    }
+
+#### Practice #3
+You're tasked with ensuring a mobile device starts up correctly. However, there's been a hiccup, and the mobile device isn't booting as expected. Review the code and fix the problem to greet users warmly when they turn on their smartphones.
+
+    class MobileDevice {
+        protected String operatingSystem = "Generic OS";
+    
+        protected void bootUp() {
+            System.out.println("Booting up " + operatingSystem + "...");
+        }
+    }
+    
+    class Smartphone extends MobileDevice {
+        protected String operatingSystem = "Android";
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            MobileDevice myDevice = new Smartphone();
+            myDevice.bootUp();
+        }
+    }
+    
+    Booting up Generic OS...
+    
+    class MobileDevice {
+        protected String operatingSystem = "Generic OS";
+    
+        protected void bootUp() {
+            System.out.println("Booting up " + operatingSystem + "...");
+        }
+    }
+    
+    class Smartphone extends MobileDevice {
+        public String operatingSystem = "Android";
+        public void bootUp() {
+            System.out.println("Booting up " + operatingSystem + "...");
+        }
+    }
+    
+    class Solution {
+        public static void main(String[] args) {
+            MobileDevice myDevice = new Smartphone();
+            myDevice.bootUp();
+        }
+    }
+
+
+#### Practice #4
+Now that you've seen how a SmartPhone can override the powerOn method, let's put your skills to the test. Replace the placeholder with your own implementation to uniquely power on the SmartPhone.
+
+    class BasicPhone {
+        protected void powerOn() {
+            System.out.println("BasicPhone powering on.");
+        }
+    }
+      
+    class SmartPhone extends BasicPhone {
+        // TODO: Override the powerOn method to announce that the SmartPhone is powered by a touch screen.
+        public void powerOn() {
+            System.out.println("Touch screen powering on.");        
+        }
+    }
+    
+    class Solution {  
+        public static void main(String[] args) {
+            SmartPhone myPhone = new SmartPhone();
+            // TODO: Call the powerOn method on myPhone object.
+            myPhone.powerOn();
+        }
+    }
+
+#### Practice #5
+You'll write code to simulate how a Smartphone can connect to the internet differently from a CellPhone. Remember to use method overriding to achieve this functionality.
+
+    // TODO: Create a class 'CellPhone' with a method 'connectToInternet' that prints a message (connecting through 3G)
+    class CellPhone {
+        public void connectToInternet() {
+            System.out.println("connecting through 3G");
+        }
+    }
+    // TODO: Create another class, 'Smartphone', that extends 'CellPhone' and overrides 'connectToInternet' method to connect through Wi-Fi
+    class Smartphone extends CellPhone{
+        public void connectToInternet() {
+              System.out.println("connecting through Wi-Fi");      
+        }
+    }
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Instantiate 'Smartphone', call 'connectToInternet', and observe overridden behavior
+            CellPhone phone = new Smartphone();
+            phone.connectToInternet();
+        }
+    }
+
+###### Congratulations🥳! you just completed the last portion of the **Java for Beginners** course! Ready to take the assessment?🙇
