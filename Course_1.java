@@ -1826,36 +1826,31 @@ Fixed*/
 //Course 1.5: Java String Manipulation for Beginners
 //LESSON 1: Java String Operations: Concatenation, Comparison, and Essential Methods
 //#### Practice #1
-    class Solution {
+    class Solution107 {
         public static void main(String[] args) {
             String bookTitle = "The Adventures of Cosmo";
             String author = "Coder Kid";
             String librarySection = "Children's Books";
-            
             String catalogEntry = bookTitle + " by " + author + " - " + librarySection;
             System.out.println(catalogEntry);
         }
     }
-
 //#### Practice #2
-    class Solution {
+    class Solution108 {
         public static void main(String[] args) {
             String bookTitle1 = "The Cosmic Code";
             String bookTitle2 = "Quantum Cosmos";
-    
             System.out.println("Book titles are: \"" + bookTitle1 + "\" and \"" + bookTitle2 + "\"");
             System.out.println("Titles are the same? " + bookTitle1.equals(bookTitle2));
             System.out.println("Alphabetical comparison result: " + bookTitle1.compareTo(bookTitle2));
         }
     }
-
 //#### Practice #3: Modify the given code to print not the raw compareTo result but a textual human-readable explanation instead. Remember - when the compareTo result is 0 - strings are equal, when it is negative - the first string is alphabetically smaller, and when it is positive - the first string is alphabetically larger. 
-    class Solution {
+    class Solution109 {
         public static void main(String[] args) {
             String bookTitle = "Cosmic Java";
             String anotherTitle = "Astronomy for Dummies";
             int titleComparison = bookTitle.compareTo(anotherTitle);
-    
             // Output the comparison result
             if (titleComparison == 0) {
                 System.out.println("book titles are equal alphabetically!");
@@ -1870,38 +1865,15 @@ Fixed*/
             // TODO: Change the output to print explanation like "'<Title 1>' comes before '<Title 2>' alphabetically" instead
         }
     }
-
-#### Practice #4
-Run the code and use what you've learned to fix it.
-
-    class Solution {
+//#### Practice #4: Run the code and use what you've learned to fix it.
+    class Solution110 {
         public static void main(String[] args) {
             String bookTitle = "Cosmic Java";
             String modifiedTitle = bookTitle.toUpperCase().substring(0, 6) + " Adventures";
             String anotherBookTitle = "COSMOS Java";
-            
             System.out.println(anotherBookTitle);       
             System.out.println(modifiedTitle);
-            if (modifiedTitle == anotherBookTitle) {
-                System.out.println("Both titles are the same.");
-            } else {
-                System.out.println("Titles are different.");
-            }
-        }
-    }
-    
-    COSMOS Java
-    COSMIC Adventures
-    Titles are different.
-    
-    class Solution {
-        public static void main(String[] args) {
-            String bookTitle = "Cosmic Java";
-            String modifiedTitle = bookTitle.toUpperCase().substring(0, 6) + " Adventures";
-            String anotherBookTitle = "COSMOS Java";
-            
-            System.out.println(anotherBookTitle);       
-            System.out.println(modifiedTitle);
+            //use .equals instead of ==
             if (modifiedTitle.equals(anotherBookTitle)) {
                 System.out.println("Both titles are the same.");
             } else {
@@ -1909,13 +1881,8 @@ Run the code and use what you've learned to fix it.
             }
         }
     }
-
-###### feedback: says not working as intended, but is working perfectly, just not technically corrrect in method of comparing strings. Should have used methods and not standard comparison operators. Output is exactly the same⚠️.
-
-#### Practice #5
-Let's try cataloging a book by completing the code to give it an entry and display it correctly.
-
-    class Solution {
+//#### Practice #5: Let's try cataloging a book by completing the code to give it an entry and display it correctly.
+    class Solution111 {
         public static void main(String[] args) {
             String author = "J.K. Rowling";
             String title = "Harry Potter";
@@ -1926,10 +1893,8 @@ Let's try cataloging a book by completing the code to give it an entry and displ
             // The output should be: HARRY POTTER BY J.K. R...
         }
     }
-#### Practice #6
-Create a catalog entry for your favorite book in the library system. Remember to concatenate the title, the word 'by', and the author's name. Then, convert the entry to uppercase and calculate its length. Display the final catalog entry with its character count!
-
-    class Solution {
+//#### Practice #6: Create a catalog entry for your favorite book in the library system. Remember to concatenate the title, the word 'by', and the author's name. Then, convert the entry to uppercase and calculate its length. Display the final catalog entry with its character count!
+    class Solution112 {
         public static void main(String[] args) {
             // TODO: Declare a string variable for the book title and initialize it with your favorite book's title.
             String title = "Divergent";
@@ -1948,17 +1913,14 @@ Create a catalog entry for your favorite book in the library system. Remember to
     }
 
 //LESSON 2: String Formatting in Java: Enhancing Readability of Your Data
-#### Practice #1
-Run the code.
-
-    class Solution {
+//#### Practice #1
+    class Solution113 {
         public static void main(String[] args) {
             // Create a formatted String for a students grade report.
             String studentName = "Alice";
             int mathsGrade = 85;
             int scienceGrade = 90;
             int artGrade = 75;
-    
             // Format and print the report card for the student
             String reportCard = String.format("| %-14s | %-3d | %-3d | %-3d |", 
                                               studentName, mathsGrade, scienceGrade, artGrade);
@@ -1967,70 +1929,33 @@ Run the code.
             System.out.println(reportCard);
         }
     }
-
-
-#### Practice #2
-Adjust the formatting of the report card in the code to widen the scores column. Change the field width from 8 to 7 for the scores in math, science, and history subjects.
-
-    class Solution {
+//#### Practice #2: Adjust the formatting of the report card in the code to widen the scores column. Change the field width from 8 to 7 for the scores in math, science, and history subjects.
+    class Solution114 {
         public static void main(String[] args) {
             String studentName = "Lucy";
             int mathScore = 88;
             int scienceScore = 91;
             int historyScore = 76;
-    
             // Using `printf` to format and print the report card directly to the console
             System.out.printf("| %-10s | %-7s | %-7s | %-7s |\n", "Name", "Math", "Science", "History");
             System.out.printf("| %-10s | %-7d | %-7d | %-7d |\n", studentName, mathScore, scienceScore, historyScore);
         }
     }
-
-
-#### Practice #3
-The provided code contains a small mistake — can you identify and correct it so that the report prints without any errors?
-
-	class Solution {
+//#### Practice #3: The provided code contains a small mistake — can you identify and correct it so that the report prints without any errors?
+	class Solution115 {
 	    public static void main(String[] args) {
 	        String studentName = "Alex";
 	        int mathGrade = 85;
 	        int scienceGrade = 90;
 	        int artGrade = 75;
-	        
-	        String reportCard = String.format("Student: %d | Math: %d | Science: %d | Art: %d",
-	                                          studentName, mathGrade, scienceGrade, artGrade);
-	
-	        System.out.println(reportCard);
-	    }
-	}
-	
-	Exception in thread "main" java.util.IllegalFormatConversionException: d != java.lang.String
-		at java.base/java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4710)
-		at java.base/java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:3248)
-		at java.base/java.util.Formatter$FormatSpecifier.print(Formatter.java:3203)
-		at java.base/java.util.Formatter.format(Formatter.java:2801)
-		at java.base/java.util.Formatter.format(Formatter.java:2738)
-		at java.base/java.lang.String.format(String.java:4481)
-		at Solution.main(solution.java:8)
-	
-	class Solution {
-	    public static void main(String[] args) {
-	        String studentName = "Alex";
-	        int mathGrade = 85;
-	        int scienceGrade = 90;
-	        int artGrade = 75;
-	        
+            //needed to change %d to %s for Student
 	        String reportCard = String.format("Student: %s | Math: %d | Science: %d | Art: %d",
 	                                          studentName, mathGrade, scienceGrade, artGrade);
-	
 	        System.out.println(reportCard);
 	    }
 	}
-	 
-
-#### Practice #4
-Create a nicely formatted report card header with left alignment and a record line with right alignment.
-
-	class Solution {
+//#### Practice #4: Create a nicely formatted report card header with left alignment and a record line with right alignment.
+	class Solution116 {
 	    public static void main(String[] args) {
 	        // Academic report card formatted display for a student
 	        String studentName = "Leo";
@@ -2042,21 +1967,14 @@ Create a nicely formatted report card header with left alignment and a record li
 	        int grade2 = 75; // TODO: Format this grade to align to the right, adding spaces to the left to a width of 7
 	        System.out.printf("Grade 2: %7s ", grade2);
 	        int grade3 = 92;
-	        
 	        // Use of String formatting to align text and numbers neatly
 	        System.out.printf("| %-9s | %-7s | %-7s | %-7s |\n", "Student", subject1, subject2, subject3);
 	        System.out.printf("| %-9s | %-7s | %7d | %7d |\n", studentName, grade1, grade2, grade3);
 	        
 	    }
 	}
-
-###### feedback: there was an error coming from the provided code (last line System.out.printf() - and the _____ had to be replaced with text alignment. Not sure if this was deliberate. Also, did not turn out 'neat', was quite unhinged actually⚠️.
-
-
-#### Practice #5
-Craft a neatly formatted report for a student's grades using the formatting skills you've just learned. Your output should line up the student’s name and grades in their respective columns.
-
-	class Solution {
+//#### Practice #5: Craft a neatly formatted report for a student's grades using the formatting skills you've just learned. Your output should line up the student’s name and grades in their respective columns.
+	class Solution117 {
 	    public static void main(String[] args) {
 	        // Grading and report card formatting for a student
 	        String studentName = "Lucy";
@@ -2069,16 +1987,14 @@ Craft a neatly formatted report for a student's grades using the formatting skil
 	        // Outputs should look like this: | Name       | Math  | Science | Art    |
 	    }
 	}
-
+/*
 	| Name      | Math  | Science   | Art  |
 	| Lucy      | 85    | 90        | 87   |
-
+*/
 
 //LESSON 3: Mastering Special Character Sequences
-#### Practice #1
-Run the code.
-
-	class Solution {
+//#### Practice #1
+	class Solution118 {
 	    public static void main(String[] args) {
 	        // Below String represents a simple formatted text editing
 	        // that might be seen in a document editor.
@@ -2086,50 +2002,22 @@ Run the code.
 	        System.out.println("Title:\tJava String Manipulation\n\nContent:\n\tJava strings are powerful.\n\tThey can contain \"special characters\" like newline (\\n) and tab (\\t).");
 	    }
 	}
-
-#### Practice #2
-Your task is to include quotes around the provided proverb and the author's name in the code below. Ensure you use escape sequences correctly. Include quotes before the word The, and after step.
-
-	class Solution {
+//#### Practice #2: Your task is to include quotes around the provided proverb and the author's name in the code below. Ensure you use escape sequences correctly. Include quotes before the word The, and after step.
+	class Solution119 {
 	    public static void main(String[] args) {
 	        // Printing a proverb with a newline for formatting
 	        System.out.println("\"The journey of a thousand miles begins with a single step.\"\n- Author");
 	    }
 	}
-
-#### Practice #3
-Can you spot the bug and fix it? The code is intended to display the title and proverb on separate lines and include specific special characters.
-
-	class Solution {
-	    public static void main(String[] args) {
-	        System.out.println("Document Title: "The Cosmic Code"\nFamous Proverb: To the stars, through difficulties \ through learning Java.");
-	    }
-	}
-	
-	solution.java:3: error: ')' or ',' expected
-	        System.out.println("Document Title: "The Cosmic Code"\nFamous Proverb: To the stars, through difficulties \ through learning Java.");
-	                                             ^
-	solution.java:3: error: ';' expected
-	        System.out.println("Document Title: "The Cosmic Code"\nFamous Proverb: To the stars, through difficulties \ through learning Java.");
-	                                                       ^
-	solution.java:3: error: illegal escape character
-	        System.out.println("Document Title: "The Cosmic Code"\nFamous Proverb: To the stars, through difficulties \ through learning Java.");
-	                                                                                                                   ^
-	solution.java:3: error: not a statement
-	        System.out.println("Document Title: "The Cosmic Code"\nFamous Proverb: To the stars, through difficulties \ through learning Java.");
-	                                                        ^
-	4 errors
-	
-	class Solution {
+//#### Practice #3: Can you spot the bug and fix it? The code is intended to display the title and proverb on separate lines and include specific special characters.
+//needed to add \"  in front of The and \n and \ in front of through
+	class Solution120 {
 	    public static void main(String[] args) {
 	        System.out.println("Document Title: \"The Cosmic Code\"\nFamous Proverb: To the stars, through difficulties \\ through learning Java.");
 	    }
 	}
-
-#### Practice #4
-Create a message titled "Java String Manipulation Guide" with a properly formatted document title, newline, and tabbed date using special character sequences.
-
-	class Solution {
+//#### Practice #4: Create a message titled "Java String Manipulation Guide" with a properly formatted document title, newline, and tabbed date using special character sequences.
+	class Solution121 {
 	    public static void main(String[] args) {
 	      // TODO: Add a line of code that prints a formatted document title with a special sequence for a newline and then a tabbed date
 	      // Output example:
@@ -2139,11 +2027,8 @@ Create a message titled "Java String Manipulation Guide" with a properly formatt
 	      System.out.println("Document Title: \"Java String Manipulation Guide\"\n\t Date: 2023-04-01");
 	    }
 	}
-
-#### Practice #5
-You need to format a document title and sections using special character sequences, such as newlines (\n) and tabs (\t), to make them look organized. Remember what you've learned about \n and \t. It's all up to you to write the code from scratch!
-
-	class Solution {
+//#### Practice #5: You need to format a document title and sections using special character sequences, such as newlines (\n) and tabs (\t), to make them look organized. Remember what you've learned about \n and \t. It's all up to you to write the code from scratch!
+	class Solution122 {
 	    public static void main(String[] args) {
 	        // TODO: Display the document title, followed by sections with appropriate tabulations and a conclusion, all separated by newlines.
 	        System.out.println("Title: Java String Manipulations \n\t - Introduction \n\t - Special Characters \n\t - Practice Exercises \n Conclusion: Mastery of Java strings!");
@@ -2157,10 +2042,8 @@ You need to format a document title and sections using special character sequenc
 	}
 
 //LESSON 4: Search and Replace in Java
-#### Practice #1
-Run the code.
-
-	class Solution {
+//#### Practice #1
+	class Solution123 {
 	    public static void main(String[] args) {
 	        String chatMessage = "I love coding. Coding is fun!";
 	        String filteredMessage = chatMessage.replace("Coding", "Java");
@@ -2168,15 +2051,11 @@ Run the code.
 	        System.out.println(filteredMessage); // Output: "I love coding. Java is fun!"
 	    }
 	}
-
-#### Practice #2
-Modify the code to replace another phrase in the message. This time, change the word "refrain" to "avoid" using the replace() method.
-
-	class Solution {
+//#### Practice #2: Modify the code to replace another phrase in the message. This time, change the word "refrain" to "avoid" using the replace() method.
+	class Solution124 {
 	    public static void main(String[] args) {
 	        // A message in an online chat room:
 	        String message = "Java is fun, but please refrain from using bad words.";
-	
 	        // Moderating the chat by finding and replacing inappropriate language:
 	        String moderatedMessage = message.replace("bad words", "****");
 	        // Do one more change to replace "refrain" with "avoid"
@@ -2185,27 +2064,18 @@ Modify the code to replace another phrase in the message. This time, change the 
 	        System.out.println(moderatedMessage2);
 	    }
 	}
-
-#### Practice #3
-You may have noticed that some chat messages with smiles aren't displaying correctly on the screen. Can you identify and rectify the issue in this code snippet? Ensure all smiles are moderated correctly.
-
-	class Solution {
+//#### Practice #3: You may have noticed that some chat messages with smiles aren't displaying correctly on the screen. Can you identify and rectify the issue in this code snippet? Ensure all smiles are moderated correctly.
+	class Solution125 {
 	    public static void main(String[] args) {
 	        String chatMessage = "I love coding with CodeSignal!! :-) Coding is fun :-)";
-	        
 	        String moderatedMessage = chatMessage.replace(":-)", "[smiley]");
-	
 	        System.out.println(moderatedMessage);
 	    }
 	}
-
-#### Practice #4
-Your task is to check whether a message contains a specific word in any letter case and then replace it with the correct case. Fill in the blanks to complete this operation.
-
-	class Solution {
+//#### Practice #4: Your task is to check whether a message contains a specific word in any letter case and then replace it with the correct case. Fill in the blanks to complete this operation.
+	class Solution126 {
 	    public static void main(String[] args) {
 	        String chatMessage = "Java is cool! But sometimes, java can be challenging.";
-	
 	        // TODO: Add a condition to check if 'chatMessage' contains the word "java"
 	        System.out.println(chatMessage.contains("java"));
 	        // TODO: If it does contain, add a line to replace all occurrences of this word "java" with "Java"
@@ -2213,11 +2083,8 @@ Your task is to check whether a message contains a specific word in any letter c
 	        // Should replace and output: "Java is cool! But sometimes, Java can be challenging."
 	    }
 	}
-
-#### Practice #5
-Now, put your knowledge to the test by writing a program that filters a forbidden word from a chat message, replacing it with asterisks.
-
-	class Solution {
+//#### Practice #5: Now, put your knowledge to the test by writing a program that filters a forbidden word from a chat message, replacing it with asterisks.
+	class Solution127 {
 	    public static void main(String[] args) {
 	        String message = "The quick brown fox jumps over the lazy dog.";
 	        String forbiddenWord = "lazy";
@@ -2229,105 +2096,54 @@ Now, put your knowledge to the test by writing a program that filters a forbidde
 	    }
 	}
 
-
 //LESSON 5: Splitting and Joining in Java for Text Wizards
-#### Practice #1
-Run the code.
-
-	class Solution {
+//#### Practice #1
+	class Solution128 {
 	    public static void main(String[] args) {
 	        // Quote by Frank Zappa about books needing formatting
 	        String quote = "So many books, so little time.";
-	        
 	        // Split the quote into words using space as the delimiter
 	        String[] words = quote.split(" ");
-	        
 	        // Join the words into a sentence
 	        String joinedQuote = String.join(" ", words);
-	        
 	        // Remove the comma from the joined sentence        
 	        String formattedQuote = joinedQuote.replace(",", ""); 
-	        
 	        // Print the formatted quote
 	        System.out.println(formattedQuote); // prints "So many books so little time."
 	    }
 	}
-
-#### Practice #2
-Adjust the formatting of the quote in the provided starter code by changing the delimiter in the join() method. Replace the dash (" - ") with a comma followed by a space (", "), which is more conventional for lists in sentences. Apply your new knowledge of string joining to polish the quote.
-
-	class Solution {
+//#### Practice #2: Adjust the formatting of the quote in the provided starter code by changing the delimiter in the join() method. Replace the dash (" - ") with a comma followed by a space (", "), which is more conventional for lists in sentences. Apply your new knowledge of string joining to polish the quote.
+	class Solution129 {
 	    public static void main(String[] args) {
 	        // Quote by Frank Zappa about books needing formatting
 	        String quote = "So many books, so little time.";
-	        
 	        // Split the quote into words using space as the delimiter
 	        String[] words = quote.split(" ");
-	        
 	        // Join the words using a dash to emphasize pause for an editorial effect
 	        String reformattedQuote = String.join(", ", words);
-	        
 	        // Print the reformatted quote
 	        System.out.println(reformattedQuote); // prints "So - many - books, - so - little - time."
 	    }
 	}
-
-###### feedback: gramatically incorrect output⚠️
-
-#### Practice #3
-Here's a piece of code that's supposed to rearrange a sentence but isn't giving us the output we’d expect. Can you spot what might be wrong and fix it? Remember, you can execute the code to see how it behaves!
-
-	class Solution {
+//#### Practice #3: Here's a piece of code that's supposed to rearrange a sentence but isn't giving us the output we’d expect. Can you spot what might be wrong and fix it? Remember, you can execute the code to see how it behaves!
+	class Solution130 {
 	    public static void main(String[] args) {
 	        // A list of words to form a book-related sentence
 	        String[] words = {"books", "are", "the", "treasure"};
-	
 	        // Joining the words to form a grammatical sentence with a period at the end
 	        String sentence = String.join(" ", words) + ".";
-	
 	        // Printing the sentence
 	        System.out.println(sentence);
-	        
 	        // Now let's rearrange the sentence to say "treasure books are the"
 	        String[] rearrangedWords = {words[3], words[0], words[1], words[2]};
-	
-	        // Joining the rearranged words
-	        String rearrangedSentence = String.join("", rearrangedWords);
-	
-	        // Printing the rearranged sentence
-	        System.out.println(rearrangedSentence);
-	    }
-	}
-	
-	books are the treasure.
-	treasurebooksarethe
-	
-	class Solution {
-	    public static void main(String[] args) {
-	        // A list of words to form a book-related sentence
-	        String[] words = {"books", "are", "the", "treasure"};
-	
-	        // Joining the words to form a grammatical sentence with a period at the end
-	        String sentence = String.join(" ", words) + ".";
-	
-	        // Printing the sentence
-	        System.out.println(sentence);
-	        
-	        // Now let's rearrange the sentence to say "treasure books are the"
-	        String[] rearrangedWords = {words[3], words[0], words[1], words[2]};
-	
 	        // Joining the rearranged words
 	        String rearrangedSentence = String.join(" ", rearrangedWords);
-	
 	        // Printing the rearranged sentence
 	        System.out.println(rearrangedSentence);
 	    }
 	}
-
-#### Practice #4
-Take the provided snippet and complete the code where marked with TODO. Remember, splitting strings is crucial for text analysis!
-
-	class Solution {
+//#### Practice #4: Take the provided snippet and complete the code where marked with TODO. Remember, splitting strings is crucial for text analysis!
+	class Solution131 {
 	    public static void main(String[] args) {
 	        String bookQuote = "To be or not to be that is the question";
 	
@@ -2341,11 +2157,8 @@ Take the provided snippet and complete the code where marked with TODO. Remember
 	        System.out.println(formattedQuote); // Should print "To be or not to be that is the boolean"
 	    }
 	}
-
-#### Practice #5
-You're almost a master at manipulating strings, Space Voyager! Your final challenge is to extract a fragment from a famous quote. Begin by identifying the last three individual words and use what you've learned about string joining to unite them into a new snippet.
-
-	class Solution {
+//#### Practice #5: You're almost a master at manipulating strings, Space Voyager! Your final challenge is to extract a fragment from a famous quote. Begin by identifying the last three individual words and use what you've learned about string joining to unite them into a new snippet.
+	class Solution132 {
 	    public static void main(String[] args) {
 	        String quote = "To be, or not to be: that is the question.";
 	
@@ -2362,7 +2175,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
 //Course 1.6: Writing Functions using Java
 //LESSON 1: Defining and Executing Java Functions and Procedures
 //#### Practice #1
-    class Solution {
+    class Solution133 {
         static void displayBakingResult(int numOfCakes) {
             System.out.println("We baked " + numOfCakes + " delicious cakes!");
         }
@@ -2376,7 +2189,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //####  Practice #2: Instead of finding out the total number of cakes from two batches, let's calculate the average number of cakes per batch. Please adjust the addBatches function and the print statement in the main method accordingly. Note: the average is the total number of cakes divided by 2.
-    class Solution {
+    class Solution134 {
       static int addBatches(int batch1, int batch2) {
         return (batch1 + batch2) / 2;
       }
@@ -2386,7 +2199,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
       }
     }
 //####  Practice #3: Modify the bakeCake function to include a parameter for the number of candles and update the message. Then, update the function call to include the new parameter.
-    class Solution {
+    class Solution135 {
         static void bakeCake(String cakeType, int layers, int candles) {
             System.out.println("Baking a " + layers + "-layer " + cakeType + " cake with " + candles + " candles.");
         }
@@ -2395,7 +2208,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //####  Practice #4: The code below, is designed to calculate and print the total number of cookies sold at a bakery. However, there's a small bug that is preventing the correct execution of the total cookie sales. Can you find and fix the error to ensure the correct number of cookies sold is printed?
-    class Solution {
+    class Solution136 {
         static void bakeCookies(int batchCount) {
             System.out.println("Baking " + batchCount + " batches cookies!");
         }
@@ -2410,7 +2223,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
             System.out.println("Total cookies sold: " + totalCookies);
         }
 //####  Practice #5: Let's add the essential piece to calculate the total price of baked goods. Also, let's ensure the bakery displays the number of goods being baked.
-    class Solution {
+    class Solution137 {
       // TODO: Define a function to calculate and return the total price of baking goods.
       // Input parameters: itemCount, pricePerItem
       public static int bakingGoods(int itemCount, int pricePerItem) {
@@ -2427,7 +2240,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
       }
     }
 //####  Practice #6: Bake up your function to calculate the cost of cakes and write a procedure to display freshly baked cookies. Remember the recipe from earlier: define the right type of function with the correct ingredients and cook your code to perfection!
-    class Solution {
+    class Solution138 {
       // TODO: Create a function to calculate the cost of 'cakes' given the 'costPerCake'
       public static int cakeCost(int totalCakes, int costPerCake) {
         int cost = totalCakes * costPerCake;
@@ -2448,7 +2261,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
 
 //LESSON 2: An Introduction to Function Overloading
 //#### Practice #1
-    class Solution {
+    class Solution140 {
         static void print() {
             System.out.println("The office is open!");
         }
@@ -2461,7 +2274,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //#### Practice #2: The given code contains two overridden implementations of checkNumber - Modify the checkNumber function variation that takes a double value to fill in the implementation there. Let's see overriding in action!
-    class Solution {
+    class Solution141 {
         static String checkNumber(int number) {
             if (number > 0) {
                 return "Positive";
@@ -2490,7 +2303,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //#### Practice #3: Define an overloaded function to display the tool's name in our office environment code.
-    class Solution {
+    class Solution142 {
         // Print with overloading for different office tool names
         static void printToolName(String toolName) {
             System.out.println("The name of the tool is: " + toolName);
@@ -2507,7 +2320,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //#### Practice #4: You are tasked with creating a greeting system for our virtual office environment. Write the complete code to overload a method that welcomes employees differently, depending on whether it's just their name or both their name and the day of the week.
-    class Solution {
+    class Solution143 {
         // TODO: Create an overloaded method to welcome an employee by name
         public static String welcome(String name){
             return "Welcome " + name + " to this job!";                
@@ -2526,7 +2339,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
 
 //LESSON 3: Java's Built-In Functions
 //#### Practice #1
-    class Solution {
+    class Solution144 {
         public static void main(String[] args) {
             // Given a square's side length, calculate its area using the Math.pow function
             double sideLength = 5;
@@ -2538,7 +2351,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //#### Practice #2: Now, take the given code and transform the areaOfCircle method into the diameterOfCircle method using Java's Math.sqrt() function based on the area you have calculated. Your goal is to calculate the diameter of the circle from its area. Remember to update both the method name and the output message accordingly. Note: the diameter of the circle equals  2 * sqrt(area/π)
-    class Solution {
+    class Solution145 {
         // A simple method to calculate the area of a circle
         static double areaOfCircle(double radius) {
             return Math.PI * Math.pow(radius, 2);
@@ -2550,7 +2363,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
             System.out.println("The area of a circle with radius " + radius + " is: " + areaOfCircle(radius));
         }
     }
-    class Solution {
+    class Solution146 {
         // A simple method to calculate the area of a circle
         static double areaOfCircle(double radius) {
             return Math.PI * Math.pow(radius, 2);
@@ -2568,7 +2381,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
     
     }
 //#### Practice #3: Try to write a line of Java code using the Math function to find the larger of two galaxy populations and create a string that states which galaxy has the greater population.
-    class Solution {
+    class Solution147 {
         public static void main(String[] args) {
             // The universe is vast and full of numbers. Let's explore with Java functions!
             int galaxyOnePopulation = 1000000;
@@ -2587,7 +2400,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //#### Practice #4: Write a program that computes the area of a square with a given side length, identifies the greater count of galaxies observed, and calculates the square root of an area to simulate space exploration measurements.
-    class Solution {
+    class Solution148 {
         public static void main(String[] args) {
             // TODO: Calculate the area of a square where the side length is 4.0 light-years using the appropriate Math.pow() function.
             double squareArea = Math.pow(4, 2);
@@ -2605,7 +2418,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
 //LESSON 4: Chaining Functions and Juggling Multiple Return Values in Java
 //#### Practice #1
 //import java.util.*;
-    class Solution {
+    class Solutio149 {
         public static void main(String[] args) {
             List<Integer> diceRolls = throwTwoDice();
             System.out.println(getHighestRoll(diceRolls));  // prints the higher number of two dice rolls
@@ -2625,7 +2438,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
     import java.util.Arrays;
     import java.util.List;
 */
-    class Solution {
+    class Solution150 {
         static List<Integer> diceRoll() {
             int roll = (int) (Math.random() * 6) + 1;  // simulates a dice roll
             int roll2 = (int) (Math.random() * 6) + 1;
@@ -2642,7 +2455,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
     import java.util.ArrayList;
     import java.util.Arrays;
 */    
-    class Solution {
+    class Solution151 {
         static double average(double a, double b) {
             return (a + b) / 2.0; // calculates the average of two numbers
         }
@@ -2666,7 +2479,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //#### Practice #4: In this lesson, you've discovered how function chaining and managing multiple return values with lists operate in Java. Now, it's time for you to roll up your sleeves and dive into writing some code on your own. Your objective is to perform a sequence of operations on a given number. Specifically, you will need to double this number and then add seven to the outcome. Your mission involves creating the appropriate functions and then chaining them together to unveil the "lucky number."
-    class Solution {
+    class Solution152 {
         // TODO: Create a function that doubles the integer number passed to it.
         static double doubled(double a) {
             return a + a;
@@ -2689,7 +2502,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
 
 //LESSON 5: Exception Handling in Functions
 //#### Practice #1
-    class Solution {
+    class Solution153 {
         static void checkEmployeeId(int employeeNumber) {
             try {
                 int idCode = 1000 / employeeNumber; // May cause ArithmeticException if employeeNumber is 0
@@ -2703,7 +2516,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //#### Practice #2: Enhance the Employee ID validation in the checkEmployeeID method to include an upper limit. Adapt the condition to throw an exception for IDs greater than 10000. 
-    class Solution {
+    class Solution154 {
         static void checkEmployeeID(int employeeID) throws IllegalArgumentException {
             if(employeeID <= 0) {
                 throw new IllegalArgumentException("Employee ID must be greater than 0.");
@@ -2722,7 +2535,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //#### Practice #3: The age validation system in our Employee Management System is malfunctioning. Can you find the bug and fix the code so that it properly throws and handles an exception when an invalid age is entered?
-    class Solution {
+    class Solution155 {
         static void validateAge(int age) {
             if (age < 0) {
                 throw new IllegalArgumentException("Age cannot be negative");
@@ -2739,7 +2552,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //#### Practice #4: Now, it's time to ensure that our Employee Management System handles situations correctly. Please add the missing code to check and handle invalid employee ages.
-    class Solution {
+    class Solution156 {
         static void checkEmployeeAge(int age) {
             // TODO: Add code that checks if the employee is under 18
             if(age < 18){
@@ -2758,7 +2571,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //#### Practice #5: You are running an employee management system and you need to access the employee IDs from an array. Write code to access an ID and handle the case where it doesn't exist using exception handling.
-    class Solution {
+    class Solution157 {
         public static void main(String[] args) {
             int[] employeeIds = {101, 102, 103};
             // TODO: Try accessing an employee ID that might not exist in the array
@@ -2776,19 +2589,19 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
 //Course 1.7: Object-Oriented Programming in Java
 //LESSON 1: Creating and Using Classes
 //#### Practice #1
-    class Automobile {
+    class Automobile158 {
         void startEngine() {
             System.out.println("The engine is starting!");
         }
     }
-    class Solution {
+    class Solution159 {
         public static void main(String[] args) {
             Automobile myCar = new Automobile();
             myCar.startEngine(); // This will print "The engine is starting!"
         }
     }
 //#### Practice #2: Let's make some tweaks: Rename the class to Car instead of Automobile; Add one more class method stopEngine that prints a message about engine stop. Don't forget to call this method afterward!
-    class Car {
+    class Car160 {
       // Define a method within the class
       void startEngine() {
         System.out.println("Vroom! The car engine starts.");
@@ -2797,7 +2610,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         System.out.println("Scrreeeech! The car engine stops.");
       }
     }
-    class Solution {
+    class Solution161 {
       public static void main(String[] args) {
         // Create an object of the Automobile class
         Car car = new Car();
@@ -2808,12 +2621,12 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
       }
     }
 //#### Practice #3: Troubleshoot the Car class's startEngine method in the Java simulator. The engine should start with a "Vroom vroom!" message when the method is called correctly. However, due to a bug, the car is not starting as expected. Identify and fix the issue by applying the Java naming conventions and object-oriented principles taught in the lesson.
-     class Car {
+     class Car162 {
         void startEngine() {
             System.out.println("The engine has started. Vroom vroom!");
         }
     }
-    class Solution {
+    class Solution163 {
         public static void main(String[] args) {
             //needed to change myCar = null; to myCar = new Car();
             Car myCar = new Car();
@@ -2821,13 +2634,13 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //#### Practice #4: Fill in the blank to make the car do something when we start 
-    class Car {
+    class Car164 {
       // TODO: Define a method inside the Car class that prints a message when the car's engine starts.
       void carEngine() {
         System.out.println("Car is exploding😵!");
       }
     }
-    class Solution {
+    class Solution165 {
       public static void main(String[] args) {
         Car myCar = new Car(); // Creating an instance of Car class
         myCar.carEngine();;   // TODO: Call the method you've defined in the Car class to start the engine
@@ -2836,12 +2649,12 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
 //#### Practice #5: You've learned how to create and use a class and its methods. Now, it's time to apply that knowledge. Write a Car class with a method to imitate the sound of a horn; then create a Car object and call your method in the main function.
     // TODO: Define a class named 'Car'
         // TODO: In the Car class, define a method 'honk' that prints the sound a car horn makes.
-    class Car {
+    class Car166 {
         void honk() {
             System.out.println("honkkkkkkk");
         }
     }
-    class Solution {
+    class Solution167 {
         public static void main(String[] args) {
             // TODO: Create a Car object.
             Car myCar = new Car();
@@ -2853,7 +2666,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
 //LESSON 2: Class Attributes and Methods in Java
 //#### Practice #1
     // CellPhone class with Class Attributes and Methods.
-    class CellPhone {
+    class CellPhone168 {
         String brand = "Galaxy";
         String model = "S21";
         final String chargerType = "Type-C";
@@ -2862,14 +2675,14 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
             System.out.println("Calling from " + brand + " " + model + " using " + chargerType + " charger...");
         }
     }
-    class Solution {
+    class Solutio169 {
         public static void main(String[] args) {
             CellPhone myPhone = new CellPhone();
             myPhone.makeCall(); // Invoking the method to simulate making a call.
         }
     }
 //#### Practice #2: Enhance the CellPhone class by adding an attribute that represents the software version. Then, create a simple updateSoftware method to change this version. This will demonstrate how methods can modify class attributes.
-    class CellPhone {
+    class CellPhone170 {
         String brand = "AnyBrand";
         String model = "AnyModel";
         final String chargerType = "MicroUSB";
@@ -2888,7 +2701,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //#### Practice #3: Your mission is to ensure your CellPhone is functional for interstellar communication. There's a slight problem: the code responsible for initiating calls is not using the model and brand variables correctly. Run the code and apply your fresh Java skills to resolve this, ensuring that the phone identifies itself properly when initiating a transmission!
-    class CellPhone {
+    class CellPhone171 {
         String brand = "GadgetCo";
         String model = "SuperPhone";
         final String chargerType = "Type-C";
@@ -2897,14 +2710,14 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
             System.out.println("Making a call with the " + model + " by " + brand + "...");
         }
     }
-    class Solution {
+    class Solution172 {
         public static void main(String[] args) {
             CellPhone myPhone = new CellPhone();
             myPhone.makeCall();
         }
     }
 //#### Practice #4: Create a new CellPhone object and call its method to simulate making a call.
-    class CellPhone {
+    class CellPhone173 {
         String brand = "TechPhone";
         String model = "X2";
         final String chargerType = "Micro-USB";
@@ -2914,7 +2727,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
             System.out.println("Making a phone call with the " + brand + model + " using a " + chargerType + "charger.");
         }
     }
-    class Solution {
+    class Solution174 {
         public static void main(String[] args) {
             // TODO: Create a CellPhone object and call the 'makeCall' method
             CellPhone newCall = new CellPhone();
@@ -2922,7 +2735,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //#### Practice #5: Create a CellPhone class with attributes and methods that allow it to dial and hang up a call. This will test your understanding of classes, attributes, and methods in Java.
-    class CellPhone {
+    class CellPhone175 {
         // TODO: Define attributes for the brand and model of the phone
         String brand = "iPhone";
         String model = "4";
@@ -2936,7 +2749,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
             System.out.println("Hanging up...");
         }  
     }
-    class Solution {
+    class Solution176 {
         public static void main(String[] args) {
             // TODO: Create an instance of CellPhone and use it to dial a number and then hang up
             CellPhone dial = new CellPhone();
@@ -2947,7 +2760,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
 
 //LESSON 3: An Introduction to Java Constructors
 //#### Practice #1
-    class Car {
+    class Car177 {
         String color;
         String model;
         boolean isElectric;
@@ -2958,14 +2771,14 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
             this.isElectric = isElectric;
         }
     }
-    class Solution {
+    class Solution178 {
         public static void main(String[] args) {
             Car familyCar = new Car("Red", "SUV", false);
             System.out.println("Family Car - Model: " + familyCar.model + ", Color: " + familyCar.color + ", Electric: " + familyCar.isElectric);
         }
     }
 //#### Practice #2: Your task is to enhance the Car constructor we've developed by implementing constructor overloading. Implement a new Car constructor with only model and year specified, setting the default color "White", benefitting our car manufacturing process during instances where a color preference is not indicated. At the end, create an instance of the Car class using the new constructor, and print all class fields to make sure everything has been set correctly.
-    class Car {
+    class Car179 {
         String model;
         String color;
         int year;
@@ -2982,7 +2795,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
             this.year = year;
         } 
     }
-    class Solution {
+    class Solution180 {
         public static void main(String[] args) {
             Car myCar = new Car("Sedan", "Red", 2021);
             System.out.println(myCar.model + " - " + myCar.color + " - " + myCar.year);  // prints: Sedan - Red - 2021
@@ -2992,7 +2805,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //#### Practice #3: Great job so far! On our car manufacturing line, there appears to be a small glitch: one car isn't displaying the correct model and year. Can you figure out what's going wrong and get our cars rolling out perfectly again?
-    class Car {
+    class Car181 {
       String model;
       int year;
       // Car class constructor with model and year
@@ -3002,7 +2815,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         this.year = year;
       }
     }
-    class Solution {
+    class Solution182 {
       public static void main(String[] args) {
         // Create a Car object called 'myCar' using the constructor
         Car myCar = new Car("Toyota Camry", 2021);
@@ -3010,7 +2823,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
       }
     }
 //#### Practice #4: Fill in the missing constructor code that initializes your car's model and year.
-    class Car {
+    class Car183 {
         String model;
         int year;
         // TODO: Define the constructor to initialize the car's model and year.
@@ -3022,14 +2835,14 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
             return "Model: " + model + ", Year: " + year;
         }
     }
-    class Solution {
+    class Solution184 {
         public static void main(String[] args) {
             Car myCar = new Car("Thunder", 2021); // Create a Car object using the constructor
             System.out.println(myCar.displayInfo()); // This should print the car's info
         }
     }
 //#### Practice #5: Now, let's build a Car class from scratch. Remember, the Car class needs a constructor that sets the car's model and color. Then, in your Solution class, create an object of Car with your favorite car model and color, and print them out.
-    class Car {
+    class Car185 {
       // TODO: Declare attributes for model and color
       String model;
       String color;
@@ -3039,7 +2852,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         this.color = color;
       }
     }
-    class Solution {
+    class Solution186 {
       public static void main(String[] args) {
         // TODO: Create a Car object with your chosen model and color, then print out its details
         Car newCar = new Car("Camry", "Transparent");
@@ -3049,7 +2862,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
 
 //LESSON 4: Java's Building Blocks: Encapsulation of Attributes and Methods
 //#### Practice #1
-    class Vehicle {
+    class Vehicle187 {
         private String engineStatus = "off";  // Encapsulated vehicle's engine attribute
         public String getEngineStatus() {      // Getter for engine status
             return engineStatus;               // Returns current engine status
@@ -3058,7 +2871,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
             this.engineStatus = status;               // Updates engine status
         }
     }
-    class Solution {
+    class Solution188 {
         public static void main(String[] args) {
             Vehicle car = new Vehicle();              // Creating a new vehicle object, car.
             car.setEngineStatus("on");               // Starting the car's engine
@@ -3082,7 +2895,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
             }
         }
     }
-    class Solution {
+    class Solution189 {
         public static void main(String[] args) {
             Vehicle myCar = new Vehicle();
             myCar.setLicensePlate("XYZ 1234");
@@ -3091,7 +2904,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
     }
 
 //#### Practice #3: Let's proceed to debug some code next. There’s a small mistake in this code that pertains to setting the model of a car. Identify and correct it to ensure the Car class functions as intended.
-    class Car {
+    class Car190 {
         private String model;
         private int year;
         public String getModel() {
@@ -3104,7 +2917,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
             this.year = newYear;
         }
     }
-    class Solution {
+    class Solution191 {
         public static void main(String[] args) {
           Car car = new Car();
           car.setModel("Tesla Model X");
@@ -3114,7 +2927,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //#### Practice #4: Add code to manage car details. Implement methods to set and get the car's manufacturing year.
-    class Car {
+    class Car192 {
         private String model;
         private int year;
         public String getModel() {
@@ -3132,7 +2945,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
         // TODO: Write a method to assign a new year to the car
     }
-    class Solution {
+    class Solution193 {
         public static void main(String[] args) {
             Car myCar = new Car();
             myCar.setModel("Tesla Model S");
@@ -3143,7 +2956,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //### Practice #5: Create a Car class with private attributes and provide public getter and setter methods to access them. Remember to follow good encapsulation practices and control how these attributes are accessed and modified.
-    class Car {
+    class Car194 {
         // TODO: Declare private attributes for the Car class (model name as a String, year as an int)
         private String model;
         private int year;
@@ -3164,7 +2977,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
             this.year = newYear;
         }
     }
-    class Solution {
+    class Solution195 {
         public static void main(String[] args) {
             Car myCar = new Car();
             // TODO: Set the model name of myCar to "Tesla Model S"
@@ -3178,7 +2991,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
 
 //LESSON 5: Mastering Interfaces, Abstract Classes, and Simple Inheritance in Java
 //#### Practice #1
-    class Solution {
+    class Solution196 {
         abstract static class Animal {
             abstract void eat();  // An abstract method for eating
     
@@ -3199,7 +3012,7 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
     }
 //#### Practice #2: We have two classes, Zebra and Lion, each having their own eat() method. However, to make things more organized, please unite these two classes under an interface Animal containing a single method eat(), to make these classes have a common ground.
     // Main class named 'Solution'
-    class Solution {
+    class Solution197 {
         public static void main(String[] args) {
             Zebra zebra = new Zebra();
             zebra.eat();
@@ -3208,37 +3021,37 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
             lion.eat();
         }
     }
-    interface Animal {
+    interface Animal198 {
          void eat();
     }
     // 'Zebra' class
-    class Zebra implements Animal {
+    class Zebra199 implements Animal {
         // Implement the 'eat' method for 'Zebra'
         public void eat() {
             System.out.println("Eating tall grass in the savanna...");
         }
     }
     // 'Lion' class
-    class Lion implements Animal {
+    class Lion200 implements Animal {
         // Implement the 'eat' method for 'Lion'
         public void eat() {
             System.out.println("Eating meat...");
         }
     }
 //#### Practice #3: There appears to be an error preventing it from running correctly. Your mission is to identify and fix this error to ensure the Lion class behaves as intended in our virtual savanna. Test your code to confirm the solution.
-    abstract class Animal { // An example of an abstract class
+    abstract class Animal201 { // An example of an abstract class
       void breathe() {
         System.out.println("Breathing...");
       }
       //needed to add abstract before void
       abstract void eat();
     }
-    class Lion extends Animal { // Class extending an abstract class
+    class Lion202 extends Animal { // Class extending an abstract class
       void eat() {
         System.out.println("Eating meat...");
       }
     }
-    class Solution {
+    class Solution203 {
       public static void main(String[] args) {
         Lion simba = new Lion(); // Creating an instance of Lion
         simba.breathe(); // Inherited from Animal class
@@ -3246,26 +3059,26 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
       }
     }
 //#### Practice #4: Define the behavior of the Lion class. Implement the specific way a lion satisfies its hunger in the wild.
-    abstract class Animal {
+    abstract class Animal204 {
         // TODO: define an abstract `eat()` method with no parameters
         abstract void eat();    
         // Each animal will implement this method
     }
-    class Lion extends Animal {
+    class Lion205 extends Animal {
         // TODO: Implement the `eat()` method to express
         // how a lion eats in the wild using a print statement.
         public void eat() {
             System.out.println("Eating meat...");
         }
     }
-    class Solution {
+    class Solution206 {
         public static void main(String[] args) {
             Lion king = new Lion();
             king.eat(); // Output: Lion is eating meat.
         }
     }
 //#### Practice #5: Create an abstract class Animal with an abstract method eat and a concrete method breathe. Then, create a class Giraffe that extends Animal and implements eat. Have the Giraffe munch on some leaves and breathe the fresh savanna air!
-    class Solution {
+    class Solution207 {
         public static void main(String[] args) {
             Giraffe g = new Giraffe();
             g.eat();
@@ -3273,14 +3086,14 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
     // TODO: Create an abstract class named 'Animal'. It should have an abstract method 'eat' and a concrete method 'breathe'.
-    abstract class Animal {
+    abstract class Animal208 {
         abstract void eat();
         public void breathe() {
             System.out.println("Breathing...");
         }
     }
     // TODO: Create a class named 'Giraffe' that extends 'Animal'. Provide an implementation for the 'eat' method.
-    class Giraffe extends Animal {
+    class Giraffe209 extends Animal {
         public void eat() {
             System.out.println("Eating...");
         }
@@ -3288,37 +3101,37 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
 
 //LESSON 6: Java Inheritance: Mastering Method and Attribute Overriding
 //#### Practice #1
-    class BasicCellPhone {
+    class BasicCellPhone210 {
         protected String batteryType = "Removable";
         public void powerOn() {
             System.out.println("Basic CellPhone powering on with " + batteryType + " battery.");
         }
     }
-    class CellPhone extends BasicCellPhone {
+    class CellPhone211 extends BasicCellPhone {
         protected String batteryType = "Non-removable";
         // Overrides powerOn method from BasicCellPhone
         public void powerOn() {
             System.out.println("Smartphone powering on with " + batteryType + " battery.");
         }
     } 
-    class Solution {
+    class Solution212 {
         public static void main(String[] args) {
             CellPhone myPhone = new CellPhone();
             myPhone.powerOn(); // Displays: Smartphone powering on with Non-removable battery.
         }
     }
 //#### Practice #2: Please change the display method's access level in the Smartphone class to public, allowing it to override the parent class’s display method and to be called from outside the class hierarchy.
-    class CellPhone {
+    class CellPhone213 {
         protected void display() {
             System.out.println("Basic cell phone display.");
         }
     }   
-    class Smartphone extends CellPhone {
+    class Smartphone214 extends CellPhone {
         public void display() {
             System.out.println("Smartphone with HD display.");
         }
     }
-    class Solution {
+    class Solution215 {
         public static void main(String[] args) {
             CellPhone myPhone = new CellPhone();
             myPhone.display();
@@ -3328,39 +3141,39 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
         }
     }
 //#### Practice #3: You're tasked with ensuring a mobile device starts up correctly. However, there's been a hiccup, and the mobile device isn't booting as expected. Review the code and fix the problem to greet users warmly when they turn on their smartphones. 
-    class MobileDevice {
+    class MobileDevice216 {
         protected String operatingSystem = "Generic OS";
     
         protected void bootUp() {
             System.out.println("Booting up " + operatingSystem + "...");
         }
     }
-    class Smartphone extends MobileDevice {
+    class Smartphone217 extends MobileDevice {
         public String operatingSystem = "Android";
         //needed to add this method
         public void bootUp() {
             System.out.println("Booting up " + operatingSystem + "...");
         }
     }
-    class Solution {
+    class Solution218 {
         public static void main(String[] args) {
             MobileDevice myDevice = new Smartphone();
             myDevice.bootUp();
         }
     }
 //#### Practice #4: Now that you've seen how a SmartPhone can override the powerOn method, let's put your skills to the test. Replace the placeholder with your own implementation to uniquely power on the SmartPhone.
-    class BasicPhone {
+    class BasicPhone219 {
         protected void powerOn() {
             System.out.println("BasicPhone powering on.");
         }
     }
-    class SmartPhone extends BasicPhone {
+    class SmartPhone220 extends BasicPhone {
         // TODO: Override the powerOn method to announce that the SmartPhone is powered by a touch screen.
         public void powerOn() {
             System.out.println("Touch screen powering on.");        
         }
     }
-    class Solution {  
+    class Solution221 {  
         public static void main(String[] args) {
             SmartPhone myPhone = new SmartPhone();
             // TODO: Call the powerOn method on myPhone object.
@@ -3369,18 +3182,18 @@ You're almost a master at manipulating strings, Space Voyager! Your final challe
     }
 //#### Practice #5: You'll write code to simulate how a Smartphone can connect to the internet differently from a CellPhone. Remember to use method overriding to achieve this functionality.
     // TODO: Create a class 'CellPhone' with a method 'connectToInternet' that prints a message (connecting through 3G)
-    class CellPhone {
+    class CellPhone222 {
         public void connectToInternet() {
             System.out.println("connecting through 3G");
         }
     }
     // TODO: Create another class, 'Smartphone', that extends 'CellPhone' and overrides 'connectToInternet' method to connect through Wi-Fi
-    class Smartphone extends CellPhone{
+    class Smartphone223 extends CellPhone {
         public void connectToInternet() {
               System.out.println("connecting through Wi-Fi");      
         }
     }
-    class Solution {
+    class Solution224 {
         public static void main(String[] args) {
             // TODO: Instantiate 'Smartphone', call 'connectToInternet', and observe overridden behavior
             CellPhone phone = new Smartphone();
