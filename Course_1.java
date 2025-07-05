@@ -1,4 +1,9 @@
 //COURSE 1.1: Getting Started with Java
+/*install and set up: in treweathers (not for project)
+brew install openjdk
+java -version
+*/
+
 //LESSON 1: Java Basics: Syntax, Comments, Semicolons, and Your First Program
 //Practice #1
     class Solution {
