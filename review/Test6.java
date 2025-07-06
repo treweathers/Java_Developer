@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 
 class Test6 {
-//####  Practice #6: Bake up your function to calculate the cost of cakes and write a procedure to display freshly baked cookies. Remember the recipe from earlier: define the right type of function with the correct ingredients and cook your code to perfection!
 //LESSON 1: Defining and Executing Java Functions and Procedures
+//####  Practice #6: Bake up your function to calculate the cost of cakes and write a procedure to display freshly baked cookies. Remember the recipe from earlier: define the right type of function with the correct ingredients and cook your code to perfection!
     // TODO: Create a function to calculate the cost of 'cakes' given the 'costPerCake'
     public static int cakeCost(int totalCakes, int costPerCake) {
       int cost = totalCakes * costPerCake;
