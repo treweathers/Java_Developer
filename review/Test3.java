@@ -6,12 +6,11 @@ class Test3 {
     public static void main(String[] args) {
         // Array of planet names in our solar system for space exploration analogy
         String[] planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
-        
+        // TODO: Write an enhanced for loop to traverse the array 'planets'        
         for (String planet : planets) {
+        // TODO: Inside the loop, print "Exploring the planet: " followed by the planet name.
            System.out.println("Visiting planet: " + planet);
         }
-        // TODO: Write an enhanced for loop to traverse the array 'planets'
-        // TODO: Inside the loop, print "Exploring the planet: " followed by the planet name.
 
 //#### Practice #5: Write code that visits each planet in our solar system, but now in **reversed order**.
         // TODO: Create an array with the names of the planets of our solar system
