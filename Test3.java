@@ -2,18 +2,46 @@
 
 class Test3 {
 //LESSON 1: For Loops and Beyond
-//#### Practice #5: Write code that visits each planet in our solar system, but now in reversed order.
+//#### Practice #4: We're going to practice using the enhanced for loop. Let's explore the solar system, one loop at a time.
     public static void main(String[] args) {
+        // Array of planet names in our solar system for space exploration analogy
+        String[] planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
+        
+        for (String planet : planets) {
+           System.out.println("Visiting planet: " + planet);
+        }
+        // TODO: Write an enhanced for loop to traverse the array 'planets'
+        // TODO: Inside the loop, print "Exploring the planet: " followed by the planet name.
+
+//#### Practice #5: Write code that visits each planet in our solar system, but now in **reversed order**.
         // TODO: Create an array with the names of the planets of our solar system
         // Here is the list of planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
-        String [] planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
+        String [] planets2 = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
         // TODO: Use a basic for loop to visit (print the name of) each planet, **in reversed order**
         // Neptune should go first, then Uranus, etc.
         // Hint: for decrementing the variable in the loop, use `i--`, which is the same as `i = i - 1`
-        for (int i = planets.length - 1; i >= 0;  i--) {
+        for (int i = planets2.length - 1; i >= 0;  i--) {
             System.out.println("Visiting: " + planets[i]);
 
 //LESSON 2: Java Space Loops: Mastering While and Do-While
+//#### Practice #4: Add the code necessary to initiate the liftoff countdown and execute an orbit maneuver. Remember what ensures that the loop does not run indefinitely and how to guarantee at least one successful orbit completion.
+        // While loop for counting down until liftoff
+        int liftoffCount = 5;
+        while (liftoffCount >= 0) { // TODO: Write the condition for continuing the countdown
+            System.out.println(liftoffCount + " seconds.");
+            liftoffCount--;
+            // TODO: Print the log message with the current countdown status
+            // TODO: What else needs to be done after each countdown print to prevent an infinite loop?
+        }
+        
+        // Do-while loop for simulating at least one orbit around a planet
+        int orbitsCompleted = 0;
+        do {
+            // TODO: Print out the completion of the first orbit.
+            System.out.println(orbitsCompleted + " orbits completed.");
+            orbitsCompleted++;
+        } while (orbitsCompleted < 1);
+
 //#### Practice #5: Write a program from scratch that simulates the collection of stars in space until you have 5? Your ship's dashboard will display the number of stars you have collected after each loop!
         // TODO: Declare a variable to keep track of how many stars have been collected
         int starsCollected = 0;
@@ -29,11 +57,10 @@ class Test3 {
         int [] temperatures = {11, 22, 33, 44, 55, 66, 77};
         // TODO: Use a for loop to go through each day of the week
 
-///Q: HOW KNOW IF TO DO .length - 1 OR NOT?
+//**Q: HOW KNOW IF TO DO .length - 1 OR NOT?**
 
         for (int ii = 0; ii <= temperatures.length - 1; ii++) {
-            // TODO: Use an if-else statement to check if the temperature is too high for exploration
-            // Let's assume the temperature is too high if it's more than 24 degrees Celsius
+            // TODO: Use an if-else statement to check if the temperature is too high for exploration. Let's assume the temperature is too high if it's more than 24 degrees Celsius
             if (temperatures[ii] <= 24) {
                 // TODO: Print the day and whether it's too hot or suitable for exploration
                 System.out.println("Day " + ii + " with temp " + temperatures[ii] + " is good");
@@ -72,8 +99,6 @@ class Test3 {
             // TODO: Print out the ride numbers that visitors enjoy on the way
             System.out.println( "Enjoying ride number: " + ride);
         }
-
-        
       }
         }
     }

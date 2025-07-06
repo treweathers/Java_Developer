@@ -16,6 +16,23 @@ class Test {
 
 
 //LESSON 7: Navigating Java Conditional Statements: If-Else, Switch, Ternary Operator
+//#### Practice #3: Something isn't quite right. Run the code to observe its behavior. Can you determine what needs to be fixed to ensure it follows the proper execution logic for the switch cases?
+        int starBrightness = 2; // Brightness of the observed star on a scale from 1 to 10
+        
+        // Let's use a switch statement to decide what to do based on star brightness
+        switch(starBrightness) {
+            case 1:
+                System.out.println("Star is too dim, use a bigger telescope.");
+                break;
+            case 2:
+                System.out.println("Star could be more visible, try to adjust the lens.");
+                break;
+                //case 2 was missing a break statement
+            case 3:
+                System.out.println("Star is fairly bright, let's start the analysis.");
+                break;
+            default:
+                System.out.println("This star is so bright, it's visible to the naked eye!");
 //#### Practice #5: Fill in the missing conditions and print statements in the provided if-else block.
         int cloudCoveragePercentage = 30; // Amount of cloud cover expected
         
@@ -54,4 +71,5 @@ class Test {
         // TODO: Display the final message about the total moons of these giant planets.
         System.out.println(planetNames);   
     }
+}
 }

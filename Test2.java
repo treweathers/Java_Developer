@@ -22,6 +22,9 @@ class Test2 {
 //LESSON 2: Java's Building Blocks: Primitive Types vs. Class Types
 //#### Practice #5: Can you manage an account balance using Java class types writing a program that simulates an account balance withdrawal? Remember about built-in auto-boxing and auto-unboxing techniques, they make the code look much prettier.
         // TODO: Declare an Integer variable for account balance and initialize it with a value
+
+//**Q: WHAT IS DIFFERENCE BETWEEN Intefer and Int
+
         Integer accountBalanceInteger = 15000;
         // TODO: Declare a primitive int variable for the withdrawal amount and initialize it with a value
         int withdrawlAmountInt = 5000;
