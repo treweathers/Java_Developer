@@ -57,7 +57,7 @@ class Test3 {
         int [] temperatures = {11, 22, 33, 44, 55, 66, 77};
         // TODO: Use a for loop to go through each day of the week
 
-//**Q: HOW KNOW IF TO DO .length - 1 OR NOT?**
+//**Q: HOW KNOW IF TO DO .length - 1 OR NOT?**: Use i < array.length - 1 or i < string.length() - 1: This is necessary when your loop's body accesses elements at i and i + 1 (or i + k for some k > 0). Subtracting 1 from the length prevents an ArrayIndexOutOfBoundsException or StringIndexOutOfBoundsException when i + 1 (or i + k) would go beyond the valid index range.
 
         for (int ii = 0; ii <= temperatures.length - 1; ii++) {
             // TODO: Use an if-else statement to check if the temperature is too high for exploration. Let's assume the temperature is too high if it's more than 24 degrees Celsius
