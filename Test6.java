@@ -50,6 +50,24 @@ class Test6 {
     }
 
 //**Q: WHAT IS THE DIFFERENCE BETWEEN public, static, void etc. methods?**
+/*
+public (Access Modifier):
+Meaning: public is an access modifier that grants the broadest visibility to a method. A public method can be accessed and invoked from any other class, regardless of its package. 
+When to use: Use public when a method needs to be accessible from outside the class or package where it is defined, such as utility methods, API methods, or methods that form part of a class's public interface.
+
+static (Non-Access Modifier):
+Meaning: static signifies that a method belongs to the class itself, rather than to any specific instance (object) of that class. Static methods can be called directly on the class name without creating an object.
+When to use: Use static for methods that do not depend on instance-specific data or state. Examples include utility methods (e.g., Math.sqrt()), methods that perform operations on static variables, or the main() method, which is the entry point for Java applications and must be callable without an object.
+
+void (Return Type):
+Meaning: void is a return type that indicates a method does not return any value. It performs an action but does not produce a result that can be used elsewhere in the code. 
+When to use: Use void when a method's primary purpose is to perform an action or side effect, such as printing output to the console, modifying an object's state, or interacting with external resources, without needing to return a computational result.
+
+In summary:
+* public defines who can access the method.
+* static defines how the method is associated with the class (class-level vs. instance-level).
+* void defines what the method returns (nothing in this case).
+*/
 
     public static void main(String[] args) {
 //FROM LESSON 1
