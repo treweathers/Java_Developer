@@ -23,7 +23,7 @@ class Test2 {
 //#### Practice #5: Can you manage an account balance using Java class types writing a program that simulates an account balance withdrawal? Remember about built-in auto-boxing and auto-unboxing techniques, they make the code look much prettier.
         // TODO: Declare an Integer variable for account balance and initialize it with a value
 
-//**Q: WHAT IS DIFFERENCE BETWEEN Intefer and Int
+//**Q: WHAT IS DIFFERENCE BETWEEN Intefer and Int: Integer can be null, can be, directly stored in collections like HashMap and ArrayList, and has built-in methods like .toString(), java may convert this for you
 
         Integer accountBalanceInteger = 15000;
         // TODO: Declare a primitive int variable for the withdrawal amount and initialize it with a value
