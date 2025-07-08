@@ -1,15 +1,12 @@
 <h1 align='center'> Course 1: Java Programming for Beginners </h1> 
 
 # Course 1.1: Getting Started with Java
-
+## Lesson 1: Java Basics: Syntax, Comments, Semicolons, and Your First Program
+### 1. Java Syntax Basics
 In Java, we use statements to perform actions, and each statement ends with a semicolon `(;)`. Java employs curly braces `({ })` to define a block of code.
 
 Look at this simple Java syntax example:
 
-## Lesson 1: Java Basics: Syntax, Comments, Semicolons, and Your First Program
-
-### 1. Java Syntax Basics
-    
     class MyFirstProgram {
         public static void main(String[] args) {
             System.out.println("Hello, Java World!");
