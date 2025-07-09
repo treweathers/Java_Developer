@@ -143,4 +143,19 @@ Check if visitor3@example.com has ever visited our site before. Use the contains
     }
 
 #### Practice #3
+Recall how to create a collection to store a unique set of visitor IDs by completing the given starter code.
+
+    import java.util.HashSet;
+    
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Instantiate a collection to store unique visitor IDs
+            java.util.HashSet<String> uniqueVisitors = new java.util.HashSet<String>(); 
+            // TODO: Add two different visitor IDs to your collection and try adding one of them again
+            uniqueVisitors.add("visitor1@example.com");
+            uniqueVisitors.add("visitor2@example.com");
+            // TODO: Display the number of unique visitors
+            System.out.println(uniqueVisitors.size());
+        }
+    }
 
