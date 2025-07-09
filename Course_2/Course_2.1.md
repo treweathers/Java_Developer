@@ -280,5 +280,5 @@ The tricky part could be managing those edge cases. Arrays can be fickle beasts 
         }
     }
 
-## Lesson 3: 
+## Lesson 3: Mastering Unique Elements and Anagram Detection with Java HashSets
 ### 1. 
