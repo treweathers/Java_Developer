@@ -472,9 +472,8 @@ Picture two spacecraft log files, each a whole array of words. Your mission? Fin
         
         Does that help clarify?
 
-###### So then I set lengthSum = sortCharacters(word).length();
+* So then I set lengthSum = sortCharacters(word).length();
 
-        Cosmo's response:
         Good effort, but your code is only keeping the length of the last matching word instead of summing all matching lengths.
         
         Try updating your code so that you add each matching word's length to the total. Need a hint, or want to give it another shot?
@@ -485,9 +484,7 @@ Picture two spacecraft log files, each a whole array of words. Your mission? Fin
         Great question! To add the length of strings, you can use the .length() method for each string and sum them up.
         
         For example:
-        
-        Java
-        Copy to clipboard
+
         int sum = 0;
         for (String word : array) {
             sum += word.length();
