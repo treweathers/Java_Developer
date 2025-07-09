@@ -491,3 +491,5 @@ Picture two spacecraft log files, each a whole array of words. Your mission? Fin
         }
         In your case, you want to add word.length() directly to your total when you find a match—no need for a loop from length() down to 0. Does that make sense?
 
+## Lesson 4:
+### 1.
