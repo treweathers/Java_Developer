@@ -167,16 +167,16 @@ Imagine you're developing a feature for a social media platform that requires us
 Initially, you might consider checking for overlap by comparing each member of one group with every member of the other — a somewhat cumbersome O(n×m) operation. If you have hundreds or thousands of users in each group, the time it would take to compare them all grows exponentially. This approach is impractical and resource-intensive, especially on the scale of a social media platform with potentially millions of users.
 
 ### 3. Problem 1: Efficient Approach
-Instead, HashSet provides a swift and efficient method for achieving the same result. Let's step through the implementation:
+Instead, `HashSet` provides a swift and efficient method for achieving the same result. Let's step through the implementation:
 
-First, we add members from one group into the HashSet:
+First, we add members from one group into the `HashSet`:
 
     HashSet<Integer> set1 = new HashSet<>();
     for (int num : arr1) {
         set1.add(num); // Populating the HashSet, preparing for constant-time checks
     }
 
-Then, for each member in the second group, we check if they are already part of the first group using the constant-time contains method of the HashSet:
+Then, for each member in the second group, we check if they are already part of the first group using the constant-time `contains` method of the `HashSet`:
     
     for (int num : arr2) {
         if (set1.contains(num)) {
@@ -186,28 +186,28 @@ Then, for each member in the second group, we check if they are already part of 
 If the second loop completes without finding any common members, we conclude that the sets are disjoint:
 
     return true; // No overlap found; the groups are exclusive.
-Thanks to HashSet, we have made our operation far more efficient, avoiding the performance cost of an O(n×m) complexity approach.
+Thanks to `HashSet`, we have made our operation far more efficient, avoiding the performance cost of an O(n×m) complexity approach.
 
 ### 4. Problem 2: Remove Duplicates from an Array
 Consider a scenario where you have a list of email addresses but must ensure each customer receives only one newsletter — duplicates must go. This scenario is akin to managing invitations to an exclusive gala where each person should receive only one invite, meaning the invitation list must be free of repeats.
 
 ### 5. Problem 2: Naive Approach
-The naive approach to this problem would be to create a new list and check every incoming address against all previously added ones — resulting in an inefficient O(n2) operation. Such an approach would not scale well with larger datasets and could lead to significant delays, like manually verifying each invitation against a growing list one by one.
+The naive approach to this problem would be to create a new list and check every incoming address against all previously added ones — resulting in an inefficient O(n^2) operation. Such an approach would not scale well with larger datasets and could lead to significant delays, like manually verifying each invitation against a growing list one by one.
 
 ### 6. Problem 2: Efficient Approach
-By leveraging HashSet, however, we can effectively simplify the process:
+By leveraging `HashSet`, however, we can effectively simplify the process:
 
     HashSet<Integer> set = new HashSet<>();
     for (int num : arr) {
         set.add(num); // Adds the number if it's not already present, thus ignoring duplicates
     }
-Here, we use the HashSet to store unique email addresses; each new address is added only if it's not already present. Hence, duplicates are naturally filtered out.
+Here, we use the `HashSet` to store unique email addresses; each new address is added only if it's not already present. Hence, duplicates are naturally filtered out.
 
-Next, we convert the HashSet back into an array, now containing unique elements:
+Next, we convert the `HashSet` back into an array, now containing unique elements:
 
     int[] result = new int[set.size()];
     int i = 0;
     for (int num : set) {
         result[i++] = num; // Each unique element is added to the result array
     }
-We now have a clean list ready for our exclusive newsletter send-out. The HashSet optimizes our process and scales it efficiently for larger datasets.
+We now have a clean list ready for our exclusive newsletter send-out. The `HashSet` optimizes our process and scales it efficiently for larger datasets.
