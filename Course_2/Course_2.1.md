@@ -252,4 +252,33 @@ This function's gonna take that original array as an input. As for output, it ou
 
 The tricky part could be managing those edge cases. Arrays can be fickle beasts – empty or filled to the brim. It's your job to handle 'em both.
 
+    import java.util.*;
+    
+    class Solution {
+        public static void main(String[] args) {
+            int[] addresses = {1, 2, 3, 2, 1, 5, 3, 1, 2, 1, 4, 5, 6};
+            int[] uniqueAddresses = processAddresses(addresses);
+            System.out.println(Arrays.toString(uniqueAddresses));   // Returns [1, 2, 3, 5, 4, 6]
+        }
+    
+        static int[] processAddresses(int[] addresses) {
+            HashSet<Integer> set = new HashSet<>();
+            
+            // TODO: fill in the set
+            for (int num: addresses) {
+                set.add(num);
+            }
+            
+            int[] result = new int[set.size()];
+            
+            // TODO: fill in the result array
+            int i = 0;
+            for (int num: set) {
+                result[i++] = num;
+            }
+            return result;
+        }
+    }
 
+## Lesson 3: 
+### 1. 
