@@ -211,3 +211,39 @@ Next, we convert the `HashSet` back into an array, now containing unique element
         result[i++] = num; // Each unique element is added to the result array
     }
 We now have a clean list ready for our exclusive newsletter send-out. The `HashSet` optimizes our process and scales it efficiently for larger datasets.
+
+#### Practice #1
+You're tracking visitors to two different blogs on your fantastic galactic website. Each user is identified with a unique id and you've got logs of all their visits. Your mission, should you choose to accept it, is to find out if there's any overlap in visitors to each blog. In simple terms, we want to know if anyone has visited both blogs. You can decode these logs – they're simply lists of user IDs, with each ID mirrored by a unique integer. Your code should return true if there is any overlap, and false otherwise.
+
+    import java.util.HashSet;
+    
+    class Solution {
+        public static boolean audienceOverlap(int blog1[], int blog2[]) {
+    
+            HashSet<Integer> visitorSet = new HashSet<>();
+            
+            // implement this 
+            for (int num: blog1) {
+                visitorSet.add(num);
+            }
+            for (int num: blog2) {
+                if (visitorSet.contains(num)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    
+        public static void main(String[] args) {
+            int blog1[] = {1, 2, 3, 4, 5};
+            int blog2[] = {6, 7, 8, 9, 10};
+            
+            if (audienceOverlap(blog1, blog2))
+                System.out.print("Yes, there is an audience overlap between both blogs.");
+            else
+                System.out.print("No, there is no audience overlap between both blogs.");
+        }
+    }
+
+#### Practice #2
+
