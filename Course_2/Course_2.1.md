@@ -368,5 +368,44 @@ By utilizing `HashSets` in this manner, we achieve efficient anagram checking wi
 You've been assigned a crew and each member has a unique ID consisting of alphanumeric characters. Now, you're sifting through these IDs and need to find the just first one that appears more than once in the array. If every ID is unique or the array is empty, just return an empty string.
 The answer format should be a string - that string is our elusive doubled ID or an empty string if we find no doubles in the array.
 
+import java.util.*; // Importing java utility package
+
+    class Solution {
+        public static String findFirstDuplicateID(String[] ids) {
+            HashSet<String> idSet = new HashSet<>();
+    
+            // TODO: Find an id that appears more than once and return it
+            HashSet<String> duplicateSet = new HashSet<>();
+            for(String id: ids) {
+                if(idSet.contains(id)) {
+                    duplicateSet.add(id);
+                    return id;
+                }
+                else {
+                    idSet.add(id);
+                }
+            }
+            idSet.removeAll(duplicateSet);
+            
+            String firstDuplicateId = "";
+            for (int i = ids.length; i<=0; i++) {
+                if (idSet.contains(ids[i])) {
+                   firstDuplicateId = ids[i];
+                   break;
+                }             
+            }
+            return firstDuplicateId;
+        }
+    
+        // Return an empty string if no duplicate ids are found
+        // return "";
+        
+    
+        public static void main(String[] args) {
+            System.out.println(findFirstDuplicateID(new String[]{"X123", "A456", "X123", "B789", "A456", "C111"})); // Expected "X123"
+            System.out.println(findFirstDuplicateID(new String[]{"Z999", "Y888", "Z999", "Y888"})); // Expected "Z999"
+            System.out.println(findFirstDuplicateID(new String[]{"E100", "B200", "C300", "E100", "D400", "C300"})); // Expected "E100"
+        }
+    }
 
 #### Practice #2
