@@ -409,3 +409,6 @@ The answer format should be a string - that string is our elusive doubled ID or 
     }
 
 #### Practice #2
+Picture two spacecraft log files, each a whole array of words. Your mission? Find the unique words from the second log file that have an anagram in the first log file. Then, add up the length of these matching anagram words. You must return this total length as an integer. Now, remember, anagrams are words that have the same letters but rearranged. If a word has no anagram in the other array or if it's not unique in its own array, abandon it like a black hole.
+
+
