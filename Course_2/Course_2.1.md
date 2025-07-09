@@ -126,5 +126,21 @@ Run the code.
     }
 
 #### Practice #2
+Check if visitor3@example.com has ever visited our site before. Use the contains method to find out, and print the result in one line.
+
+    class Solution {
+        public static void main(String[] args) {
+            java.util.HashSet<String> uniqueVisitors = new java.util.HashSet<String>();
+            
+            // Simulated visits to the website
+            uniqueVisitors.add("visitor1@example.com");
+            uniqueVisitors.add("visitor2@example.com");
+            uniqueVisitors.add("visitor1@example.com"); // repeated visitor
+            
+            // Check presence of a visitor and print the result
+            System.out.println(uniqueVisitors.contains("visitor3@example.com"));
+        }
+    }
+
 #### Practice #3
 
