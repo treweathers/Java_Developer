@@ -411,4 +411,84 @@ The answer format should be a string - that string is our elusive doubled ID or 
 #### Practice #2
 Picture two spacecraft log files, each a whole array of words. Your mission? Find the unique words from the second log file that have an anagram in the first log file. Then, add up the length of these matching anagram words. You must return this total length as an integer. Now, remember, anagrams are words that have the same letters but rearranged. If a word has no anagram in the other array or if it's not unique in its own array, abandon it like a black hole.
 
+    import java.util.*;
+    
+    class Solution {
+        // Method to return a unique character signature for each string.
+        static String sortCharacters(String input) {
+            char[] chars = input.toCharArray();
+            Arrays.sort(chars);
+            return new String(chars);
+        }
+    
+        // Method to find unique words from array2 that have an anagram in array1 
+        public static int findAnagrams(String[] array1, String[] array2) {
+            HashSet<String> sortedWordsInArray1 = new HashSet<>();
+            // TODO: fill in sortedWordsInArray1
+            for (String word : array1) {
+                sortedWordsInArray1.add(sortCharacters(word));
+            }
+            HashSet<String> anagramsMatched = new HashSet<>();
+            int lengthSum = 0;
+    
+            for (String word : array2) {
+                // implement this
+                if (sortedWordsInArray1.contains(sortCharacters(word))) {
+                    if(!anagramsMatched.contains(word)) {
+                        anagramsMatched.add(word);
+                        lengthSum += sortCharacters(word).length();
+                   }
+                }
+            }
+    
+            return lengthSum;
+        }
+        
+        public static void main(String []args){
+            String[] array1 = {"cat", "dog", "tac", "god", "act"};
+            String[] array2 = {"tca", "ogd", "atc", "taco"};
+            int result = findAnagrams(array1, array2);
+            System.out.println(result);   // output: 9
+    
+            // additional test samples
+            String[] array3 = {"rat", "tar", "bat", "tab","bats"};
+            String[] array4 = {"tra", "art", "abr"};
+            int result2 = findAnagrams(array3, array4);
+            System.out.println(result2);  // output: 6
+        }
+    }
+
+###### Questions I asked Cosmo:
+* What do you mean by "sum the lengths of unique words from array2 that have an anagram in array1"?
+Cosmo's response:
+Great question! Here’s what it means:
+
+For each word in array2, check if:
+The word is unique in array2 (appears only once).
+There is an anagram of that word in array1.
+If both are true, add the length of that word to your total sum.
+For example, if "tca" in array2 is unique and has an anagram in array1 (like "cat"), you add 3 (its length) to your sum. Repeat for all such words, then return the total.
+
+Does that help clarify?
+
+###### So then I set lengthSum = sortCharacters(word).length();
+
+Cosmo's response:
+Good effort, but your code is only keeping the length of the last matching word instead of summing all matching lengths.
+
+Try updating your code so that you add each matching word's length to the total. Need a hint, or want to give it another shot?
+
+* How can you add the length of strings in an array?
+Cosmo's response:
+Great question! To add the length of strings, you can use the .length() method for each string and sum them up.
+
+For example:
+
+Java
+Copy to clipboard
+int sum = 0;
+for (String word : array) {
+    sum += word.length();
+}
+In your case, you want to add word.length() directly to your total when you find a match—no need for a loop from length() down to 0. Does that make sense?
 
