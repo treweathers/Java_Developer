@@ -164,7 +164,7 @@ Recall how to create a collection to store a unique set of visitor IDs by comple
 Imagine you're developing a feature for a social media platform that requires user groups to be exclusive — you need to ensure that users can't belong to more than one group at a time. It's like organizing events where a guest should not appear on the lists for two different parties at the same venue — an overlap would be a significant issue.
 
 ### 2. Problem 1: Naive Approach
-Initially, you might consider checking for overlap by comparing each member of one group with every member of the other — a somewhat cumbersome O(n×m) operation. If you have hundreds or thousands of users in each group, the time it would take to compare them all grows exponentially. This approach is impractical and resource-intensive, especially on the scale of a social media platform with potentially millions of users.
+Initially, you might consider checking for overlap by comparing each member of one group with every member of the other — a somewhat cumbersome O(n*m) operation. If you have hundreds or thousands of users in each group, the time it would take to compare them all grows exponentially. This approach is impractical and resource-intensive, especially on the scale of a social media platform with potentially millions of users.
 
 ### 3. Problem 1: Efficient Approach
 Instead, `HashSet` provides a swift and efficient method for achieving the same result. Let's step through the implementation:
@@ -186,7 +186,7 @@ Then, for each member in the second group, we check if they are already part of 
 If the second loop completes without finding any common members, we conclude that the sets are disjoint:
 
     return true; // No overlap found; the groups are exclusive.
-Thanks to `HashSet`, we have made our operation far more efficient, avoiding the performance cost of an O(n×m) complexity approach.
+Thanks to `HashSet`, we have made our operation far more efficient, avoiding the performance cost of an O(n*m) complexity approach.
 
 ### 4. Problem 2: Remove Duplicates from an Array
 Consider a scenario where you have a list of email addresses but must ensure each customer receives only one newsletter — duplicates must go. This scenario is akin to managing invitations to an exclusive gala where each person should receive only one invite, meaning the invitation list must be free of repeats.
