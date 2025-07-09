@@ -460,35 +460,37 @@ Picture two spacecraft log files, each a whole array of words. Your mission? Fin
 
 ###### Questions I asked Cosmo:
 * What do you mean by "sum the lengths of unique words from array2 that have an anagram in array1"?
-Cosmo's response:
-Great question! Here’s what it means:
 
-For each word in array2, check if:
-The word is unique in array2 (appears only once).
-There is an anagram of that word in array1.
-If both are true, add the length of that word to your total sum.
-For example, if "tca" in array2 is unique and has an anagram in array1 (like "cat"), you add 3 (its length) to your sum. Repeat for all such words, then return the total.
-
-Does that help clarify?
+        Cosmo's response:
+        Great question! Here’s what it means:
+        
+        For each word in array2, check if:
+        The word is unique in array2 (appears only once).
+        There is an anagram of that word in array1.
+        If both are true, add the length of that word to your total sum.
+        For example, if "tca" in array2 is unique and has an anagram in array1 (like "cat"), you add 3 (its length) to your sum. Repeat for all such words, then return the total.
+        
+        Does that help clarify?
 
 ###### So then I set lengthSum = sortCharacters(word).length();
 
-Cosmo's response:
-Good effort, but your code is only keeping the length of the last matching word instead of summing all matching lengths.
-
-Try updating your code so that you add each matching word's length to the total. Need a hint, or want to give it another shot?
+        Cosmo's response:
+        Good effort, but your code is only keeping the length of the last matching word instead of summing all matching lengths.
+        
+        Try updating your code so that you add each matching word's length to the total. Need a hint, or want to give it another shot?
 
 * How can you add the length of strings in an array?
-Cosmo's response:
-Great question! To add the length of strings, you can use the .length() method for each string and sum them up.
 
-For example:
-
-Java
-Copy to clipboard
-int sum = 0;
-for (String word : array) {
-    sum += word.length();
-}
-In your case, you want to add word.length() directly to your total when you find a match—no need for a loop from length() down to 0. Does that make sense?
+        Cosmo's response:
+        Great question! To add the length of strings, you can use the .length() method for each string and sum them up.
+        
+        For example:
+        
+        Java
+        Copy to clipboard
+        int sum = 0;
+        for (String word : array) {
+            sum += word.length();
+        }
+        In your case, you want to add word.length() directly to your total when you find a match—no need for a loop from length() down to 0. Does that make sense?
 
