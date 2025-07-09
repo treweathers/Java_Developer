@@ -364,4 +364,6 @@ Our final step is to return the list of anagrams found:
     return result;
 By utilizing `HashSets` in this manner, we achieve efficient anagram checking with reduced complexity, considering both the  O(mlogm) character sorting for each word and the O(n) comparison for n words.
 
+#### Practice #1
 
+#### Practice #2
