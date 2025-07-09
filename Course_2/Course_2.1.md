@@ -281,4 +281,87 @@ The tricky part could be managing those edge cases. Arrays can be fickle beasts 
     }
 
 ## Lesson 3: Mastering Unique Elements and Anagram Detection with Java HashSets
-### 1. 
+### 1. Problem 1: Unique Echo
+Picture this: you're given a vast list of words, and you must identify the final word that stands proudly solitary — the last word that is not repeated. Imagine sorting through a database of unique identifiers and finding one identifier towards the end of the list that is unlike any others.
+
+### 2. Problem 1: Naive Approach
+The straightforward approach would be to examine each word in reverse, comparing it to every other word for uniqueness. This brute-force method would result in poor time complexity, O(n^2), which is less than ideal for large datasets.
+
+### 3. Problem 1: Efficient Approach
+We can use two HashSet instances: wordsSet to maintain unique words and duplicatesSet to keep track of duplicate words. By the end, we can remove all duplicated words from wordsSet to achieve our goal. Here is how to use HashSet to solve the problem:
+
+Create a HashSet instance to store unique words:
+
+    HashSet<String> wordsSet = new HashSet<>();
+    Initialize another HashSet to monitor duplicates:
+
+
+    HashSet<String> duplicatesSet = new HashSet<>();
+    Iterate the word array, filling wordsSet and duplicatesSet:
+
+    for (String word : words) {
+        if (wordsSet.contains(word)) {
+            duplicatesSet.add(word);
+        } else {
+            wordsSet.add(word);
+        }
+    }
+Use the removeAll method from the HashSet API to remove all duplicated words from wordsSet:
+
+    wordsSet.removeAll(duplicatesSet);
+Now, wordsSet only contains unique words. Find the last unique word by iterating through the original word list from the end:
+
+    String lastUniqueWord = "";
+    for (int i = words.length - 1; i >= 0; i--) {
+       if (wordsSet.contains(words[i])){
+           lastUniqueWord = words[i];
+           break;
+       }
+    }
+And finally, return the last unique word:
+
+    return lastUniqueWord;
+This efficient approach, with a time complexity closer to O(n), is far superior to the naive method and showcases your proficiency at solving algorithmic problems with Java's HashSet.
+
+### 4. Problem 2: Anagram Matcher
+Now, imagine a different scenario in which you have two arrays of strings, and your task is to find all the unique words from the first array that have an anagram in the second array.
+
+### 5. Problem 2: Efficient Approach
+We'll create a unique signature for each word by sorting its characters and then compare these signatures for matches. We'll use a HashSet to store signatures for efficient access.
+
+### 6. Problem 2: Solution Building
+Let's break down the anagram matcher:
+
+Construct a method to create sorted character signatures from the input string:
+
+    private static String sortCharacters(String input) {
+       char[] chars = input.toCharArray();
+       Arrays.sort(chars);
+       return new String(chars);
+    }
+Store these sorted characters from array2 in a HashSet for fast lookup:
+
+    HashSet<String> sortedWordsInArray2 = new HashSet<>();
+    for (String word : array2) {
+       sortedWordsInArray2.add(sortCharacters(word));
+    }
+For each word in array1, check for its sorted signature in the HashSet and track the found anagrams:
+
+    HashSet<String> anagramsMatched = new HashSet<>();
+    ArrayList<String> result = new ArrayList<>();
+    for (String word : array1) {
+        if (sortedWordsInArray2.contains(sortCharacters(word))) {
+            if (!anagramsMatched.contains(word)) {
+                result.add(word);
+                anagramsMatched.add(word);
+            }
+        }
+    }
+The ArrayList result stores the matches, ensuring that we return unique anagrams, while the HashSet anagramsMatched prevents duplication in our result.
+
+Our final step is to return the list of anagrams found:
+
+    return result;
+By utilizing HashSets in this manner, we achieve efficient anagram checking with reduced complexity, considering both the  O(mlogm) character sorting for each word and the O(n) comparison for n words.
+
+
