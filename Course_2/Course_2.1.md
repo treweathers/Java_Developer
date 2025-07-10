@@ -650,69 +650,63 @@ Consider this: you have an extensive text — perhaps a short story or a section
 
 Visualize yourself tasked with developing a feature for a text editor that gives feedback on word usage. A writer could use this feature to refine their work, ensuring they use only certain words.
 
-Problem 1: Naive Approach
+### 2. Problem 1: Naive Approach
 Consider iterating over the text word by word, keeping track of each instance in a list. This approach might work for a short sentence, but imagine scaling it up to an entire book! It becomes inefficient as you repeatedly wade through a growing list for each word you encounter.
 
-Problem 1: Efficient Approach
-This is where HashMap shines like a knight in shining armor. With its getOrDefault function, HashMap allows for swift updates. Instead of a laborious search for each word, a HashMap can check and update the count in a constant time — a massive time-saver!
+### 3. Problem 1: Efficient Approach
+This is where `HashMap` shines like a knight in shining armor. With its `getOrDefault` function, `HashMap` allows for swift updates. Instead of a laborious search for each word, a `HashMap` can check and update the count in a constant time — a massive time-saver!
 
-Problem 1: Build Solution
+### 4. Problem 1: Build Solution
 Let's break down the code step by step:
 
-We create a HashMap called wordCount to store words and their frequencies.
-using the split method around each space, we split the text into words.
-Then, for each word, we update the HashMap using the getOrDefault method, which fetches the current count and adds one. If the key is not in the HashMap, it creates the key and assigns it a value of 0.
+1. We create a `HashMap` called `wordCount` to store words and their frequencies.
+2. using the `split` method around each space, we split the text into words.
+3. Then, for each word, we update the `HashMap` using the `getOrDefault` method, which fetches the current count and adds one. If the key is not in the HashMap, it creates the key and assigns it a value of 0.
 Here's how our Java crusader does it:
 
-Java
-Copy to clipboard
-Play
-import java.util.HashMap;
-
-class Solution {
-    public static void main(String[] args) {
-        String text = "Java Java Java";
-        HashMap<String, Integer> wordCount = new HashMap<>();
-        String[] words = text.split(" ");
-        for (String word : words) {
-            wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+        import java.util.HashMap;
+        
+        class Solution {
+            public static void main(String[] args) {
+                String text = "Java Java Java";
+                HashMap<String, Integer> wordCount = new HashMap<>();
+                String[] words = text.split(" ");
+                for (String word : words) {
+                    wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+                }
+                System.out.println(wordCount);
+            }
         }
-        System.out.println(wordCount);
-    }
-}
-Take the sentence "Java Java Java" for example. Our function would create a HashMap with a single entry: {"Java", 3}. Simple and elegant!
+Take the sentence "Java Java Java" for example. Our function would create a `HashMap` with a single entry: {"Java", 3}. Simple and elegant!
 
-Problem 2: Sum of Mapped Values
+### 5. Problem 2: Sum of Mapped Values
 Suppose you're keeping track of inventory. You have items identified by their names and associated with their prices, all stored in a hashmap. How would you compute the total inventory value with minimal fuss?
 
 Consider a situation in a retail store with a diverse product range, each with a unique barcode and price. To calculate the total inventory value, you must efficiently pair each item with its price and tally them up.
 
-Problem 2: Approach
-HashMap lays out items and prices on a neat table. It associates each product name (key) with its price (value). Using the values() method, you can directly access all the prices at once for summation, turning a complex task into a walk in the park.
+### 6. Problem 2: Approach
+`HashMap` lays out items and prices on a neat table. It associates each product name (key) with its price (value). Using the `values()` method, you can directly access all the prices at once for summation, turning a complex task into a walk in the park.
 
-Problem 2: Solution Building
+### 7. Problem 2: Solution Building
 Given a hashmap of items, we will use the loop to traverse the map's values, adding them together into a sum.
 
 Here's the Java magic:
 
-Java
-Copy to clipboard
-Play
-import java.util.HashMap;
-
-class Solution {
-    public static void main(String[] args) {
-        HashMap<String, Integer> map = new HashMap<>();
-
-        map.put("a", 10);
-        map.put("b", 6);
-        map.put("c", 12);
-
-        int sum = 0;
-        for (int value : map.values()) {
-            sum += value;
+    import java.util.HashMap;
+    
+    class Solution {
+        public static void main(String[] args) {
+            HashMap<String, Integer> map = new HashMap<>();
+    
+            map.put("a", 10);
+            map.put("b", 6);
+            map.put("c", 12);
+    
+            int sum = 0;
+            for (int value : map.values()) {
+                sum += value;
+            }
+            System.out.println(sum);  // 28
         }
-        System.out.println(sum);  // 28
     }
-}
-Imagine a register ringing up items — "apple: 1, banana: 2, cherry: 3" — our HashMap would keep a tally, and in the end, the sum would be a quick and accurate total: 6.
+Imagine a register ringing up items — "apple: 1, banana: 2, cherry: 3" — our `HashMap` would keep a tally, and in the end, the sum would be a quick and accurate total: 6.
