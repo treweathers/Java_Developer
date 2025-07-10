@@ -491,5 +491,66 @@ Picture two spacecraft log files, each a whole array of words. Your mission? Fin
         }
         In your case, you want to add word.length() directly to your total when you find a match—no need for a loop from length() down to 0. Does that make sense?
 
-## Lesson 4:
-### 1.
+## Lesson 4: HashMaps: Understanding Implementation and Complexity Analysis in Java
+### 1. Deep Dive into HashMaps
+Before we commence, let's formally define a HashMap. A HashMap in the world of Java, functions based on a hashtable, implementing the Map interface. This interface implies that HashMaps can store key-value pairs, and interestingly, it allows null values and a null key. HashMaps do not guarantee any specific map order; in other words, the order can change over time.
+
+HashMaps function using the principle of hashing. Here, a key is rendered to a hash code by a hash function, and this numeric code identifies the storage location for the key-value pair. Let's visualize a simple creation of a HashMap:
+
+    import java.util.HashMap;
+    
+    class Solution {
+    
+        public static void main(String[] args) {
+            // Creating the HashMap
+            HashMap<Integer, String> hashMap = new HashMap<Integer, String>();
+    
+            // Adding key-value pairs to the HashMap
+            hashMap.put(1, "John");
+            hashMap.put(2, "Mike");
+            hashMap.put(3, "Emma");
+    
+            // Displaying the contents of the HashMap
+            System.out.println("HashMap: " + hashMap);  // Outputs HashMap: {1=John, 2=Mike, 3=Emma}
+        }
+    }
+In the above code snippet, we have created a HashMap that maps an Integer key to a String value. Then, we add three key-value pairs and print the HashMap to the console.
+
+### 2. The Power of Hashing in HashMaps
+In HashMaps, hashing takes center stage where the keys are hashed. Intriguingly, this hashed value helps us determine where to store the corresponding data.
+
+This mechanism of hashing is what gives the HashMap its name. But the question that arises is, why is hashing important? Through hashing, it becomes possible to achieve constant time complexity, O(1), for get() and put() operations in ideal scenarios. This means that HashMaps provides extremely swift data access and insertion functionality — an advantage unrivaled by other data structures.
+
+One thing to note is that due to the hashing mechanism, a HashMap might end up with multiple keys with the same hash code (known as a hash collision). To handle collisions, all keys with the same hash code are added to a linked list. Starting from Java 8, when this list becomes too large, it transforms into a balanced tree, enhancing worst-case performance from O(n) to O(log n).
+
+### 3. Complexity Analysis of HashMap Operations
+HashMaps demonstrate an impressive O(1) time complexity for basic operations — get() and put(). Derived from the concept of hashing, the key's hash code is used directly to store and retrieve elements, eliminating the need for scanning or searching. This gives HashMap a substantial edge in efficiency.
+
+While it offers efficient time complexity operations, by using a HashMap, we need to be mindful of the space complexity as well. The space usage for HashMap can grow to O(n), where n is the number of elements in the HashMap.
+
+We extend our earlier HashMap example to exhibit these operations:
+
+    import java.util.HashMap;
+    
+    class Solution {
+    
+        public static void main(String[] args) {
+            HashMap<Integer, String> hashMap = new HashMap<Integer, String>();
+    
+            // Adding elements (put operation)
+            hashMap.put(1, "John");
+            hashMap.put(2, "Mike");
+            hashMap.put(3, "Emma");
+    
+            // Retrieving an element (get operation)
+            System.out.println("Element with key 1: " + hashMap.get(1));
+            // Output: Element with key 1: John
+    
+            // Removing an element (remove operation)
+            hashMap.remove(2);
+    
+            System.out.println("HashMap after removal operation: " + hashMap);
+            // Output: HashMap after removal operation: {1=John, 3=Emma}
+        }
+    }
+Here, we use the get(key) function to retrieve the value mapped to the provided key and the remove(key) function to delete the designated key-value pair.
