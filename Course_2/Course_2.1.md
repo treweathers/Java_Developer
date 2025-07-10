@@ -554,3 +554,93 @@ We extend our earlier HashMap example to exhibit these operations:
         }
     }
 Here, we use the `get(key)` function to retrieve the value mapped to the provided key and the `remove(key)` function to delete the designated key-value pair.
+
+#### Practice #1
+Run the code.
+
+    import java.util.HashMap;
+    
+    
+    class Solution {
+        public static void main(String[] args) {
+            // HashMap to store books (ISBN) and their average reviews
+            HashMap<String, Double> bookReviews = new HashMap<>();
+    
+            // Adding some books and their reviews to the inventory
+            bookReviews.put("978-0134685991", 4.7); // Effective Java
+            bookReviews.put("978-0596009205", 4.5); // Head First Java
+    
+            // Printing the average review of "Effective Java"
+            System.out.println("Average review for Effective Java: " + bookReviews.get("978-0134685991"));
+        }
+    }
+
+#### Practice #2
+Modify the bookstore inventory system to remove a book from the inventory? Use what you've learned to apply the remove() method on the HashMap and remove the entry for the book with ID 1001. Then, print out the remaining inventory.
+
+    import java.util.HashMap;
+    
+    
+    class Solution {
+        public static void main(String[] args) {
+            // Create a HashMap to track the quantity of books by their unique IDs
+            HashMap<Integer, Integer> bookInventory = new HashMap<>();
+            
+            // Adding books with their unique IDs as keys and quantities as values
+            bookInventory.put(1001, 5); // ID 1001 has 5 copies
+            bookInventory.put(1002, 3); // ID 1002 has 3 copies
+    
+            // TODO: Remove the book with ID 1001 from the inventory
+            bookInventory.remove(1001);
+            
+            // Print the updated inventory
+            System.out.println("Updated book inventory: " + bookInventory);
+        }
+    }
+
+#### Practice #3
+Enhance our Online Bookstore Inventory. Your mission is to complete the code by adding 3 key-value pairs for new books and their quantity to the inventory.
+
+    import java.util.HashMap;
+    
+    
+    class Solution {
+        public static void main(String[] args) {
+            // Creating a HashMap for the Online Bookstore Inventory
+            HashMap<String, Integer> books = new HashMap<>();
+    
+            // Adding key-value pairs for BookName-Quantity
+            books.put("The Alchemist", 10);
+            // TODO: Add any other books to the bookstore inventory along with their quantity
+            books.put("Divergent", 11);
+            books.put("Insurgent", 12);
+            books.put("Allegiant", 13);
+            // Display the quantity of "The Alchemist"
+            System.out.println(books.get("The Alchemist"));
+        }
+    }
+
+#### Practice #4
+Create an inventory system for an online bookstore. Use your knowledge to map book ISBNs to their names, add several books to the inventory, and then reveal the entire book collection.
+
+After that, remove any book you like and display the rest.
+
+    import java.util.HashMap;
+    
+    class Solution {
+        public static void main(String[] args) {
+            // TODO: Create a HashMap with String as the key type and String as the value type
+            HashMap<String, String> bookInventory = new HashMap<>();
+            // TODO: Add at least three books to the inventory with their ISBN and name
+            bookInventory.put("978-9374893012", "The Hunger Games");
+            bookInventory.put("978-9739409248", "Catching Fire");
+            bookInventory.put("978-7892384786", "Mocking Jay");
+            // TODO: Display the entire bookstore inventory
+            System.out.println("Book Inventory:" + bookInventory);
+            // TODO: Remove any book from the inventory
+            bookInventory.remove("978-9374893012");
+            // TODO: Display the entire bookstore inventory
+            System.out.println("Updated book inventory:" + bookInventory);
+        }
+    }
+
