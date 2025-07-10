@@ -814,13 +814,13 @@ This line can be likened to opening a new spreadsheet where each row represents 
         for (String word : words) {
 Here, we're flipping through each document and dissecting it into individual words. It's parallel to scanning each page of our metaphorical book.
     
-        if (!word.isEmpty()) {
-            List<Integer> docIndices = index.getOrDefault(word, new ArrayList<>());
-            docIndices.add(i);
-             index.put(word, docIndices);
+            if (!word.isEmpty()) {
+                List<Integer> docIndices = index.getOrDefault(word, new ArrayList<>());
+                docIndices.add(i);
+                index.put(word, docIndices);
+            }
         }
     }
-}
 For every word we encounter, we pinpoint its listing or create one if it's new. Then, we're cross-referencing the document index, much like jotting down on which page a topic is discussed.
 
     return index;
