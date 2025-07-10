@@ -645,7 +645,7 @@ After that, remove any book you like and display the rest.
     }
 
 ## Lesson 5: Java HashMaps: A Guide to Efficient Data Management
-## 1. Problem 1: Word Counter
+### 1. Problem 1: Word Counter
 Consider this: you have an extensive text — perhaps a short story or a section of a report — and want to analyze word usage. How many times does each word appear? This isn't just about curiosity; such a tool benefits writers aiming for diverse vocabulary.
 
 Visualize yourself tasked with developing a feature for a text editor that gives feedback on word usage. A writer could use this feature to refine their work, ensuring they use only certain words.
