@@ -731,3 +731,36 @@ Imagine you're receiving cosmic signals, but the alien words are separated by a 
     }
 
 #### Practice #2
+We've got a HashMap that holds each unique product sold in a store and its quantity. Every product key is a unique string, and its quantity is represented by an integer value. Now, your mission is to calculate the total quantity of all the products stocked in this store and return it as an integer.
+
+Do remember, the HashMap you get as an input will not contain any unusual cases, it would be an ordinary universe with just products and their quantities.
+
+    import java.util.HashMap;
+    
+    class Solution {
+        public static void main(String[] args) {
+            HashMap<String, Integer> inventory = new HashMap<>();
+            inventory.put("Apples", 50);
+            inventory.put("Bananas", 100);
+            inventory.put("Oranges", 75);
+            System.out.println(getTotalQuantity(inventory));  // It should print 225
+    
+            HashMap<String, Integer> anotherInventory = new HashMap<>();
+            anotherInventory.put("Pizzas", 20);
+            anotherInventory.put("Burgers", 30);
+            anotherInventory.put("Tacos", 50);
+            System.out.println(getTotalQuantity(anotherInventory));  // It should print 100
+    
+            HashMap<String, Integer> emptyInventory = new HashMap<>();
+            System.out.println(getTotalQuantity(emptyInventory));  // It should print 0
+        }
+    
+        public static int getTotalQuantity(HashMap<String, Integer> inventory) {
+            // implement this
+            int sum = 0;
+            for (int value : inventory.values()) {
+                sum += value;
+            }
+            return sum;
+        }
+    }
