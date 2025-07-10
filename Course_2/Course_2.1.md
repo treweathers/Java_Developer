@@ -870,3 +870,6 @@ class Solution {
 ###### Questions I asked Cosmo:
 * Are the array integer values the identifiers?
         Yes, exactly! Each integer in the array represents a unique user identifier. Your goal is to find the one (other than 0) that appears more than n/4 times. Does that help clarify things?
+
+#### Practice #2
+Imagine you're a wordsmith astronaut needing to catalog words in alien languages. We'd create a tool - a HashMap! It maps unique words in any sentence to their frequency of appearance. Just like you'd document "blorp" shows up 3 times to know it's a common word. Here's a friendly rubric: Create a function taking a sentence as input (a string of English words separated by spaces, could be empty) and returning a HashMap. Each key is a unique word (case insensitive), and its value is the count of how often it appeared.
