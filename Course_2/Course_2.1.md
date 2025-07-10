@@ -825,3 +825,6 @@ For every word we encounter, we pinpoint its listing or create one if it's new. 
 
     return index;
 And with that, our index is complete, a feat many times quicker than doing so manually and without the risk of paper cuts!
+
+#### Practice #1
+imagine you're a webmaster of a popular website and you monitor visits from various users. You've got a list of identifier numbers linked to each visit, where each number represents a unique user. Now, imagine a situation where one of them visits the site more frequently, precisely, more than n/4 times, where n is the total number of visits. If that's the case, you'd want to find out who it is. So, here's your task: Write a script that scans the list and points out that frequent visitor. Non-negative integers represent the identifiers, but ignore the case when the identifier is zero. If there's no such frequent user, your script should return -1.
