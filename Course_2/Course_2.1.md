@@ -714,6 +714,20 @@ Imagine a register ringing up items — "apple: 1, banana: 2, cherry: 3" — our
 #### Practice #1
 Imagine you're receiving cosmic signals, but the alien words are separated by a comma, not the usual spaces we're accustomed to. They've sent you a string and your objective is to jot down how many times each word appears in the message. Let's say it's something like "hello,stellar,navigator,stellar,stellar". The outcome? A count showing "hello: 1, stellar: 3, navigator: 1".
 
-
+    import java.util.*;
+    
+    class Solution {
+        public static void main(String[] args) {
+            String text = "Cosmo,is,an,incredible,technical,companion,with,very,strong,skills,in,Algorithms,and,Data,Structures,and,a,great,teacher,for,technical,interviews.";
+            // TODO: initialize the counter hashmap
+            String[] words = text.split(",");
+            HashMap<String, Integer> wordCount = new HashMap<>();
+            // TODO: count words
+            for (String word: words) {
+                wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+            }
+            System.out.println(wordCount);
+        }
+    }
 
 #### Practice #2
