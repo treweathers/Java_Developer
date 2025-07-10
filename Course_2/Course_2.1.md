@@ -764,3 +764,6 @@ Do remember, the HashMap you get as an input will not contain any unusual cases,
             return sum;
         }
     }
+
+## Lesson 6:
+# 1. 
