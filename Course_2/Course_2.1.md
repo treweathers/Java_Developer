@@ -710,3 +710,10 @@ Here's the Java magic:
         }
     }
 Imagine a register ringing up items — "apple: 1, banana: 2, cherry: 3" — our `HashMap` would keep a tally, and in the end, the sum would be a quick and accurate total: 6.
+
+#### Practice #1
+Imagine you're receiving cosmic signals, but the alien words are separated by a comma, not the usual spaces we're accustomed to. They've sent you a string and your objective is to jot down how many times each word appears in the message. Let's say it's something like "hello,stellar,navigator,stellar,stellar". The outcome? A count showing "hello: 1, stellar: 3, navigator: 1".
+
+
+
+#### Practice #2
