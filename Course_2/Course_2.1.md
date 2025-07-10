@@ -864,7 +864,9 @@ class Solution {
     }
 }
 
-Questions I asked Cosmo
-* Good try, but your code doesn't skip identifier 0 as required by the prompt. Can you update your solution to ignore zeros? Let me know if you want a hint!
+###### Cosmo's feedback: 
+    Good try, but your code doesn't skip identifier 0 as required by the prompt. Can you update your solution to ignore zeros? Let me know if you want a hint!
+
+###### Questions I asked Cosmo:
 * Are the array integer values the identifiers?
-* Yes, exactly! Each integer in the array represents a unique user identifier. Your goal is to find the one (other than 0) that appears more than n/4 times. Does that help clarify things?
+        Yes, exactly! Each integer in the array represents a unique user identifier. Your goal is to find the one (other than 0) that appears more than n/4 times. Does that help clarify things?
