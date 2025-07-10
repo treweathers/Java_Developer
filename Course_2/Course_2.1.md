@@ -828,3 +828,43 @@ And with that, our index is complete, a feat many times quicker than doing so ma
 
 #### Practice #1
 imagine you're a webmaster of a popular website and you monitor visits from various users. You've got a list of identifier numbers linked to each visit, where each number represents a unique user. Now, imagine a situation where one of them visits the site more frequently, precisely, more than n/4 times, where n is the total number of visits. If that's the case, you'd want to find out who it is. So, here's your task: Write a script that scans the list and points out that frequent visitor. Non-negative integers represent the identifiers, but ignore the case when the identifier is zero. If there's no such frequent user, your script should return -1.
+
+import java.util.HashMap;
+
+class Solution {
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+
+        int[] visits1 = {1,2,3,1,2,3,1,2,3,1};
+        int frequentUser1 = solution.frequentUser(visits1);
+        System.out.println("Frequent User: " + frequentUser1);  // Expected output: 1
+
+        int[] visits2 = {5,0,5,0,5,0,5,0,1,1,1,1,1};
+        int frequentUser2 = solution.frequentUser(visits2);
+        System.out.println("Frequent User: " + frequentUser2);  // Expected output: 5
+
+        int[] visits3 = {3,2,2,1,3,2,3,0,0,1,4,1};
+        int frequentUser3 = solution.frequentUser(visits3);
+        System.out.println("Frequent User: " + frequentUser3);  // Expected output: -1
+    }
+
+    public int frequentUser(int[] visits) {
+        HashMap<Integer, Integer> countMap = new HashMap<>();
+        int frequentVisitThreshold = visits.length / 4;
+
+        // implement this
+        for (int num : visits) {
+            countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+        
+        if (countMap.get(num) > frequentVisitThreshold && countMap.get(num) != 0) {
+            return num;  
+        }
+        }   
+    return -1;
+    }
+}
+
+Questions I asked Cosmo
+* Good try, but your code doesn't skip identifier 0 as required by the prompt. Can you update your solution to ignore zeros? Let me know if you want a hint!
+* Are the array integer values the identifiers?
+* Yes, exactly! Each integer in the array represents a unique user identifier. Your goal is to find the one (other than 0) that appears more than n/4 times. Does that help clarify things?
