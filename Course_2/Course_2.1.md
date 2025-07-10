@@ -765,5 +765,63 @@ Do remember, the HashMap you get as an input will not contain any unusual cases,
         }
     }
 
-## Lesson 6:
-# 1. 
+## Lesson 6: HashMaps for Efficient Problem Solving in Java Algorithmic Interviews
+### 1. Problem 1: Majority Element Finder
+Our journey begins with the Majority Element Finder. You're handed an array of integers, and your mission is simple yet intriguing: determine whether this array has a celebrity element. This integer appears more frequently than all others combined. More formally, we are looking for an element appearing more than `n/2` times.
+
+### 2. Problem 1: Problem Actualization
+Why does this matter? Well, consider analyzing sales data to determine the most sold product in an online marketplace—knowing the majority of products could streamline marketing strategies and inventory management. That's the real-world relevance of the majority element problem.
+
+### 3. Problem 1: Efficient Approach Explanation
+Now, let's be savvy about this. Enter the `HashMap`: your sophisticated voting tally system. With it, you can keep a running total of each product's sales as you go through the transaction list once rather than reviewing the entire list for each product. It grants us the speed of an experienced cashier who knows customers' habits by heart.
+
+### 4. Problem 1: Solution Building
+Let's dissect the process in our election analogy step by step:
+
+    HashMap<Integer, Integer> countMap = new HashMap<>();
+    int majorityThreshold = arr.length / 2;
+Here, we're preparing our `HashMap`, akin to setting up our ballot boxes and establishing the majority threshold — the number of votes needed to win the election by a landslide.
+
+    for (int num : arr) {
+        countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+We're recording every vote cast in our `HashMap` ledger. Each key is a unique product, and the value is the current total of received votes.
+    
+    if (countMap.get(num) > majorityThreshold) {
+            return num;
+    }
+Once a product's vote count exceeds the threshold — signaling a majority — our search concludes, akin to declaring a winner!
+
+    return -1;
+If the polling ends with no majority victor, we return -1, signifying a contested market where no single product dominates.
+
+### 5. Problem 2: Keyword Index Creator
+Imagine you are building a search feature for an app, and you need a function that quickly retrieves all documents where a certain keyword is present. If you have ever searched for something using your browser's Ctrl+F or Command+F function, you have utilized such an index! Our task is to create a dictionary that behaves like an index, mapping a keyword to all the documents where it can be found.
+
+### 6. Problem 2: Problem Actualization
+This capability is the cornerstone of search engines or reference databases — offering instant results when you look up a word or phrase. Indexing is an unsung hero in big data, where speed is invaluable.
+
+### 7. Problem 2: Efficient Approach Explanation
+Our `HashMap` steps in as our digital librarian, capable of cataloging every word and its locations at a fantastic clip. It's the magic behind the fast search results we often take for granted.
+
+### 8. Problem 2: Solution Building
+Let's delve into our code, assembling our digital index:
+
+    HashMap<String, List<Integer>> index = new HashMap<>();
+This line can be likened to opening a new spreadsheet where each row represents a distinct word, and the columns list the document numbers where the word appears.
+
+    for (int i = 0; i < docs.length; i++) {
+        String[] words = docs[i].split(" ");
+        for (String word : words) {
+Here, we're flipping through each document and dissecting it into individual words. It's parallel to scanning each page of our metaphorical book.
+    
+        if (!word.isEmpty()) {
+            List<Integer> docIndices = index.getOrDefault(word, new ArrayList<>());
+            docIndices.add(i);
+             index.put(word, docIndices);
+        }
+    }
+}
+For every word we encounter, we pinpoint its listing or create one if it's new. Then, we're cross-referencing the document index, much like jotting down on which page a topic is discussed.
+
+    return index;
+And with that, our index is complete, a feat many times quicker than doing so manually and without the risk of paper cuts!
