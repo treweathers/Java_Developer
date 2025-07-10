@@ -829,40 +829,40 @@ And with that, our index is complete, a feat many times quicker than doing so ma
 #### Practice #1
 imagine you're a webmaster of a popular website and you monitor visits from various users. You've got a list of identifier numbers linked to each visit, where each number represents a unique user. Now, imagine a situation where one of them visits the site more frequently, precisely, more than n/4 times, where n is the total number of visits. If that's the case, you'd want to find out who it is. So, here's your task: Write a script that scans the list and points out that frequent visitor. Non-negative integers represent the identifiers, but ignore the case when the identifier is zero. If there's no such frequent user, your script should return -1.
 
-import java.util.HashMap;
-
-class Solution {
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-
-        int[] visits1 = {1,2,3,1,2,3,1,2,3,1};
-        int frequentUser1 = solution.frequentUser(visits1);
-        System.out.println("Frequent User: " + frequentUser1);  // Expected output: 1
-
-        int[] visits2 = {5,0,5,0,5,0,5,0,1,1,1,1,1};
-        int frequentUser2 = solution.frequentUser(visits2);
-        System.out.println("Frequent User: " + frequentUser2);  // Expected output: 5
-
-        int[] visits3 = {3,2,2,1,3,2,3,0,0,1,4,1};
-        int frequentUser3 = solution.frequentUser(visits3);
-        System.out.println("Frequent User: " + frequentUser3);  // Expected output: -1
-    }
-
-    public int frequentUser(int[] visits) {
-        HashMap<Integer, Integer> countMap = new HashMap<>();
-        int frequentVisitThreshold = visits.length / 4;
-
-        // implement this
-        for (int num : visits) {
-            countMap.put(num, countMap.getOrDefault(num, 0) + 1);
-        
-        if (countMap.get(num) > frequentVisitThreshold && countMap.get(num) != 0) {
-            return num;  
+    import java.util.HashMap;
+    
+    class Solution {
+        public static void main(String[] args) {
+            Solution solution = new Solution();
+    
+            int[] visits1 = {1,2,3,1,2,3,1,2,3,1};
+            int frequentUser1 = solution.frequentUser(visits1);
+            System.out.println("Frequent User: " + frequentUser1);  // Expected output: 1
+    
+            int[] visits2 = {5,0,5,0,5,0,5,0,1,1,1,1,1};
+            int frequentUser2 = solution.frequentUser(visits2);
+            System.out.println("Frequent User: " + frequentUser2);  // Expected output: 5
+    
+            int[] visits3 = {3,2,2,1,3,2,3,0,0,1,4,1};
+            int frequentUser3 = solution.frequentUser(visits3);
+            System.out.println("Frequent User: " + frequentUser3);  // Expected output: -1
         }
-        }   
-    return -1;
+    
+        public int frequentUser(int[] visits) {
+            HashMap<Integer, Integer> countMap = new HashMap<>();
+            int frequentVisitThreshold = visits.length / 4;
+    
+            // implement this
+            for (int num : visits) {
+                countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+            
+            if (countMap.get(num) > frequentVisitThreshold && countMap.get(num) != 0) {
+                return num;  
+            }
+            }   
+        return -1;
+        }
     }
-}
 
 ###### Cosmo's feedback: 
     Good try, but your code doesn't skip identifier 0 as required by the prompt. Can you update your solution to ignore zeros? Let me know if you want a hint!
@@ -873,3 +873,69 @@ class Solution {
 
 #### Practice #2
 Imagine you're a wordsmith astronaut needing to catalog words in alien languages. We'd create a tool - a HashMap! It maps unique words in any sentence to their frequency of appearance. Just like you'd document "blorp" shows up 3 times to know it's a common word. Here's a friendly rubric: Create a function taking a sentence as input (a string of English words separated by spaces, could be empty) and returning a HashMap. Each key is a unique word (case insensitive), and its value is the count of how often it appeared.
+
+import java.util.*;
+
+class Solution {
+    public static HashMap<String, Integer> createWordIndex(String sentence) {
+        HashMap<String, Integer> index = new HashMap<>();
+        String[] words = sentence.split("\\s+");
+        // implement this
+        for (String word : words) {
+            if (!word.isEmpty() == false) {
+                continue;
+            }
+            word = word.toLowerCase();
+            index.put(word, index.getOrDefault(word, 0) + 1);
+        }
+        return index;
+    }
+
+    public static void main(String[] args) {
+        String sentence1 = "Hello Hello world world world";
+        HashMap<String, Integer> index1 = createWordIndex(sentence1);
+        index1.forEach((k, v) -> System.out.println("(" + k + " -> " + v + ")")); //Should print: (hello -> 2),  (world -> 3)
+        System.out.println("----");
+
+        String sentence2 = "";
+        HashMap<String, Integer> index2 = createWordIndex(sentence2);
+        index2.forEach((k, v) -> System.out.println("(" + k + " -> " + v + ")")); //Should print nothing as the sentence is empty.
+        System.out.println("----");
+
+        String sentence3 = "Quick Quick brown fox jumps over the lazy dog";
+        HashMap<String, Integer> index3 = createWordIndex(sentence3);
+        index3.forEach((k, v) -> System.out.println("(" + k + " -> " + v + ")")); 
+        //Should print: (over -> 1), (the -> 1), (quick -> 2), (lazy -> 1), (jumps -> 1), (brown -> 1), (dog -> 1), (fox -> 1)
+        System.out.println("----");
+    }
+}
+
+###### Cosmo's feedback: 
+    Good try, but your solution doesn't handle case insensitivity and adds an entry for empty strings. Can you adjust your code to fix these issues? Need a hint?
+
+* If the string is empty, what should the code return?
+
+        Great question! If the string is empty, your code should return an empty HashMap.
+        
+        Does your current code handle that, or is it adding something unexpected?
+
+* How do you handle case insensitivity?
+
+        To handle case insensitivity, you should convert each word to lowercase before adding it to the HashMap.
+        
+        Try using word.toLowerCase() when updating your map. Can you update your loop to do that?
+
+Good effort, but your code is counting empty strings as words. Try skipping empty strings before updating the map. Need a hint?
+
+* What should my code do when it finds an empty string?
+
+        If you find an empty string, you should skip it and not add it to the HashMap.
+        
+        Try checking if (!word.isEmpty()) before updating the map, not after. Can you adjust your loop so only non-empty words are counted?
+
+* I added a continue statement to skip it and moved my if (!word.isEmpty()) to the top of the for statement
+
+        Good try, but your logic is flipped—you're skipping all non-empty words and only counting empty strings.
+        
+        Want to take another shot at fixing that? Let me know if you need a hint!
+
