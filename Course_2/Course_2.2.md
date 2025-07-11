@@ -1,4 +1,6 @@
-<h1> Course 2.2: Sorting and Searching Algorithms in Java </h1>
+<h1 align='center'> Course 2: Mastering Algorithms and Data Structures in Java </h1> 
+
+# Course 2.2: Sorting and Searching Algorithms in Java
 ## Lesson 1: Recursion Refreshment in Java
 ### 1. Understanding Recursion
 Consider a stack of books. Want the bottom one? You'll need to remove each book above it, one by one. It's a recurring action — an example of recursion. In programming, recursion encompasses a function calling itself repeatedly until a specific condition is met, similar to descending stairs one step at a time until you reach the ground.
