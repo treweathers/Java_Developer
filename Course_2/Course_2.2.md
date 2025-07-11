@@ -181,3 +181,27 @@ Review this code carefully. There's a subtle space anomaly causing an incorrect 
 #### Practice #4
 You will need to help calculate the sum of all digits in a star code number. Replace the TODO with the recursive magic that will do the trick.
 
+class Solution {
+    // Recursive method to calculate the sum of digits of a number
+    static int countStars(int number) {
+        if(number == 0) return 0; // Base case: if number is 0, stop recursion
+        // TODO: Add the recursive logic to sum up the digits of 'number'
+        else 
+            return number % 10 + countStars(number / 10);
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println(countStars(4042)); // Will print the sum of digits of the star code 4042
+    }
+}
+
+###### Question(s) I asked Cosmo:
+* How do you write an else block when the if statement does not start a block?
+Great question! In Java, if your if statement does not use curly braces {}, it only applies to the next single statement. If you want to add an else, you just write it right after the if statement, like this:
+
+        if (condition)
+            return something;
+        else
+            return somethingElse;
+        But if you have more than one statement in either branch, use curly braces. Does that help clarify?
