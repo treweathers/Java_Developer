@@ -98,5 +98,8 @@ Run the code.
 
 
 #### Practice #2
+Let's refine our digit counter to be more selective. Modify the existing countDigits function so that it tallies up only the even digits of a number. Use what you've learned about conditional checks and recursion to accomplish this stellar task.
+
+
 #### Practice #3
 #### Practice #4
