@@ -100,6 +100,58 @@ Run the code.
 #### Practice #2
 Let's refine our digit counter to be more selective. Modify the existing countDigits function so that it tallies up only the even digits of a number. Use what you've learned about conditional checks and recursion to accomplish this stellar task.
 
+    class Solution {
+      // Function to count the number of digits in a number using recursion
+      static int countDigits(int num) {
+        if(num == 0) {
+          return 0;
+        } else {
+            if (num % 2 == 0) {
+              return 1 + countDigits(num / 10) ;
+            }
+          // Recursive case: reduce the number by dividing by 10 and count the rest
+            else {
+              return countDigits(num / 10);
+          }
+        }
+      }
+    
+      public static void main(String args[]) {
+        System.out.println("The number of digits in the 'diameter of Mars': " + countDigits(7623));
+      }
+    }
+
+###### Questions I asked Cosmo:
+
+* Am I supposed to modify the else block?
+
+        Yes, you’ll need to modify the else block! Right now, it counts every digit.
+        
+        What could you add so it only counts the digit if it’s even? Try thinking about how you’d check if a digit is even, and where that check should go
+  
+* Do you use n% to check for even or odd?
+
+        Great question! You can use num % 2 to check if a number is even or odd:
+        
+        If num % 2 == 0, the number is even.
+        If num % 2 == 1, the number is odd.
+        How could you use this check to only count even digits in your function?
+* How am I supposed to add this condition without another conditional block?
+
+        Great observation! To count only even digits, you’ll need two things:
+        
+        A base case for when the number is 0 (to stop recursion).
+        A way to check if the last digit is even, and only add to your count if it is.
+        You can use an if...else or a conditional (ternary) operator.
+        Would you like a hint on how to structure the condition?
+
+* So I need to add an additional conditional block instead of just adjusting the provided else block?
+
+        Exactly! You’ll want to check two things:
+        
+        Is the number done (base case)?
+        Is the last digit even or odd?
+        This usually means you’ll need an if for the base case, and then inside the recursive part, another condition to decide whether to count the digit or not. Want a hint on how to structure that?
 
 #### Practice #3
 #### Practice #4
