@@ -206,3 +206,6 @@ You will need to help calculate the sum of all digits in a star code number. Rep
         else
             return somethingElse;
         But if you have more than one statement in either branch, use curly braces. Does that help clarify?
+
+## Lesson 2: Binary Search: From Concept to Java Implementation and Complexity Analysis
+### 1. 
