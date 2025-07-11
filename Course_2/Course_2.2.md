@@ -198,7 +198,8 @@ You will need to help calculate the sum of all digits in a star code number. Rep
 
 ###### Question(s) I asked Cosmo:
 * How do you write an else block when the if statement does not start a block?
-Great question! In Java, if your if statement does not use curly braces {}, it only applies to the next single statement. If you want to add an else, you just write it right after the if statement, like this:
+
+        Great question! In Java, if your if statement does not use curly braces {}, it only applies to the next single statement. If you want to add an else, you just write it right after the if statement, like this:
 
         if (condition)
             return something;
