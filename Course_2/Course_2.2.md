@@ -154,4 +154,28 @@ Let's refine our digit counter to be more selective. Modify the existing countDi
         This usually means you’ll need an if for the base case, and then inside the recursive part, another condition to decide whether to count the digit or not. Want a hint on how to structure that?
 
 #### Practice #3
+Review this code carefully. There's a subtle space anomaly causing an incorrect number of digits to be counted in our cosmic integer. Find and fix the glitch so we can accurately track the stars again!
+
+class Solution {
+  static int countDigits(int num) {
+    if(num < 10) {
+      return 1;
+    } else {
+      return 1 + countDigits(num / 10); // Recursive execution to count remaining digits
+    }
+  }
+
+  public static void main(String args[]) {
+    System.out.println(countDigits(9876)); 
+  }
+}
+
+###### Questions I asked Cosmo:
+* Should I be editing the if block?
+        Great question! Yes, the if block is important here.
+        
+        Ask yourself: for a single-digit number, how many digits should be counted? What should the function return in that case?
+        
+        Try adjusting the return value in the if block to match the correct count for a single-digit number.
+
 #### Practice #4
