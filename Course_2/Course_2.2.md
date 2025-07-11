@@ -77,3 +77,26 @@ Let's develop a function that calculates the sum of an integer's digits. Normall
     }
 In this example, we use the same principle as with factorial calculation, but we pass `num / 10` to the next recursion call, chopping off the last digit every time.
 
+#### Practice #1
+Run the code.
+
+    class Solution {
+        static int countDigits(int number) {
+            // Base case: if number is less than 10, it's a single-digit number
+            if (number < 10) {
+                return 1;
+            } else {
+                // Recursive case: chop off one digit and count the rest
+                return 1 + countDigits(number / 10);
+            }
+        }
+    
+        public static void main(String[] args) {
+            System.out.println("Number of digits in 1234: " + countDigits(1234)); // Should print 4
+        }
+    }
+
+
+#### Practice #2
+#### Practice #3
+#### Practice #4
