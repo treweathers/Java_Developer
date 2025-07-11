@@ -74,6 +74,6 @@ Let's develop a function that calculates the sum of an integer's digits. Normall
       public static void main(String args[]) {
         System.out.println(sumOfDigits(12345)); // Will print out 15 (1+2+3+4+5)
       }
-}
+    }
 In this example, we use the same principle as with factorial calculation, but we pass `num / 10` to the next recursion call, chopping off the last digit every time.
 
