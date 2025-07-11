@@ -28,10 +28,10 @@ Here's a simple `Java` function illustrating recursion:
     1
     Base case reached
     */
-This function keeps calling itself with x getting lower by one until x <= 0, which is our base case. At this point, it stops the recursion.
+This function keeps calling itself with `x` getting lower by one until `x <= 0`, which is our base case. At this point, it stops the recursion.
 
 ### 2. Defining the Base Case
-The base case acts like a friendly signpost, telling the recursion when to stop. In our book stack example, reaching a point where no more books are left to remove serves as the signal. Similarly, x <= 0 is our base case in our function. The base case is crucial as it prevents infinite recursion and related errors.
+The base case acts like a friendly signpost, telling the recursion when to stop. In our book stack example, reaching a point where no more books are left to remove serves as the signal. Similarly, `x <= 0` is our base case in our function. The base case is crucial as it prevents infinite recursion and related errors.
 
 ### 3. Defining the Recursive Case
 The recursive case is an essential aspect of recursion — the rule responsible for creating smaller versions of the original problem. Each call brings us a step closer to the base case. Let's use the process of calculating a factorial as an illustrative example.
@@ -50,7 +50,7 @@ To find a factorial, we multiply a number by the factorial of the number minus o
         System.out.println(factorial(3)); // we expect 6 (3 * 2 * 1)
       }
     }
-In this case, we call factorial(3), it returns 3 * factorial(2), where factorial(2) returns 2 * factorial(1). As factorial(1) is a base case, it returns 1. As a result, the whole recursion chain returns 3 * 2 * 1.
+In this case, we call `factorial(3)`, it returns `3 * factorial(2)`, where `factorial(2)` returns `2 * factorial(1)`. As `factorial(1)` is a base case, it returns 1. As a result, the whole recursion chain returns `3 * 2 * 1`.
 
 ### 4. Tips for Thinking Recursively
 To think recursively, visualize the problem like an onion. Peeling each layer brings you closer to the center. The center of the onion represents the base case, and the peeling process denotes the recursive case.
@@ -58,7 +58,7 @@ To think recursively, visualize the problem like an onion. Peeling each layer br
 Remember that a complex problem often contains smaller, simpler sub-problems. You can trust these sub-problems to be solved correctly, culminating in an elegant solution.
 
 ### 5. Another Example of Recursive Function
-Let's develop a function that calculates the sum of an integer's digits. Normally, it would involve using a while loop, but with recursion, it is done much more easily:
+Let's develop a function that calculates the sum of an integer's digits. Normally, it would involve using a `while` loop, but with recursion, it is done much more easily:
 
     class Main {
       static int sumOfDigits(int num) {
@@ -75,5 +75,5 @@ Let's develop a function that calculates the sum of an integer's digits. Normall
         System.out.println(sumOfDigits(12345)); // Will print out 15 (1+2+3+4+5)
       }
 }
-In this example, we use the same principle as with factorial calculation, but we pass num / 10 to the next recursion call, chopping off the last digit every time.
+In this example, we use the same principle as with factorial calculation, but we pass `num / 10` to the next recursion call, chopping off the last digit every time.
 
