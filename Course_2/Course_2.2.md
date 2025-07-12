@@ -287,6 +287,13 @@ Run the code.
 #### Practice #2
 Now, for a slight twist: adjust the binarySearchBook method so that it returns the index where the book should be inserted if it's not found. This will require a subtle change to the return value when the book ID is not present in the array. Don't forget to modify the print statement to reflect new logic.
 
+What do you mean the index but not the value?
+
+Great question! In Java, bookIDs[3] gives you the value at index 3 (which is 404), not the index itself.
+
+But you want to return the position (the index) where the new book ID should be inserted. For example, if the correct spot is after index 2, you should return 3 (the index), not bookIDs[3].
+
+So, in your base case, what variable represents the correct index to insert the new ID?
 
 #### Practice #3
 #### Practice #4
