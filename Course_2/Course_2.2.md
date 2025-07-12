@@ -209,7 +209,7 @@ You will need to help calculate the sum of all digits in a star code number. Rep
 
 ## Lesson 2: Binary Search: From Concept to Java Implementation and Complexity Analysis
 ### 1. Understanding Binary Search
-Binary Search begins at the midpoint of a sorted list, halving the search area at each step until it locates the target. For example, if we were to look for the number 8 in a sorted list that ranges from 1 to 10, we would begin at 5. Since 8 is larger than the midpoint, we would look within the second half of the list, leaving us with numbers 6 to 10. Within the remaining list, the middle number is 8; thus, we've found our number.
+Binary Search begins at the midpoint of a sorted list, halving the search area at each step until it locates the target. For example, if we were to look for the number `8` in a sorted list that ranges from `1` to `10`, we would begin at `5`. Since `8` is larger than the midpoint, we would look within the second half of the list, leaving us with numbers `6` to `10`. Within the remaining list, the middle number is `8`; thus, we've found our number.
 
 ### 2. Coding Binary Search in Java
 Let's see how Binary Search can be implemented in Java, taking a recursive approach. This process involves a function calling itself—with a base case in place to prevent infinite loops—and a recursive case to solve more minor parts of the problem.
@@ -222,10 +222,10 @@ Let's see how Binary Search can be implemented in Java, taking a recursive appro
             return binarySearch(arr, start, mid - 1, target); // Search the left half
         return binarySearch(arr, mid + 1, end, target); // Search the right half
     }
-Within this code, the base case is defined first. If the start index is greater than the end index, it indicates the search area is exhausted, resulting in a -1 return. The code then locates the midpoint. If the midpoint equals our target, it’s returned. Depending on whether the target is less or more than the midpoint, the search continues within the left or right half, respectively.
+Within this code, the base case is defined first. If the start index is greater than the end index, it indicates the search area is exhausted, resulting in a `-1` return. The code then locates the midpoint. If the midpoint equals our target, it’s returned. Depending on whether the target is less or more than the midpoint, the search continues within the left or right half, respectively.
 
 ### 3. Analyzing the Time Complexity of Binary Search
-Let's analyze the time complexity of Binary Search, which measures how much time an algorithm takes increases with the input size. Notably, Binary Search halves the list at every step, necessitating log(n) steps for an array of size n. Therefore, the time complexity of Binary Search is O(log n).
+Let's analyze the time complexity of Binary Search, which measures how much time an algorithm takes increases with the input size. Notably, Binary Search halves the list at every step, necessitating log(`n`) steps for an array of size `n`. Therefore, the time complexity of Binary Search is O(log n).
 
 ### 4. Implementing Binary Search Iteratively
 You can also implement the Binary Search algorithm in an iterative way using a while loop. Here is the Java code for the iterative approach.
