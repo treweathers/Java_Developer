@@ -287,13 +287,33 @@ Run the code.
 #### Practice #2
 Now, for a slight twist: adjust the binarySearchBook method so that it returns the index where the book should be inserted if it's not found. This will require a subtle change to the return value when the book ID is not present in the array. Don't forget to modify the print statement to reflect new logic.
 
-What do you mean the index but not the value?
+###### Questions I asked Cosmo:
+* Should I be editing the base case?
 
-Great question! In Java, bookIDs[3] gives you the value at index 3 (which is 404), not the index itself.
+        Great question! Yes, you do need to edit the base case, but not in the way you currently have it.
+        
+        Think about what index you should return if the searchID is not found. Where would you insert it to keep the array sorted?
+        What value of start or end represents the correct insertion point?
+        Try to reason about what should be returned when start > end. Give it a shot!
 
-But you want to return the position (the index) where the new book ID should be inserted. For example, if the correct spot is after index 2, you should return 3 (the index), not bookIDs[3].
+* Should I instantiate the binarySearchForBook function?
+    
+        No need to instantiate or call the function again in your base case! That’s actually causing your infinite recursion (and the stack overflow error).
+        
+        Instead, think about what value you should return when start > end.
+        
+        What index represents the correct place to insert the searchID to keep the array sorted?
+        Try returning that index directly in the base case. Give it a try!
 
-So, in your base case, what variable represents the correct index to insert the new ID?
+* What do you mean the index but not the value?
+    
+        Great question! In Java, bookIDs[3] gives you the value at index 3 (which is 404), not the index itself.
+        
+        But you want to return the position (the index) where the new book ID should be inserted. For example, if the correct spot is after index 2, you should return 3 (the index), not bookIDs[3].
+        
+        So, in your base case, what variable represents the correct index to insert the new ID?
+
+###### feedback:
 
 #### Practice #3
 #### Practice #4
