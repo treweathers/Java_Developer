@@ -208,4 +208,54 @@ You will need to help calculate the sum of all digits in a star code number. Rep
         But if you have more than one statement in either branch, use curly braces. Does that help clarify?
 
 ## Lesson 2: Binary Search: From Concept to Java Implementation and Complexity Analysis
-### 1. 
+### 1. Understanding Binary Search
+Binary Search begins at the midpoint of a sorted list, halving the search area at each step until it locates the target. For example, if we were to look for the number 8 in a sorted list that ranges from 1 to 10, we would begin at 5. Since 8 is larger than the midpoint, we would look within the second half of the list, leaving us with numbers 6 to 10. Within the remaining list, the middle number is 8; thus, we've found our number.
+
+Coding Binary Search in Java
+Let's see how Binary Search can be implemented in Java, taking a recursive approach. This process involves a function calling itself—with a base case in place to prevent infinite loops—and a recursive case to solve more minor parts of the problem.
+
+    public int binarySearch(int[] arr, int start, int end, int target) {
+        if (start > end) return -1; // Base case
+        int mid = start + (end - start) / 2; // Find the midpoint
+        if (arr[mid] == target) return mid; // Target found
+        if (arr[mid] > target) // If the target is less than the midpoint
+            return binarySearch(arr, start, mid - 1, target); // Search the left half
+        return binarySearch(arr, mid + 1, end, target); // Search the right half
+    }
+Within this code, the base case is defined first. If the start index is greater than the end index, it indicates the search area is exhausted, resulting in a -1 return. The code then locates the midpoint. If the midpoint equals our target, it’s returned. Depending on whether the target is less or more than the midpoint, the search continues within the left or right half, respectively.
+
+Analyzing the Time Complexity of Binary Search
+Let's analyze the time complexity of Binary Search, which measures how much time an algorithm takes increases with the input size. Notably, Binary Search halves the list at every step, necessitating log(n) steps for an array of size n. Therefore, the time complexity of Binary Search is O(log n).
+
+Implementing Binary Search Iteratively
+You can also implement the Binary Search algorithm in an iterative way using a while loop. Here is the Java code for the iterative approach.
+
+    public int binarySearch(int[] arr, int target) {
+        int start = 0;
+        int end = arr.length - 1;
+    
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+    
+            if (arr[mid] == target) return mid;
+    
+            if (arr[mid] < target) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+        return -1;
+    }
+Instead of dividing the array recursively in this code, we use a while loop, which continues until the start index is equal to or less than the end index.
+
+The middle element is found the same way as in the recursive approach. We have found the target if the target is equal to this middle element. On the other hand, if the target is greater than the middle element, we adjust the start index to be one position after the middle index. However, if the target is less than the middle element, we adjust the end index to be one position before the middle index.
+
+Comparing Recursive and Iterative Approaches
+Both the recursive and iterative versions of the Binary Search algorithm have a time complexity of O(log(n)), which makes them both very efficient.
+
+However, the iterative version generally uses less memory space than the recursive one. Every recursive call adds a layer onto the system call stack, a part of memory where information about the active subroutines in a program is stored. If the recursion gets too deep, it could result in stack overflow errors.
+
+On the upside, some developers find recursive code easier to understand and debug because it often leads to simpler and cleaner code.
+
+Finally, the choice between recursion and iteration can depend on the specifics of the problem being tackled, the performance characteristics of the specific system you're working on, and personal or team preferences. Both methods have their place in a programmer's toolkit.
