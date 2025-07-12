@@ -285,6 +285,7 @@ Run the code.
     }
 
 #### Practice #2
+Now, for a slight twist: adjust the binarySearchBook method so that it returns the index where the book should be inserted if it's not found. This will require a subtle change to the return value when the book ID is not present in the array. Don't forget to modify the print statement to reflect new logic.
 
 
 #### Practice #3
