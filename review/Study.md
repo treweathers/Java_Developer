@@ -56,3 +56,16 @@
 * String equality "abc".equals("abc")
 * Length of array arr.length
 * Length of String str.length()
+
+### Test-Taking Tips
+* Start with the easiest problem first.
+* Use meaningful variable names, but focus on speed.
+* Always test your solution with edge cases.
+* If stuck, skip and return later.
+* Make use of built-in Java libraries.
+
+### Practice Platforms
+* CodeSignal Arcade – Java Section: https://codesignal.com/
+* LeetCode Easy & Medium Java Problems: https://leetcode.com/
+* HackerRank Java Practice: https://www.hackerrank.com/domains/tutorials/10-days-of-java
+* GeeksforGeeks Java Programming: https://www.geeksforgeeks.org/java/
