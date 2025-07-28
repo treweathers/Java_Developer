@@ -1,3 +1,4 @@
+//Error: Could not find or load main class practice Caused by: java.lang.NoClassDefFoundError: (wrong name: )
 class Practice {
     public static void main(String [] args) {
         System.out.println(palindrome("ama"));
