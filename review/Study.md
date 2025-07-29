@@ -13,32 +13,38 @@
 * Primitive types: int, double, char, boolean, long, etc.
 * Reference types: String, arrays, custom classes
 * Type casting (implicit and explicit)
+
 2. Control Flow
 * if, else, switch
 * while, for, do-while
 * Enhanced for-loop (for-each)
 * break, continue, and return
+
 3. Arrays and Strings
 * One-dimensional and multi-dimensional arrays
 * Common String methods: .length(), .charAt(), .substring(), .equals(), .split()
 * Converting between Strings and arrays: .toCharArray(), String.join()
-4. Methods and Scope
+
+4. Methods and Scope⚠️
 * Method declarations: return types, parameters
 * Static vs. instance methods
 * Pass-by-value behavior
 * Method overloading
-5. Object-Oriented Programming (OOP)
+
+5. Object-Oriented Programming (OOP)🚨
 * Classes and objects
 * Constructors
 * Inheritance (extends)
 * Interfaces (implements)
 * Method overriding vs overloading
 * Polymorphism
+
 6. Collections and Data Structures
 * ArrayList, HashMap, HashSet
 * Iteration using for, Iterator, or forEach
 * Sorting: Collections.sort(), Arrays.sort()
 * Comparing: Comparable vs Comparator
+
 7. Algorithms and Problem Solving
 * Searching: linear, binary
 * Sorting: bubble, selection, insertion (know time complexity)
