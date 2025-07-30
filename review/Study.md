@@ -140,10 +140,10 @@
 * D. if (x > 5); {...}
 
 #### Section 4: Data Structures & Arrays
-10. How do you declare an array of integers in Java with 5 elements? B
+10. How do you declare an array of integers in Java with 5 elements? C
 * A. int[] arr = new int(5)
-* B. **int arr[] = new int[5];**
-* C. int[5] arr = new int[];
+* B. int arr[] = new int[5];
+* C. **int[5] arr = new int[]**;
 * D. int arr = new int[5];
 
 11. Which interface allows duplicate elements and maintains insertion order? B
@@ -215,123 +215,126 @@
 * C. Makes the variable static
 * D. Allows changes only inside loops
 
-20. What is method overloading in Java?
-A. Using the same method name with different return types
-B. Using the same method name with different parameters
-C. Redefining a method in a child class
-D. A method that throws multiple exceptions
+20. What is method overloading in Java? B
+* A. Using the same method name with different return type
+* B. **Using the same method name with different parameters**
+* C. Redefining a method in a child class
+* D. A method that throws multiple exceptions
 
-21. What is the default value of a boolean variable in Java (class-level)?
-A. true
-B. false
-C. null
-D. 0
+21. What is the default value of a boolean variable in Java (class-level)? C
+* A. true
+* B. false
+* C. **null**
+* D. 0
 
-22. Which of the following is true about static methods?
-A. They can access instance variables directly
-B. They can be overridden
-C. They belong to the class, not objects
-D. They require an object instance to be called
+22. Which of the following is true about static methods? C
+* A. They can access instance variables directly
+* B. They can be overridden
+* C. **They belong to the class, not objects**
+* D. They require an object instance to be called
 
-23. Which keyword is used to define an interface in Java?
-A. class
-B. interface
-C. abstract
-D. implements
+24. Which keyword is used to define an interface in Java? C
+* A. class
+* B. interface
+* C. **abstract**
+* D. implements
 
-24. Which of the following can be used to stop a loop immediately?
-A. stop
-B. exit
-C. continue
-D. break
+25. Which of the following can be used to stop a loop immediately? D
+* A. stop
+* B. exit
+* C. continue
+* D. **break**
 
-25. Which statement correctly initializes a HashMap?
-A. Map map = new HashMap();
-B. HashMap map = new Map();
-C. Map map = HashMap();
-D. new HashMap map = Map();
+26. Which statement correctly initializes a HashMap? A
+* A. **Map map = new HashMap();**
+* B. HashMap map = new Map()
+* C. Map map = HashMap();
+* D. new HashMap map = Map();
 
-26. What is the result of this expression?
-System.out.println(10 + 20 + "30");
-A. 30
-B. 102030
-C. 3030
-D. 3030
+27. What is the result of this expression? B
 
-27. Which of the following is the correct way to declare a constant in Java?
-A. const double RATE = 0.05;
-B. final double RATE = 0.05;
-C. double constant RATE = 0.05;
-D. static RATE = 0.05;
+        System.out.println(10 + 20 + "30");
+* A. 30
+* B. **102030*
+* C. 3030
+* D. 3030
 
-28. Which method must be implemented when a class implements the Runnable
-interface?
-A. execute()
-B. run()
-C. start()
-D. main()
+29. Which of the following is the correct way to declare a constant in Java? A
+* A. **const double RATE = 0.05;**
+* B. final double RATE = 0.05;
+* C. double constant RATE = 0.05;
+* D. static RATE = 0.05;
 
-29. Which operator is used to compare the values of two primitives for equality?
-A. =
-B. ==
-C. equals()
-D. !=
+30. Which method must be implemented when a class implements the Runnable interface? A🚨
+* A. **execute()**
+* B. run()
+* C. start()
+* D. main()
 
-30. Which exception is thrown when an array is accessed out of bounds?
-A. ArrayException
-B. NullPointerException
-C. ArrayIndexOutOfBoundsException
-D. IndexException
+32. Which operator is used to compare the values of two primitives for equality? B
+* A.
+* B. **==**
+* C. equals()
+* D. !=
+
+33. Which exception is thrown when an array is accessed out of bounds? C
+* A. ArrayException
+* B. NullPointerException
+* C. **ArrayIndexOutOfBoundsException**
+* D. IndexException
 
 #### Section 7: Additional Questions & Answers
-31. What is the result of the following Java code?
-int x = 5;
-int y = 2;
-System.out.println(x / y);
+31. What is the result of the following Java code? **Compilation Error**
 
-32. Which access modifier allows visibility only within the same package?
-A. public
-B. protected
-C. private
-D. default (no modifier)
+        int x = 5;
+        int y = 2;
+        System.out.println(x / y);
 
-33. What will this code print?
-String s = "hello";
-System.out.println(s.substring(1, 4));
+32. Which access modifier allows visibility only within the same package? C
+* A. public
+* B. protected
+* C. **private**
+* D. default (no modifier)
+
+33. What will this code print? **ello**
+
+        String s = "hello";
+        System.out.println(s.substring(1, 4));
 
 34. Which keyword is used to prevent inheritance of a class?
-A. static
-B. final
-C. const
-D. immutable
+* A. **static**
+* B. final
+* C. const
+* D. immutable
 
-35. How is a HashSet different from a TreeSet in Java?
-A. HashSet is ordered, TreeSet is not
-B. HashSet allows duplicates, TreeSet does not
-C. TreeSet maintains sorted order, HashSet does not
-D. HashSet uses more memory than TreeSet
+35. How is a HashSet different from a TreeSet in Java? C🚨
+* A. HashSet is ordered, TreeSet is not
+* B. HashSet allows duplicates, TreeSet does not
+* C. **TreeSet maintains sorted order, HashSet does not**
+* D. HashSet uses more memory than TreeSet
 
-36. What is the correct way to declare an abstract method in Java?
-A. abstract void run() {}
-B. void run();
-C. abstract void run();
-D. public void abstract run();
+37. What is the correct way to declare an abstract method in Java? A
+* A. **abstract void run() {}**
+* B. void run();
+* C. abstract void run();
+* D. public void abstract run();
 
-37. What is the result of this code?
-int[] arr = {1, 2, 3};
-System.out.println(arr[3]);
+38. What is the result of this code? **ArrayIndexOutofBoundsException
 
-38. What does the finally block do in exception handling?
-A. Executes only if an exception is thrown
-B. Executes only if no exception is thrown
-C. Executes always, whether an exception is thrown or not
-D. Prevents the program from crashing
+        int[] arr = {1, 2, 3};
+        System.out.println(arr[3]);
 
-39. Which data structure is best suited for a FIFO (first-in-first-out) behavior?
-A. Stack
-B. Queue
-C. Tree
-D. Set
+40. What does the finally block do in exception handling? C
+* A. Executes only if an exception is thrown
+* B. Executes only if no exception is thrown
+* C. **Executes always, whether an exception is thrown or not*
+* D. Prevents the program from crashing
+
+41. Which data structure is best suited for a FIFO (first-in-first-out) behavior? C🚨
+* A. Stac
+* B. Queue
+* C. **Tree**
+* D. Set
 
 ## Part II: Practice Problems with Answers🥈
 CodeSignal's "Java Programming for Beginners" path includes various types of problems, with a strong emphasis on single-function challenges and dedicated debugging exercises.
