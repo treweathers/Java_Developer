@@ -327,11 +327,11 @@
 40. What does the finally block do in exception handling? C
 * A. Executes only if an exception is thrown
 * B. Executes only if no exception is thrown
-* C. **Executes always, whether an exception is thrown or not*
+* C. **Executes always, whether an exception is thrown or not**
 * D. Prevents the program from crashing
 
 41. Which data structure is best suited for a FIFO (first-in-first-out) behavior? C🚨
-* A. Stac
+* A. Stack
 * B. Queue
 * C. **Tree**
 * D. Set
