@@ -163,7 +163,7 @@
 
 #### Section 5: Exceptions & Libraries
 13. Which keyword is used to handle exceptions? A
-* A. **catch*
+* A. **catch**
 * B. final
 * C. error
 * D. handle
