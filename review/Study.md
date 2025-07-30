@@ -26,7 +26,7 @@
 * Common String methods: .length(), .charAt(), .substring(), .equals(), .split()
 * Converting between Strings and arrays: .toCharArray(), String.join()
 
-4. Methods and Scope⚠️
+4. Methods and Scope🚨
 * Method declarations: return types, parameters
 * Static vs. instance methods
 * Pass-by-value behavior
@@ -78,14 +78,14 @@
 * GeeksforGeeks Java Programming: https://www.geeksforgeeks.org/java/
 
 
-### Java CodeSignal Certification – Practice Quiz (with Answers)
-1. Which of the following is a valid main method signature in Java?: B
+### Java CodeSignal Certification – Practice Quiz (with Answers)🥇
+1. Which of the following is a valid main method signature in Java? B
 * A. public void main(String[] args
 * B. **public static void main(String[] args)**
 * C. static void Main(String args[])
 * D. void public static main(String args[])
 
-2. What is the output of the following code?: D
+2. What is the output of the following code? D
 int a = 5, b = 2;
 System.out.println(a / b);
 * A. 2
@@ -93,70 +93,70 @@ System.out.println(a / b);
 * C. 2.0
 * D. **Compilation error**
 
-3. Which Java data type is used to store 64-bit integer values?: B
+3. Which Java data type is used to store 64-bit integer values? B
 * A. int
 * B. **long**
 * C. shorts
 * D. double
 
 #### Section 2: Object-Oriented Programming
-4. Which keyword is used to inherit a class in Java?
-A. implements
-B. inherits
-C. extends
-D. super
+4. Which keyword is used to inherit a class in Java?: C
+* A. implements
+* B. inherits
+* C. **extends**
+* D. super
 
 5. True or False: Java supports multiple inheritance with classes.
-The answer is: False
+**The answer is: False**
 
-6. Which of the following statements is correct about constructors?
-A. They must have a return type
-B. They can be static
-C. They have the same name as the class
-D. They can be called explicitly with new.constructorName()
+6. Which of the following statements is correct about constructors? D🚨
+* A. They must have a return type
+* B. They can be static
+* C. They have the same name as the class
+* D. They can be called explicitly with new.constructorName()
 
 #### Section 3: Loops and Conditionals
-7. What is the output of the following loop?
+7. What is the output of the following loop? A
 for (int i = 0; i < 3; i++) {
 System.out.print(i + " ");
  }
-A. 0 1 2
-B. 1 2 3
-C. 0 1 2 3
-D. 1 2
+* A. **0 1 2**
+* B. 1 2 3
+* C. 0 1 2 3
+* D. 1 2
 
-8. Which loop guarantees at least one execution?
-A. for loop
-B. while loop
-C. do-while loop
-D. All of the above
+8. Which loop guarantees at least one execution? D
+* A. for loop
+* B. while loop
+* C. do-while loop
+* D. **All of the above**
 
-9. What is the correct syntax for an if statement in Java?
-A. if x > 5 then {...}
-B. if (x > 5) {...}
-C. if x > 5: {...}
-D. if (x > 5); {...}
+9. What is the correct syntax for an if statement in Java? B
+* A. if x > 5 then {...}
+* B. **if (x > 5) {...}**
+* C. if x > 5: {...}
+* D. if (x > 5); {...}
 
 #### Section 4: Data Structures & Arrays
-10. How do you declare an array of integers in Java with 5 elements?
-A. int[] arr = new int(5);
-B. int arr[] = new int[5];
-C. int[5] arr = new int[];
-D. int arr = new int[5];
+10. How do you declare an array of integers in Java with 5 elements? B
+* A. int[] arr = new int(5)
+* B. **int arr[] = new int[5];**
+* C. int[5] arr = new int[];
+* D. int arr = new int[5];
 
-11. Which interface allows duplicate elements and maintains insertion order?
-A. Set
-B. List
-C. Map
-D. Queue
+11. Which interface allows duplicate elements and maintains insertion order? B
+* A. Set
+* B. **List**
+* C. Map
+* D. Queue
 
-12. What is the result of the following code?
+12. What is the result of the following code? C
 int[] nums = {1, 2, 3};
 System.out.println(nums[3]);
-A. 3
-B. Compilation error
-C. ArrayIndexOutOfBoundsException
-D. null
+* A. 3
+* B. Compilation error
+* C. **ArrayIndexOutOfBoundsException**
+* D. null
 
 #### Section 5: Exceptions & Libraries
 13. Which keyword is used to handle exceptions?
@@ -328,7 +328,7 @@ B. Queue
 C. Tree
 D. Set
 
-## Part II: Practice Problems with Answers
+## Part II: Practice Problems with Answers🥈
 CodeSignal's "Java Programming for Beginners" path includes various types of problems, with a strong emphasis on single-function challenges and dedicated debugging exercises.
 
 ### Single-Function Problems
