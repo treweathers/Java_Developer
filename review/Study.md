@@ -209,9 +209,9 @@
 * C. LinkedList
 * D. Vector
 
-19. What does the final keyword do when used with a variable?
+19. What does the final keyword do when used with a variable? B
 A. Prevents the variable from being accessed
-B. Makes the variable immutable after assignment
+B. **Makes the variable immutable after assignment**
 C. Makes the variable static
 D. Allows changes only inside loops
 
