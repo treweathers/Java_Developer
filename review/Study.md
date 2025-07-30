@@ -86,7 +86,8 @@
 * D. void public static main(String args[])
 
 2. What is the output of the following code? D
-int a = 5, b = 2;
+ 
+       int a = 5, b = 2;
 System.out.println(a / b);
 * A. 2
 * B. 2.5
@@ -117,9 +118,10 @@ System.out.println(a / b);
 
 #### Section 3: Loops and Conditionals
 7. What is the output of the following loop? A
-for (int i = 0; i < 3; i++) {
-System.out.print(i + " ");
- }
+
+       for (int i = 0; i < 3; i++) {
+       System.out.print(i + " ");
+        }
 * A. **0 1 2**
 * B. 1 2 3
 * C. 0 1 2 3
@@ -151,8 +153,9 @@ System.out.print(i + " ");
 * D. Queue
 
 12. What is the result of the following code? C
-int[] nums = {1, 2, 3};
-System.out.println(nums[3]);
+
+        int[] nums = {1, 2, 3};
+        System.out.println(nums[3]);
 * A. 3
 * B. Compilation error
 * C. **ArrayIndexOutOfBoundsException**
