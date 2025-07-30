@@ -1,5 +1,6 @@
-# WGU Java Study Guide: CodeSignal Certification Preparation
-## Certification Overview
+# Java Study Guide
+## Part I: WGU Java Study Guide: CodeSignal Certification Preparation
+### Certification Overview
 ##### The CodeSignal Java certification evaluates your knowledge in core Java programming concepts. While the exam may change at any moment without notice, historically, you can expect four timed coding questions designed to test logic, problem-solving, and command of Java syntax. You will not be graded on style or comments, only on correctness and performance.
 
 ### Important Notes:
@@ -8,7 +9,7 @@
 * Graded automatically on accuracy, efficiency, and test cases passed
 * Difficulty: Ranges from basic to advanced
 
-## Core Java Topics to Review
+### Core Java Topics to Review
 1. Data Types and Variables
 * Primitive types: int, double, char, boolean, long, etc.
 * Reference types: String, arrays, custom classes
@@ -51,8 +52,8 @@
 * Recursion and iteration
 * Greedy and brute-force approaches
 
-## Key Java Functions and Concepts
-### Task Example
+### Key Java Functions and Concepts
+#### Task Example
 * Parse String to int int x = Integer.parseInt("123");
 * Convert int to String String s = String.valueOf(123);
 * Sort an array Arrays.sort(myArray);
@@ -63,21 +64,21 @@
 * Length of array arr.length
 * Length of String str.length()
 
-### Test-Taking Tips
+#### Test-Taking Tips
 * Start with the easiest problem first.
 * Use meaningful variable names, but focus on speed.
 * Always test your solution with edge cases.
 * If stuck, skip and return later.
 * Make use of built-in Java libraries.
 
-### Practice Platforms
+#### Practice Platforms
 * CodeSignal Arcade – Java Section: https://codesignal.com/
 * LeetCode Easy & Medium Java Problems: https://leetcode.com/
 * HackerRank Java Practice: https://www.hackerrank.com/domains/tutorials/10-days-of-java
 * GeeksforGeeks Java Programming: https://www.geeksforgeeks.org/java/
 
 
-## Java CodeSignal Certification – Practice Quiz (with Answers)
+### Java CodeSignal Certification – Practice Quiz (with Answers)
 1. Which of the following is a valid main method signature in Java?
 A. public void main(String[] args)
 B. public static void main(String[] args)
@@ -98,9 +99,8 @@ B. long
 C. short
 D. double
 
-
 Section 2: Object-Oriented Programming
-4. 5. 6. Which keyword is used to inherit a class in Java?
+4. Which keyword is used to inherit a class in Java?
 A. implements
 B. inherits
 C. extends
@@ -108,7 +108,7 @@ D. super
 
 True or False: Java supports multiple inheritance with classes.
 The answer is: False
-Which of the following statements is correct about constructors?
+5. Which of the following statements is correct about constructors?
 A. They must have a return type
 B. They can be static
 C. They have the same name as the class
@@ -118,13 +118,13 @@ Section 3: Loops and Conditionals
 7. What is the output of the following loop?
 for (int i = 0; i < 3; i++) {
 System.out.print(i + " ");
-8. }
+ }
 A. 0 1 2
 B. 1 2 3
 C. 0 1 2 3
 D. 1 2
 
-Which loop guarantees at least one execution?
+8. Which loop guarantees at least one execution?
 A. for loop
 B. while loop
 C. do-while loop
@@ -175,7 +175,6 @@ B. Compilation error
 C. Runtime crash
 D. Error
 
-
 15. What does java.util.ArrayList provide that arrays do not?
 A. Fixed size
 B. Type safety
@@ -221,7 +220,6 @@ A. true
 B. false
 C. null
 D. 0
-
 
 22. Which of the following is true about static methods?
 A. They can access instance variables directly
@@ -291,7 +289,6 @@ B. protected
 C. private
 D. default (no modifier)
 
-
 33. What will this code print?
 String s = "hello";
 System.out.println(s.substring(1, 4));
@@ -330,7 +327,7 @@ B. Queue
 C. Tree
 D. Set
 
-
+## Part II: Practice Problems with Answers
 CodeSignal's "Java Programming for Beginners" path includes various types of problems, with a strong emphasis on single-function challenges and dedicated debugging exercises.
 
 ### Single-Function Problems
