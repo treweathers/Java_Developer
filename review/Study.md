@@ -79,25 +79,25 @@
 
 
 ### Java CodeSignal Certification – Practice Quiz (with Answers)
-1. Which of the following is a valid main method signature in Java?
-A. public void main(String[] args)
-B. public static void main(String[] args)
-C. static void Main(String args[])
-D. void public static main(String args[])
+1. Which of the following is a valid main method signature in Java?: B
+* A. public void main(String[] args
+* B. **public static void main(String[] args)**
+* C. static void Main(String args[])
+* D. void public static main(String args[])
 
-2. What is the output of the following code?
+2. What is the output of the following code?: D
 int a = 5, b = 2;
 System.out.println(a / b);
-A. 2
-B. 2.5
-C. 2.0
-D. Compilation error
+* A. 2
+* B. 2.5
+* C. 2.0
+* D. **Compilation error**
 
-3. Which Java data type is used to store 64-bit integer values?
-A. int
-B. long
-C. short
-D. double
+3. Which Java data type is used to store 64-bit integer values?: B
+* A. int
+* B. **long**
+* C. shorts
+* D. double
 
 #### Section 2: Object-Oriented Programming
 4. Which keyword is used to inherit a class in Java?
