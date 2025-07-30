@@ -114,7 +114,7 @@
 * A. They must have a return type
 * B. They can be static
 * C. They have the same name as the class
-* D. They can be called explicitly with new.constructorName()
+* D. **They can be called explicitly with new.constructorName()**
 
 #### Section 3: Loops and Conditionals
 7. What is the output of the following loop? A
@@ -162,50 +162,52 @@
 * D. null
 
 #### Section 5: Exceptions & Libraries
-13. Which keyword is used to handle exceptions?
-A. catch
-B. final
-C. error
-D. handle
+13. Which keyword is used to handle exceptions? A
+* A. **catch*
+* B. final
+* C. error
+* D. handle
 
-14. What is the output?
-try {
-int x = 5 / 0;
-} catch (ArithmeticException e) {
-System.out.println("Error");
-}
-A. No output
-B. Compilation error
-C. Runtime crash
-D. Error
+14. What is the output? D
 
-15. What does java.util.ArrayList provide that arrays do not?
-A. Fixed size
-B. Type safety
-C. Dynamic resizing
-D. Primitive storage
+        try {
+        int x = 5 / 0;
+        } catch (ArithmeticException e) {
+        System.out.println("Error");
+        }
+* A. No output
+* B. Compilation error
+* C. Runtime crash
+* D. **Error**
+
+15. What does java.util.ArrayList provide that arrays do not? D🚨
+* A. Fixed size
+* B. Type safety
+* C. Dynamic resizing
+* D. **Primitive storage**
 
 #### Section 6: Additional Questions & Answers
-16. Which of the following is not a valid access modifier in Java?
-A. public
-B. private
-C. protected
-D. external
+16. Which of the following is not a valid access modifier in Java? D
+* A. public
+* B. private
+* C. protected
+* D. **external**
 
-17. What will be the output of this code snippet?
-String a = "Hello";
-String b = "Hello";
-System.out.println(a == b);
-A. false
-B. true
-C. Compilation error
-D. Runtime exception
+17. What will be the output of this code snippet? D
 
-18. Which collection class does not allow duplicate elements?
-A. ArrayList
-B. HashSet
-C. LinkedList
-D. Vector
+        String a = "Hello";
+        String b = "Hello";
+        System.out.println(a == b);
+* A. false
+* B. true
+* C. Compilation error
+* D. **Runtime exception**
+
+18. Which collection class does not allow duplicate elements? B
+* A. ArrayList
+* B. **HashSet**
+* C. LinkedList
+* D. Vector
 
 19. What does the final keyword do when used with a variable?
 A. Prevents the variable from being accessed
