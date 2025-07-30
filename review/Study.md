@@ -99,22 +99,23 @@ B. long
 C. short
 D. double
 
-Section 2: Object-Oriented Programming
+### Section 2: Object-Oriented Programming
 4. Which keyword is used to inherit a class in Java?
 A. implements
 B. inherits
 C. extends
 D. super
 
-True or False: Java supports multiple inheritance with classes.
+5. True or False: Java supports multiple inheritance with classes.
 The answer is: False
-5. Which of the following statements is correct about constructors?
+
+6. Which of the following statements is correct about constructors?
 A. They must have a return type
 B. They can be static
 C. They have the same name as the class
 D. They can be called explicitly with new.constructorName()
 
-Section 3: Loops and Conditionals
+### Section 3: Loops and Conditionals
 7. What is the output of the following loop?
 for (int i = 0; i < 3; i++) {
 System.out.print(i + " ");
@@ -136,7 +137,7 @@ B. if (x > 5) {...}
 C. if x > 5: {...}
 D. if (x > 5); {...}
 
-Section 4: Data Structures & Arrays
+### Section 4: Data Structures & Arrays
 10. How do you declare an array of integers in Java with 5 elements?
 A. int[] arr = new int(5);
 B. int arr[] = new int[5];
@@ -157,7 +158,7 @@ B. Compilation error
 C. ArrayIndexOutOfBoundsException
 D. null
 
-Section 5: Exceptions & Libraries
+### Section 5: Exceptions & Libraries
 13. Which keyword is used to handle exceptions?
 A. catch
 B. final
@@ -181,7 +182,7 @@ B. Type safety
 C. Dynamic resizing
 D. Primitive storage
 
-Section 6: Additional Questions & Answers
+### Section 6: Additional Questions & Answers
 16. Which of the following is not a valid access modifier in Java?
 A. public
 B. private
@@ -277,7 +278,7 @@ B. NullPointerException
 C. ArrayIndexOutOfBoundsException
 D. IndexException
 
-Section 7: Additional Questions & Answers
+### Section 7: Additional Questions & Answers
 31. What is the result of the following Java code?
 int x = 5;
 int y = 2;
