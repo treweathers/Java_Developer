@@ -88,7 +88,7 @@
 2. What is the output of the following code? D
  
        int a = 5, b = 2;
-System.out.println(a / b);
+       System.out.println(a / b);
 * A. 2
 * B. 2.5
 * C. 2.0
