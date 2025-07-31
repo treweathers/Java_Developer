@@ -336,307 +336,367 @@
 * C. **Tree**
 * D. Set
 
-Based on the provided practice quiz, here are the corrected and detailed answers to the questions.
+Here are the answers to the Java CodeSignal Certification Practice Quiz, with corrections and explanations where needed:
 
-Section 1: Java Basics
-Which of the following is a valid main method signature in Java?
+**Section 1: Java Basics**
 
-Correct Answer: B. public static void main(String[] args)
+  * **Which of the following is a valid main method signature in Java?** B
 
-Explanation: The main method must be public (accessible from anywhere), static (can be called without creating an object of the class), and void (does not return a value). It must also accept a String array as its argument.
+      * A. public void main(String[] args
+      * **B. public static void main(String[] args)**
+      * C. static void Main(String args[])
+      * D. void public static main(String args[])
+      * *Explanation: The `main` method must be `public`, `static`, `void`, and accept a `String` array as its argument.*
 
-What is the output of the following code?
+  * **What is the output of the following code?** A
 
-Code:
+    ```java
+    int a = 5, b = 2;
+    System.out.println(a / b);
+    ```
 
-Java
+      * **A. 2**
+      * B. 2.5
+      * C. 2.0
+      * D. Compilation error
+      * *Explanation: Integer division in Java truncates the decimal part.*
 
-int a = 5, b = 2;
-System.out.println(a / b);
-Correct Answer: A. 2
+  * **Which Java data type is used to store 64-bit integer values?** B
 
-Explanation: When two int variables are divided, the result is an int, and the fractional part is truncated. 5/2=2.5, which becomes 2 in integer division.
+      * A. int
+      * **B. long**
+      * C. shorts
+      * D. double
+      * *Explanation: `long` is used for 64-bit integers, `int` for 32-bit, `short` for 16-bit, and `double` for 64-bit floating-point numbers.*
 
-Which Java data type is used to store 64-bit integer values?
+**Section 2: Object-Oriented Programming**
 
-Correct Answer: B. long
+  * **Which keyword is used to inherit a class in Java?** C
 
-Explanation: long is a 64-bit integer, while int is a 32-bit integer, short is a 16-bit integer, and double is a 64-bit floating-point number.
+      * A. implements
+      * B. inherits
+      * **C. extends**
+      * D. super
+      * *Explanation: `extends` is used for class inheritance, `implements` for interface implementation.*
 
-Section 2: Object-Oriented Programming
-Which keyword is used to inherit a class in Java?
+  * **True or False: Java supports multiple inheritance with classes.** The answer is: **False**
 
-Correct Answer: C. extends
+      * *Explanation: Java supports multiple inheritance of interfaces, but not classes, to avoid the "diamond problem."*
 
-Explanation: The extends keyword is used to create a subclass that inherits properties and methods from a superclass. implements is used for interfaces.
+  * **Which of the following statements is correct about constructors?** C (Your answer D is incorrect)
 
-True or False: Java supports multiple inheritance with classes.
+      * A. They must have a return type
+      * B. They can be static
+      * **C. They have the same name as the class**
+      * D. They can be called explicitly with new.constructorName()
+      * *Explanation: Constructors do not have a return type (not even `void`), cannot be static, and their name must exactly match the class name. They are invoked implicitly when creating a new object with `new ClassName()`, not `new.constructorName()`.*
 
-Correct Answer: False
+**Section 3: Loops and Conditionals**
 
-Explanation: Java does not support multiple inheritance with classes to avoid the "diamond problem." It does, however, support multiple inheritance of interfaces.
+  * **What is the output of the following loop?** A
 
-Which of the following statements is correct about constructors?
+    ```java
+    for (int i = 0; i < 3; i++) {
+        System.out.print(i + " ");
+    }
+    ```
 
-Correct Answer: C. They have the same name as the class.
+      * **A. 0 1 2**
+      * B. 1 2 3
+      * C. 0 1 2 3
+      * D. 1 2
+      * *Explanation: The loop runs for `i = 0`, `i = 1`, and `i = 2`. When `i = 3`, the condition `i < 3` is false.*
 
-Explanation: A constructor is a special method used to initialize objects, and its name must exactly match the class name. Constructors do not have a return type, cannot be static, and are called implicitly with the new keyword, not new.constructorName().
+  * **Which loop guarantees at least one execution?** C (Your answer D is incorrect)
 
-Section 3: Loops and Conditionals
-What is the output of the following loop?
+      * A. for loop
+      * B. while loop
+      * **C. do-while loop**
+      * D. All of the above
+      * *Explanation: A `do-while` loop executes its body at least once before checking the condition, whereas `for` and `while` loops check the condition first.*
 
-Code:
+  * **What is the correct syntax for an if statement in Java?** B
 
-Java
+      * A. if x \> 5 then {...}
+      * **B. if (x \> 5) {...}**
+      * C. if x \> 5: {...}
+      * D. if (x \> 5); {...}
+      * *Explanation: The condition in an `if` statement must be enclosed in parentheses.*
 
-for (int i = 0; i < 3; i++) {
-    System.out.print(i + " ");
-}
-Correct Answer: A. 0 1 2
+**Section 4: Data Structures & Arrays**
 
-Explanation: The loop starts with i = 0 and continues as long as i < 3. It prints the value of i and then increments it. The loop will execute for i = 0, i = 1, and i = 2.
+  * **How do you declare an array of integers in Java with 5 elements?** B (Your answer C is incorrect)
 
-Which loop guarantees at least one execution?
+      * A. int[] arr = new int(5)
+      * **B. int arr[] = new int[5];**
+      * C. int[5] arr = new int[];
+      * D. int arr = new int[5];
+      * *Explanation: Option B correctly declares and initializes an integer array of size 5. `int[5] arr = new int[];` is incorrect syntax.*
 
-Correct Answer: C. do-while loop
+  * **Which interface allows duplicate elements and maintains insertion order?** B
 
-Explanation: A do-while loop executes its body at least once before checking the condition. for and while loops check the condition at the beginning and might not execute at all if the condition is initially false.
+      * A. Set
+      * **B. List**
+      * C. Map
+      * D. Queue
+      * *Explanation: `List` interfaces (like `ArrayList`, `LinkedList`) allow duplicates and maintain insertion order. `Set` interfaces do not allow duplicates.*
+
+  * **What is the result of the following code?** C
+
+    ```java
+    int[] nums = {1, 2, 3};
+    System.out.println(nums[3]);
+    ```
+
+      * A. 3
+      * B. Compilation error
+      * **C. ArrayIndexOutOfBoundsException**
+      * D. null
+      * *Explanation: Arrays in Java are 0-indexed. An array of size 3 has valid indices 0, 1, and 2. Accessing `nums[3]` attempts to access an element outside the array's bounds.*
+
+**Section 5: Exceptions & Libraries**
+
+  * **Which keyword is used to handle exceptions?** A
+
+      * **A. catch**
+      * B. final
+      * C. error
+      * D. handle
+      * *Explanation: `catch` is used in a `try-catch` block to handle exceptions.*
+
+  * **What is the output?** D
+
+    ```java
+    try {
+        int x = 5 / 0;
+    } catch (ArithmeticException e) {
+        System.out.println("Error");
+    }
+    ```
+
+      * A. No output
+      * B. Compilation error
+      * C. Runtime crash
+      * **D. Error**
+      * *Explanation: Dividing by zero throws an `ArithmeticException`, which is caught by the `catch` block, printing "Error".*
+
+  * **What does java.util.ArrayList provide that arrays do not?** C (Your answer D is incorrect)
+
+      * A. Fixed size
+      * B. Type safety
+      * **C. Dynamic resizing**
+      * D. Primitive storage
+      * *Explanation: `ArrayList` can dynamically resize itself, while traditional arrays have a fixed size upon creation. Both provide type safety.*
+
+**Section 6: Additional Questions & Answers**
+
+  * **Which of the following is not a valid access modifier in Java?** D
+
+      * A. public
+      * B. private
+      * C. protected
+      * **D. external**
+      * *Explanation: The valid access modifiers are `public`, `private`, `protected`, and the default (package-private).*
+
+  * **What will be the output of this code snippet?** B (Your answer D is incorrect)
+
+    ```java
+    String a = "Hello";
+    String b = "Hello";
+    System.out.println(a == b);
+    ```
+
+      * A. false
+      * **B. true**
+      * C. Compilation error
+      * D. Runtime exception
+      * *Explanation: For String literals with the same content, Java's String pool often reuses the same object, leading `a == b` to be `true`. While `equals()` is generally preferred for String content comparison, `==` can be true for interned String literals.*
+
+  * **Which collection class does not allow duplicate elements?** B
+
+      * A. ArrayList
+      * **B. HashSet**
+      * C. LinkedList
+      * D. Vector
+      * *Explanation: `HashSet` implements the `Set` interface, which by definition does not allow duplicate elements.*
+
+  * **What does the final keyword do when used with a variable?** B
+
+      * A. Prevents the variable from being accesse
+      * **B. Makes the variable immutable after assignment**
+      * C. Makes the variable static
+      * D. Allows changes only inside loops
+      * *Explanation: A `final` variable can be assigned a value only once. Once assigned, its value cannot be changed.*
+
+  * **What is method overloading in Java?** B
+
+      * A. Using the same method name with different return type
+      * **B. Using the same method name with different parameters**
+      * C. Redefining a method in a child class
+      * D. A method that throws multiple exceptions
+      * *Explanation: Method overloading occurs when multiple methods in the same class have the same name but different parameter lists.*
 
-What is the correct syntax for an if statement in Java?
+  * **What is the default value of a boolean variable in Java (class-level)?** B (Your answer C is incorrect)
+
+      * A. true
+      * **B. false**
+      * C. null
+      * D. 0
+      * *Explanation: Class-level (instance) `boolean` variables are initialized to `false` by default. Local variables are not initialized by default.*
 
-Correct Answer: B. if (x > 5) {...}
+  * **Which of the following is true about static methods?** C
+
+      * A. They can access instance variables directly
+      * B. They can be overridden
+      * **C. They belong to the class, not objects**
+      * D. They require an object instance to be called
+      * *Explanation: Static methods are associated with the class itself, not with specific instances. They can be called directly using the class name.*
 
-Explanation: The condition in an if statement must be enclosed in parentheses (). Semicolons are not used after the condition.
+  * **Which keyword is used to define an interface in Java?** B (Your answer C is incorrect)
 
-Section 4: Data Structures & Arrays
-How do you declare an array of integers in Java with 5 elements?
+      * A. class
+      * **B. interface**
+      * C. abstract
+      * D. implements
+      * *Explanation: The `interface` keyword is used to declare an interface.*
 
-Correct Answer: B. int arr[] = new int[5];
+  * **Which of the following can be used to stop a loop immediately?** D
 
-Explanation: The correct syntax involves specifying the size of the array inside square brackets [] when using new. int[] arr = new int[5]; is also a valid syntax.
+      * A. stop
+      * B. exit
+      * C. continue
+      * **D. break**
+      * *Explanation: The `break` statement terminates the innermost loop or `switch` statement immediately. `continue` skips the rest of the current iteration.*
 
-Which interface allows duplicate elements and maintains insertion order?
+  * **Which statement correctly initializes a HashMap?** A
 
-Correct Answer: B. List
+      * **A. Map map = new HashMap();**
+      * B. HashMap map = new Map()
+      * C. Map map = HashMap();
+      * D. new HashMap map = Map();
+      * *Explanation: Option A demonstrates polymorphism, declaring the variable as the `Map` interface type and initializing it with a `HashMap` object. Options B, C, and D are syntactically incorrect.*
 
-Explanation: List (e.g., ArrayList, LinkedList) is an ordered collection that allows duplicate elements. Set (e.g., HashSet) does not allow duplicates. Map stores key-value pairs, and Queue is typically used for FIFO behavior.
+  * **What is the result of this expression?** C (Your answer B is incorrect)
 
-What is the result of the following code?
+    ```java
+    System.out.println(10 + 20 + "30");
+    ```
 
-Code:
+      * A. 30
+      * B. 102030
+      * **C. 3030**
+      * D. 3030
+      * *Explanation: The `+` operator performs addition from left to right. `10 + 20` evaluates to `30`. Then, `30 + "30"` performs string concatenation, resulting in "3030".*
 
-Java
+  * **Which of the following is the correct way to declare a constant in Java?** B (Your answer A is incorrect)
 
-int[] nums = {1, 2, 3};
-System.out.println(nums[3]);
-Correct Answer: C. ArrayIndexOutOfBoundsException
+      * A. const double RATE = 0.05;
+      * **B. final double RATE = 0.05;**
+      * C. double constant RATE = 0.05;
+      * D. static RATE = 0.05;
+      * *Explanation: In Java, constants are declared using the `final` keyword, often in conjunction with `static` if they are class-level constants. `const` is not a keyword in Java.*
 
-Explanation: The array nums has indices 0, 1, and 2. Trying to access nums[3] is an out-of-bounds access, which results in a java.lang.ArrayIndexOutOfBoundsException at runtime.
+  * **Which method must be implemented when a class implements the Runnable interface?** B (Your answer A is incorrect)
 
-Section 5: Exceptions & Libraries
-Which keyword is used to handle exceptions?
+      * A. execute()
+      * **B. run()**
+      * C. start()
+      * D. main()
+      * *Explanation: The `Runnable` interface has a single abstract method, `run()`, which must be implemented by any class that implements `Runnable`.*
 
-Correct Answer: A. catch
+  * **Which operator is used to compare the values of two primitives for equality?** B
 
-Explanation: The try-catch-finally block is used for exception handling. The catch block is where you specify the code to execute when a particular exception is thrown within the try block.
+      * A.
+      * **B. ==**
+      * C. equals()
+      * D. \!=
+      * *Explanation: The `==` operator is used to compare the values of primitive data types for equality. `equals()` is used for object content comparison.*
 
-What is the output?
+  * **Which exception is thrown when an array is accessed out of bounds?** C
 
-Code:
+      * A. ArrayException
+      * B. NullPointerException
+      * **C. ArrayIndexOutOfBoundsException**
+      * D. IndexException
+      * *Explanation: As seen in an earlier question, attempting to access an array element using an invalid index throws an `ArrayIndexOutOfBoundsException`.*
 
-Java
+**Section 7: Additional Questions & Answers**
 
-try {
-    int x = 5 / 0;
-} catch (ArithmeticException e) {
-    System.out.println("Error");
-}
-Correct Answer: D. Error
+  * **What is the result of the following Java code?** **2** (Your answer "Compilation Error" is incorrect)
 
-Explanation: Dividing by zero throws an ArithmeticException. The catch block correctly handles this exception and prints "Error" to the console.
+    ```java
+    int x = 5;
+    int y = 2;
+    System.out.println(x / y);
+    ```
 
-What does java.util.ArrayList provide that arrays do not?
+      * *Explanation: This is integer division, so 5 divided by 2 is 2 (the decimal part is truncated).*
 
-Correct Answer: C. Dynamic resizing
+  * **Which access modifier allows visibility only within the same package?** D (Your answer C is incorrect)
 
-Explanation: A regular array has a fixed size. An ArrayList is a dynamic data structure that can grow or shrink in size as elements are added or removed.
+      * A. public
+      * B. protected
+      * C. private
+      * **D. default (no modifier)**
+      * *Explanation: When no access modifier is specified, it's considered "default" or "package-private," meaning it's only visible within the same package. `private` allows visibility only within the same class.*
 
-Section 6: Additional Questions & Answers
-Which of the following is not a valid access modifier in Java?
+  * **What will this code print?** **ell** (Your answer "ello" is incorrect)
 
-Correct Answer: D. external
+    ```java
+    String s = "hello";
+    System.out.println(s.substring(1, 4));
+    ```
 
-Explanation: The valid access modifiers are public, private, protected, and the default (package-private) modifier. external is not a Java keyword.
+      * *Explanation: `substring(startIndex, endIndex)` extracts characters from `startIndex` (inclusive) up to `endIndex` (exclusive). So, `s.substring(1, 4)` extracts characters at index 1 ('e'), 2 ('l'), and 3 ('l'), resulting in "ell".*
 
-What will be the output of this code snippet?
+  * **Which keyword is used to prevent inheritance of a class?** B (Your answer A is incorrect)
 
-Code:
+      * A. static
+      * **B. final**
+      * C. const
+      * D. immutable
+      * *Explanation: The `final` keyword, when applied to a class, prevents it from being extended (inherited).*
 
-Java
+  * **How is a HashSet different from a TreeSet in Java?** C
 
-String a = "Hello";
-String b = "Hello";
-System.out.println(a == b);
-Correct Answer: B. true
+      * A. HashSet is ordered, TreeSet is not
+      * B. HashSet allows duplicates, TreeSet does not
+      * **C. TreeSet maintains sorted order, HashSet does not**
+      * D. HashSet uses more memory than TreeSet
+      * *Explanation: `TreeSet` stores elements in a sorted order (natural order or by a custom comparator), while `HashSet` does not guarantee any order.*
 
-Explanation: For string literals like "Hello", Java's String Pool ensures that both a and b refer to the same object in memory, so the == operator returns true. If they were created with new String("Hello"), the result would be false.
+  * **What is the correct way to declare an abstract method in Java?** C (Your answer A is incorrect)
 
-Which collection class does not allow duplicate elements?
+      * A. abstract void run() {}
+      * B. void run();
+      * **C. abstract void run();**
+      * D. public void abstract run();
+      * *Explanation: An abstract method is declared with the `abstract` keyword, does not have a method body (no curly braces), and ends with a semicolon. Option A incorrectly includes a method body.*
 
-Correct Answer: B. HashSet
+  * **What is the result of this code?** **ArrayIndexOutOfBoundsException**
 
-Explanation: HashSet is a part of the Set interface, which is defined as a collection that contains no duplicate elements. ArrayList, LinkedList, and Vector are all implementations of the List interface and allow duplicates.
+    ```java
+    int[] arr = {1, 2, 3};
+    System.out.println(arr[3]);
+    ```
 
-What does the final keyword do when used with a variable?
+      * *Explanation: As explained before, accessing `arr[3]` on an array of size 3 (valid indices 0, 1, 2) results in an `ArrayIndexOutOfBoundsException`.*
 
-Correct Answer: B. Makes the variable immutable after assignment
+  * **What does the finally block do in exception handling?** C
 
-Explanation: A final variable can be initialized only once. Once a value is assigned, it cannot be changed. This makes it a constant.
+      * A. Executes only if an exception is thrown
+      * B. Executes only if no exception is thrown
+      * **C. Executes always, whether an exception is thrown or not**
+      * D. Prevents the program from crashing
+      * *Explanation: The `finally` block is guaranteed to execute regardless of whether an exception was thrown or caught, making it ideal for cleanup code.*
 
-What is method overloading in Java?
+  * **Which data structure is best suited for a FIFO (first-in-first-out) behavior?** B (Your answer C is incorrect)
 
-Correct Answer: B. Using the same method name with different parameters
-
-Explanation: Method overloading involves having multiple methods in the same class with the same name but different parameter lists (different number of parameters, different types, or different order of types).
-
-What is the default value of a boolean variable in Java (class-level)?
-
-Correct Answer: B. false
-
-Explanation: The default value for an instance boolean variable (not a local variable) is false.
-
-Which of the following is true about static methods?
-
-Correct Answer: C. They belong to the class, not objects
-
-Explanation: static methods are associated with the class itself, not with any particular instance of the class. They can be called directly on the class name without creating an object. They cannot directly access non-static instance variables.
-
-Which keyword is used to define an interface in Java?
-
-Correct Answer: B. interface
-
-Explanation: Interfaces are defined using the interface keyword. abstract is used for abstract classes and methods.
-
-Which of the following can be used to stop a loop immediately?
-
-Correct Answer: D. break
-
-Explanation: The break statement is used to terminate a loop prematurely. continue skips the current iteration and proceeds to the next one.
-
-Which statement correctly initializes a HashMap?
-
-Correct Answer: A. Map<String, String> map = new HashMap<String, String>(); (using generics) or Map map = new HashMap(); (without generics, as in the user's question)
-
-Explanation: The correct syntax is to declare a variable of type Map and instantiate it with new HashMap(). The Map interface is typically used to reference the HashMap implementation.
-
-What is the result of this expression?
-
-Code:
-
-Java
-
-System.out.println(10 + 20 + "30");
-Correct Answer: C. 3030
-
-Explanation: Java evaluates expressions from left to right. First, 10 + 20 is evaluated, resulting in the integer 30. Then, the + operator acts as a concatenation operator when a String is involved, so 30 + "30" concatenates the integer and the string, producing the string "3030".
-
-Which of the following is the correct way to declare a constant in Java?
-
-Correct Answer: B. final double RATE = 0.05;
-
-Explanation: The final keyword is used to declare a constant variable in Java. const is a reserved word but not currently used for this purpose.
-
-Which method must be implemented when a class implements the Runnable interface?
-
-Correct Answer: B. run()
-
-Explanation: The Runnable interface has a single abstract method, public void run(). This method contains the code that will be executed by a thread.
-
-Which operator is used to compare the values of two primitives for equality?
-
-Correct Answer: B. ==
-
-Explanation: The == operator is used to compare the actual values of two primitive data types. equals() is a method used for comparing objects.
-
-Which exception is thrown when an array is accessed out of bounds?
-
-Correct Answer: C. ArrayIndexOutOfBoundsException
-
-Explanation: This is the specific runtime exception that occurs when an invalid index is used to access an array element.
-
-Section 7: Additional Questions & Answers
-What is the result of the following Java code?
-
-Code:
-
-Java
-
-int x = 5;
-int y = 2;
-System.out.println(x / y);
-Correct Answer: 2
-
-Explanation: Same as the previous question, this is integer division.
-
-Which access modifier allows visibility only within the same package?
-
-Correct Answer: D. default (no modifier)
-
-Explanation: The default access level (when no keyword like public, private, or protected is used) makes a class, method, or variable visible only within its own package.
-
-What will this code print?
-
-Code:
-
-Java
-
-String s = "hello";
-System.out.println(s.substring(1, 4));
-Correct Answer: ell
-
-Explanation: The substring(startIndex, endIndex) method returns a substring from the beginning index (inclusive) to the ending index (exclusive). The characters at indices 1, 2, and 3 are e, l, and l.
-
-Which keyword is used to prevent inheritance of a class?
-
-Correct Answer: B. final
-
-Explanation: A class declared as final cannot be extended (inherited) by any other class.
-
-How is a HashSet different from a TreeSet in Java?
-
-Correct Answer: C. TreeSet maintains sorted order, HashSet does not
-
-Explanation: A HashSet stores elements in a hash table and does not guarantee any order. A TreeSet stores elements in a Red-Black tree and keeps them in a sorted order (either natural or custom).
-
-What is the correct way to declare an abstract method in Java?
-
-Correct Answer: C. abstract void run();
-
-Explanation: An abstract method has no implementation and must be declared with the abstract keyword and terminated with a semicolon. The body {} is not included.
-
-What is the result of this code?
-
-Code:
-
-Java
-
-int[] arr = {1, 2, 3};
-System.out.println(arr[3]);
-Correct Answer: ArrayIndexOutOfBoundsException
-
-Explanation: This is another example of accessing an array out of bounds.
-
-What does the finally block do in exception handling?
-
-Correct Answer: C. Executes always, whether an exception is thrown or not
-
-Explanation: The finally block is optional, but if it is present, its code is guaranteed to execute after the try and catch blocks, regardless of whether an exception was thrown or not.
-
-Which data structure is best suited for a FIFO (first-in-first-out) behavior?
-
-Correct Answer: B. Queue
-
-Explanation: A Queue is an abstract data type that follows the FIFO principle, where the first element added is the first one to be removed. A Stack is LIFO (last-in-first-out).
+      * A. Stack
+      * **B. Queue**
+      * C. Tree
+      * D. Set
+      * *Explanation: A `Queue` is specifically designed for FIFO behavior, where the first element added is the first one to be removed. A `Stack` is LIFO (last-in, first-out).*
 
 ## Part II: Practice Problems with Answers🥈
 CodeSignal's "Java Programming for Beginners" path includes various types of problems, with a strong emphasis on single-function challenges and dedicated debugging exercises.
