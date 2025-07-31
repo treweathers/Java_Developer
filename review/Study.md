@@ -822,22 +822,48 @@ class Solution {
 **Solution:**
 
 ```java
+// Define a class named Solution
 class Solution {
+    // This method checks if a given string is a palindrome.
+    // It takes one argument, a String named 'str'.
     boolean isPalindrome(String str) {
+        // First, handle the edge case where the input string is null.
+        // A null string cannot be a palindrome, so we return false.
         if (str == null) {
             return false;
         }
+
+        // Pre-processing the string to handle non-alphanumeric characters and case.
+        // 1. We use the .replaceAll() method with a regular expression `[^a-zA-Z0-9]`.
+        //    - The `[]` denotes a character set.
+        //    - The `^` inside the brackets negates the set, meaning "any character NOT in this set".
+        //    - `a-zA-Z0-9` defines the characters we want to keep (lowercase letters, uppercase letters, and digits).
+        //    - So, this regex finds and replaces all non-alphanumeric characters with an empty string, effectively removing them.
+        // 2. We then use the .toLowerCase() method to convert the entire string to lowercase.
+        //    - This ensures that the comparison is case-insensitive (e.g., 'A' is treated the same as 'a').
         String cleanedStr = str.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+
+        // Initialize two pointers, one at the beginning and one at the end of the cleaned string.
         int left = 0;
         int right = cleanedStr.length() - 1;
 
+        // Use a while loop to compare characters from both ends of the string.
+        // The loop continues as long as the left pointer is less than the right pointer.
         while (left < right) {
+            // Check if the characters at the 'left' and 'right' pointers are not equal.
             if (cleanedStr.charAt(left) != cleanedStr.charAt(right)) {
+                // If they are different, the string is not a palindrome, so we can immediately return false.
                 return false;
             }
+            // If the characters match, move the pointers inward to continue the comparison.
+            // Increment the left pointer to move it one step to the right.
             left++;
+            // Decrement the right pointer to move it one step to the left.
             right--;
         }
+
+        // If the loop completes without finding any mismatched characters,
+        // it means the string is a palindrome. We return true.
         return true;
     }
 }
