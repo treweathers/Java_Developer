@@ -874,7 +874,39 @@ class Solution {
 // boolean isPal2 = sol.isPalindrome("A man, a plan, a canal: Panama"); // Result: true
 // boolean isPal3 = sol.isPalindrome("hello");     // Result: false
 ```
+Alternative method
+```java
+// Define a class named Solution
+class Solution {
+    // This method checks if a given string is a palindrome using a StringBuilder.
+    // It takes one argument, a String named 'str'.
+    boolean isPalindrome(String str) {
+        // First, handle the edge case where the input string is null.
+        // A null string cannot be a palindrome, so we return false.
+        if (str == null) {
+            return false;
+        }
 
+        // Pre-process the string to handle non-alphanumeric characters and case.
+        // We use the .replaceAll() method with a regular expression `[^a-zA-Z0-9]` to remove
+        // any characters that are not letters or numbers.
+        // We then convert the string to lowercase to ensure the check is case-insensitive.
+        String cleanedStr = str.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+
+        // Create a new StringBuilder object from the cleaned string.
+        StringBuilder reversedStr = new StringBuilder(cleanedStr);
+
+        // Reverse the StringBuilder object. This modifies the object in place.
+        reversedStr.reverse();
+
+        // Compare the original cleaned string with the reversed string from the StringBuilder.
+        // We use the .equals() method to perform a content-based comparison.
+        // If the two strings are identical, the original string is a palindrome.
+        // The .toString() method is necessary to convert the StringBuilder back to a String for comparison.
+        return cleanedStr.equals(reversedStr.toString());
+    }
+}
+```
 #### 3\. Finding Max/Min in an Array
 
 **Problem:** Given an array of numbers, find the maximum value.
