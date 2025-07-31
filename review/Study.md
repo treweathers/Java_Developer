@@ -319,7 +319,7 @@
 * C. abstract void run();
 * D. public void abstract run();
 
-37. What is the result of this code? **ArrayIndexOutofBoundsException
+37. What is the result of this code? **ArrayIndexOutofBoundsException**
 
         int[] arr = {1, 2, 3};
         System.out.println(arr[3]);
