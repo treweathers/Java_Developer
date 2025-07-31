@@ -788,19 +788,27 @@ Got it\! Providing solutions for each of the common problems, including sample b
 **Solution:**
 
 ```java
+// Define a class named Solution
 class Solution {
+    // This method reverses a given string.
+    // It takes one argument, a String named 'str'.
     String reverseString(String str) {
+        // First, check if the input string is null or empty.
+        // If it is, there's nothing to reverse, so we return the string as is.
+        // This is an important edge case to handle to prevent errors.
         if (str == null || str.isEmpty()) {
             return str;
         }
+
+        // If the string is not null or empty, we use the StringBuilder class to reverse it.
+        // StringBuilder is more efficient for modifying strings than the regular String class.
+        // 1. We create a new StringBuilder object, initializing it with the input 'str'.
+        // 2. We call the .reverse() method on the StringBuilder object, which reverses the sequence of characters.
+        // 3. We then call the .toString() method to convert the reversed StringBuilder back into a regular String.
+        // 4. Finally, this new reversed string is returned.
         return new StringBuilder(str).reverse().toString();
     }
 }
-
-// Example Usage:
-// Solution sol = new Solution();
-// String original = "hello";
-// String reversed = sol.reverseString(original); // Result: "olleh"
 ```
 
 #### 2\. Palindrome Check
