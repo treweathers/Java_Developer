@@ -809,6 +809,10 @@ class Solution {
         return new StringBuilder(str).reverse().toString();
     }
 }
+// Example Usage:// Solution sol = new Solution();
+// String original = "hello";
+// String reversed = sol.reverseString(original);
+// Result: "olleh"
 ```
 
 #### 2\. Palindrome Check
