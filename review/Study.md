@@ -233,25 +233,25 @@
 * C. **They belong to the class, not objects**
 * D. They require an object instance to be called
 
-24. Which keyword is used to define an interface in Java? C
+23. Which keyword is used to define an interface in Java? C
 * A. class
 * B. interface
 * C. **abstract**
 * D. implements
 
-25. Which of the following can be used to stop a loop immediately? D
+24. Which of the following can be used to stop a loop immediately? D
 * A. stop
 * B. exit
 * C. continue
 * D. **break**
 
-26. Which statement correctly initializes a HashMap? A
+25. Which statement correctly initializes a HashMap? A
 * A. **Map map = new HashMap();**
 * B. HashMap map = new Map()
 * C. Map map = HashMap();
 * D. new HashMap map = Map();
 
-27. What is the result of this expression? B
+26. What is the result of this expression? B
 
         System.out.println(10 + 20 + "30");
 * A. 30
@@ -259,25 +259,25 @@
 * C. 3030
 * D. 3030
 
-29. Which of the following is the correct way to declare a constant in Java? A
+27. Which of the following is the correct way to declare a constant in Java? A
 * A. **const double RATE = 0.05;**
 * B. final double RATE = 0.05;
 * C. double constant RATE = 0.05;
 * D. static RATE = 0.05;
 
-30. Which method must be implemented when a class implements the Runnable interface? A🚨
+28. Which method must be implemented when a class implements the Runnable interface? A🚨
 * A. **execute()**
 * B. run()
 * C. start()
 * D. main()
 
-32. Which operator is used to compare the values of two primitives for equality? B
+29. Which operator is used to compare the values of two primitives for equality? B
 * A.
 * B. **==**
 * C. equals()
 * D. !=
 
-33. Which exception is thrown when an array is accessed out of bounds? C
+30. Which exception is thrown when an array is accessed out of bounds? C
 * A. ArrayException
 * B. NullPointerException
 * C. **ArrayIndexOutOfBoundsException**
@@ -313,24 +313,24 @@
 * C. **TreeSet maintains sorted order, HashSet does not**
 * D. HashSet uses more memory than TreeSet
 
-37. What is the correct way to declare an abstract method in Java? A
+36. What is the correct way to declare an abstract method in Java? A
 * A. **abstract void run() {}**
 * B. void run();
 * C. abstract void run();
 * D. public void abstract run();
 
-38. What is the result of this code? **ArrayIndexOutofBoundsException
+37. What is the result of this code? **ArrayIndexOutofBoundsException
 
         int[] arr = {1, 2, 3};
         System.out.println(arr[3]);
 
-40. What does the finally block do in exception handling? C
+38. What does the finally block do in exception handling? C
 * A. Executes only if an exception is thrown
 * B. Executes only if no exception is thrown
 * C. **Executes always, whether an exception is thrown or not**
 * D. Prevents the program from crashing
 
-41. Which data structure is best suited for a FIFO (first-in-first-out) behavior? C🚨
+39. Which data structure is best suited for a FIFO (first-in-first-out) behavior? C🚨
 * A. Stack
 * B. Queue
 * C. **Tree**
