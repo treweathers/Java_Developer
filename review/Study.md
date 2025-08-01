@@ -914,17 +914,37 @@ class Solution {
 **Solution (Finding Max - Min is similar logic):**
 
 ```java
+// Define a class named Solution
 class Solution {
+    // This method finds the maximum value in an integer array.
+    // It takes one argument, an integer array named 'arr'.
     int findMax(int[] arr) {
+        // Handle edge cases where the input array is invalid.
+        // If the array is null or has a length of 0 (is empty),
+        // we throw an IllegalArgumentException. This is better than
+        // returning a default value, as it clearly indicates an invalid input state.
         if (arr == null || arr.length == 0) {
             throw new IllegalArgumentException("Array cannot be null or empty.");
         }
+        
+        // Initialize a variable 'max' with the first element of the array.
+        // We assume the first element is the maximum until we find a larger one.
         int max = arr[0];
+
+        // Start a loop to iterate through the rest of the array, from the second element onward.
+        // We start the loop at index 1 because we've already used index 0 to initialize 'max'.
         for (int i = 1; i < arr.length; i++) {
+            // Inside the loop, we compare the current element `arr[i]` with the current 'max'.
             if (arr[i] > max) {
+                // If the current element is greater than 'max', we have found a new maximum.
+                // We update 'max' to be the value of the current element.
                 max = arr[i];
             }
         }
+
+        // After the loop has finished iterating through all the elements,
+        // 'max' will hold the largest value in the array.
+        // We return this value.
         return max;
     }
 }
