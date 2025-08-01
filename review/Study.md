@@ -1009,33 +1009,53 @@ class Solution {
 **Solution:**
 
 ```java
+// Define a class named Solution
 class Solution {
+    // This method transforms an array by calculating the sum of each element and its neighbors.
+    // It takes one argument, an integer array named 'a'.
     int[] transformArray(int[] a) {
+        // Handle edge cases where the input array is null or empty.
+        // If the array is invalid, we return a new, empty integer array.
+        // This prevents errors and provides a consistent, empty result.
         if (a == null || a.length == 0) {
             return new int[0];
         }
 
+        // Get the length of the input array.
         int n = a.length;
+        // Create a new integer array 'b' of the same size as 'a' to store the results.
+        // All elements in 'b' will be initialized to their default value, which is 0 for integers.
         int[] b = new int[n];
 
+        // Loop through each element of the input array 'a' using its index.
         for (int i = 0; i < n; i++) {
-            int sum = a[i]; // Start with the current element
+            // Initialize a variable 'sum' for the current element at index 'i'.
+            // The sum always starts with the value of the current element itself.
+            int sum = a[i];
 
-            // Add left neighbor if it exists
+            // Check if a left neighbor exists.
+            // A left neighbor exists if the current index 'i' is greater than 0.
             if (i > 0) {
+                // If a left neighbor exists, add its value to the 'sum'.
                 sum += a[i - 1];
             }
 
-            // Add right neighbor if it exists
+            // Check if a right neighbor exists.
+            // A right neighbor exists if the current index 'i' is less than the last index (n - 1).
             if (i < n - 1) {
+                // If a right neighbor exists, add its value to the 'sum'.
                 sum += a[i + 1];
             }
+            
+            // After checking for both neighbors and adding their values,
+            // store the final calculated 'sum' in the corresponding position of the result array 'b'.
             b[i] = sum;
         }
+        
+        // After the loop has processed all elements, return the new transformed array 'b'.
         return b;
     }
 }
-
 // Example Usage:
 // Solution sol = new Solution();
 // int[] a = {1, 2, 3, 4, 5};
