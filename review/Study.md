@@ -1308,6 +1308,9 @@ class FixedSolution {
 
 ## Q & A
 ### CodeSignal Assessments
+#### Edge Cases
+Does CodeSignal require that you handle edge cases in single function Java questions if it doesn't specify?
+
 Yes, you absolutely should handle edge cases in single-function Java questions on CodeSignal, even if they aren't explicitly mentioned in the problem description.
 
 Here's why:
@@ -1324,7 +1327,7 @@ In the example you provided, the check for `str == null || str.isEmpty()` is a c
 
 This is an excellent and fundamental question in Java programming. Here's a breakdown of why this conversion is necessary and what form the `StringBuilder` is in:
 
-### Why You Need to Convert it Back
+#### Why You Need to Convert it Back
 
 The short answer is: `StringBuilder` is not a `String`. They are two different classes with different purposes. The `reverseString` function you provided is designed to return a `String`, so you must convert the result of your work (the `StringBuilder`) into the expected return type.
 
@@ -1336,10 +1339,30 @@ Think of it like this:
 
 The `reverse()` method, as its name suggests, reverses the character sequence within the `StringBuilder` object itself. It doesn't magically turn the object into a `String`. Its return type is `StringBuilder`, which allows for "method chaining" (like `new StringBuilder(str).reverse().toString()`).
 
-### The Form of the `StringBuilder` Object
+##### The Form of the `StringBuilder` Object
 
 A `StringBuilder` object is essentially a **dynamic array of characters**. It has a `capacity`, which is the total number of characters it can hold before it needs to resize itself. When you call `reverse()`, the order of the characters in that internal array is changed.
 
 For example, if you have `new StringBuilder("hello")`, its internal character array holds `['h', 'e', 'l', 'l', 'o']`. After you call `reverse()`, the same `StringBuilder` object now holds `['o', 'l', 'l', 'e', 'h']`. It's still a `StringBuilder`, not a `String`.
 
 To get a true `String` object with the new reversed value, you must explicitly call the `.toString()` method. This method takes the character sequence from the `StringBuilder`'s internal buffer and creates a **new, immutable `String` object** with those characters. It's the final step to get the result in the format that most Java functions expect and that is most suitable for storing and passing around as a final value.
+
+#### String Boolean Operations
+Can you confirm that if I wanted a boolean to return yes if it is reversed, I can set a new variable equal to reversedStr.toString(); (like String newStr = reversedStr.toString();) and create a boolean that checks if cleanedStr.equals(newStr), and return the boolean instead?
+
+Yes, your understanding is absolutely correct. The approach you've outlined is a perfectly valid and common way to achieve the same result.
+
+Here's a breakdown of why your proposed code works and is a good practice:
+
+1.  **`String newStr = reversedStr.toString();`**: This line is crucial. You are explicitly taking the character sequence stored within the `StringBuilder` object (`reversedStr`) and creating a **new, immutable `String` object** with that sequence. This new `String` object (`newStr`) now holds the reversed value.
+
+2.  **`boolean isPalindromeResult = cleanedStr.equals(newStr);`**: This line performs the actual comparison.
+    * `cleanedStr` is already a `String` object.
+    * `newStr` is now also a `String` object.
+    * The `.equals()` method on a `String` is the correct way to compare their *content*. It checks to see if the character sequences are identical.
+
+3.  **`return isPalindromeResult;`**: This returns the final boolean value, which will be `true` if the strings were equal (and thus the original string was a palindrome) and `false` if they were not.
+
+In essence, you are just breaking down the single return statement `return cleanedStr.equals(reversedStr.toString());` into two more explicit steps. Both code snippets are functionally identical, but your suggested version might be considered more readable by some developers, as it clearly separates the steps of creating the new string and then performing the comparison.
+
+This confirms the importance of `toString()`: it's the bridge that allows you to take the mutable content of a `StringBuilder` and use it in methods that expect an immutable `String` object, like `String.equals()`.
