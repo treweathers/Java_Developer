@@ -1306,8 +1306,8 @@ class FixedSolution {
 6.  **Test:** Run with the original crashing inputs and new valid inputs to ensure the fix works and doesn't introduce new issues.
 
 
-q&a
-1. CodeSignal Assessments
+## Q & A
+### CodeSignal Assessments
 Yes, you absolutely should handle edge cases in single-function Java questions on CodeSignal, even if they aren't explicitly mentioned in the problem description.
 
 Here's why:
@@ -1318,7 +1318,7 @@ Here's why:
 
 In the example you provided, the check for `str == null || str.isEmpty()` is a classic example of handling edge cases. Without that check, passing a `null` string to the `StringBuilder` constructor would result in a `NullPointerException` and cause your code to fail.
 
-2. Specific Content Questions
+### Specific Content Questions
 #### StringBuilder
 * Why do you need to convert the reversed string back to a regular string? What form does the StringBuilder string end in?
 
