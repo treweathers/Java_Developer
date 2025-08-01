@@ -962,15 +962,36 @@ class Solution {
 **Solution (Sum - Average is sum / count):**
 
 ```java
+// Define a class named Solution
 class Solution {
+    // This method calculates the sum of all elements in an integer array.
+    // It takes one argument, an integer array named 'arr'.
     int sumArray(int[] arr) {
+        // Handle the edge case where the input array is null.
+        // If the array is null, we can't sum its elements.
+        // We choose to return 0, which is a reasonable default for an empty sum.
+        // An alternative would be to throw an exception, as was done in the previous example,
+        // to signal an invalid input.
         if (arr == null) {
-            return 0; // Or throw IllegalArgumentException
+            return 0;
         }
+
+        // Initialize a variable 'sum' to 0. This variable will store the cumulative total
+        // of the array elements.
         int sum = 0;
+
+        // Use an enhanced for-loop (also known as a "for-each" loop) to iterate through the array.
+        // This loop simplifies the process of iterating over collections.
+        // For each integer element in the array 'arr', we assign its value to the variable 'num'.
         for (int num : arr) {
+            // Add the value of the current element ('num') to the 'sum'.
+            // This is shorthand for: sum = sum + num;
             sum += num;
         }
+
+        // After the loop has finished iterating through all the elements,
+        // 'sum' will hold the total sum of all the numbers in the array.
+        // We return this final sum.
         return sum;
     }
 }
