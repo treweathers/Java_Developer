@@ -1190,62 +1190,119 @@ class Solution {
 
 ```java
 class Solution {
-    // Helper to check if a character is a vowel
+    /**
+     * Helper method to check if a given character is a vowel.
+     * The check is case-insensitive.
+     *
+     * @param c The character to check.
+     * @return true if the character is a vowel ('a', 'e', 'i', 'o', 'u'), false otherwise.
+     */
     private boolean isVowel(char c) {
+        // Convert the character to lowercase to ensure case-insensitive comparison.
         c = Character.toLowerCase(c);
+        // Check if the character matches any of the vowel characters.
         return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
     }
 
-    // Helper to check if a character is a consonant
+    /**
+     * Helper method to check if a given character is a consonant.
+     * A character is considered a consonant if it's a letter and not a vowel.
+     * The check is case-insensitive.
+     *
+     * @param c The character to check.
+     * @return true if the character is a consonant, false otherwise.
+     */
     private boolean isConsonant(char c) {
+        // Convert the character to lowercase for consistent checking.
         c = Character.toLowerCase(c);
+        // First, check if the character is an English letter (a-z).
+        // Then, check if it's NOT a vowel using the isVowel helper.
         return Character.isLetter(c) && !isVowel(c);
     }
 
+    /**
+     * Counts the number of times a given pattern occurs in a source string.
+     * The pattern consists of '0' (representing a vowel) and '1' (representing a consonant).
+     * For example, a pattern "010" would match "Vowel Consonant Vowel".
+     *
+     * @param source The string to search within.
+     * @param pattern The pattern to search for, composed of '0's (vowels) and '1's (consonants).
+     * @return The number of times the pattern is found in the source string.
+     */
     int countPatternMatches(String source, String pattern) {
+        // Handle edge cases: if source or pattern is null, or if source is shorter than pattern,
+        // no matches are possible, so return 0.
         if (source == null || pattern == null || source.length() < pattern.length()) {
             return 0;
         }
 
+        // Initialize a counter for the number of successful pattern matches.
         int count = 0;
+        // Get the length of the pattern for efficient access.
         int patternLen = pattern.length();
+        // Get the length of the source string for loop bounds.
         int sourceLen = source.length();
 
+        // Iterate through the source string, considering all possible starting positions
+        // for a substring that could match the pattern.
+        // The loop runs from index 0 up to (sourceLen - patternLen) inclusive,
+        // to ensure there's enough remaining length in 'source' to match the 'pattern'.
         for (int i = 0; i <= sourceLen - patternLen; i++) {
+            // Assume a match initially for the current substring starting at index 'i'.
             boolean match = true;
+            // Iterate through each character of the pattern and the corresponding character
+            // in the source substring.
             for (int j = 0; j < patternLen; j++) {
+                // Get the character from the pattern at index 'j'.
                 char patternChar = pattern.charAt(j);
+                // Get the corresponding character from the source string.
+                // It's at index (i + j) because 'i' is the start of the current window.
                 char sourceChar = source.charAt(i + j);
 
-                if (patternChar == '0') { // Expecting vowel
+                // Check the pattern character to determine the expected type of source character.
+                if (patternChar == '0') { // If the pattern expects a vowel
+                    // If the source character is NOT a vowel, then this pattern match fails.
                     if (!isVowel(sourceChar)) {
-                        match = false;
-                        break;
+                        match = false; // Set match to false
+                        break;         // Exit the inner loop as this substring is not a match.
                     }
-                } else if (patternChar == '1') { // Expecting consonant
+                } else if (patternChar == '1') { // If the pattern expects a consonant
+                    // If the source character is NOT a consonant, then this pattern match fails.
                     if (!isConsonant(sourceChar)) {
-                        match = false;
-                        break;
+                        match = false; // Set match to false
+                        break;         // Exit the inner loop.
                     }
                 } else {
-                    // Handle invalid pattern characters if necessary, or throw error
+                    // If the pattern contains an unexpected character (not '0' or '1'),
+                    // consider it an invalid pattern, and this specific match fails.
+                    // You might choose to throw an IllegalArgumentException here in a stricter implementation.
                     match = false;
-                    break;
+                    break; // Exit the inner loop.
                 }
             }
+            // After checking all characters in the current substring, if 'match' is still true,
+            // it means the pattern was successfully found.
             if (match) {
-                count++;
+                count++; // Increment the total match count.
             }
         }
+        // Return the total number of times the pattern was found in the source.
         return count;
     }
 }
 
 // Example Usage:
-// Solution sol = new Solution();
-// String source = "amazing";
-// String pattern = "010"; // Vowel, Consonant, Vowel
-// int matches = sol.countPatternMatches(source, pattern); // Result: 2 ("ama", "azi")
+// Solution sol = new Solution(); // Creates an instance of the Solution class.
+// String source = "amazing"; // The string to search within.
+// String pattern = "010"; // The pattern to match: Vowel, Consonant, Vowel.
+// int matches = sol.countPatternMatches(source, pattern); // Calls the method to count matches.
+// // Let's trace for "amazing" and "010":
+// // "ama" (a=vowel, m=consonant, a=vowel) -> Matches!
+// // "maz" (m=consonant, a=vowel, z=consonant) -> No match.
+// // "azi" (a=vowel, z=consonant, i=vowel) -> Matches!
+// // "zin" (z=consonant, i=vowel, n=consonant) -> No match.
+// // "ing" (i=vowel, n=consonant, g=consonant) -> No match.
+// // Result: 2 ("ama", "azi")
 ```
 
 #### 9\. Array Element Parity (Even/Odd)
