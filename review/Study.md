@@ -1312,25 +1312,33 @@ class Solution {
 **Solution:**
 
 ```java
+// Define a class named Solution.
 class Solution {
+    // Define a method named countEvenNumbers that accepts an integer array as input
+    // and returns the count of even numbers.
     int countEvenNumbers(int[] arr) {
+        // Check if the input array is null. If so, return 0 to prevent a NullPointerException.
         if (arr == null) {
             return 0;
         }
+        
+        // Initialize a counter variable to keep track of the number of even numbers found.
         int count = 0;
+        
+        // Iterate through each integer 'num' in the input array 'arr'.
         for (int num : arr) {
+            // Use the modulo operator (%) to check if the current number is even.
+            // A number is even if the remainder when divided by 2 is 0.
             if (num % 2 == 0) {
+                // If the number is even, increment the counter.
                 count++;
             }
         }
+        
+        // After the loop finishes, return the final count of even numbers.
         return count;
     }
 }
-
-// Example Usage:
-// Solution sol = new Solution();
-// int[] numbers = {1, 2, 3, 4, 5, 6};
-// int evenCount = sol.countEvenNumbers(numbers); // Result: 3
 ```
 
 #### 10\. Finding Duplicates/Unique Elements
