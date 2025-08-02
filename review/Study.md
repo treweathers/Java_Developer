@@ -1076,22 +1076,49 @@ class Solution {
 
 ```java
 class Solution {
+    /**
+     * Counts the number of vowels in a given string.
+     * Vowels are considered to be 'a', 'e', 'i', 'o', 'u' (case-insensitive).
+     *
+     * @param str The input string to count vowels from.
+     * @return The total number of vowels in the string.
+     */
     int countVowels(String str) {
+        // Check if the input string is null or empty.
+        // If it is, there are no vowels, so return 0.
         if (str == null || str.isEmpty()) {
             return 0;
         }
+
+        // Initialize a counter for the vowels.
         int count = 0;
+
+        // Convert the input string to lowercase to handle both
+        // uppercase and lowercase vowels without needing multiple checks.
         String lowerStr = str.toLowerCase();
+
+        // Iterate over each character in the lowercase string.
+        // The toCharArray() method converts the string into an array of characters.
         for (char c : lowerStr.toCharArray()) {
+            // Check if the current character is one of the vowels.
             if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                // If it's a vowel, increment the counter.
                 count++;
             }
         }
+
+        // Return the final count of vowels.
         return count;
     }
 }
 
-// Example Usage:
+// Example Usage 1:
+// Solution sol = new Solution(); // Creates an instance of the Solution class.
+// int vowelCount = sol.countVowels("Hello World"); // Calls the countVowels method with the string "Hello World".
+// // The method will count 'e', 'o', 'o' resulting in a vowelCount of 3.
+// // Result: 3 (e, o, o)
+
+// Example Usage 2:
 // Solution sol = new Solution();
 // int vowelCount = sol.countVowels("Hello World"); // Result: 3 (e, o, o)
 ```
