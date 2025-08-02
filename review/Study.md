@@ -1127,32 +1127,59 @@ class Solution {
 
 ```java
 class Solution {
+    /**
+     * Calculates the nth Fibonacci number.
+     * The Fibonacci sequence starts with 0 and 1, and each subsequent number is
+     * the sum of the two preceding ones (e.g., 0, 1, 1, 2, 3, 5, 8, ...).
+     * This implementation uses an iterative approach for efficiency.
+     *
+     * @param n The index of the Fibonacci number to calculate. Must be a non-negative integer.
+     * @return The nth Fibonacci number.
+     * @throws IllegalArgumentException if the input n is negative.
+     */
     int fibonacci(int n) {
+        // Check for invalid input: Fibonacci sequence is typically defined for non-negative integers.
+        // Throw an exception if n is negative to indicate an invalid argument.
         if (n < 0) {
             throw new IllegalArgumentException("Input cannot be negative.");
         }
+        // Base case: The 0th Fibonacci number is 0.
         if (n == 0) {
             return 0;
         }
+        // Base case: The 1st Fibonacci number is 1.
         if (n == 1) {
             return 1;
         }
 
-        int a = 0;
-        int b = 1;
+        // Initialize the first two Fibonacci numbers.
+        // 'a' will hold F(i-2) and 'b' will hold F(i-1) in each iteration.
+        int a = 0; // Represents fib(0)
+        int b = 1; // Represents fib(1)
+
+        // Iterate from the 2nd number up to the nth number.
+        // We start from i=2 because fib(0) and fib(1) are already handled.
         for (int i = 2; i <= n; i++) {
+            // Calculate the next Fibonacci number as the sum of the previous two.
             int next = a + b;
+            // Update 'a' to be the previous 'b' (which was F(i-1)).
             a = b;
+            // Update 'b' to be the newly calculated 'next' (which is F(i)).
             b = next;
         }
+        // After the loop, 'b' will hold the nth Fibonacci number.
         return b;
     }
 }
 
 // Example Usage:
-// Solution sol = new Solution();
-// int fib5 = sol.fibonacci(5); // Result: 5 (0, 1, 1, 2, 3, 5)
-// int fib10 = sol.fibonacci(10); // Result: 55
+// Solution sol = new Solution(); // Creates an instance of the Solution class.
+// int fib5 = sol.fibonacci(5); // Calls the fibonacci method for n=5.
+// // The sequence is 0, 1, 1, 2, 3, 5. So, fib(5) is 5.
+// // Result: 5 (0, 1, 1, 2, 3, 5)
+// int fib10 = sol.fibonacci(10); // Calls the fibonacci method for n=10.
+// // The sequence continues: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55. So, fib(10) is 55.
+// // Result: 55
 ```
 
 #### 8\. String Pattern Matching (Vowel/Consonant Rules)
