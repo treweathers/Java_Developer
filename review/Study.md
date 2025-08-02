@@ -1112,15 +1112,11 @@ class Solution {
     }
 }
 
-// Example Usage 1:
+// Example Usage:
 // Solution sol = new Solution(); // Creates an instance of the Solution class.
 // int vowelCount = sol.countVowels("Hello World"); // Calls the countVowels method with the string "Hello World".
 // // The method will count 'e', 'o', 'o' resulting in a vowelCount of 3.
 // // Result: 3 (e, o, o)
-
-// Example Usage 2:
-// Solution sol = new Solution();
-// int vowelCount = sol.countVowels("Hello World"); // Result: 3 (e, o, o)
 ```
 
 #### 7\. Basic Mathematical Operations (e.g., Fibonacci)
