@@ -1339,6 +1339,10 @@ class Solution {
         return count;
     }
 }
+// Example Usage:
+// Solution sol = new Solution();
+// int[] numbers = {1, 2, 3, 4, 5, 6};
+// int evenCount = sol.countEvenNumbers(numbers); // Result: 3
 ```
 
 #### 10\. Finding Duplicates/Unique Elements
@@ -1348,20 +1352,39 @@ class Solution {
 **Solution:**
 
 ```java
+// Import the ArrayList class to use dynamic arrays.
 import java.util.ArrayList;
+// Import the HashSet class to use a set data structure for storing unique elements.
 import java.util.HashSet;
+// Import the List interface to use as a type for the return value.
 import java.util.List;
+// Import the Set interface to use as a type for the set of unique elements.
 import java.util.Set;
 
+// Define a class named Solution.
 class Solution {
+    // Define a method named findUniqueElements that takes an integer array as input
+    // and returns a List of unique integers.
     List<Integer> findUniqueElements(int[] arr) {
+        // Check if the input array is null. If so, return an empty ArrayList to
+        // prevent a NullPointerException and indicate no elements were found.
         if (arr == null) {
             return new ArrayList<>();
         }
+        
+        // Create a new HashSet to store the unique elements. A HashSet automatically
+        // handles duplicates, as it only allows one instance of each element.
         Set<Integer> uniqueSet = new HashSet<>();
+        
+        // Iterate through each integer 'num' in the input array 'arr'.
         for (int num : arr) {
+            // Add the current number to the HashSet. If the number is already present,
+            // the set will not add it again, effectively ensuring uniqueness.
             uniqueSet.add(num);
         }
+        
+        // Create a new ArrayList from the HashSet. This converts the set of unique
+        // elements back into a list, which is the required return type.
         return new ArrayList<>(uniqueSet);
     }
 }
