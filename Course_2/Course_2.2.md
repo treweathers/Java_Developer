@@ -458,7 +458,33 @@ class Solution {
 
 #### Practice #6
 Add the two key parts of the iterative binary search by yourself. Write down the code to complete the core of the our algorithm!
+```java
+class Solution {
+    static int findBook(int[] catalog, int bookCode) {
+        int left = 0;
+        int right = catalog.length - 1;
+        
+        while (left <= right) {
+            // TODO: implement this
+            int mid = left + (right - left) / 2;
+            if (catalog[mid] == bookCode) return mid;
+            if (catalog[mid] < bookCode) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        
+        return -1; // Book not found
+    }
 
+    public static void main(String[] args) {
+        int[] sortedCatalog = {101, 123, 137, 150, 165, 172, 189, 205, 220};
+        int bookCode = 150;
+        System.out.println("Book found at index: " + findBook(sortedCatalog, bookCode));
+    }
+}
+```
 ## Lesson 3: Advanced Binary Search Techniques for Complex Data Structures
 ### 1. Introduction to Advanced Binary Search Problems
 In today’s lesson, we’ll stretch our algorithmic muscles by exploring sophisticated variations of binary search. By now, you're familiar with the classic search through sorted data, but what happens when that data becomes more complex? By using advanced binary search, we can efficiently navigate through bitonic arrays and rotated arrays. Let's dive deeper into each problem and see how we can apply binary search in ways you might encounter during a challenging technical interview or in a complex software development task.
