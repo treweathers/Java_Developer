@@ -389,7 +389,6 @@ class Solution {
 }
 ```
 
-
 #### Practice #4
 Now, let’s see if you can find our missing book in the library by implementing Binary Search. Fill in the blanks, and may your logic be ever clear!
 ```java
@@ -417,5 +416,20 @@ class Solution {
     }
 }
 ```
+###### Questions I asked Cosmo:
+* Should I be adding *2* if statements?
+
+        Good question! You definitely need a base case and then conditions to decide which half to search next. How many distinct cases do you think the comparison between the middle book and the target can produce?
+
+* Remind me of the basics of the String.compareTo method
+
+        Sure! String.compareTo compares two strings lexicographically and returns:
+        
+        A negative number if the first string is less than the second,
+        Zero if they are equal,
+        A positive number if the first string is greater than the second.
+        How could you use this to decide which half of the array to search next?
+
 #### Practice #5
+
 #### Practice #6
