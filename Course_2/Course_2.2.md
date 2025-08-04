@@ -7,27 +7,27 @@ Consider a stack of books. Want the bottom one? You'll need to remove each book 
 
 Here's a simple `Java` function illustrating recursion:
 ``` java
-    public class Main {
-      public static void recursiveFunction(int x) {
+public class Main {
+    public static void recursiveFunction(int x) {
         if(x <= 0){ // Termination condition --> base case
-          System.out.println("Base case reached");
-        } else {
-          System.out.print(x);
-          recursiveFunction(x - 1); // Recursive function call --> recursive case
+            System.out.println("Base case reached");
+            } else {
+            System.out.print(x);
+            recursiveFunction(x - 1); // Recursive function call --> recursive case
         }
-      }
-      public static void main(String[] args) {
-        recursiveFunction(5);
-      }
     }
-    /*Output:
-    5
-    4
-    3
-    2
-    1
-    Base case reached
-    */
+    public static void main(String[] args) {
+        recursiveFunction(5);
+    }
+}
+/*Output:
+5
+4
+3
+2
+1
+Base case reached
+*/
 ```
 This function keeps calling itself with `x` getting lower by one until `x <= 0`, which is our base case. At this point, it stops the recursion.
 
