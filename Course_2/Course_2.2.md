@@ -391,5 +391,7 @@ class Solution {
 
 
 #### Practice #4
+Now, let’s see if you can find our missing book in the library by implementing Binary Search. Fill in the blanks, and may your logic be ever clear!
+
 #### Practice #5
 #### Practice #6
