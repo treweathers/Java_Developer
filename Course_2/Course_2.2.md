@@ -6,7 +6,7 @@
 Consider a stack of books. Want the bottom one? You'll need to remove each book above it, one by one. It's a recurring action — an example of recursion. In programming, recursion encompasses a function calling itself repeatedly until a specific condition is met, similar to descending stairs one step at a time until you reach the ground.
 
 Here's a simple `Java` function illustrating recursion:
-
+``` java
     public class Main {
       public static void recursiveFunction(int x) {
         if(x <= 0){ // Termination condition --> base case
@@ -28,6 +28,7 @@ Here's a simple `Java` function illustrating recursion:
     1
     Base case reached
     */
+```
 This function keeps calling itself with `x` getting lower by one until `x <= 0`, which is our base case. At this point, it stops the recursion.
 
 ### 2. Defining the Base Case
@@ -38,6 +39,7 @@ The recursive case is an essential aspect of recursion — the rule responsible 
 
 To find a factorial, we multiply a number by the factorial of the number minus one, and repeat this process until we get to one (our base case):
 
+``` java
     public class Main {
       static int factorial(int n){
         if(n == 1){ // base case
@@ -50,6 +52,7 @@ To find a factorial, we multiply a number by the factorial of the number minus o
         System.out.println(factorial(3)); // we expect 6 (3 * 2 * 1)
       }
     }
+```
 In this case, we call `factorial(3)`, it returns `3 * factorial(2)`, where `factorial(2)` returns `2 * factorial(1)`. As `factorial(1)` is a base case, it returns 1. As a result, the whole recursion chain returns `3 * 2 * 1`.
 
 ### 4. Tips for Thinking Recursively
@@ -59,7 +62,7 @@ Remember that a complex problem often contains smaller, simpler sub-problems. Yo
 
 ### 5. Another Example of Recursive Function
 Let's develop a function that calculates the sum of an integer's digits. Normally, it would involve using a `while` loop, but with recursion, it is done much more easily:
-
+``` java
     class Main {
       static int sumOfDigits(int num) {
         // Base case: if num is less than 10, return num itself
@@ -75,11 +78,12 @@ Let's develop a function that calculates the sum of an integer's digits. Normall
         System.out.println(sumOfDigits(12345)); // Will print out 15 (1+2+3+4+5)
       }
     }
+```
 In this example, we use the same principle as with factorial calculation, but we pass `num / 10` to the next recursion call, chopping off the last digit every time.
 
 #### Practice #1
 Run the code.
-
+``` java
     class Solution {
         static int countDigits(int number) {
             // Base case: if number is less than 10, it's a single-digit number
@@ -95,11 +99,12 @@ Run the code.
             System.out.println("Number of digits in 1234: " + countDigits(1234)); // Should print 4
         }
     }
-
+```
 
 #### Practice #2
 Let's refine our digit counter to be more selective. Modify the existing countDigits function so that it tallies up only the even digits of a number. Use what you've learned about conditional checks and recursion to accomplish this stellar task.
 
+``` java
     class Solution {
       // Function to count the number of digits in a number using recursion
       static int countDigits(int num) {
@@ -120,7 +125,7 @@ Let's refine our digit counter to be more selective. Modify the existing countDi
         System.out.println("The number of digits in the 'diameter of Mars': " + countDigits(7623));
       }
     }
-
+```
 ###### Questions I asked Cosmo:
 
 * Am I supposed to modify the else block?
@@ -155,7 +160,7 @@ Let's refine our digit counter to be more selective. Modify the existing countDi
 
 #### Practice #3
 Review this code carefully. There's a subtle space anomaly causing an incorrect number of digits to be counted in our cosmic integer. Find and fix the glitch so we can accurately track the stars again!
-
+``` java
     class Solution {
       static int countDigits(int num) {
         if(num < 10) {
@@ -169,7 +174,7 @@ Review this code carefully. There's a subtle space anomaly causing an incorrect 
         System.out.println(countDigits(9876)); 
       }
     }
-
+```
 ###### Questions I asked Cosmo:
 * Should I be editing the if block?
         Great question! Yes, the if block is important here.
@@ -214,6 +219,7 @@ Binary Search begins at the midpoint of a sorted list, halving the search area a
 ### 2. Coding Binary Search in Java
 Let's see how Binary Search can be implemented in Java, taking a recursive approach. This process involves a function calling itself—with a base case in place to prevent infinite loops—and a recursive case to solve more minor parts of the problem.
 
+``` java
     public int binarySearch(int[] arr, int start, int end, int target) {
         if (start > end) return -1; // Base case
         int mid = start + (end - start) / 2; // Find the midpoint
@@ -222,6 +228,7 @@ Let's see how Binary Search can be implemented in Java, taking a recursive appro
             return binarySearch(arr, start, mid - 1, target); // Search the left half
         return binarySearch(arr, mid + 1, end, target); // Search the right half
     }
+```
 Within this code, the base case is defined first. If the start index is greater than the end index, it indicates the search area is exhausted, resulting in a `-1` return. The code then locates the midpoint. If the midpoint equals our target, it’s returned. Depending on whether the target is less or more than the midpoint, the search continues within the left or right half, respectively.
 
 ### 3. Analyzing the Time Complexity of Binary Search
@@ -229,7 +236,7 @@ Let's analyze the time complexity of Binary Search, which measures how much time
 
 ### 4. Implementing Binary Search Iteratively
 You can also implement the Binary Search algorithm in an iterative way using a while loop. Here is the Java code for the iterative approach.
-
+``` java
     public int binarySearch(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
@@ -247,6 +254,7 @@ You can also implement the Binary Search algorithm in an iterative way using a w
         }
         return -1;
     }
+```
 Instead of dividing the array recursively in this code, we use a while loop, which continues until the start index is equal to or less than the end index.
 
 The middle element is found the same way as in the recursive approach. We have found the target if the target is equal to this middle element. On the other hand, if the target is greater than the middle element, we adjust the start index to be one position after the middle index. However, if the target is less than the middle element, we adjust the end index to be one position before the middle index.
@@ -342,7 +350,7 @@ Now, for a slight twist: adjust the binarySearchBook method so that it returns t
 We have a series of book IDs sorted in a space database, and your task is to find a specific book using Binary Search. It appears there is a warp breach in the current code; it's not locating the books correctly, falling into an infinite recursion. Can you identify and repair the malfunction?
 
 Original
-
+``` java
     class Solution {
         static int findBookIndex(int[] ids, int start, int end, int bookId) {
             if (start > end) return -1; // Base case: Book not found
@@ -359,7 +367,7 @@ Original
             System.out.println(findBookIndex(bookIds, 0, bookIds.length - 1, bookToFind)); // Outputs: 0
         }
     }
-
+```
 Fixed
 
 
