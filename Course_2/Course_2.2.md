@@ -459,4 +459,108 @@ class Solution {
 #### Practice #6
 Add the two key parts of the iterative binary search by yourself. Write down the code to complete the core of the our algorithm!
 
+## Lesson 3: Advanced Binary Search Techniques for Complex Data Structures
+### 1. Introduction to Advanced Binary Search Problems
+In today’s lesson, we’ll stretch our algorithmic muscles by exploring sophisticated variations of binary search. By now, you're familiar with the classic search through sorted data, but what happens when that data becomes more complex? By using advanced binary search, we can efficiently navigate through bitonic arrays and rotated arrays. Let's dive deeper into each problem and see how we can apply binary search in ways you might encounter during a challenging technical interview or in a complex software development task.
+
+Problem 1: Searching in a Bitonic Array
+Consider a scenario where you're dealing with a dataset akin to a roller coaster ride — you start with a steady climb (ascending values), reach the summit (the peak value), and then take a thrilling dive (descending values). This is precisely what a bitonic array resembles. For instance, if you track the hourly temperature readings over a day, the temperature may increase until noon and then decrease towards the evening, forming a bitonic pattern.
+
+Naive Approach
+Walking through each temperature reading individually to find a specific value would be the most straightforward approach. It's simple but inefficient, especially if you have a large dataset. You'd end up with linear, 
+O
+(
+n
+)
+O(n) complexity because you'd potentially check every single number in the array — quite the opposite of efficient.
+
+Efficient Approach Explanation
+To optimize, we must embrace the bitonic property of the dataset. We'll first target the day's peak temperature with a modified binary search. Once we've found that, the array effectively splits into two: ascending and descending. We conduct another binary search adapted to the respective sequence direction for each of these.
+
+Solution Building - Finding the Peak
+Java
+Copy to clipboard
+Play
+public static int findPeak(int[] temperatures) {
+    int low = 0, high = temperatures.length - 1;
+    while (low < high) {
+        int mid = low + (high - low) / 2;
+        if (temperatures[mid] > temperatures[mid + 1]) {
+            high = mid;
+        } else {
+            low = mid + 1;
+        }
+    }
+    return low; // This is the index of the peak temperature.
+}
+In findPeak, we're not just looking for a high value; we're searching for the pinnacle. A peak temperature in a bitonic array is greater than its neighbors. We use binary search logic to divide our search area efficiently until we isolate this peak.
+
+Solution Building - Modified Binary Search
+Now, we initiate a binary search to the left (ascending portion) and the right (descending portion) of the peak index to determine if our target temperature exists:
+
+Java
+Copy to clipboard
+Play
+public static int binarySearch(int[] temperatures, int low, int high, int targetTemp, boolean ascending) {
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        if (temperatures[mid] == targetTemp) {
+            return mid;
+        }
+        if (ascending ? temperatures[mid] < targetTemp : temperatures[mid] > targetTemp) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+    return -1;
+}
+Notice how we've adapted binarySearch by adding an ascending flag. This determines whether we're on the part of the ride that goes up or down. Our condition for moving the low and high pointers changes based on the direction we're "searching."
+
+Solution Building – Final Steps
+Our final step is to implement the searchBitonicArray function, which first finds peak and then applies binary search to both parts of the array:
+
+Java
+Copy to clipboard
+Play
+public static int searchBitonicArray(int[] temperatures, int targetTemp) {
+    int peakIndex = findPeak(temperatures);
+    int searchResult = binarySearch(temperatures, 0, peakIndex, targetTemp, true);
+    if(searchResult != -1) {
+        return searchResult;
+    } else {
+        return binarySearch(temperatures, peakIndex + 1, temperatures.length - 1, targetTemp, false);
+    }
+}
+Problem 2: Minimum Element in a Rotated Sorted Array
+Picture a scenario where you're sorting through a collection of books arranged by publish date, and for some reason, they've gotten mixed up. You now have a series where some books have been shifted from the beginning to the end, and you must find the oldest book. This is the essence of a rotated sorted array.
+
+Naive Approach
+Unshuffling the books to their original order and picking the first one could work, but it isn’t necessary. It would take extra time and might not be practical, especially if you're dealing with a large inventory.
+
+Efficient Approach Explanation
+A smarter way is to use binary search to find the point of rotation, which indicates the oldest book. It's like finding the index of the minimum publish date without re-sorting the entire array.
+
+Solution Building
+Java
+Copy to clipboard
+Play
+public static int findMin(int[] publishDates) {
+    int left = 0, right = publishDates.length - 1;
+    while (left < right) {
+        int mid = left + (right - left) / 2;
+        if (publishDates[mid] > publishDates[right]) {
+            left = mid + 1;
+        } else {
+            right = mid;
+        }
+    }
+    return publishDates[left]; // This is the oldest book's publish date.
+}
+With findMin, we’re doing almost the same trick as with findPeak in the previous problem. We keep narrowing our search region until we hone in on the oldest book.
+
+Lesson Summary
+We've now seen binary search in a new light — as adaptable, precise, and incredibly useful in scenarios that extend beyond straight-line, uniform datasets. Whether tracking temperatures, organizing books, or sorting other ordered information, binary search can serve as our algorithmic compass, helping us efficiently navigate through ordered data that has taken on an unexpected shape. Remember, algorithms are tools, and like any good craftsman, knowing when and how to use them is the hallmark of proficiency. Now it's time to apply these learnings practically, so let's move on to some exercises where you can further refine these advanced binary search skills.
+
+
 
