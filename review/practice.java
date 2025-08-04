@@ -1,5 +1,7 @@
+import java.util.HashMap;
+
 //Error: Could not find or load main class practice Caused by: java.lang.NoClassDefFoundError: (wrong name: )
-class Practice {
+/*class Practice {
     public static void main(String [] args) {
         System.out.println(palindrome("ama"));
         System.out.println(solution(20));
@@ -25,7 +27,7 @@ class Practice {
         return true;
     }
 }
-
+*/
 //2. Write a boolean that returns true if the string is in the "HR:MM" format and false if it is not.
 public boolean isValidTime(String time) {
     // Check if the input string is null or empty.
@@ -82,6 +84,7 @@ public boolean isValidTime(String time) {
     return true;
 }
 
+
 //Find the bug questions
 // 3. find the bug that returns this format: (seems to be double the amount of stars for each input). The function is a set of for loops that control "*" additions to string.
 /*
@@ -91,6 +94,7 @@ public boolean isValidTime(String time) {
  ***"
 
  */
+/*
 public class StarPatternGenerator {
 
     /**
@@ -176,7 +180,8 @@ public class StarPatternGenerator {
         System.out.println("--- Use Case 3: Pattern without an inner string ---");
         printDoublingStarPattern(null);
     }
-}
+
+
 
 //Sample Question Types
 //1. Array Manipulation
@@ -186,9 +191,7 @@ public class StarPatternGenerator {
 
 //3. HashMap Practice
 //Return the first non-repeating character in a string.
-import java.util.HashMap;
-
-public class FirstNonRepeatingCharacter {
+class FirstNonRepeatingCharacter {
 
     /**
      * Finds the first non-repeating character in a given string.

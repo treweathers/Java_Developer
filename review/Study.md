@@ -1397,6 +1397,234 @@ class Solution {
 
 -----
 
+Excellent plan\! That's a highly efficient way to review. We'll present the problem, then immediately show the commented solution code for quick understanding.
+
+Let's dive into the review concepts:
+
+-----
+
+### **Review Concept 1: `ArrayList` Basics**
+
+**Problem Example: Summing Elements in an `ArrayList`**
+
+Write a Java method `public int sumArrayList(ArrayList<Integer> list)` that takes an `ArrayList` of integers and returns the sum of all its elements.
+
+```java
+import java.util.ArrayList; // Don't forget to import ArrayList
+
+class ReviewConcepts {
+
+    public int sumArrayList(ArrayList<Integer> list) {
+        int sum = 0; // Initialize sum to 0
+
+        // Iterate through the ArrayList using an enhanced for-loop
+        // This is concise and good when you don't need the index.
+        for (int num : list) {
+            sum += num; // Add each number to the sum
+        }
+
+        // Alternatively, using a traditional for-loop if you need the index:
+        // for (int i = 0; i < list.size(); i++) {
+        //     sum += list.get(i); // Use .get(index) to retrieve elements
+        // }
+
+        return sum; // Return the total sum
+    }
+
+    // Example of main method usage (for your reference, not part of the problem)
+    public static void main(String[] args) {
+        ArrayList<Integer> myNumbers = new ArrayList<>();
+        myNumbers.add(10);
+        myNumbers.add(20);
+        myNumbers.add(30);
+        myNumbers.add(40);
+
+        ReviewConcepts rc = new ReviewConcepts();
+        System.out.println("Sum of ArrayList: " + rc.sumArrayList(myNumbers)); // Expected: 100
+
+        ArrayList<Integer> emptyList = new ArrayList<>();
+        System.out.println("Sum of empty ArrayList: " + rc.sumArrayList(emptyList)); // Expected: 0
+    }
+}
+```
+
+**Key `ArrayList` takeaways:**
+
+  * **Declaration:** `ArrayList<DataType> name = new ArrayList<>();` (Note: `DataType` must be a wrapper class like `Integer`, `String`, `Boolean`, not primitive `int`, `char`, etc.)
+  * **Adding Elements:** `list.add(element);`
+  * **Getting Elements:** `list.get(index);`
+  * **Size:** `list.size();`
+  * **Iteration:** Both enhanced for-loops and traditional for-loops work.
+
+-----
+
+### **Review Concept 2: Basic Searching in an Array**
+
+**Problem Example: Find Element Index**
+
+Write a Java method `public int findElementIndex(int[] arr, int target)` that takes an integer array `arr` and an integer `target`. It should return the index of the first occurrence of the `target` in the array. If the `target` is not found, return `-1`.
+
+```java
+class ReviewConcepts {
+
+    public int findElementIndex(int[] arr, int target) {
+        // Iterate through the array using a traditional for-loop
+        // because we need access to the index.
+        for (int i = 0; i < arr.length; i++) {
+            // Check if the current element matches the target
+            if (arr[i] == target) {
+                return i; // If found, return its index immediately
+            }
+        }
+        // If the loop finishes, it means the target was not found in the array.
+        return -1; // Return -1 to indicate not found.
+    }
+
+    // Example of main method usage (for your reference)
+    public static void main(String[] args) {
+        ReviewConcepts rc = new ReviewConcepts();
+        int[] numbers = {5, 12, 8, 20, 3};
+
+        System.out.println("Index of 8: " + rc.findElementIndex(numbers, 8));    // Expected: 2
+        System.out.println("Index of 20: " + rc.findElementIndex(numbers, 20));  // Expected: 3
+        System.out.println("Index of 7: " + rc.findElementIndex(numbers, 7));    // Expected: -1
+        System.out.println("Index of 5 (first occurrence): " + rc.findElementIndex(new int[]{5, 5, 5}, 5)); // Expected: 0
+    }
+}
+```
+
+**Key Searching takeaways:**
+
+  * **Linear Search:** This is the simplest search algorithm. It checks each element one by one.
+  * **Return immediately:** If you find what you're looking for, you can `return` from the method right away to stop further processing.
+  * **Sentinel Value:** Returning `-1` is a common convention to indicate "not found" for index-based searches.
+
+-----
+
+### **Review Concept 3: Basic Prime Number Check (Math/Logic)**
+
+**Problem Example: Is Prime?**
+
+Write a Java method `public boolean isPrime(int n)` that takes an integer `n` and returns `true` if `n` is a prime number, and `false` otherwise. (A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.)
+
+```java
+class ReviewConcepts {
+
+    public boolean isPrime(int n) {
+        // Prime numbers are greater than 1.
+        // 0, 1, and negative numbers are not prime.
+        if (n <= 1) {
+            return false;
+        }
+
+        // We only need to check for divisors up to the square root of n.
+        // If n has a divisor greater than its square root, it must also
+        // have a divisor smaller than its square root.
+        // Iterating up to n / 2 or n is also mathematically correct but less efficient.
+        for (int i = 2; i * i <= n; i++) {
+            // If n is divisible by i (without a remainder), then n is not prime.
+            if (n % i == 0) {
+                return false;
+            }
+        }
+
+        // If no divisors were found up to sqrt(n), then n is prime.
+        return true;
+    }
+
+    // Example of main method usage (for your reference)
+    public static void main(String[] args) {
+        ReviewConcepts rc = new ReviewConcepts();
+        System.out.println("Is 7 prime? " + rc.isPrime(7));     // Expected: true
+        System.out.println("Is 10 prime? " + rc.isPrime(10));   // Expected: false (divisible by 2, 5)
+        System.out.println("Is 2 prime? " + rc.isPrime(2));     // Expected: true (smallest prime)
+        System.out.println("Is 1 prime? " + rc.isPrime(1));     // Expected: false
+        System.out.println("Is 0 prime? " + rc.isPrime(0));     // Expected: false
+        System.out.println("Is 9 prime? " + rc.isPrime(9));     // Expected: false (divisible by 3)
+        System.out.println("Is 29 prime? " + rc.isPrime(29));   // Expected: true
+    }
+}
+```
+
+**Key Prime Number takeaways:**
+
+  * **Base Cases:** Handle `n <= 1` explicitly.
+  * **Optimization:** The `i * i <= n` loop condition is a common optimization. You only need to check divisors up to the square root of `n`.
+  * **Modulo Operator:** `n % i == 0` is the key to checking divisibility.
+
+-----
+
+### **Review Concept 4: `switch` Statement**
+
+**Problem Example: Day of Week Name**
+
+Write a Java method `public String getDayName(int dayNumber)` that takes an integer `dayNumber` (1 for Monday, 2 for Tuesday, ..., 7 for Sunday) and returns the corresponding day name. If the number is out of the range 1-7, return "Invalid Day".
+
+```java
+class ReviewConcepts {
+
+    public String getDayName(int dayNumber) {
+        String dayName; // Declare a variable to store the result
+
+        // The switch statement evaluates the 'dayNumber' expression.
+        // It then jumps to the 'case' label whose value matches that of the expression.
+        switch (dayNumber) {
+            case 1:
+                dayName = "Monday";
+                break; // 'break' is crucial! It exits the switch block.
+                       // Without it, execution would "fall through" to the next case.
+            case 2:
+                dayName = "Tuesday";
+                break;
+            case 3:
+                dayName = "Wednesday";
+                break;
+            case 4:
+                dayName = "Thursday";
+                break;
+            case 5:
+                dayName = "Friday";
+                break;
+            case 6:
+                dayName = "Saturday";
+                break;
+            case 7:
+                dayName = "Sunday";
+                break;
+            default: // The 'default' case handles any value not matched by the 'case' labels.
+                dayName = "Invalid Day";
+                break; // Break here is optional but good practice.
+        }
+        return dayName; // Return the determined day name.
+    }
+
+    // Example of main method usage (for your reference)
+    public static void main(String[] args) {
+        ReviewConcepts rc = new ReviewConcepts();
+        System.out.println("Day 3: " + rc.getDayName(3));   // Expected: Wednesday
+        System.out.println("Day 7: " + rc.getDayName(7));   // Expected: Sunday
+        System.out.println("Day 0: " + rc.getDayName(0));   // Expected: Invalid Day
+        System.out.println("Day 1: " + rc.getDayName(1));   // Expected: Monday
+    }
+}
+```
+
+**Key `switch` Statement takeaways:**
+
+  * **Purpose:** Useful for selecting one of many code blocks to execute based on the value of a single variable.
+  * **`case` labels:** Values must be constants (literals or final variables).
+  * **`break`:** Essential to exit the `switch` block after a match. Without it, execution "falls through" to subsequent cases.
+  * **`default`:** An optional but highly recommended case to handle values that don't match any other `case` label.
+
+-----
+
+This concludes our problem walk-through and quick review of additional common concepts\!
+
+You've demonstrated a strong grasp of the fundamentals and the ability to learn and adapt. With the practice we've done and this review, you should feel much more confident going into your CodeSignal Java Programming for Beginners assessment.
+
+Do you have any final questions or areas you'd like to briefly touch upon before we conclude? Good luck with your assessment\!
+
+
 ### Common Debugging Problem - Sample Bugged Code and Fixed Code
 
 #### Problem: `NullPointerException` Debugging
