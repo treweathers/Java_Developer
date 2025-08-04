@@ -457,3 +457,6 @@ class Solution {
 ```
 
 #### Practice #6
+Add the two key parts of the iterative binary search by yourself. Write down the code to complete the core of the our algorithm!
+
+
