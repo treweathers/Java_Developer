@@ -814,5 +814,8 @@ class Solution {
 }
 ```
 #### Practice #2
+Stellar job, Space Wanderer! Now, let's write the code to find the position where we'll label our 'pivot star' amid the galaxy of numbers. It's a small step in the Quick Sort cosmos!
+
+
 #### Practice #3
 #### Practice #4
