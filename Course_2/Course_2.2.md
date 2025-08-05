@@ -779,3 +779,40 @@ The efficiency or "time complexity" of Quick Sort varies. When sorting items, us
 ### 9. Summary and Next Steps
 Great job! We've untangled the concept of Quick Sort, broken it down piece by piece, and implemented it in Java. Now comes the fun part: we will reinforce what you've learned with practical exercises. Ready to dive in?
 
+#### Practice #1
+Imagine you want to sort a small lineup of space rocks by their mass before safely storing them in the ship's cargo bay. But before moving to the actual sorting, you need to utilize the partition process! The given code accomplishes exactly that using the first element as the pivot. Click Run to observe how the space rocks (represented by numbers) are organized around the pivot!
+```java
+class Solution {
+    static int partition(int[] arr, int start, int end) {
+        int pivot = arr[start];
+        int i = start;
+
+        for (int j = start + 1; j <= end; j++) {
+            if (arr[j] < pivot) {
+                i++;
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+
+        arr[start] = arr[i];
+        arr[i] = pivot;
+
+        return i;
+    }
+
+    public static void main(String[] args) {
+        int[] items = {7, 3, 2, 10, 9, 5, 6, 9, 2, 3};
+        int pivotIndex = partition(items, 0, items.length - 1);
+
+        System.out.println("Pivot Index: " + pivotIndex);
+        for (int item : items) {
+            System.out.print(item + " ");
+        }
+    }
+}
+```
+#### Practice #2
+#### Practice #3
+#### Practice #4
