@@ -691,27 +691,25 @@ class Solution {
 
         Your current code is finding the minimum element in a rotated increasing sorted array, not the maximum in a rotated decreasing one. How could you adjust the comparison to reflect the decreasing order rotation?
 
-## Lesson #4: Sorting with Quick Sort: Understanding the Algorithm and Its Java Implementation
-Introduction
+## Lesson 4: Sorting with Quick Sort: Understanding the Algorithm and Its Java Implementation
+### 1. Introduction
 Hello, curious learners! Today, we will embark on a journey through the Quick Sort world. Picture yourself organizing various items - like toys or books - by size or color. That's what Quick Sort does with spectacular speed. Are you ready to explore further? Fantastic! Let's get started.
 
-Quick Sort: A Brief Overview
+### 2. Quick Sort: A Brief Overview
 Quick Sort is a clever little algorithm invented by a British computer scientist named Tony Hoare in 1959. It uses a strategy called 'divide-and-conquer' to put elements in order. Quick Sort takes an array, selects a particular "pivot" element, and then places everything smaller than the pivot on one side and everything larger on the other.
 
-How Quick Sort Operates
+### 3. How Quick Sort Operates
 Quick Sort has a three-step process:
 
-Pick a random "pivot" element from the array.
-Move all elements smaller than the pivot to one side and bigger ones to the other. This operation effectively divides the array into two parts, guaranteeing that all the elements will be kept within their part until the end of the sorting process.
-Repeat steps 1 and 2 for each part until there are no more unsorted elements.
-For example, if we have nine marbles numbered [3, 9, 4, 7, 5, 1, 6, 2, 8] and our chosen marble, or pivot, is 7, then after one round of sorting, we'll get [3, 4, 5, 1, 6, 2, 7, 9, 8]. It seems that this is a minor change, but now the pivot element is in its correct position, and we can think of the first half of the array [3, 4, 5, 1, 6] and [9, 8] separately as they won't ever intersect again.
+1. Pick a random "pivot" element from the array.
+2. Move all elements smaller than the pivot to one side and bigger ones to the other. This operation effectively divides the array into two parts, guaranteeing that all the elements will be kept within their part until the end of the sorting process.
+3. Repeat steps 1 and 2 for each part until there are no more unsorted elements.
+For example, if we have nine marbles numbered `[3, 9, 4, 7, 5, 1, 6, 2, 8]` and our chosen marble, or pivot, is 7, then after one round of sorting, we'll get [`3, 4, 5, 1, 6, 2, 7, 9, 8]`. It seems that this is a minor change, but now the pivot element is in its correct position, and we can think of the first half of the array `[3, 4, 5, 1, 6]` and `[9, 8]` separately as they won't ever intersect again.
 
-Quick Sort in Java - Defining the Partition Process
+### 4. Quick Sort in Java - Defining the Partition Process
 Let's translate these steps into a concrete Java program. We'll tackle it part by part. Our first step is to partition an array around a pivot. In the Java world, we need to write a method, let's call it partition(), to handle this:
 
-Java
-Copy to clipboard
-Play
+```java
 int partition(int[] arr, int start, int end) {
     int pivot = arr[end]; // choosing the last element as pivot
     int i = (start - 1);  // marking the index of smaller element
@@ -728,45 +726,42 @@ int partition(int[] arr, int start, int end) {
         }
     }
 }
+```
 In this portion of the code, we selected the last element as the pivot and placed smaller elements on the left.
 
 The function starts by initializing i to one index before the start. This i basically keeps track of the latest position where an element has been swapped because it was less than or equal to the pivot. If arr[j] is less than or equal to the pivot, i is incremented and then arr[j] is swapped with arr[i]. Essentially, smaller elements get pushed towards the front of the array (or the given part of the array).
 The start and end parameters control which part of the given array is under the partition operation. Using these parameters, we can apply partition to some part of the array, which will be helpful later.
 
-Exchanging Pivot and Finalizing Partition
+### 5. Exchanging Pivot and Finalizing Partition
 After partitioning, we still need to place the pivot properly in the already partitioned list. We'll add this in the next part of our partition() method:
 
-Java
-Copy to clipboard
-Play
+```java
     // Swap arr[i+1] and arr[end] (or pivot)
     int temp = arr[i+1];
     arr[i+1] = arr[end];
     arr[end] = temp;
 
     return (i+1); // return the partition point
+```
 Now our partition() method is complete! It partitions the array around the pivot and ensures it is in its correct position.
 
-Implementing Quick Sort Recursive Mechanism
+### 6. Implementing Quick Sort Recursive Mechanism
 Next up is the quickSort() method. It will use our partition() method to sort the left and right portions of the array recursively. Let's code that step-by-step. First, it should call the partitioning process:
 
-Java
-Copy to clipboard
-Play
+```java
 void quickSort(int[] arr, int start, int end) {
     if (start < end) {
         int pivot_index = partition(arr, start, end);
     }
     // Ready to split!
 }
+```
 This function has yet to do much, but it's a strong start. We've managed to partition our list around a pivot point.
 
-Continuously Sorting Left and Right Partitions
+### 7. Continuously Sorting Left and Right Partitions
 We must teach our quickSort() method to keep sorting smaller and larger partitions. We do this by simply calling itself recursively for these partitions:
 
-Java
-Copy to clipboard
-Play
+```java
 void quickSort(int[] arr, int start, int end) {
     if (start < end) {
         int pivot_index = partition(arr, start, end);
@@ -774,31 +769,12 @@ void quickSort(int[] arr, int start, int end) {
         quickSort(arr, pivot_index + 1, end);  // sort right part
     }
 }
+```
 And that's it! Our Quick Sort implementation is complete. It initially partitions the array and then continues sorting each partition until everything is sorted.
 
-Deciphering Efficiency of Quick Sort
-The efficiency or "time complexity" of Quick Sort varies. When sorting items, usually the more unique items, the quicker it is. In the "best" and "average" situations, Quick Sort works like a charm with a time complexity of 
-O
-(
-n
-∗
-l
-o
-g
-(
-n
-)
-)
-O(n∗log(n)). However, in the "worst" situation, where many items are the same (like a pile of identical blocks), it may take more time, resulting in a time complexity of 
-O
-(
-n
-2
-)
-O(n 
-2
- ).
+### 8. Deciphering Efficiency of Quick Sort
+The efficiency or "time complexity" of Quick Sort varies. When sorting items, usually the more unique items, the quicker it is. In the "best" and "average" situations, Quick Sort works like a charm with a time complexity of O(n∗log(n)). However, in the "worst" situation, where many items are the same (like a pile of identical blocks), it may take more time, resulting in a time complexity of O(n2).
 
-Summary and Next Steps
+### 9. Summary and Next Steps
 Great job! We've untangled the concept of Quick Sort, broken it down piece by piece, and implemented it in Java. Now comes the fun part: we will reinforce what you've learned with practical exercises. Ready to dive in?
 
