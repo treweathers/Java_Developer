@@ -929,24 +929,23 @@ class Solution {
 ```
 ## Lesson 5: Demystifying Merge Sort: Implementation and Complexity Analysis in Java
 ### 1. Welcome to Merge Sort
-Hello, aspiring programmers! Today's topic is the "Merge Sort." Merge Sort is a sorting technique like arranging a deck of shuffled cards in order. But for data on the Internet scale, Merge Sort outperforms your regular techniques. Today, we'll explore Merge Sort, code it in Java, and analyze its speed. Ready? Let's get started!
+Hello, aspiring programmers! Today's topic is the **"Merge Sort."** Merge Sort is a sorting technique like arranging a deck of shuffled cards in order. But for data on the Internet scale, Merge Sort outperforms your regular techniques. Today, we'll explore Merge Sort, code it in `Java`, and analyze its speed. Ready? Let's get started!
 
-What is Merge Sort?
+### 2. What is Merge Sort?
 In computer science, Merge Sort is a popular method to sort elements. Merge Sort uses the same 'divide-and-conquer' strategy for sorting, like the familiar Quick Sort algorithm. Imagine if you have one long music playlist mixed up with songs. You want to sort these songs from A to Z. That's what Merge Sort does to an array.
 
 In the three steps of Merge Sort:
 
-Split the array into halves.
-Sort each half separately.
-Merge the sorted halves back together.
-Understanding the Merge Process
+1. Split the array into halves.
+2. Sort each half separately.
+3. Merge the sorted halves back together.
+
+### 3. Understanding the Merge Process
 We will start with building a code for merging two sorted parts. The merge process makes two halves play sort and seek. It compares elements from two halves and merges so that the resulting list is sorted as well.
 
 Let's code a merge() function in Java that will do just that. Note that the final variant of the merge sort function will do every operation "in place," meaning there will not be actual two arrays; we will operate parts of one array. Having this in mind, let's implement the merge function to take just one array and treat its parts like separate arrays.
 
-Java
-Copy to clipboard
-Play
+```java
 void merge(int arr[], int left, int mid, int right) {
     int n1 = mid - left + 1; // Find number of elements in the left array
     int Left[] = new int[n1]; // Define left array
@@ -960,14 +959,13 @@ void merge(int arr[], int left, int mid, int right) {
     for (int j = 0; j < n2; j++)
         Right[j] = arr[mid + 1 + j];
 }
+```
 So far, we've divided our original list into two halves, Left and Right.
 
-Merging the Halves Back Together
+### 4. Merging the Halves Back Together
 Now, we'll sort and merge these halves:
 
-Java
-Copy to clipboard
-Play
+```java
     int i = 0, j = 0;
     int k = left;
     while (i < n1 && j < n2) {
@@ -981,17 +979,15 @@ Play
         k++;
     }
 }
+```
 Seemingly tricky, the code is very straightforward: We place two pointers, i and j, at the beginning of the Right and Left arrays. We choose the smaller element, put it in the final array arr, and move the corresponding pointer further. We keep doing this until one of the pointers reaches the end of its array.
 
-Handling Leftovers
+### 5. Handling Leftovers
 We stop the process when one of the pointers reaches the end of its array, but some elements could be left in the other array.
 
 To handle this, let's copy the remaining elements of both arrays (if any) to the end of the resulting arr array.
 
-Java
-Copy to clipboard
-Play
-
+```java
     // Copy remaining elements of Left[] if any
     while (i < n1) {
         arr[k] = Left[i];
@@ -1005,45 +1001,44 @@ Play
         j++;
         k++;
     }
+```
 The merge section is completed. It successfully merges two halves back together in the sorted order.
 
-Implementing Divide and Conquer Strategy
+### 6. Implementing Divide and Conquer Strategy
 Now, let's implement the method to divide the array into two halves. Coding-wise, we'll need to define a sort() method to split the array and manage the merge process. We will split the array and its halves recursively until we end up with small arrays of just one element, which are naturally sorted! Next, we will merge these arrays back together into one big sorted array.
 
-Splitting the Array into Halves
+### 7. Splitting the Array into Halves
 Let's start building the sort() method. Initially, we'll handle the splitting part:
 
-Java
-Copy to clipboard
-Play
+```java
 void sort(int arr[], int left, int right) {
     if (left < right) {
         int mid = (left + right) / 2; // Finding the midpoint
     
     }
 }
+```
 Now, we can split our list into two halves, but they still need to be sorted.
 
-Marshalling the Merge Process
+### 8. Marshalling the Merge Process
 Next, we need to sort these halves and merge them together:
 
-Java
-Copy to clipboard
-Play
+```java
         sort(arr, left, mid); // Sorting the left half
         sort(arr, mid + 1, right); // Sorting the right half
         merge(arr, left, mid, right); // Merging the sorted halves
     }
 }
+```
 Phew! We've now implemented our Merge Sort algorithm in Java.
 
-Decoding Merge Sort Efficiency
+### 9. Decoding Merge Sort Efficiency
 In the computing world, performance matters. The less time it takes for a sorting algorithm to run, the better. Merge Sort shows good performance with the time complexity of O(n log n), similar to sorting a huge deck of cards quickly. Thus, it excels when dealing with massive data sets.
 
-Strengths and Pitfalls of Merge Sort
+### 10. Strengths and Pitfalls of Merge Sort
 Merge Sort is consistent. It's like a reliable late-night tutor that offers predictable performance, regardless of the initial order of the data input. It mimics a reliable friend who will not let down expectations.
 
 However, it tends to use extra memory, creating new arrays during the merge process.
 
-Ending Notes and Looking Ahead
+### 11. Ending Notes and Looking Ahead
 Great job! We've broken down Merge Sort and coded it in Java. Next up, we have some exciting hands-on exercises for you. Ready to put what you've learned into practice? Let's dive into the fun part! Let's get coding!
