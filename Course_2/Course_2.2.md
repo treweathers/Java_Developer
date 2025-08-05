@@ -1508,5 +1508,47 @@ class Solution {
 }
 ```
 #### Practice #5
+Excellent progress, Space Voyager! Your task now is to sort the grocery inventory by price in the ascending order. In case of a tie, sort by rating in the descending order. Write your own custom comparator using .comparing and .thenComparing functions to organize these space provisions from the lowest to the highest cost!
+```java
+import java.util.*;
 
+// Grocery item class
+class GroceryItem {
+    String name;
+    double price;
+    double rating; // added field
+
+    GroceryItem(String name, double price, double rating) {
+        this.name = name;
+        this.price = price;
+        this.rating = rating; // added initialization
+    }
+
+    String getName() { return name; }
+    double getPrice() { return price; }
+    double getRating() { return rating; } // added getter
+
+    @Override
+    public String toString() {
+        return name + ": $" + price + ", rating: " + rating;
+    }
+}
+
+// Main class should be named 'Solution'.
+class Solution {
+    public static void main(String[] args) {
+        ArrayList<GroceryItem> inventory = new ArrayList<>(
+                Arrays.asList(
+                        new GroceryItem("Milk", 2.99, 4.5),
+                        new GroceryItem("Bread", 2.99, 4.7),
+                        new GroceryItem("Eggs", 3.49, 4.3)
+                )
+        );
+
+        // TODO: Sort grocery items by price and then by rating
+        inventory.sort(Comparator.comparing(GroceryItem::getPrice).thenComparing(GroceryItem::getRating, Comparator.reverseOrder()));
+        System.out.println(inventory);
+    }
+}
+```
 ## Lesson 7:
