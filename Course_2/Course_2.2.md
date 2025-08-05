@@ -1393,6 +1393,10 @@ Well done! You've learned how sorting functions in Java work, including the use 
 
 In our future lessons, we'll delve deeper into sorting and tackling more intricate problems, such as finding the K-th largest number. So, stay tuned and get ready to sort your way to success! Happy coding!
 
-
+#### Practice #1
+#### Practice #2
+#### Practice #3
+#### Practice #4
+#### Practice #5
 
 ## Lesson 7:
