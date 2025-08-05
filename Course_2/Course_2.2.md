@@ -1294,4 +1294,6 @@ class Solution {
     }
 }
 ```
+## Lesson 6: Mastering Java's Built-in Sorting Functions: Arrays and Comparators
 
+## Lesson 7:
