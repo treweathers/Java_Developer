@@ -1141,7 +1141,7 @@ class Solution {
                 arr[k] = rightArr[j];
                 j++;
             }
-            k++;
+            k++; // it was missing this increment
         }
 
         while (i < n1) {
@@ -1230,3 +1230,8 @@ class Solution {
 ```
 
 #### Practice #4
+Great progress, Stellar Navigator! Now it's time to take another step forward. In our musical sorting universe, the merge function is like combining melodies in harmony. Can you complete the crucial part of mergeSort function?
+
+Add the missing code to sort the playlist into a perfect tune!
+
+
