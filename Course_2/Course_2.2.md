@@ -815,7 +815,32 @@ class Solution {
 ```
 #### Practice #2
 Stellar job, Space Wanderer! Now, let's write the code to find the position where we'll label our 'pivot star' amid the galaxy of numbers. It's a small step in the Quick Sort cosmos!
+```java
+class Solution {
+    static int partitionCelestial(int[] magnitudes, int start, int end) {
+        int pivot = magnitudes[end];
+        int i = start - 1;
+        // TODO: Implement the partition loop
+        for (int j = start; j < end; j++) {
+          if (magnitudes[j] <= pivot) {
+            i++;
+            int temp = magnitudes[i];
+            magnitudes[i] = magnitudes[j];
+            magnitudes[j] = temp;
+          }
+        }
+        int temp = magnitudes[i + 1];
+        magnitudes[i + 1] = magnitudes[end];
+        magnitudes[end] = temp;
+        return i + 1;
+    }
 
-
+    public static void main(String[] args) {
+      int[] celestialMagnitudes = {5, 3, 0, -1, -2, 1};
+      int pivotPosition = partitionCelestial(celestialMagnitudes, 0, celestialMagnitudes.length - 1);
+      // Now, celestialMagnitudes is partitioned, with pivot in the correct position.
+    }
+}
+```
 #### Practice #3
 #### Practice #4
