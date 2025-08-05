@@ -1170,6 +1170,63 @@ class Solution {
 
 #### Practice #3
 You're doing great! Let's fill in a crucial part of the merging process in our Merge Sort. Complete the missing code to merge the sorted halves.
+```java
+class Solution {
+    static void mergeSort(int[] arr, int left, int right) {
+        if (left < right) {
+            int mid = (left + right) / 2;
+            mergeSort(arr, left, mid);
+            mergeSort(arr, mid + 1, right);
+            merge(arr, left, mid, right);
+        }
+    }
 
+    static void merge(int[] arr, int left, int mid, int right) {
+        int n1 = mid - left + 1;
+        int n2 = right - mid;
+        int[] leftPart = new int[n1];
+        int[] rightPart = new int[n2];
+
+        for (int i = 0; i < n1; ++i)
+            leftPart[i] = arr[left + i];
+        for (int j = 0; j < n2; ++j)
+            rightPart[j] = arr[mid + 1 + j];
+
+        int i = 0, j = 0;
+        int k = left;
+        while (i < n1 && j < n2) {
+            if (leftPart[i] <= rightPart[j]) {
+                arr[k] = leftPart[i];
+                i++;
+            } else {
+                arr[k] = rightPart[j];
+                j++;
+            }
+            k++;
+        }
+
+        //TODO append leftover elements from leftPart and rightPart to the resulting array
+        while (i < n1) {
+            arr[k] = leftPart[i];
+            i++;
+            k++;
+        }
+        while (j < n2) {
+            arr[k] = rightPart[j];
+            j++;
+            k++;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] tracks = {11, 2, 5, 7, 8, 3, 6, 9, 10, 1};
+        mergeSort(tracks, 0, tracks.length - 1);
+
+        for (int songID : tracks) {
+            System.out.print(songID + " "); 
+        }
+    }
+}
+```
 
 #### Practice #4
