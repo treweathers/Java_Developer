@@ -541,8 +541,6 @@ Notice how we've adapted `binarySearch` by adding an `ascending` flag. This dete
 Our final step is to implement the `searchBitonicArray` function, which first finds peak and then applies binary search to both parts of the array:
 
 ```java
-Copy to clipboard
-Play
 public static int searchBitonicArray(int[] temperatures, int targetTemp) {
     int peakIndex = findPeak(temperatures);
     int searchResult = binarySearch(temperatures, 0, peakIndex, targetTemp, true);
