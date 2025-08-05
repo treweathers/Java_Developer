@@ -881,3 +881,50 @@ class Solution {
 }
 ```
 #### Practice #4
+You're doing great, Space Voyager! Now, let's see if you can implement Quick Sort on your own. Specifically, I need you to write the recursive part that deals with sorting the left and right partitions of our space objects. May your code be as swift as comets!
+
+```java
+class Solution {
+    // Function to perform the Quick Sort
+    static void quickSort(int[] spaceObjects, int start, int end) {
+        if (start < end) {
+            int pivot_index = partition(spaceObjects, start, end);
+            // TODO: Implement recursive quickSort call to sort the elements to the left of the pivot
+            quickSort(spaceObjects, start, pivot_index - 1);
+            // TODO: Implement recursive quickSort call to sort the elements to the right of the pivot
+            quickSort(spaceObjects, pivot_index + 1, end);
+        }
+    }
+
+    // Helper function to partition the array (uses logic from the lesson)
+    static int partition(int[] arr, int start, int end) {
+        // This part is complete, no changes needed here.
+        int pivot = arr[end];
+        int i = (start - 1);
+        for (int j = start; j < end; j++) {
+            if (arr[j] <= pivot) {
+                i++;
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+        int temp = arr[i+1];
+        arr[i+1] = arr[end];
+        arr[end] = temp;
+        return (i+1);
+    }
+
+    // Main method to test the quickSort function (Complete, do not change)
+    public static void main(String[] args) {
+        int[] spaceObjects = {109, 76, 45, 32, 88}; // Masses of celestial objects (in arbitrary units)
+        quickSort(spaceObjects, 0, spaceObjects.length - 1); // Sorting celestial objects by their mass
+
+        // The print statement is ready to verify your result.
+        for (int mass : spaceObjects) {
+            System.out.print(mass + ", ");
+        }
+    }
+}
+```
+## Lesson 5:
