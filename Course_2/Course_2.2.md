@@ -1296,44 +1296,39 @@ class Solution {
 ```
 ## Lesson 6: Mastering Java's Built-in Sorting Functions: Arrays and Comparators
 ### 1. Lesson Introduction and Overview
-Hello, and welcome back! Our journey today takes us into the sorting universe in Java. We will learn about and use Java's built-in Arrays.sort() function. Additionally, we will explore how Java's Comparator interface allows us to define custom sorting rules for more complex sorting scenarios.
+Hello, and welcome back! Our journey today takes us into the sorting universe in Java. We will learn about and use Java's built-in `Arrays.sort()` function. Additionally, we will explore how Java's `Comparator` interface allows us to define custom sorting rules for more complex sorting scenarios.
 
 These ready-to-use tools in Java simplify the task of sorting significantly. Let's get started!
 
-Understanding Sorting and Its Importance
+### 2. Understanding Sorting and Its Importance
 Sorting refers to arranging data in a specific order, which enhances the efficiency of search or merge operations on data. In real life, we sort books alphabetically or clothes by size. Similar concepts are applicable in programming, where sorting large lists of data for more effective analysis is a frequent practice.
 
-An Introduction to Java's Built-in Sorting Function
-Java offers a built-in sorting method, Arrays.sort(), to sort arrays. Here's a demonstration of how we use this method:
+### 3. An Introduction to Java's Built-in Sorting Function
+Java offers a built-in sorting method, `Arrays.sort()`, to sort arrays. Here's a demonstration of how we use this method:
 
-Sorting of Primitive Types and Objects
-Sorting with Arrays.sort() makes sorting arrays of primitives a breeze. Let's see it in action!
+### 4. Sorting of Primitive Types and Objects
+Sorting with `Arrays.sort()` makes sorting arrays of primitives a breeze. Let's see it in action!
 
-Sorting Arrays of Primitives
-
-Java
-Copy to clipboard
-Play
+**Sorting Arrays of Primitives**
+```java
 int[] arr = {4, 1, 3, 2};
 Arrays.sort(arr);
 System.out.println(Arrays.toString(arr)); // Output: [1, 2, 3, 4]
-Sorting Arrays of Objects
+```
 
-Java
-Copy to clipboard
-Play
+**Sorting Arrays of Objects**
+```java
 String[] inventory = {"Bananas", "Pears", "Apples", "Dates"};
 Arrays.sort(inventory);
 System.out.println(Arrays.toString(inventory));
 // Output: [Apples, Bananas, Dates, Pears]
+```
 As you can see, sorting in Java is as simple as that!
 
-More Complex Sorting Problem
-Java's Comparator interface enables us to dictate the sorting order by setting custom rules. Let's sort a list of students by their grades, with alphabetical sorting applied in the event of ties in grades. Firstly, we define the Student class:
+### 5. More Complex Sorting Problem
+Java's `Comparator` interface enables us to dictate the sorting order by setting custom rules. Let's sort a list of students by their grades, with alphabetical sorting applied in the event of ties in grades. Firstly, we define the `Student` class:
 
-Java
-Copy to clipboard
-Play
+```java
 class Student {
     String name;
     int grade;
@@ -1349,14 +1344,13 @@ class Student {
         return name + ":" + grade;
     }
 }
+```
 Note that it has to have getters for its fields for the Comparator to work.
 
-Custom Sorting with Comparator
-Modern Java makes solving such sorting tasks straightforward. Here is how we do it using the Comparator interface:
+### 6. Custom Sorting with Comparator
+Modern Java makes solving such sorting tasks straightforward. Here is how we do it using the `Comparator` interface:
 
-Java
-Copy to clipboard
-Play
+```java
 import java.util.*;
 
 class Solution {
@@ -1374,29 +1368,28 @@ class Solution {
         System.out.println(students); // Output: [Bob:90, Charlie:90, Alice:85]
     }
 }
-In the above example, we create an ArrayList of Student objects and sort it using a custom Comparator. The Comparator.comparing(Student::getGrade).reversed() portion first creates a Comparator that compares Student objects based on their grades, and reversed() is used to reverse the natural ordering of the Comparator, thus ensuring that Students with higher grades come first.
+```
+In the above example, we create an `ArrayList` of `Student` objects and sort it using a custom `Comparator`. The `Comparator.comparing(Student::getGrade).reversed()` portion first creates a Comparator that compares Student objects based on their grades, and `reversed()` is used to reverse the natural ordering of the Comparator, thus ensuring that Students with higher grades come first.
 
-If two students have the same grade, thenComparing(Student::getName) then compares the students based on their names in alphabetical order.
+If two students have the same grade, `thenComparing(Student::getName)` then compares the students based on their names in alphabetical order.
 
-Applying Reverse Order to thenComparing
-There is a small problem with the reversed() method. Imagine a situation where we want to sort students in ascending order by their grades but in descending order alphabetically. In this case, our previous tools won't work as expected:
+### 7. Applying Reverse Order to thenComparing
+There is a small problem with the `reversed()` method. Imagine a situation where we want to sort students in ascending order by their grades but in descending order alphabetically. In this case, our previous tools won't work as expected:
 
-Java
-Copy to clipboard
-Play
+```java
 students.sort(Comparator.comparing(Student::getGrade).thenComparing(Student::getName).reversed());
 // Result: [Charlie:90, Bob:90, Alice:85]
-The .reversed() method reverses the sorted array, making both grades and names in descending order. To tackle this problem, we can pass the Comparator.reverseOrder() function as the second parameter of the .thenComparing() function:
+```
+The `.reversed()` method reverses the sorted array, making both grades and names in descending order. To tackle this problem, we can pass the `Comparator.reverseOrder()` function as the second parameter of the `.thenComparing()` function:
 
-Java
-Copy to clipboard
-Play
+```java
 students.sort(Comparator.comparing(Student::getGrade).thenComparing(Student::getName, Comparator.reverseOrder()));
 // [Alice:85, Charlie:90, Bob:90]
+```
 This way, only the names sorting gets reversed.
 
-Lesson Summary and Next Steps
-Well done! You've learned how sorting functions in Java work, including the use of Java's built-in Arrays.sort() function for basic sorting needs. Additionally, you explored how the Comparator interface allows you to define custom sorting rules, making it easy to handle more complex sorting scenarios effectively.
+### 8. Lesson Summary and Next Steps
+Well done! You've learned how sorting functions in Java work, including the use of Java's built-in `Arrays.sort()` function for basic sorting needs. Additionally, you explored how the `Comparator` interface allows you to define custom sorting rules, making it easy to handle more complex sorting scenarios effectively.
 
 In our future lessons, we'll delve deeper into sorting and tackling more intricate problems, such as finding the K-th largest number. So, stay tuned and get ready to sort your way to success! Happy coding!
 
