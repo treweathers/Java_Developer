@@ -1408,7 +1408,22 @@ class Solution {
     }
 }
 ```
+
 #### Practice #2
+Great progress, Space Voyager! Now, let's put your skills to the test. We need to sort the grocery inventory alphabetically. Write the line of code that sorts the inventory array and display the sorted inventory.
+```java
+import java.util.Arrays;
+
+class Solution {
+    public static void main(String[] args) {
+        String[] inventory = {"Bananas", "Cherries", "Apples", "Dates"};
+        // TODO: Sort the `inventory` array in alphabetical order and print it out.
+        Arrays.sort(inventory);
+        System.out.println("Grocery Inventory: " + Arrays.toString(inventory));
+    }
+}
+```
+
 #### Practice #3
 #### Practice #4
 #### Practice #5
