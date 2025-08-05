@@ -655,3 +655,6 @@ class Solution {
 }
 ```
 #### Practice #2
+You're navigating through a galaxy of integers, when suddenly your radar picks up a cyclically sorted array. This isn't ordinary sorting, oh no! It's sorted in decreasing order, but a pesky asteroid has bumped some numbers from the tail to the front. Your mission, should you choose to accept it, is to find the largest element in this array.
+
+
