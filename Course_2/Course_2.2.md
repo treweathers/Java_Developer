@@ -487,7 +487,7 @@ class Solution {
 ```
 ## Lesson 3: Advanced Binary Search Techniques for Complex Data Structures
 ### 1. Introduction to Advanced Binary Search Problems
-In today’s lesson, we’ll stretch our algorithmic muscles by exploring sophisticated variations of binary search. By now, you're familiar with the classic search through sorted data, but what happens when that data becomes more complex? By using advanced binary search, we can efficiently navigate through **bitonic arrays** and **rotated arrays++. Let's dive deeper into each problem and see how we can apply binary search in ways you might encounter during a challenging technical interview or in a complex software development task.
+In today’s lesson, we’ll stretch our algorithmic muscles by exploring sophisticated variations of binary search. By now, you're familiar with the classic search through sorted data, but what happens when that data becomes more complex? By using advanced binary search, we can efficiently navigate through **bitonic arrays** and **rotated arrays**. Let's dive deeper into each problem and see how we can apply binary search in ways you might encounter during a challenging technical interview or in a complex software development task.
 
 ### 2. Problem 1: Searching in a Bitonic Array
 Consider a scenario where you're dealing with a dataset akin to a roller coaster ride — you start with a steady climb (ascending values), reach the summit (the peak value), and then take a thrilling dive (descending values). This is precisely what a bitonic array resembles. For instance, if you track the hourly temperature readings over a day, the temperature may increase until noon and then decrease towards the evening, forming a bitonic pattern.
