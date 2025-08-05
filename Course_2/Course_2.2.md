@@ -1394,6 +1394,20 @@ Well done! You've learned how sorting functions in Java work, including the use 
 In our future lessons, we'll delve deeper into sorting and tackling more intricate problems, such as finding the K-th largest number. So, stay tuned and get ready to sort your way to success! Happy coding!
 
 #### Practice #1
+In managing our grocery store inventory, we've listed the initial quantities of some items. The given code will sort these quantities to help us better understand what we have in stock. Click Run to see the sorted list of item quantities.
+```java
+import java.util.Arrays;
+
+class Solution {
+    public static void main(String[] args) {
+        int[] stockQuantities = {15, 60, 35, 2, 14};
+        
+        Arrays.sort(stockQuantities);
+        
+        System.out.println("Sorted stock quantities: " + Arrays.toString(stockQuantities));
+    }
+}
+```
 #### Practice #2
 #### Practice #3
 #### Practice #4
