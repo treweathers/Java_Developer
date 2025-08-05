@@ -843,4 +843,41 @@ class Solution {
 }
 ```
 #### Practice #3
+In this exercise, you'll apply the Quick Sort algorithm you've mastered to sort space rock sizes collected during your intergalactic travels. Imagine you're cataloging these rocks by size to ensure they're correctly stored on your spaceship. Your challenge is to sort a set of values, much like organizing items by size for efficient storage. Click Run to initiate the sorting sequence and observe the organized list of space rock sizes!
+```java
+class Solution {
+    static void quickSort(int[] sizes, int left, int right) {
+        if (left < right) {
+            int pi = partition(sizes, left, right);
+            quickSort(sizes, left, pi - 1);  // Recursively sort left side
+            quickSort(sizes, pi + 1, right); // Recursively sort right side
+        }
+    }
+
+    static int partition(int[] sizes, int left, int right) {
+        int pivot = sizes[right];
+        int i = (left - 1);
+        for (int j = left; j < right; j++) {
+            if (sizes[j] < pivot) {
+                i++;
+                int temp = sizes[i];
+                sizes[i] = sizes[j];
+                sizes[j] = temp;
+            }
+        }
+        int temp = sizes[i + 1];
+        sizes[i + 1] = sizes[right];
+        sizes[right] = temp;
+        return i + 1;
+    }
+
+    public static void main(String[] args) {
+        int[] celestialSizes = {3, 5, 2, 1, 9, 5, 7, 8}; // Unsorted space rock sizes
+        quickSort(celestialSizes, 0, celestialSizes.length - 1);
+        for (int size : celestialSizes) {
+            System.out.print(size + " ");
+        }
+    }
+}
+```
 #### Practice #4
