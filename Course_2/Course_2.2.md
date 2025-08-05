@@ -1169,4 +1169,7 @@ class Solution {
 ```
 
 #### Practice #3
+You're doing great! Let's fill in a crucial part of the merging process in our Merge Sort. Complete the missing code to merge the sorted halves.
+
+
 #### Practice #4
