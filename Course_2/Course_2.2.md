@@ -588,6 +588,70 @@ Your mission? Create a function, findPosition, that returns the 'index' of a giv
 
 Let's be precise: an input to findPosition is a number you want to locate, and the output is either the number's first occurrence position or -1 if the number does not exist. Now, go supe up your code engines, Voyager! You got this!
 
+```java
+class Solution {
+    public static int findPosition(int arr[], int x) {
+        // TODO: find peak
+        int peakIndex = findPeak(arr);
+        int searchResult = binarySearch(arr, 0, peakIndex, x, true);
+        // TODO: search to the left of the peak
+        if (searchResult != -1) {
+            return searchResult;
+        // TODO: search to the right of the peak
+        } else {
+            return binarySearch(arr, x, peakIndex + 
+             + 1, arr.length - 1, false);
+        }
+    }
 
+    static int findPeak(int arr[]) {
+        int low = 0, high = arr.length - 1;
+        // TODO: implement this
+        while (low < high) {
+            int mid = low + (high - low) / 2;
+            if (arr[mid] > arr[mid + 1]) {
+                high = mid;
+            } else {
+                low = mid + 1;
+            }
+        }
+        return low;
+    }
 
+    static int binarySearch(int arr[], int x, int low, int high, boolean ascending) {
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (arr[mid] == x) {
+                return mid;
+            } else if (ascending) {
+                if (arr[mid] < x) {
+                    low = mid + 1;
+                } else {
+                    high = mid - 1;
+                }
+            } else {
+                // TODO: implement the descending binary search logic
+                if (ascending ? arr[mid] < x : arr[mid] > x) {
+                    low = mid + 1;
+                }
+                else {
+                    high = mid - 1;
+                }
+            }
+        }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        int arr[] = {-3, -2, 4, 6, 10, 8, 7, 1};
+        int x = 7;
+        int position = findPosition(arr, x);
+        if (position == -1) {
+            System.out.println("Element Not Present");
+        } else {
+            System.out.println("Element Present at Index " + position);
+        }
+    }
+}
+```
 #### Practice #2
