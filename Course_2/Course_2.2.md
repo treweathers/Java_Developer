@@ -1104,6 +1104,10 @@ class Solution {
 }
 ```
 #### Practice #2
+Stellar Navigator, in the code provided, there's a bug causing the music tracks to be sorted incorrectly. Our advanced locators say that the bug should be in the merge process, specifically in the initial while loop. Find and fix the issue to ensure that the playlist is in perfect order for the intergalactic journey ahead.
+
+Good luck!
+
 
 #### Practice #3
 #### Practice #4
