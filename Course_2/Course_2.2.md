@@ -696,7 +696,7 @@ class Solution {
 Hello, curious learners! Today, we will embark on a journey through the **Quick Sort** world. Picture yourself organizing various items - like toys or books - by size or color. That's what Quick Sort does with spectacular speed. Are you ready to explore further? Fantastic! Let's get started.
 
 ### 2. Quick Sort: A Brief Overview
-Quick Sort is a clever little algorithm invented by a British computer scientist named Tony Hoare in 1959. It uses a strategy called 'divide-and-conquer' to put elements in order. Quick Sort takes an array, selects a particular "pivot" element, and then places everything smaller than the pivot on one side and everything larger on the other.
+**Quick Sort** is a clever little algorithm invented by a British computer scientist named Tony Hoare in 1959. It uses a strategy called 'divide-and-conquer' to put elements in order. Quick Sort takes an array, selects a particular "pivot" element, and then places everything smaller than the pivot on one side and everything larger on the other.
 
 ### 3. How Quick Sort Operates
 Quick Sort has a three-step process:
