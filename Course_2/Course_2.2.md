@@ -582,3 +582,8 @@ With `findMin`, we’re doing almost the same trick as with `findPeak` in the pr
 
 ### 11. Lesson Summary
 We've now seen binary search in a new light — as adaptable, precise, and incredibly useful in scenarios that extend beyond straight-line, uniform datasets. Whether tracking temperatures, organizing books, or sorting other ordered information, binary search can serve as our algorithmic compass, helping us efficiently navigate through ordered data that has taken on an unexpected shape. Remember, algorithms are tools, and like any good craftsman, knowing when and how to use them is the hallmark of proficiency. Now it's time to apply these learnings practically, so let's move on to some exercises where you can further refine these advanced binary search skills.
+
+#### Practice #1
+
+
+#### Practice #2
