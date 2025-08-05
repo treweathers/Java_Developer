@@ -932,7 +932,7 @@ class Solution {
 Hello, aspiring programmers! Today's topic is the **"Merge Sort."** Merge Sort is a sorting technique like arranging a deck of shuffled cards in order. But for data on the Internet scale, Merge Sort outperforms your regular techniques. Today, we'll explore Merge Sort, code it in `Java`, and analyze its speed. Ready? Let's get started!
 
 ### 2. What is Merge Sort?
-In computer science, Merge Sort is a popular method to sort elements. Merge Sort uses the same 'divide-and-conquer' strategy for sorting, like the familiar Quick Sort algorithm. Imagine if you have one long music playlist mixed up with songs. You want to sort these songs from A to Z. That's what Merge Sort does to an array.
+In computer science, **Merge Sort** is a popular method to sort elements. Merge Sort uses the same 'divide-and-conquer' strategy for sorting, like the familiar **Quick Sort** algorithm. Imagine if you have one long music playlist mixed up with songs. You want to sort these songs from A to Z. That's what Merge Sort does to an array.
 
 In the three steps of Merge Sort:
 
@@ -943,7 +943,7 @@ In the three steps of Merge Sort:
 ### 3. Understanding the Merge Process
 We will start with building a code for merging two sorted parts. The merge process makes two halves play sort and seek. It compares elements from two halves and merges so that the resulting list is sorted as well.
 
-Let's code a merge() function in Java that will do just that. Note that the final variant of the merge sort function will do every operation "in place," meaning there will not be actual two arrays; we will operate parts of one array. Having this in mind, let's implement the merge function to take just one array and treat its parts like separate arrays.
+Let's code a `merge()` function in `Java` that will do just that. Note that the final variant of the merge sort function will do every operation "in place," meaning there will not be actual two arrays; we will operate parts of one array. Having this in mind, let's implement the `merge` function to take just one array and treat its parts like separate arrays.
 
 ```java
 void merge(int arr[], int left, int mid, int right) {
@@ -980,12 +980,12 @@ Now, we'll sort and merge these halves:
     }
 }
 ```
-Seemingly tricky, the code is very straightforward: We place two pointers, i and j, at the beginning of the Right and Left arrays. We choose the smaller element, put it in the final array arr, and move the corresponding pointer further. We keep doing this until one of the pointers reaches the end of its array.
+Seemingly tricky, the code is very straightforward: We place two pointers, `i` and `j`, at the beginning of the `Right` and `Left` arrays. We choose the smaller element, put it in the final array `arr`, and move the corresponding pointer further. We keep doing this until one of the pointers reaches the end of its array.
 
 ### 5. Handling Leftovers
 We stop the process when one of the pointers reaches the end of its array, but some elements could be left in the other array.
 
-To handle this, let's copy the remaining elements of both arrays (if any) to the end of the resulting arr array.
+To handle this, let's copy the remaining elements of both arrays (if any) to the end of the resulting `arr` array.
 
 ```java
     // Copy remaining elements of Left[] if any
@@ -1005,10 +1005,10 @@ To handle this, let's copy the remaining elements of both arrays (if any) to the
 The merge section is completed. It successfully merges two halves back together in the sorted order.
 
 ### 6. Implementing Divide and Conquer Strategy
-Now, let's implement the method to divide the array into two halves. Coding-wise, we'll need to define a sort() method to split the array and manage the merge process. We will split the array and its halves recursively until we end up with small arrays of just one element, which are naturally sorted! Next, we will merge these arrays back together into one big sorted array.
+Now, let's implement the method to divide the array into two halves. Coding-wise, we'll need to define a `sort()` method to split the array and manage the merge process. We will split the array and its halves recursively until we end up with small arrays of just one element, which are naturally sorted! Next, we will merge these arrays back together into one big sorted array.
 
 ### 7. Splitting the Array into Halves
-Let's start building the sort() method. Initially, we'll handle the splitting part:
+Let's start building the `sort()` method. Initially, we'll handle the splitting part:
 
 ```java
 void sort(int arr[], int left, int right) {
@@ -1030,10 +1030,10 @@ Next, we need to sort these halves and merge them together:
     }
 }
 ```
-Phew! We've now implemented our Merge Sort algorithm in Java.
+Phew! We've now implemented our Merge Sort algorithm in `Java`.
 
 ### 9. Decoding Merge Sort Efficiency
-In the computing world, performance matters. The less time it takes for a sorting algorithm to run, the better. Merge Sort shows good performance with the time complexity of O(n log n), similar to sorting a huge deck of cards quickly. Thus, it excels when dealing with massive data sets.
+In the computing world, performance matters. The less time it takes for a sorting algorithm to run, the better. Merge Sort shows good performance with the time complexity of `O(n log n),` similar to sorting a huge deck of cards quickly. Thus, it excels when dealing with massive data sets.
 
 ### 10. Strengths and Pitfalls of Merge Sort
 Merge Sort is consistent. It's like a reliable late-night tutor that offers predictable performance, regardless of the initial order of the data input. It mimics a reliable friend who will not let down expectations.
@@ -1041,4 +1041,4 @@ Merge Sort is consistent. It's like a reliable late-night tutor that offers pred
 However, it tends to use extra memory, creating new arrays during the merge process.
 
 ### 11. Ending Notes and Looking Ahead
-Great job! We've broken down Merge Sort and coded it in Java. Next up, we have some exciting hands-on exercises for you. Ready to put what you've learned into practice? Let's dive into the fun part! Let's get coding!
+Great job! We've broken down Merge Sort and coded it in `Java`. Next up, we have some exciting hands-on exercises for you. Ready to put what you've learned into practice? Let's dive into the fun part! Let's get coding!
