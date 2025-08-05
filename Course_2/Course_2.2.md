@@ -1467,7 +1467,46 @@ class Solution {
 ```
 
 #### Practice #4
+Alright, Stellar Navigator! We've observed products sorted in ascending order by price. Your mission is to modify the Comparator logic in the starter code so that the inventory sorts in descending order by price. Remember, descending order means arranging from the highest to the lowest.
 
+Let's enhance our inventory sorting skills!
+```java
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+
+class Product {
+    String name;
+    double price;
+
+    Product(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public String getName() { return this.name; }
+    public double getPrice() { return this.price; }
+    public String toString() {
+        return name + ": $" + price;
+    }
+}
+
+class Solution {
+    public static void main(String[] args) {
+        ArrayList<Product> inventory = new ArrayList<>(
+            Arrays.asList(
+                new Product("Apple", 1.99),
+                new Product("Milk", 2.99),
+                new Product("Bread", 2.49)
+            )
+        );
+
+        // Sort products in descending order by price.
+        inventory.sort(Comparator.comparing(Product::getPrice).reversed());
+        System.out.println(inventory); 
+    }
+}
+```
 #### Practice #5
 
 ## Lesson 7:
