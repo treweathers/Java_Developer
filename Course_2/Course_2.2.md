@@ -1425,7 +1425,49 @@ class Solution {
 ```
 
 #### Practice #3
+Imagine you have a list of products for our Grocery store inventory and you want to quickly identify the most expensive items. The provided code will sort the products by price in ascending order. Click Run to see how the inventory is organized from the priciest to the most affordable!
+```java
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+
+
+class Product {
+    String name;
+    double price;
+
+    Product(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public double getPrice() {return this.price;}
+
+    public String toString() {
+        return name + ": $" + price;
+    }
+}
+
+class Solution {
+    public static void main(String[] args) {
+        ArrayList<Product> inventory = new ArrayList<>(
+                Arrays.asList(
+                        new Product("Milk", 2.99),
+                        new Product("Bread", 1.99),
+                        new Product("Eggs", 3.99)
+                )
+        );
+
+        // Sorting the inventory by price in ascending order using Comparator.comparing
+        inventory.sort(Comparator.comparing(Product::getPrice));
+
+        System.out.println(inventory);
+    }
+}
+```
+
 #### Practice #4
+
 #### Practice #5
 
 ## Lesson 7:
