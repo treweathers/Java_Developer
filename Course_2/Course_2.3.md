@@ -110,7 +110,7 @@ This example showcases the creation of a Stack and the utilization of the `push(
 Congratulations, you've completed the lesson on Stacks in Java! You will now proceed to the practice sessions using the concepts learned here. These hands-on practice exercises will help solidify your knowledge and improve your problem-solving skills. So, get ready to roll up your sleeves and dive right in!
 
 #### Practice #1
-n the context of managing a restaurant kitchen, you have code that simulates the operations of a stack handling dishes. The chef uses the stack to keep track of the dishes that need to be prepared. Click Run to see how the Stack class manages the addition and removal of dishes.
+In the context of managing a restaurant kitchen, you have code that simulates the operations of a stack handling dishes. The chef uses the stack to keep track of the dishes that need to be prepared. Click Run to see how the Stack class manages the addition and removal of dishes.
 ```java
 
 class Stack {
