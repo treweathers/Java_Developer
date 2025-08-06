@@ -1561,7 +1561,7 @@ Let's dive into these captivating problems!
 Our first problem presents a list of integers and the number `k`. The challenge is finding the `k`-th smallest element in that given list. To further elucidate, `k` starts from `1`, so for `k = 1`, you are seeking to find the smallest element; if `k = 2,` you're searching for the second smallest element, and so on. By the conclusion of this lesson, you'll be highly skilled at performing this task!
 
 ### 2. Problem 1: Naive Approaches
-A primary instinctive solution could involve iteratively identifying and discarding the smallest element from the list until you reach the `k`-th smallest element. While it sounds straightforward, this approach, unfortunately, incurs high time complexity due to the repetitive scans of the list to locate the smallest element. This solution has a O(n2)O(n 2) complexity.
+A primary instinctive solution could involve iteratively identifying and discarding the smallest element from the list until you reach the `k`-th smallest element. While it sounds straightforward, this approach, unfortunately, incurs high time complexity due to the repetitive scans of the list to locate the smallest element. This solution has a O(n^2) complexity.
 
 Another straightforward solution is just to sort the input array and return the `k`-th element:
 
