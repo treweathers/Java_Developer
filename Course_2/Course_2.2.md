@@ -1770,4 +1770,10 @@ class Solution {
 ```
 
 #### Practice #2
+Alright, Stellar Navigator, it's time for your next coding challenge!
+
+In our space analogy, let's say we've got a bunch of asteroids, each with distinct masses. An inversion is like two asteroids where the bigger one appears before the smaller one in space. Let's relate that to numbers: if we have two indices, i and j, with i < j and numbers[i] > numbers[j], then this pair (numbers[i], numbers[j]) is an inversion (they're flipped out of order, just like our universe!). Your mission, should you choose to accept it, is to create countInversions method that takes in numbers as input (an array of distinct integers) and returns the overall number of inversions.
+
+And remember, even in the vast universe, there's no room for duplicate asteroids, so numbers won't have any repeating elements. You'll always receive at least one element in numbers, and those integers might be negative, zero, or positive. Your method should return a single integer - the number of inversions. Now, blast off into the world of inversions, and let's see what you discover!
+
 
