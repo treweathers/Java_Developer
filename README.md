@@ -1,4 +1,4 @@
-<h1 align='center'> Course 1: Java Programming for Beginners </h1> 
+<h1 align='center'> Course 1: Java Programming for Beginners✅ </h1> 
 
 ## Course 1.1: Getting Started with Java: 8 units✅
 ## Course 1.2: Learning Simple Data Structures in Java: 5 units✅
@@ -10,9 +10,9 @@
 
 <h1 align='center'> Course 2: Mastering Algorithms and Data Structures in Java </h1> 
 
-## Course 2.1: Hashing, Dictionaries, and Sets in Java⏳
-## Course 2.2: Sorting and Searching Algorithms in Java🔜
-## Course 2.3: Advanced Data Structures - Stacks and Queues in Java🔜
+## Course 2.1: Hashing, Dictionaries, and Sets in Java✅
+## Course 2.2: Sorting and Searching Algorithms in Java✅
+## Course 2.3: Advanced Data Structures - Stacks and Queues in Java⏳
 ## Course 2.4: Fundamental Data Structures - Linked Lists in Java🔜
 
 <h1 align='center'> Course 3:  </h1> 
