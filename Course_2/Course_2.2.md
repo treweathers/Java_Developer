@@ -1775,5 +1775,58 @@ Alright, Stellar Navigator, it's time for your next coding challenge!
 In our space analogy, let's say we've got a bunch of asteroids, each with distinct masses. An inversion is like two asteroids where the bigger one appears before the smaller one in space. Let's relate that to numbers: if we have two indices, i and j, with i < j and numbers[i] > numbers[j], then this pair (numbers[i], numbers[j]) is an inversion (they're flipped out of order, just like our universe!). Your mission, should you choose to accept it, is to create countInversions method that takes in numbers as input (an array of distinct integers) and returns the overall number of inversions.
 
 And remember, even in the vast universe, there's no room for duplicate asteroids, so numbers won't have any repeating elements. You'll always receive at least one element in numbers, and those integers might be negative, zero, or positive. Your method should return a single integer - the number of inversions. Now, blast off into the world of inversions, and let's see what you discover!
+```java
+import java.util.Arrays;
 
+class Solution {
+    public static void main(String[] args) {
+        CountInversions countInversions = new CountInversions();
+        int[] numbers1 = {5, 4, 3, 2, 1};
+        System.out.println(countInversions.countInversions(numbers1).inversions); // Expected output: 10
+        int[] numbers2 = {-3, -2, -1, 0, 1};
+        System.out.println(countInversions.countInversions(numbers2).inversions); // Expected output: 0
+    }
+}
+
+class Result {
+    public int[] sorted;
+    public long inversions;
+
+    public Result(int[] sorted, long inversions) {
+        this.sorted = sorted;
+        this.inversions = inversions;
+    }
+}
+
+class CountInversions {
+    public Result countInversions(int[] arr) {
+        if (arr.length <= 1) {
+            return new Result(arr, 0);
+        }
+        int middle = arr.length / 2;
+        Result left = countInversions(Arrays.copyOfRange(arr, 0, middle));
+        Result right = countInversions(Arrays.copyOfRange(arr, middle, arr.length));
+        Result result = mergeAndCountInversions(left.sorted, right.sorted);
+        // implement this
+        return new Result(result.sorted, left.inversions + right.inversions + result.inversions);
+    }
+
+    private Result mergeAndCountInversions(int[] left, int[] right) {
+        int[] merged = new int[left.length + right.length];
+        int i = 0, j = 0;
+        long inversions = 0;
+        
+        // implement this
+        for(int k = 0; k < merged.length; k++) {
+            if (i < left.length && (j >= right.length || left[i] <= right[j])) {
+                merged[k] = left[i++];
+            } else {
+                merged[k] = right[j++];
+                inversions += left.length - i;
+            }
+        }
+        return new Result(merged, inversions);
+    }
+}
+```
 
