@@ -201,5 +201,8 @@ class Solution {
 ```
 
 #### Practice #3
+Alright, Space Voyager, I need your keen eye! The chef robot in the kitchen is designed to manage order stacks, but it's acting oddly and not accepting any new orders. Could you check the code and fix what's wrong? Good luck, and pay close attention to how stacks should properly function!
+
+
 #### Practice #4
 #### Practice #5
