@@ -75,7 +75,7 @@ class Main {
   }
 
   public static void main(String args[]) {
-    System.out.println(sumOfDigits(12345)); // Will print out 15 (1+2+3+4+5)
+    System.out.println(sumOfDigits(125)); // Will print out 15 (1+2+3+4+5)
   }
 }
 ```
@@ -96,7 +96,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println("Number of digits in 1234: " + countDigits(1234)); // Should print 4
+        System.out.println("Number of digits in 12334: " + countDigits(1234)); // Should print 4
     }
 }
 ```
@@ -1551,4 +1551,154 @@ class Solution {
     }
 }
 ```
-## Lesson 7:
+## Lesson 7: Advanced Sorting Techniques: K-th Ordinal Statistics and Counting Inversions
+### Introduction to the Lesson
+Welcome to this insightful session, where we aim to master the complexities of the illustrious applications of **sorting algorithms**. Today's voyage links two problems: **"Find the K-th Ordinal Statistic in a List" and "Count the Number of Inversions in a List"**. These problems mirror practical scenarios, and the efficient techniques used to solve them present valuable demonstrations of the application of sort algorithms. Solving these two problems, we'll see how Quick Sort and Merge Sort knowledge applies here and helps provide efficient implementations for both questions.
+
+Let's dive into these captivating problems!
+
+### 1. Problem 1: Find the K-th Ordinal Statistic in a List
+Our first problem presents a list of integers and the number `k`. The challenge is finding the `k`-th smallest element in that given list. To further elucidate, `k` starts from `1`, so for `k = 1`, you are seeking to find the smallest element; if `k = 2,` you're searching for the second smallest element, and so on. By the conclusion of this lesson, you'll be highly skilled at performing this task!
+
+### 2. Problem 1: Naive Approaches
+A primary instinctive solution could involve iteratively identifying and discarding the smallest element from the list until you reach the `k`-th smallest element. While it sounds straightforward, this approach, unfortunately, incurs high time complexity due to the repetitive scans of the list to locate the smallest element. This solution has a O(n2)O(n 2) complexity.
+
+Another straightforward solution is just to sort the input array and return the `k`-th element:
+
+```java
+Arrays.sort(inputArray);
+return inputArray[k - 1];
+```
+This approach has O(nlogn) complexity and is as simple as two lines of code. However, there are more efficient approaches than this, as there is an O(n) solution to this problem, using Quick Sort techniques we covered earlier in this course.
+
+### 3. Problem 1: Efficient Approach Explanation
+Sorting steps in here to offer an efficient solution! The Quick Sort algorithm, a splendid application of divide and conquer, can solve this problem more efficiently. By selecting the right pivot for partitioning, the input list is divided into two: a left partition, which contains elements less than the pivot, and a right partition, which includes elements greater than the pivot.
+
+If the pivot's position after elements repartition is the same as `k`, we have the `k`-th smallest element. If `k` is less than the pivot's position, the task is carried forward on the left partition; otherwise, on the right partition.
+
+### 4. Problem 1: Solution Building – Partition
+Our Java solution mirrors this efficient approach as follows. Firstly, we define the partition procedure, the same way we do it in the quick sort:
+```java
+static int partition(int[] arr, int start, int end) {
+    int pivot = arr[start];
+    int i = start;
+
+    for(int j = start + 1; j <= end; j++) {
+        if(arr[j] <= pivot) {
+            i++;
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+
+    int temp = arr[i];
+    arr[i] = arr[start];
+    arr[start] = temp;
+
+    return i;
+}
+```
+
+### 5. Problem 1: Solution Building – Main Logic
+Then, we define the `findKthSmallest` algorithm, essentially working as a quicksort, but chasing a different goal:
+```java
+import java.util.*;
+
+class Solution {
+    public static int findKthSmallest(int[] numbers, int k) {
+        if(numbers == null || numbers.length < k)
+            return Integer.MIN_VALUE;
+        return kthSmallest(numbers, 0, numbers.length - 1, k);
+    }
+
+    static int kthSmallest(int[] arr, int start, int end, int k) {
+        if (k > 0 && k <= end - start + 1) {
+            int pos = partition(arr, start, end);
+
+            if (pos - start == k - 1) {
+                return arr[pos];
+            }
+
+            if (pos - start > k - 1) {
+                return kthSmallest(arr, start, pos - 1, k);
+            }
+
+            return kthSmallest(arr, pos + 1, end, k - pos + start - 1);
+        }
+
+        return Integer.MAX_VALUE;
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {1, 7, 2, 4, 2, 1, 6};
+        System.out.println(findKthSmallest(numbers, 5));  // It should print 4
+    }
+}
+```
+After we form the partitions, we compare the pivot's position to `k`. If the positions match, our pivot is the `k`-th smallest element. If our `k` is smaller, we look at the left partition; otherwise, the right one.
+
+### 6. Problem 2: Count the Number of Inversions in a List
+Our second problem entails a list of integers; your task is to deduce the number of inversions in the list.
+
+An inversion is a pair of elements where the larger element appears before the smaller one. In other words, if we have two indices `i` and `j`, where `i < j` and the element at position `i` is greater than the element at position `j (numbers[i] > numbers[j])`, we have an inversion.
+
+For example, for `numbers = {4, 2, 1, 3}`, there are four inversions: `(4, 2)`, `(4, 1)`, `(4, 3)`, and `(2, 1)`.
+
+### 7. Problem 2: Efficient Approach Explanation
+In our quest for efficiency, the Merge Sort algorithm comes into play. At its core, Merge Sort is a divide-and-conquer-based sorting algorithm, providing an optimal efficiency of O(nlogn). However, we can cleverly modify this algorithm to count the number of inversions in the array while sorting it. This additional functionality doesn't impact the time complexity; therefore, it remains O(nlogn). So, how does this work?
+
+The process starts by dividing the array into two halves, similar to how Merge Sort operates. Then, we recursively sort both array halves and merge them back. Here comes the twist in the tale: while merging these sorted halves, we add additional counting logic to keep track of inversions.
+
+As the halves are already sorted, if an element of the right half is smaller than that of the left half, it's inverted. This is because the element from the right half should have been after 'all' the remaining elements of the left half in a sorted array. Thus, we don't just have a single inversion here, we have as many inversions as there are remaining elements in the left half.
+
+By counting these inversions at each merge and adding them up, we get the total number of inversions in the array.
+
+### 8. Problem 2: Solution Building – Supporting Class
+Here is the Java solution based on the Merge Sort algorithm. First, let's define a supportive class to store our counter for each subarray:
+
+```java
+public class Result {
+    public int[] sorted;
+    public long inversions;
+
+    public Result(int[] sorted, long inversions) {
+        this.sorted = sorted;
+        this.inversions = inversions;
+    }
+}
+```
+Then, implement the merge sort that keeps track of the amount of inversions:
+
+```java
+public Result countInversions(int[] arr) {
+    if (arr.length <= 1) {
+        return new Result(arr, 0);
+    }
+    int middle = arr.length / 2;
+    Result left = countInversions(Arrays.copyOfRange(arr, 0, middle));
+    Result right = countInversions(Arrays.copyOfRange(arr, middle, arr.length));
+    Result result = mergeAndCountInversions(left.sorted, right.sorted);
+    return new Result(result.sorted, left.inversions + right.inversions + result.inversions);
+}
+
+private Result mergeAndCountInversions(int[] left, int[] right) {
+    int[] merged = new int[left.length + right.length];
+    int i = 0, j = 0;
+    long inversions = 0;
+    for(int k = 0; k < merged.length; k++) {
+        if (i < left.length && (j >= right.length || left[i] <= right[j])) {
+            merged[k] = left[i++];
+        } else {
+            merged[k] = right[j++];
+            inversions += left.length - i;
+        }
+    }
+    return new Result(merged, inversions);
+}
+```
+While performing the merge in Merge Sort, we have added an additional counter to track inversions. If we come across an element in the right array that is smaller than an element in the left, we increment the counter by the number of items remaining in the left array. These all form inversions as per our problem's definition.
+
+### Lesson Summary
+During today's lesson, we thoroughly inspected the advanced applications of Quick Sort and Merge Sort algorithms through the dissection of two exciting problems. We went from recognizing the issues, proposing naive methods, progressing towards efficient approaches, and executing the Java solutions.
+
