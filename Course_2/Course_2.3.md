@@ -269,3 +269,8 @@ class Solution {
 ```
 
 #### Practice #5
+Great work so far! Now let's consolidate your knowledge by implementing from scratch a small Java program that simulates the stacking of plates in a restaurant kitchen. Your task is to create a stack, add plates to it, and then remove all the plates one by one, printing the whole stack after each removal.
+
+```java
+
+```
