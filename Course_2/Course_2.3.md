@@ -1,4 +1,4 @@
-h1 align='center'> Course 2: Mastering Algorithms and Data Structures in Java </h1> 
+<h1 align='center'> Course 2: Mastering Algorithms and Data Structures in Java </h1> 
 
 # Course 2.3: Advanced Data Structures - Stacks and Queues in Java
 ## Lesson 1: Stacking Up in Java: Understanding Stacks Data Structure
