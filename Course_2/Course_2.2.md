@@ -1704,3 +1704,14 @@ During today's lesson, we thoroughly inspected the advanced applications of Quic
 
 ### Practice Exercises
 You're now ready to flex those coding muscles! We have covered a substantial amount of theory and strongly advocate that real-world application solidifies the lessons learned. Be prepared for the forthcoming exercises, where you'll apply the logic imbibed in this session to similar problems. Let's get hands-on!
+
+#### Practice #1
+Alright, Space Voyager, voyage with me into another intriguing scenario: Imagine you are tuning in to the Space Olympics, and the event you're witnessing features different alien species. You're curious about the top performers. However, all you've got is a huge array of scores, and you want to figure out the k-th highest score. Each integer in this array represents an alien's score and k starts from 1. k = 1 represents the highest score and so forth.
+
+Your mission, should you choose to accept it, is to write a piece of code that gets you this k-th highest score given any set of scores. Handle different values of k and explore various arrays of scores.
+
+Your input will be an array of integers indicating scores and a number k. As for the output, the score corresponding to the k-th highest position is expected.
+
+Now go ahead and show us your cosmic intelligence, Space Voyager!
+
+#### Practice #2
