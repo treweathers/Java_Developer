@@ -1702,3 +1702,5 @@ While performing the merge in Merge Sort, we have added an additional counter to
 ### Lesson Summary
 During today's lesson, we thoroughly inspected the advanced applications of Quick Sort and Merge Sort algorithms through the dissection of two exciting problems. We went from recognizing the issues, proposing naive methods, progressing towards efficient approaches, and executing the Java solutions.
 
+### Practice Exercises
+You're now ready to flex those coding muscles! We have covered a substantial amount of theory and strongly advocate that real-world application solidifies the lessons learned. Be prepared for the forthcoming exercises, where you'll apply the logic imbibed in this session to similar problems. Let's get hands-on!
