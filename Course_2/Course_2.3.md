@@ -507,7 +507,7 @@ Envision analyzing daily temperatures over several months. You're interested in 
 You might be tempted to approach this problem with the vigor of a brute force assault — looking behind each element to find a smaller one. However, this could mean reviewing multiple times and spending unforgiving time as you consider each element repeatedly. In a vast data set, this would be akin to retracing your steps on each day's hike to find a shorter peak, an exhausting proposition!
 
 ### 4. Problem 1: Efficient Approach
-Enter the stack — our trusty Sherpa. As we progress through the array, we push peaks onto the stack. When we encounter a peak (arr[i]), we pop entries from the stack that aren't shorter than the current one. The stack's top now reveals the nearest preceding smaller peak, which we note before adding the current peak to the stack.
+Enter the stack — our trusty Sherpa. As we progress through the array, we push peaks onto the stack. When we encounter a peak `(arr[i])`, we pop entries from the stack that aren't shorter than the current one. The stack's top now reveals the nearest preceding smaller peak, which we note before adding the current peak to the stack.
 
 ### 5. Problem 1: Solution Building
 Let's lace up our boots and start the ascent by iterating through the array of peak heights and interacting with our stack.
@@ -541,7 +541,7 @@ public class PrecedingSmallerElements {
     }
 }
 ```
-In our code, we trek through each element in the array (arr). Our conditions within the loop perform the 'pop' work — discarding any peak that isn't lower than our current one, ensuring that only useful candidates remain. Then, we notate the result — either -1 if no such peak exists or the last peak remaining on the stack. Before moving on, we add our current peak to the stack.
+In our code, we trek through each element in the array `(arr)`. Our conditions within the loop perform the 'pop' work — discarding any peak that isn't lower than our current one, ensuring that only useful candidates remain. Then, we notate the result — either `-1` if no such peak exists or the last peak remaining on the stack. Before moving on, we add our current peak to the stack.
 
 ### 6. Problem 2: Stack with Minimum Trace
 Think about a real-time inventory tracking system in a warehouse where items are stacked based on the order of arrival. However, you must keep an ongoing record of the lightest item in stock for quick retrieval. This scenario highlights the need for a system that efficiently maintains a snapshot of the minimum item as stack operations proceed.
@@ -553,7 +553,7 @@ Consider tagging each item with its weight and then brute-forcing through the st
 The stroke of genius here is using not one but two stacks. The secondary stack acts as a memory, holding the minimum value attained with each element pushed to the primary stack. This way, when the current minimum leaves the stack, the next one in line is right at the top of the auxiliary stack, ready to be the new champion.
 
 ### 9. Problem 2: Solution Building
-It's time to manifest this brainchild into Java code. Here's the skeletal structure of our MinStack, waiting to be imbued with functionality:
+It's time to manifest this brainchild into Java code. Here's the skeletal structure of our `MinStack`, waiting to be imbued with functionality:
 
 ```java
 import java.util.Stack;
@@ -591,9 +591,9 @@ public class MinStack {
     }
 }
 ```
-The push method introduces the key player — our minValues stack, which retains the minimum value observed so far every time we add a new entry. Meanwhile, the pop operation is like a relay race transition, handing off the title "minimum" to the next contender when the current titleholder is knocked off the podium.
+The `push` method introduces the key player — our `minValues` stack, which retains the minimum value observed so far every time we add a new entry. Meanwhile, the `pop` operation is like a relay race transition, handing off the title "minimum" to the next contender when the current titleholder is knocked off the podium.
 
-Simulating the pushing of various elements onto the stack and invoking getMin would yield the correct minimum every time, thanks to our additional stack, minValues.
+Simulating the pushing of various elements onto the stack and invoking `getMin` would yield the correct minimum every time, thanks to our additional stack, `minValues`.
 
 ### Lesson Summary
 Our expedition through stack-land today has shown us that stacks can be the clever trick up your sleeve for certain types of interview questions. We have seen how to keep track of past element states with 'Preceding Smaller Elements' and maintain instant access to the minimum element in our 'MinStack'. From trails to inventory — stacks reveal their flexibility and efficiency. Thus, your toolbox of algorithms has just received a shiny new set of tools, bolstering your confidence for what lies ahead — practice!
