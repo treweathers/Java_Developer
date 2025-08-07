@@ -484,11 +484,11 @@ Questions I asked Cosmo:
         What do you think you should do after checking the case?
 * So I should be converting ch and not just returning it's new value?
 
-You're close! In Java, Character.toLowerCase(ch) and Character.toUpperCase(ch) return the converted character, but they don't change ch itself.
-
-So, you should push the converted value to the stack, like this:
-    
-    stack.push(Character.toLowerCase(ch));
-    or
-    stack.push(Character.toUpperCase(ch));
-    Try updating your code so you push the flipped character, not the original one!
+        You're close! In Java, Character.toLowerCase(ch) and Character.toUpperCase(ch) return the converted character, but they don't change ch itself.
+        
+        So, you should push the converted value to the stack, like this:
+            
+        stack.push(Character.toLowerCase(ch));
+        or
+        stack.push(Character.toUpperCase(ch));
+        Try updating your code so you push the flipped character, not the original one!
