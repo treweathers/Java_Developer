@@ -311,7 +311,7 @@ A stack data structure is an efficient way to solve this problem. The stack foll
 ### 4. Problem 1: Algorithm
 We create a dictionary that maps each opening bracket to its corresponding closing bracket and an empty stack. Then, we iterate over each character in the string: If a character is an opening bracket, it gets appended to the stack. If a character is a closing bracket and the top element in the stack is the corresponding opening bracket, we remove the top element from the stack.
 
-If at any point we meet a closing bracket that doesn't match the top bracket in stack, we return false.
+If at any point we meet a closing bracket that doesn't match the top bracket in stack, we return `false`.
 
 ### 5. Problem 1: Solution Building
 First, let's introduce brackets mapping and set:
@@ -352,23 +352,24 @@ Now, let's implement the solution loop:
         }
         return stack.isEmpty();
 ```
-It returns false in three cases:
+It returns `false` in three cases:
 
-If at any point we find a closing bracket and the stack of opening brackets is empty
-If at any point we find a closing bracket and the latest opening bracket doesn't match
-If at the end of the process we have any opening brackets left in the stack
-Problem 2: Reverse a String using a Stack
+1. If at any point we find a closing bracket and the stack of opening brackets is empty
+2. If at any point we find a closing bracket and the latest opening bracket doesn't match
+3. If at the end of the process we have any opening brackets left in the stack
+
+### 6. Problem 2: Reverse a String using a Stack
 Next, we will flip the script — quite literally — by reversing strings. It may seem straightforward, but it demonstrates the effective use of data structures in computation.
 
-### 6. Problem 2: Actualization
+### 7. Problem 2: Actualization
 Imagine you're tasked with building a function in which a user can input a string, and you need to display the reversed string as part of the application features. Or, as a more advanced example, in computer networks, stack buffers are often used to reverse the order of packets that arrive out of order. Understanding how to reverse the order of elements using a Stack is a crucial skill.
 
-### 7. Problem 2: Approach Explanation
+### 8. Problem 2: Approach Explanation
 Thanks to the stack's Last In First Out (LIFO) feature, it serves as an excellent tool to reverse elements' order. The strategy here is straightforward: push all the characters to a stack and then pop them out. As a result, we get the reversed string.
 
 A stack inverts addition and removal sequences, much like pressing rewind on a video. Pushing items onto a stack and later popping them off effectively turns the sequence on its head, as if by magic.
 
-### 8. Problem 2: Solution Building
+### 9. Problem 2: Solution Building
 ```java
 Stack<Character> stack = new Stack<>();
 for (char c : str.toCharArray()) {
