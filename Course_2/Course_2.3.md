@@ -813,3 +813,9 @@ Java's queue interface is versatile and can accommodate diverse data types.
 We've learned about the `Queue`, its operations, and its implementation in Java. Furthermore, these techniques are fundamental for smooth functioning in daily life. They are invaluable and versatile in various applications, from data buffering in hardware to process scheduling in operating systems.
 
 With your newfound knowledge of the `Queue` data structure, it's time to level up! Coming next are some practice problems to enhance your understanding of these concepts. Let's dive in!
+
+#### Practice #1
+#### Practice #2
+#### Practice #3
+#### Practice #4
+#### Practice #5
