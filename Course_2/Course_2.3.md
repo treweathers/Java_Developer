@@ -658,4 +658,10 @@ Questions I asked Cosmo:
         Can you spot what’s wrong with your current loop’s start and stop conditions?
 
 #### Practice #2
+Alright, Space Voyager, let's work on this fascinating puzzle. Have you ever wondered how to find the maximum value in a stack so far, without removing it, and without taking ages to do it? Well, here’s your chance!
 
+Your task is to design a new stack operation called "getMax", which swiftly returns the maximum element in the stack in constant time. Input will be the set of stack operations including "push", "pop", "top", and your new operation "getMax".
+
+Remember the edge case when the stack is empty. Output will be the maximum value that has ever been pushed into the stack. No pressure, if you get stuck, remember to revisit the lesson! Let’s dive in!
+```java
+```
