@@ -706,3 +706,109 @@ class Solution {
     }
 }
 ```
+## Lesson 4: Exploring Queues: From Concept to Java Implementation
+### Introduction to Queues
+Hello there! Today, we will unveil Queues in coding, likening them to a line in a coffee shop or a queue of print requests. Queues in computer science are First-In, First-Out (FIFO) structures. Consider this example: you're at a theme park — the first person in line for the roller coaster gets on first. Today's lesson revolves around this straightforward yet powerful concept. So, let's dive in!
+
+### 1. Implementing a Queue in Java
+Let's explore the implementation of Queues in Java. An array is ideal for implementing a Queue. Let's define the Queue:
+
+```java
+public class Queue {
+    int front, rear, size, capacity;
+    int array[];
+    public Queue(int capacity) {
+        this.capacity = capacity; // Set the max size
+        front = size = 0; // Initialize front and size
+        rear = capacity - 1; // Initialize rear
+        array = new int[this.capacity]; 
+    }
+
+    // Will return true if the Queue is full
+    boolean isFull(Queue queue) {
+        return (queue.size == queue.capacity);
+    }
+}
+```
+In the Queue class above, the isFull() method checks if our queue is already at maximum capacity.
+
+### 2. Queue Enqueue Operation
+Enqueue, a fancy term, denotes adding an item to the queue — the item lines up at the rear. Here's how it plays out in our Queue class:
+
+```java
+void enqueue(int item) {
+    if (isFull(this)) return;  // Check if the queue is full
+    this.rear = (this.rear + 1) % this.capacity; // Move rear
+    this.array[this.rear] = item; // Add item at rear position
+    this.size++; // Increment size
+}
+```
+The enqueue() method checks if our queue has enough space before adding the item.
+
+### 3. Queue Dequeue Operation
+Just as enqueue adds an element to our queue, dequeue removes it. It extracts the element at the queue's front, reducing its size. However, we encounter an underflow condition if there are no elements to remove.
+
+```java
+int dequeue() {
+    if (isEmpty(this)) // Check if the queue is empty
+        return Integer.MIN_VALUE;
+
+    int item = this.array[this.front]; // Item at front
+    this.front = (this.front + 1) % this.capacity; // Move front
+    this.size = this.size - 1; // decrement size
+    return item; // return removed item
+}
+```
+The dequeue() method checks for emptiness before dispatching the item.
+
+### 4. Complexity Analysis of Queue Operations
+The time complexity of enqueue and dequeue operations remains constant: O(1). However, the space complexity varies with the size of the queue, making it O(n).
+
+### 5. Using Java's Queue Interface
+While it is essential to understand the queue's inner structure, we won't implement it ourselves. Instead, we will use the Java's built-in queue. Think of any system that needs to handle requests in a fair, first-come-first-served order. These are all excellent candidates for using a queue. Here's how you can declare, initialize, and utilize a Queue using Java's built-in Queue interface:
+
+```java
+// Import the necessary package
+import java.util.Queue; 
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create and initialize a Queue using a LinkedList
+        Queue<Integer> queue = new LinkedList<>(); 
+  
+        // Add elements {0, 1, 2, 3, 4} to queue 
+        for (int i=0; i<5; i++) 
+         queue.add(i); 
+  
+       // Display contents of the queue. 
+       System.out.println("Elements of queue-"+queue); 
+  
+       // To remove the head of queue. 
+       int removedele = queue.remove(); 
+       System.out.println("removed element-" + removedele); 
+         
+       System.out.println(queue); 
+  
+       // To view the head of queue 
+       int head = queue.peek(); 
+       System.out.println("head of queue-" + head); 
+
+       // Rest all methods of collection interface
+       int size = queue.size(); 
+       System.out.println("Size of queue-" + size); 
+    } 
+}
+```
+In the above example, we create an instance of Queue using LinkedList. What follows includes key Queue operations:
+
+* add(): Inserts the specified element into the Queue.
+* remove(): Removes and returns the head of the Queue.
+* peek(): Retrieves, but does not remove, the head of the Queue, returning null if the queue is empty.
+* size(): Returns the number of elements in the Queue.
+Java's queue interface is versatile and can accommodate diverse data types.
+
+### In Summary: Queues
+We've learned about the Queue, its operations, and its implementation in Java. Furthermore, these techniques are fundamental for smooth functioning in daily life. They are invaluable and versatile in various applications, from data buffering in hardware to process scheduling in operating systems.
+
+With your newfound knowledge of the Queue data structure, it's time to level up! Coming next are some practice problems to enhance your understanding of these concepts. Let's dive in!
