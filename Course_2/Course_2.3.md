@@ -806,6 +806,7 @@ In the above example, we create an instance of `Queue` using `LinkedList`. What 
 * `remove()`: Removes and returns the head of the Queue.
 * `peek()`: Retrieves, but does not remove, the head of the Queue, returning null if the queue is empty.
 * `size()`: Returns the number of elements in the Queue.
+
 Java's queue interface is versatile and can accommodate diverse data types.
 
 ### In Summary: Queues
