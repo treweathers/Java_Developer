@@ -435,7 +435,39 @@ Attention, Space Voyager! You know those alien messages we receive? Let's play w
 Once finished, we'll respond with the reversed, case-flipped string! Now, unleash your linguistic skills and establish this interstellar communication!
 
 ```java
+import java.util.*;
 
+class Solution {
+    public static void main(String[] args) {
+        System.out.println(reverseAndFlipCase("Hello, World!")); // Expected Output: "!DLROw ,OLLEh"
+        System.out.println(reverseAndFlipCase("hello")); // Expected Output: "OLLEH"
+        System.out.println(reverseAndFlipCase("HELLO")); // Expected Output: "olleh"
+    }
+
+    public static String reverseAndFlipCase(String str) {
+        Stack<Character> stack = new Stack<>();
+
+        char[] charArray = str.toCharArray();
+        for (char ch : charArray) {
+            // fill the stack
+            if (Character.isUpperCase(ch)) {
+                stack.push(Character.toLowerCase(ch));
+            }
+            else if (Character.isLowerCase(ch)) {
+                stack.push(Character.toUpperCase(ch));
+            } else {
+                stack.push(ch);
+            }
+        }
+
+        StringBuilder reversed = new StringBuilder();
+        // implement this
+        while (!stack.isEmpty()) {
+            reversed.append(stack.pop());
+        }
+        return reversed.toString();
+    }
+}
 ```
 
 Questions I asked Cosmo:
