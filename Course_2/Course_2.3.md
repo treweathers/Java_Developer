@@ -862,7 +862,12 @@ class Solution {
     }
 }
 ```
+
 #### Practice #2
+Stellar Navigator, let's see if you can get our theme park queue rolling! It's your turn to control the ebb and flow. Write the code that adds a new visitor to the back of the queue and then allows the first visitor to take the ride.
+```java
+```
+
 #### Practice #3
 #### Practice #4
 #### Practice #5
