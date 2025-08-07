@@ -492,3 +492,6 @@ Questions I asked Cosmo:
         or
         stack.push(Character.toUpperCase(ch));
         Try updating your code so you push the flipped character, not the original one!
+
+## Lesson 3: Decoding Stacks for Technical Interviews: Mastering Efficient Data Management
+### 
