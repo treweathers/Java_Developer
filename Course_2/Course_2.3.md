@@ -270,7 +270,26 @@ class Solution {
 
 #### Practice #5
 Great work so far! Now let's consolidate your knowledge by implementing from scratch a small Java program that simulates the stacking of plates in a restaurant kitchen. Your task is to create a stack, add plates to it, and then remove all the plates one by one, printing the whole stack after each removal.
-
 ```java
+import java.util.Stack;
 
+class Solution {
+    public static void main(String[] args) {
+        // TODO: Create a Stack object to simulate a stack of plates
+        Stack<Integer> stack = new Stack<>();
+        // TODO: Add three plates to the stack (numbered 1, 2, 3)
+        stack.add(1);
+        stack.add(2);
+        stack.add(3);
+        // TODO: Remove all the plates from the stack. Print initial stack state and its state after each removal
+        System.out.println(stack);
+        System.out.println(stack.pop());
+        System.out.println(stack);
+        System.out.println(stack.pop());
+        System.out.println(stack);
+        System.out.println(stack.pop());
+        System.out.println(stack);
+    }
+}
 ```
+## Lesson 2: 
