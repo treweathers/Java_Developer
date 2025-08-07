@@ -437,3 +437,10 @@ Once finished, we'll respond with the reversed, case-flipped string! Now, unleas
 ```java
 
 ```
+
+Questions I asked Cosmo:
+* By "every letter's case is reversed", do you mean uppercase to lowercase and vise versa?
+
+        Exactly! For each letter, if it's uppercase, make it lowercase; if it's lowercase, make it uppercase. Non-letter characters stay the same. Can you update your code to handle that before pushing to the stack?
+
+
