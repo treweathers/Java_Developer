@@ -389,3 +389,51 @@ Today, you've tackled two classic problems using the stack, demonstrating its pr
 Well done on completing this lesson! The understanding you've gained is crucial for solving problems where the order of operations is paramount. Now, you're better prepared for real-world scenarios where data needs to be processed in reverse or verified for correctness.
 
 Equipped with a deeper understanding of the stack's operations, you can confidently approach the exercises ahead. Happy coding!
+
+##### Practice #1
+Hey there, Galactic Pioneer! Let's embark on a new mission - a string of parentheses ( and ), needs your decoding skills. Your job will be to create a function areParenthesesBalanced that takes a string as an input and returns a boolean value where True represents that each parenthesis appropriately finds its pair and they are perfectly nested, whereas False implies a glitch in this alignment. Take for instance, (()) is balanced, but ())( is not. Recollect the teleportation rules of the universe and watch out for edge cases like an empty string or a string with just one parenthesis. Stay sharp, Pioneer!
+```java
+import java.util.*;
+import java.util.Stack;
+
+class Solution {
+    public static void main(String[] args) {
+        System.out.println(areParenthesesBalanced("(())()"));  // prints: true
+        System.out.println(areParenthesesBalanced("())("));  // prints: false
+        System.out.println(areParenthesesBalanced("("));  // prints: false
+    }
+
+    public static boolean areParenthesesBalanced(String inputStr) {
+        // implement the solution
+        HashMap<Character, Character> parenthesesMap = new HashMap<>();
+        parenthesesMap.put('(', ')');
+        
+        Set<Character> openPar = new HashSet<>();
+        openPar.add('(');
+        
+        Stack <Character> stack = new Stack<>();
+        
+        for (int i = 0; i < inputStr.length(); i++) {
+            char character = inputStr.charAt(i);
+            if (openPar.contains(character)) {
+                stack.push(character);
+            } else if (!stack.isEmpty() && character == parenthesesMap.get(stack.peek())) {
+                stack.pop();
+            } else {
+                return false;
+            } 
+        }
+        return stack.isEmpty();
+    }
+}
+```
+###### feedback: didn't include Stack declaration in example^⚠️
+
+#### Practice #2
+Attention, Space Voyager! You know those alien messages we receive? Let's play with them! Picture every letter's case is reversed, then the whole message is flipped like in a cosmic stack! Your mission is to code this stack.
+
+Once finished, we'll respond with the reversed, case-flipped string! Now, unleash your linguistic skills and establish this interstellar communication!
+
+```java
+
+```
