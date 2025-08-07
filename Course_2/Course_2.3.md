@@ -430,9 +430,7 @@ class Solution {
 ###### feedback: didn't include Stack declaration in example^⚠️
 
 #### Practice #2
-Attention, Space Voyager! You know those alien messages we receive? Let's play with them! Picture every letter's case is reversed, then the whole message is flipped like in a cosmic stack! Your mission is to code this stack.
-
-Once finished, we'll respond with the reversed, case-flipped string! Now, unleash your linguistic skills and establish this interstellar communication!
+Attention, Space Voyager! You know those alien messages we receive? Let's play with them! Picture every letter's case is reversed, then the whole message is flipped like in a cosmic stack! Your mission is to code this stack. Once finished, we'll respond with the reversed, case-flipped string! Now, unleash your linguistic skills and establish this interstellar communication!
 
 ```java
 import java.util.*;
@@ -599,11 +597,7 @@ Simulating the pushing of various elements onto the stack and invoking `getMin` 
 Our expedition through stack-land today has shown us that stacks can be the clever trick up your sleeve for certain types of interview questions. We have seen how to keep track of past element states with 'Preceding Smaller Elements' and maintain instant access to the minimum element in our 'MinStack'. From trails to inventory — stacks reveal their flexibility and efficiency. Thus, your toolbox of algorithms has just received a shiny new set of tools, bolstering your confidence for what lies ahead — practice!
 
 #### Practice #1
-Hello there, Stellar Navigator! Ready for another space adventure? This time, we're navigating through an array of intergalactic integers. Your mission, should you choose to accept it, is to locate the next smallest number for each number in this array. If no smaller number exists in the subsequent elements, flag that number with -1.
-
-Remember, you're only going to be looking at the numbers that FOLLOW the current number in the array. We're not looking back; we're Space Explorers, we only move forward!
-
-Remember to stay curious, bold, and respectful as you journey through the stars ...or in this case, arrays!
+Hello there, Stellar Navigator! Ready for another space adventure? This time, we're navigating through an array of intergalactic integers. Your mission, should you choose to accept it, is to locate the next smallest number for each number in this array. If no smaller number exists in the subsequent elements, flag that number with -1. Remember, you're only going to be looking at the numbers that FOLLOW the current number in the array. We're not looking back; we're Space Explorers, we only move forward! Remember to stay curious, bold, and respectful as you journey through the stars ...or in this case, arrays!
 ```java
 import java.util.Stack;
 
@@ -658,10 +652,57 @@ Questions I asked Cosmo:
         Can you spot what’s wrong with your current loop’s start and stop conditions?
 
 #### Practice #2
-Alright, Space Voyager, let's work on this fascinating puzzle. Have you ever wondered how to find the maximum value in a stack so far, without removing it, and without taking ages to do it? Well, here’s your chance!
-
-Your task is to design a new stack operation called "getMax", which swiftly returns the maximum element in the stack in constant time. Input will be the set of stack operations including "push", "pop", "top", and your new operation "getMax".
-
-Remember the edge case when the stack is empty. Output will be the maximum value that has ever been pushed into the stack. No pressure, if you get stuck, remember to revisit the lesson! Let’s dive in!
+Alright, Space Voyager, let's work on this fascinating puzzle. Have you ever wondered how to find the maximum value in a stack so far, without removing it, and without taking ages to do it? Well, here’s your chance! Your task is to design a new stack operation called "getMax", which swiftly returns the maximum element in the stack in constant time. Input will be the set of stack operations including "push", "pop", "top", and your new operation "getMax". Remember the edge case when the stack is empty. Output will be the maximum value that has ever been pushed into the stack. No pressure, if you get stuck, remember to revisit the lesson! Let’s dive in!
 ```java
+import java.util.Stack;
+
+class MaxStack {
+    private Stack<Integer> stack = new Stack<>();
+    private Stack<Integer> maxValues = new Stack<>();
+
+    public void push(int x) {
+        // implement this
+        if (maxValues.isEmpty() || x >= maxValues.peek()) {
+            maxValues.push(x);
+        }
+        stack.push(x);
+    }
+    
+    public void pop() {
+        // implement this
+        if(!stack.empty() && stack.peek().equals(maxValues.peek())) {
+            maxValues.pop();
+        }
+        if(!stack.isEmpty()) {
+            stack.pop();
+        }
+    }
+    
+    public int top() {
+        return stack.isEmpty() ? -1 : stack.peek();
+    }
+    
+    public int getMax() {
+        // implement this
+        return stack.isEmpty() ? -1 : maxValues.peek();
+    }
+}
+
+class Solution {
+    public static void main(String[] args) {
+        MaxStack maxStack = new MaxStack();
+        maxStack.push(-2);
+        maxStack.push(0);
+        maxStack.push(-3);
+        System.out.println(maxStack.getMax());  // Expected Output: 0
+        maxStack.pop();
+        System.out.println(maxStack.top());    // Expected Output: 0
+        System.out.println(maxStack.getMax());  // Expected Output: 0
+
+        maxStack.push(10);
+        System.out.println(maxStack.getMax());  // Expected Output: 10
+        maxStack.push(-1);
+        System.out.println(maxStack.getMax());  // Expected Output: 10
+    }
+}
 ```
