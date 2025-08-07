@@ -597,3 +597,14 @@ Simulating the pushing of various elements onto the stack and invoking `getMin` 
 
 ### Lesson Summary
 Our expedition through stack-land today has shown us that stacks can be the clever trick up your sleeve for certain types of interview questions. We have seen how to keep track of past element states with 'Preceding Smaller Elements' and maintain instant access to the minimum element in our 'MinStack'. From trails to inventory — stacks reveal their flexibility and efficiency. Thus, your toolbox of algorithms has just received a shiny new set of tools, bolstering your confidence for what lies ahead — practice!
+
+#### Practice #1
+Hello there, Stellar Navigator! Ready for another space adventure? This time, we're navigating through an array of intergalactic integers. Your mission, should you choose to accept it, is to locate the next smallest number for each number in this array. If no smaller number exists in the subsequent elements, flag that number with -1.
+
+Remember, you're only going to be looking at the numbers that FOLLOW the current number in the array. We're not looking back; we're Space Explorers, we only move forward!
+
+Remember to stay curious, bold, and respectful as you journey through the stars ...or in this case, arrays!
+```java
+
+```
+#### Practice #2
