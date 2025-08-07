@@ -411,7 +411,7 @@ class Solution {
         Set<Character> openPar = new HashSet<>();
         openPar.add('(');
         
-        Stack <Character> stack = new Stack<>();
+        Stack<Character> stack = new Stack<>();
         
         for (int i = 0; i < inputStr.length(); i++) {
             char character = inputStr.charAt(i);
