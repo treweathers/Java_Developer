@@ -1130,5 +1130,50 @@ After mastering these techniques and understanding the rationale for using queue
 
 ### Practice Exercises
 It's time to put these theories into practice. Your next challenge awaits with hands-on exercises where you'll apply our freshly-acquired queue knowledge. These exercises will be both a test and an opportunity to perfect the art of manipulating queues to solve algorithmic puzzles. Are you ready? Let the coding begin!
+```java
+import java.util.*;
+
+class Solution {
+    public static Queue<Integer> everyAlter(Queue<Integer> queue) {
+        Queue<Integer> newQueue = new LinkedList<>();
+        Queue<Integer> newestQueue = new LinkedList<>();
+        int i = 0;
+
+        // TODO: fill in new queue
+        while (!queue.isEmpty()) {
+            if (i % 2 == 0) {
+                newQueue.add((queue.remove()));
+            } else {
+                newestQueue.add(queue.remove());
+            }
+            i++;
+        }
+        return newQueue;
+    }
+
+    public static void main(String[] args) {
+
+        // test case 1
+        Queue<Integer> queue1 = new LinkedList<>();
+        queue1.addAll(Arrays.asList(1, 2, 3, 4, 5, 6));
+        queue1 = everyAlter(queue1);
+        System.out.println(queue1); // Expected Output: [1, 3, 5]
+
+        // test case 2
+        Queue<Integer> queue2 = new LinkedList<>();
+        queue2.addAll(Arrays.asList(1, 2));
+        queue2 = everyAlter(queue2);
+        System.out.println(queue2); // Expected Output: [1]
+
+        // test case 3
+        Queue<Integer> queue3 = new LinkedList<>();
+        queue3.addAll(Arrays.asList(1, 2, 3, 4, 5, 6, 7));
+        queue3 = everyAlter(queue3);
+        System.out.println(queue3); // Expected Output: [1, 3, 5, 7]
+    }
+}
+```
+###### feedback: Seems as though the practices are designed to become increasingly more like technical interviews which would be useful if the lessons were in-depth enough to prepare for that. Instead we get broad overviews with very basic examples. These practices are not useful for the depth and speed of the material.
+###### note: it is a personal preference to get through the materials and practice at the conclusion of the COURSE to prepare for the assesment. These practices would be more useful as additional examples in the lessons.
 
 
