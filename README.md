@@ -1,6 +1,5 @@
 <h1 align='center'> Java Developer Certificate </h1> 
-<h2 align='center'> Course 1: Java Programming for Beginners✅ 550/600 </h2> 
-<br>
+<h2 align='center'> Course 1: Java Programming for Beginners✅ 550/600 </h2>
 
 ### Course 1.1: Getting Started with Java: 8 units✅
 ### Course 1.2: Learning Simple Data Structures in Java: 5 units✅
