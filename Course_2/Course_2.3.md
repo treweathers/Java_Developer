@@ -1003,4 +1003,127 @@ class Solution {
 ```
 
 ## Lesson 5: Interleaving Queues and Calculating Moving Averages: Algorithmic Acumen with Java
-### 
+### Introduction to the Lesson
+Welcome back! As we progress through our course on Advanced Data Structures - Stacks and Queues in Java, we focus on leveraging queues to crack algorithmic challenges often encountered in technical interviews. With their orderly structure, Queues are excellent for representing sequential processes and managing streaming data. In this lesson, we'll explore two problems highlighting complex queue manipulations. Let's get started and decode these intriguing interview problems, ensuring that the concepts are thoroughly understood with added examples and detailed explanations.
+
+### 1. Problem 1: Queue Interleaving
+Let's begin with the concept of queue interleaving. Imagine you're orchestrating a dance sequence where dancers from two groups must perform in an alternating pattern. In a similar vein, our first computational task relates to a list of elements that we want to rearrange, ensuring that if we start with an order like a1a 1 , a2a 2 , ..., an/2a n/2 , b1b 1 , b2b 2 , ..., bn/2b n/2 , we end up with a sequence a1a 1 , b1b 1 , a2a 2 , b2b 2 , ..., an/2a n/2 , bn/2b n/2. This organization method mirrors real-life situations, such as merging traffic from two lanes onto a single-lane road, ensuring each car takes its turn from each lane.
+
+### 2. Efficient Approach to Solving the Problem
+We will use two auxiliary queues, akin to having two sub-lines in the dance sequence or two lanes on the road, to hold the divided sections of the original queue. We maintain a clean and memory-efficient interleaving without needing extra arrays by systematically dequeuing elements from these and enqueuing them back into the original queue.
+
+### 3. Solution Building
+First, consider a queue constructed of dancers (or elements). We want to divide this queue into two groups, with the first half entering the firstHalf queue and the second half into the secondHalf queue. This way, we can alternately choose a dancer from each group and form a new, interleaved queue.
+
+Let's construct our division:
+
+```java
+Queue<Integer> firstHalf = new LinkedList<>();
+Queue<Integer> secondHalf = new LinkedList<>();
+
+while (queue.size() > n / 2) {
+    firstHalf.add(queue.remove());
+}
+
+while (!queue.isEmpty()) {
+    secondHalf.add(queue.remove());
+}
+```
+By iterating over the original queue, we distribute the elements into two separate queues, simulating the splitting of dancers into two groups. With the first group ready, we proceed to the second, ensuring a balanced division.
+
+With both groups lined up, we alternately take a member from each group, thus combining them into the interwoven order:
+
+```java
+while (!firstHalf.isEmpty() || !secondHalf.isEmpty()) {
+    if (!firstHalf.isEmpty()) {
+        queue.add(firstHalf.remove());
+    }
+    if (!secondHalf.isEmpty()) {
+        queue.add(secondHalf.remove());
+    }
+}
+```
+Imagine this as a dance coordinator calling out to each group in turn, forming a new sequence. This approach ensures no auxiliary arrays are needed, thus elegantly solving the problem using only the queues.
+
+### 4. Problem 2: Moving Average for Data Stream
+Now, let's shift our attention to the second problem: computing a moving average from a data stream. This problem finds its way into technical interviews and requires real-time decision-making, like a trader monitoring livestock prices for quick buying or selling decisions. Our task is to calculate the average of the last k items in a stream of data, a critical operation for trend analysis in data analytics.
+
+### 5. Problem 2: Real-life Scenario
+Consider a fitness tracking app that updates a user's average heart rate over the last 10 minutes. The app computes the average heart rate readings to showcase the most recent state of health, updating this information with each new reading received.
+
+### 6. Problem 2: Naive Approach
+A naive method would involve storing all the data points and recalculating the average each time a new element arrives. However, this approach could be more suitable and efficient for a large dataset or an infinite stream. The computational overhead can become overwhelming as more data is processed.
+
+### 7. Problem 2: Efficient Approach to Solving the Problem
+A queue presents an efficient solution. Maintaining a sliding window of the most recent k elements mimics our fitness app's ongoing cycle of heart rate readings, where fresh readings replace old data.
+
+### 8. Problem 2: Solution Building
+Imagine creating a class MovingAverage that emulates our fitness tracking app's backend, tasked with dynamically providing the average of the last k heart rate readings:
+
+```java
+private int size;
+private Queue<Integer> window;
+private double sum;
+
+public MovingAverage(int size) {
+    this.size = size;
+    this.window = new LinkedList<>();
+    sum = 0.0;
+}
+
+public double next(int val) {
+    if (window.size() == size) {
+        sum -= window.remove();
+    }
+    
+    window.add(val);
+    sum += val;
+    return sum / window.size();
+}
+```
+In the next method, once the window reaches its maximum capacity (comparable to reaching the 10-minute mark in our app), we discard the oldest reading before adding the new one. We add the new value to our sum and then calculate the average by dividing the sum by the current window's size — much like updating the app display with the latest heart rate average.
+
+### 9. Problem 2: Complete Code
+Here is the complete code for you to test, envisioning live data streaming in and out, with the heartbeat average being updated after each new entry:
+
+```java
+import java.util.LinkedList;
+import java.util.Queue;
+
+class MovingAverage {
+    private int size;
+    private Queue<Integer> window;
+    private double sum;
+
+    public MovingAverage(int size) {
+        this.size = size;
+        this.window = new LinkedList<>();
+        sum = 0.0;
+    }
+
+    public double next(int val) {
+        if (window.size() == size) {
+            sum -= window.remove();
+        }
+        window.add(val);
+        sum += val;
+        return sum / window.size();
+    }
+}
+
+class Solution {
+    public static void main(String[] args) {
+        MovingAverage m = new MovingAverage(3);
+        System.out.println(m.next(1)); // returns 1.0 (like a single heart rate reading)
+        System.out.println(m.next(10)); // returns 5.5 (the average after a short burst of activity)
+        System.out.println(m.next(3)); // returns 4.66667 (normalizing after the burst)
+        System.out.println(m.next(5)); // returns 6.0 (the most recent average, taking into account the last three readings)
+    }
+}
+```
+Try adding this code into a Java IDE, running it, and visualizing how the moving average changes dynamically, similar to our app's heart rate tracker.
+
+### Lesson Summary
+Throughout this lesson, we've unlocked the potential of queues to streamline complex data manipulations, whether it’s mixing up queues for interleaving or keeping tabs on streaming data using a sliding window for moving averages. Both sets of problems allowed us to demonstrate how queues minimize redundancy and maximize efficiency—two highly prized qualities in technical interviews.
+
+After mastering these techniques and understanding the rationale for using queues, you've added robust tactics to your coding repertoire, setting you up for success in practical scenarios. The use of real-life analogies, such as dance sequences and fitness apps, helps make these abstract concepts more tangible.
