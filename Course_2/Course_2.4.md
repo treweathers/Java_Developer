@@ -471,7 +471,7 @@ Questions I asked Cosmo:
   ```
       But this just assigns the parameter to itself.
       How can you refer to the instance variable inside the constructor? (Hint: Try using this!)
-  ```
+  
 
 ## Lesson 2: Reversing and Measuring: Mastering Linked List Operations in Java
 ### Introduction to the Lesson
