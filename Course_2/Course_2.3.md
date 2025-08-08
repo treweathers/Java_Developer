@@ -1222,9 +1222,8 @@ Questions I asked Cosmo:
         Increment your index.
         Try updating your loop to process elements from the original queue instead of newQueue. What do you think will happen?
 
-###### feedback: Combnining things we've learned previously with what is new is good, BUT requiring knowledge of things we did not cover is bad.  Also, misleading comments are bad because there is likely more code that needs to be written outside of that designated area.
+###### feedback: Combnining things we've learned previously with what is new is good, BUT requiring knowledge of things we did not cover is bad.  Also, misleading comments are bad because there is likely more code that needs to be written outside of that designated area.  It sems as though the practices are designed to become increasingly more like technical interviews which would be useful if the lessons were in-depth enough to prepare for that. Instead we get broad overviews with very basic examples. These practices are not useful for the depth and speed of the material. It would be more effective and still challenging (in a useful way), if we covered everything in the lessons, and then were presented with practices where we are asked to utilized what we learned but in a different real-world scenario, to get us to think about how to build these solutions from the ground up. There is a lack of balance. Either it requirres the same exact code as our examples, or it requires something we did not cover (or gives confusing instructions including in the comments).
 
-Seems as though the practices are designed to become increasingly more like technical interviews which would be useful if the lessons were in-depth enough to prepare for that. Instead we get broad overviews with very basic examples. These practices are not useful for the depth and speed of the material.
 ###### note: it is a personal preference to get through the materials and practice at the conclusion of the COURSE to prepare for the assesment. These practices would be more useful as additional examples in the lessons.
 
 #### Practice #2
