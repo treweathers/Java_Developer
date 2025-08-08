@@ -1004,16 +1004,16 @@ class Solution {
 
 ## Lesson 5: Interleaving Queues and Calculating Moving Averages: Algorithmic Acumen with Java
 ### Introduction to the Lesson
-Welcome back! As we progress through our course on Advanced Data Structures - Stacks and Queues in Java, we focus on leveraging queues to crack algorithmic challenges often encountered in technical interviews. With their orderly structure, Queues are excellent for representing sequential processes and managing streaming data. In this lesson, we'll explore two problems highlighting complex queue manipulations. Let's get started and decode these intriguing interview problems, ensuring that the concepts are thoroughly understood with added examples and detailed explanations.
+Welcome back! As we progress through our course on **Advanced Data Structures - Stacks and Queues in Java**, we focus on leveraging queues to crack algorithmic challenges often encountered in technical interviews. With their orderly structure, Queues are excellent for representing sequential processes and managing streaming data. In this lesson, we'll explore two problems highlighting complex queue manipulations. Let's get started and decode these intriguing interview problems, ensuring that the concepts are thoroughly understood with added examples and detailed explanations.
 
 ### 1. Problem 1: Queue Interleaving
-Let's begin with the concept of queue interleaving. Imagine you're orchestrating a dance sequence where dancers from two groups must perform in an alternating pattern. In a similar vein, our first computational task relates to a list of elements that we want to rearrange, ensuring that if we start with an order like a1a 1 , a2a 2 , ..., an/2a n/2 , b1b 1 , b2b 2 , ..., bn/2b n/2 , we end up with a sequence a1a 1 , b1b 1 , a2a 2 , b2b 2 , ..., an/2a n/2 , bn/2b n/2. This organization method mirrors real-life situations, such as merging traffic from two lanes onto a single-lane road, ensuring each car takes its turn from each lane.
+Let's begin with the concept of queue interleaving. Imagine you're orchestrating a dance sequence where dancers from two groups must perform in an alternating pattern. In a similar vein, our first computational task relates to a list of elements that we want to rearrange, ensuring that if we start with an order like a1, a2,..., an/2, b1, b2, ..., bn/2, we end up with a sequence a1, b1, a2, b2, ..., an/2, bn/2. This organization method mirrors real-life situations, such as merging traffic from two lanes onto a single-lane road, ensuring each car takes its turn from each lane.
 
 ### 2. Efficient Approach to Solving the Problem
 We will use two auxiliary queues, akin to having two sub-lines in the dance sequence or two lanes on the road, to hold the divided sections of the original queue. We maintain a clean and memory-efficient interleaving without needing extra arrays by systematically dequeuing elements from these and enqueuing them back into the original queue.
 
 ### 3. Solution Building
-First, consider a queue constructed of dancers (or elements). We want to divide this queue into two groups, with the first half entering the firstHalf queue and the second half into the secondHalf queue. This way, we can alternately choose a dancer from each group and form a new, interleaved queue.
+First, consider a queue constructed of dancers (or elements). We want to divide this queue into two groups, with the first half entering the `firstHalf` queue and the second half into the `secondHalf` queue. This way, we can alternately choose a dancer from each group and form a new, interleaved queue.
 
 Let's construct our division:
 
@@ -1055,10 +1055,10 @@ Consider a fitness tracking app that updates a user's average heart rate over th
 A naive method would involve storing all the data points and recalculating the average each time a new element arrives. However, this approach could be more suitable and efficient for a large dataset or an infinite stream. The computational overhead can become overwhelming as more data is processed.
 
 ### 7. Problem 2: Efficient Approach to Solving the Problem
-A queue presents an efficient solution. Maintaining a sliding window of the most recent k elements mimics our fitness app's ongoing cycle of heart rate readings, where fresh readings replace old data.
+A queue presents an efficient solution. Maintaining a sliding window of the most recent `k` elements mimics our fitness app's ongoing cycle of heart rate readings, where fresh readings replace old data.
 
 ### 8. Problem 2: Solution Building
-Imagine creating a class MovingAverage that emulates our fitness tracking app's backend, tasked with dynamically providing the average of the last k heart rate readings:
+Imagine creating a class `MovingAverage` that emulates our fitness tracking app's backend, tasked with dynamically providing the average of the last `k` heart rate readings:
 
 ```java
 private int size;
@@ -1081,7 +1081,7 @@ public double next(int val) {
     return sum / window.size();
 }
 ```
-In the next method, once the window reaches its maximum capacity (comparable to reaching the 10-minute mark in our app), we discard the oldest reading before adding the new one. We add the new value to our sum and then calculate the average by dividing the sum by the current window's size — much like updating the app display with the latest heart rate average.
+In the `next` method, once the window reaches its maximum capacity (comparable to reaching the 10-minute mark in our app), we discard the oldest reading before adding the new one. We add the new value to our sum and then calculate the average by dividing the sum by the current window's size — much like updating the app display with the latest heart rate average.
 
 ### 9. Problem 2: Complete Code
 Here is the complete code for you to test, envisioning live data streaming in and out, with the heartbeat average being updated after each new entry:
