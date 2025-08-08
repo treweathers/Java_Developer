@@ -1127,3 +1127,8 @@ Try adding this code into a Java IDE, running it, and visualizing how the moving
 Throughout this lesson, we've unlocked the potential of queues to streamline complex data manipulations, whether it’s mixing up queues for interleaving or keeping tabs on streaming data using a sliding window for moving averages. Both sets of problems allowed us to demonstrate how queues minimize redundancy and maximize efficiency—two highly prized qualities in technical interviews.
 
 After mastering these techniques and understanding the rationale for using queues, you've added robust tactics to your coding repertoire, setting you up for success in practical scenarios. The use of real-life analogies, such as dance sequences and fitness apps, helps make these abstract concepts more tangible.
+
+### Practice Exercises
+It's time to put these theories into practice. Your next challenge awaits with hands-on exercises where you'll apply our freshly-acquired queue knowledge. These exercises will be both a test and an opportunity to perfect the art of manipulating queues to solve algorithmic puzzles. Are you ready? Let the coding begin!
+
+
