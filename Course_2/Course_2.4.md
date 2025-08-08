@@ -246,5 +246,15 @@ class Solution {
 }
 ```
 #### Practice #3
+Great progress, Stellar Navigator! Now, use your skills to help our railway network grow. Write the code to create a new station node, and then find the last station in our list to connect it to the new one.
+```java
+
+```
 #### Practice #4
+```java
+
+```
 #### Practice #5
+```java
+
+```
