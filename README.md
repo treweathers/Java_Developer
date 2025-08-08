@@ -1,5 +1,6 @@
 <h1 align='center'> Java Developer Certificate </h1> 
 <h2 align='center'> Course 1: Java Programming for Beginners✅ 550/600 </h2> 
+<br>
 
 ### Course 1.1: Getting Started with Java: 8 units✅
 ### Course 1.2: Learning Simple Data Structures in Java: 5 units✅
@@ -9,6 +10,7 @@
 ### Course 1.6: Writing Functions using Java: 5 units✅
 ### Course 1.7: Object-Oriented Programming in Java: 6 units✅
 
+<br>
 <h2 align='center'> Course 2: Mastering Algorithms and Data Structures in Java </h2> 
 
 ### Course 2.1: Hashing, Dictionaries, and Sets in Java✅
