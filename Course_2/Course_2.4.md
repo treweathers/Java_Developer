@@ -549,8 +549,90 @@ Today, we practiced critical operations on linked lists, namely reversing a list
 #### Practice #1
 Stellar Navigator, here's your mission: construct a function that navigates a given singly linked list from end to start, retrieving and printing the last n data points. We assure that n won't exceed the linked list's length. Ace this space chase using your coding toolkit, and be prepared for unexpected challenges on this celestial journey!
 ```java
+import java.util.Stack;
+import java.util.ArrayList;
 
+class LinkedList {
+    static class ListNode {
+        int value;
+        ListNode next;
+
+        ListNode(int value) {
+            this.value = value;
+            next = null;
+        }
+    }
+
+    ListNode head;
+
+    public void append(int value) {
+        if (head == null) {
+            head = new ListNode(value);
+        } else {
+            ListNode current = head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = new ListNode(value);
+        }
+    }
+}
+
+class Solution {
+    public static void lastNElements(LinkedList.ListNode head, int n) {
+        // implement this
+        Stack<Integer> stack = new Stack<>();
+        LinkedList.ListNode current = head;
+        while (current != null)  {
+            stack.push(current.value);
+            current = current.next;
+        }
+       for (int i = 0; i < n; n--) {
+            System.out.println(stack.pop());
+        }
+    }
+
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+        list.append(1);
+        list.append(2);
+        list.append(3);
+        list.append(4);
+        list.append(5);
+
+        lastNElements(list.head, 3);
+
+        // prints: 5 4 3
+    }
+}
 ```
+Questions I asked Cosmo:
+* Explain the difference between the examples in the lesson and this problem.
+
+        Great question! Here’s the key difference:
+        
+        Lesson Example: You printed all elements of the linked list in reverse order.
+        This Problem: You only need to print the last n elements in reverse order (not the whole list).
+        So, you’ll need to adjust your logic to print just the last n values, not everything. How might you change your code to do that?
+
+
+* So the rest of the coding logic is exactly the same?
+
+        Almost! Your logic currently prints all elements in reverse, just like the lesson. But this practice only wants the last n elements in reverse order.
+        
+        What could you change so you only print n values from the stack, instead of all of them?
+
+
+* Adjust the while loops in the lastElements function
+
+        Nice effort so far!
+        
+        Now, for the while loops:
+        
+        Your first loop (pushing values onto the stack) is good.
+        The second loop currently pops and prints all elements.
+        But you only want to print the last n elements.
+        How could you change the second loop so it only runs n times? (Hint: Maybe a for loop with n iterations?)
 
 #### Practice #2
 
