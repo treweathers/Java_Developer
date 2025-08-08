@@ -467,7 +467,7 @@ Questions I asked Cosmo:
         Right now, you have:
 
   ```java
-          stationName = stationName;
-          But this just assigns the parameter to itself.
-          How can you refer to the instance variable inside the constructor? (Hint: Try using this!)
+      stationName = stationName;
+      But this just assigns the parameter to itself.
+      How can you refer to the instance variable inside the constructor? (Hint: Try using this!)
   ```
