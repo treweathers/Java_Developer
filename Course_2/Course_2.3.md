@@ -1001,3 +1001,6 @@ class Solution {
     }
 }
 ```
+
+## Lesson 5: Interleaving Queues and Calculating Moving Averages: Algorithmic Acumen with Java
+### 
