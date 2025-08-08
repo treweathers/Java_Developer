@@ -18,6 +18,7 @@
 ### Course 2.4: Fundamental Data Structures - Linked Lists in Java⏳
 
 <h2 align='center'> 🔜 Course 3:  </h2> 
+<br>
 
 ### Course 3.1:
 
