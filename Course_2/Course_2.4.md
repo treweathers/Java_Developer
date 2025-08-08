@@ -451,12 +451,12 @@ Questions I asked Cosmo:
 
         Nice progress! The main issue is in your Node constructor:
         
-        Java
-        Copy to clipboard
-        Node(int d, String stationName) {
-            data = d;
-            next = null;
-        }
+```java
+Node(int d, String stationName) {
+    data = d;
+    next = null;
+}
+```
         You never assign the stationName parameter to the stationName field, so it stays null.
         What line should you add to store the name in each node?
 
