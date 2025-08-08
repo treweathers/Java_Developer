@@ -196,6 +196,8 @@ class Solution {
 🚄
 
 #### Practice #2
+The train route is expanding! Let's create a code that adds the new station to the beginning of our train route. Follow the scenario to implement the missing part.
+
 
 #### Practice #3
 #### Practice #4
