@@ -16,7 +16,7 @@
 ### Course 2.3: Advanced Data Structures - Stacks and Queues in Java✅
 ### Course 2.4: Fundamental Data Structures - Linked Lists in Java⏳
 
-<h1 align='center'> Course 3:  </h1> 🔜
+<h2 align='center'> 🔜 Course 3:  </h2> 
 
 ## Course 3.1:
 
