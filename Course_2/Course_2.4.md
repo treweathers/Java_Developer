@@ -546,5 +546,13 @@ In this code, we initialize an integer `length` to zero, which will serve as our
 ### Lesson Summary
 Today, we practiced critical operations on linked lists, namely reversing a list's traversal and calculating its length. Both solutions involved traversing the linked list but with different goals in mind. We efficiently solved these problems using structurally simple yet powerful techniques in **Java**. We will transition to a series of exercises designed to reinforce your understanding of linked lists and prepare you for tackling similar problems in real-world scenarios or technical interviews.
 
+#### Practice #1
+Stellar Navigator, here's your mission: construct a function that navigates a given singly linked list from end to start, retrieving and printing the last n data points. We assure that n won't exceed the linked list's length. Ace this space chase using your coding toolkit, and be prepared for unexpected challenges on this celestial journey!
+```java
+
+```
+
+#### Practice #2
+
 ## Lesson 3
 ## Lesson 4
