@@ -248,9 +248,59 @@ class Solution {
 #### Practice #3
 Great progress, Stellar Navigator! Now, use your skills to help our railway network grow. Write the code to create a new station node, and then find the last station in our list to connect it to the new one.
 ```java
+class Node {
+    int data;
+    Node next;
 
+    Node(int d) {
+        data = d;
+        next = null;
+    }
+}
+
+class RailwayNetwork {
+    Node head;
+
+    // Method to add a new station to the network
+    void addStation(int stationData) {
+        Node newStation = new Node(stationData);
+        // TODO: check if head is null. If it is, initialize head with newStation
+        if (head == null) {
+            head = newStation;
+        // TODO: else append the newStation to the end of the list
+        } else {
+            Node last = head;
+            while (last.next != null) {
+                last = last.next;
+            }
+            last.next = newStation;
+        }
+    }
+
+    void show() {
+        Node current = head;
+        while (current.next != null) {
+            System.out.print(current.data + "-");
+            current = current.next;
+        }
+        System.out.print(current.data);
+    }
+
+}
+
+class Solution {
+    public static void main(String[] args) {
+        RailwayNetwork network = new RailwayNetwork();
+        // Adding stations with their station IDs
+        network.addStation(101);
+        network.addStation(202);
+        network.addStation(303);
+        network.show();
+    }
+}
 ```
 #### Practice #4
+Great journey so far! Now, test your skills by writing the missing piece of code to delete a station from the railway network. Pay close attention to the deletion logic, as it's key to understanding linked list manipulations.
 ```java
 
 ```
