@@ -980,3 +980,4 @@ class Solution {
 ```
 
 #### Practice #5
+Take control of the Theme Park Queue Management system! You'll need to recreate the queue handling by adding visitors to the queue, allowing the first in line to go on the ride, and then showing who's next. Fill in the code to bring the theme park queue to life!
