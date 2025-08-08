@@ -472,12 +472,12 @@ Questions I asked Cosmo:
   How can you refer to the instance variable inside the constructor? (Hint: Try using this!)
   ```
 
-## Lesson 2: 
+## Lesson 2: Reversing and Measuring: Mastering Linked List Operations in Java
 ### Introduction to the Lesson
-Today's lesson will build upon our foundational understanding of linked lists by diving into practical implementation exercises using Java. These problems sharpen your coding skills and prepare you for scenarios you might encounter in technical interviews.
+Today's lesson will build upon our foundational understanding of **linked lists** by diving into practical implementation exercises using **Java**. These problems sharpen your coding skills and prepare you for scenarios you might encounter in technical interviews.
 
 ### 1. Problem 1: Reverse Linked List Traversal
-Picture a scenario in which you have a sequence of events stored in a linked list. Your task is to look back in time — essentially, to reverse the chronology of these events. In technical terms, this means traversing a singly linked list in reverse order while keeping its structure intact. This skill is critical, whether for reversing transaction logs or simply navigating through a playlist from end to start.
+Picture a scenario in which you have a sequence of events stored in a linked list. Your task is to look back in time — essentially, to reverse the chronology of these events. In technical terms, this means traversing a **singly linked list** in reverse order while keeping its structure intact. This skill is critical, whether for reversing transaction logs or simply navigating through a playlist from end to start.
 
 ### 2. Problem 1: Problem Actualization
 Consider a browser's back-button functionality, where the most recently visited pages must be revisited reversely. This operation mirrors our task of reverse traversal in a linked list, capturing the essence of a real-world application.
@@ -486,12 +486,12 @@ Consider a browser's back-button functionality, where the most recently visited 
 One may consider creating a new linked list while iterating over the original list, inserting each element at the head of the new list. Although this approach might work, it's an overcomplicated approach that results in extra processing and memory usage that we can avoid.
 
 ### 5. Problem 1: Efficient Approach Explanation
-A more sophisticated solution would use a stack. Using a stack, we ensure an orderly collection of the nodes' values as we navigate the list. Once the traversal is complete, we extract the values in reverse, thanks to the stack's Last-In-First-Out property.
+A more sophisticated solution would use a **stack**. Using a stack, we ensure an orderly collection of the nodes' values as we navigate the list. Once the traversal is complete, we extract the values in reverse, thanks to the stack's *Last-In-First-Out property*.
 
 Let's visualize it with a deck of cards: We pick each card from the top (the head of the linked list) and place it into a pile (the stack). When we finish, we pick up the cards from the pile now in reverse order.
 
 ### 6. Problem 1: Solution Building
-Let's tackle it with Java:
+Let's tackle it with **Java**:
 
 ```java
 // Instantiate a stack to hold node values.
@@ -509,7 +509,7 @@ while (!stack.isEmpty()) {
     System.out.println(stack.pop());
 }
 ```
-In this code, we create a Stack object to store integers. We then iterate through the linked list using a while loop. For each node visited, we push its value onto the stack. After traversing the entire list, we pop the values off the stack. This reversal is possible because stacks operate on a Last In, First Out (LIFO) principle, which means the last element added to the stack will be the first one removed, thus reversing the order of the elements.
+In this code, we create a `Stack` object to store integers. We then iterate through the linked list using a `while` loop. For each node visited, we push its value onto the stack. After traversing the entire list, we pop the values off the stack. This reversal is possible because stacks operate on a Last In, First Out (LIFO) principle, which means the last element added to the stack will be the first one removed, thus reversing the order of the elements.
 
 ### 7. Problem 2: Calculate Linked List Length
 Next up, we face a seemingly simple task: determining the size of a linked list. Imagine it as a conga line at a party. You'd like to know how many people are in the line without disturbing the dance. Start at the beginning and count each person until you reach the end.
@@ -518,13 +518,13 @@ Next up, we face a seemingly simple task: determining the size of a linked list.
 In scenarios such as buffering data streams or executing batch operations, we often need to know the size of a list of tasks to allocate resources efficiently. This real-world implication highlights the utility of accurately determining the length of a linked list.
 
 ### 9. Problem 2: Naive Approach
-While it may be tempting to convert the linked list to an array and use its length property, such an approach is needlessly burdensome. We would create a new data structure when a more straightforward method can be employed.
+While it may be tempting to convert the linked list to an array and use its `length` property, such an approach is needlessly burdensome. We would create a new data structure when a more straightforward method can be employed.
 
 ### 10. Problem 2: Efficient Approach Explanation
 To calculate the length efficiently, we'll employ a classic traversal technique. It's a counting exercise: start at the first node (like the first person in the conga line) and increment a counter as we follow the links until we reach the end. The counter then reflects the conga line's length.
 
 ### 11. Problem 2: Solution Building
-Implementing this strategy in Java is straightforward:
+Implementing this strategy in **Java** is straightforward:
 
 ```java
 // Initialize a counter for the length.
@@ -540,10 +540,10 @@ while (currentNode != null) {
 // Return the final count.
 return length;
 ```
-In this code, we initialize an integer length to zero, which will serve as our counter. We then loop through each node of the linked list, incrementing length by one each time a new node is encountered. When the end of the list is reached (which we know occurs when currentNode is null), we exit the loop and return the total count.
+In this code, we initialize an integer `length` to zero, which will serve as our counter. We then loop through each node of the linked list, incrementing `length` by one each time a new node is encountered. When the end of the list is reached (which we know occurs when `currentNode` is `null`), we exit the loop and return the total count.
 
 ### Lesson Summary
-Today, we practiced critical operations on linked lists, namely reversing a list's traversal and calculating its length. Both solutions involved traversing the linked list but with different goals in mind. We efficiently solved these problems using structurally simple yet powerful techniques in Java. We will transition to a series of exercises designed to reinforce your understanding of linked lists and prepare you for tackling similar problems in real-world scenarios or technical interviews.
+Today, we practiced critical operations on linked lists, namely reversing a list's traversal and calculating its length. Both solutions involved traversing the linked list but with different goals in mind. We efficiently solved these problems using structurally simple yet powerful techniques in **Java**. We will transition to a series of exercises designed to reinforce your understanding of linked lists and prepare you for tackling similar problems in real-world scenarios or technical interviews.
 
 ## Lesson 3
 ## Lesson 4
