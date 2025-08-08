@@ -1178,63 +1178,53 @@ class Solution {
 ```
 Questions I asked Cosmo:
 * Should I be creating two halves to store the alternates?
-Cosmo
-11:06 AM
-Read message aloud
-Great question! For this practice, you only need to create:
 
-One queue for the elements you want to keep (every alternate, starting from index 0)
-One queue for the elements you skip (the others)
-You don’t need to split the original queue into two halves.
-How might you loop through the original queue and decide which element goes where?
+        Great question! For this practice, you only need to create:
+        
+        One queue for the elements you want to keep (every alternate, starting from index 0)
+        One queue for the elements you skip (the others)
+        You don’t need to split the original queue into two halves.
+        How might you loop through the original queue and decide which element goes where?
 
 
-Tre
-11:14 AM
-Conditional?
-Cosmo
-11:14 AM
-Read message aloud
-Yes, you’ll need a conditional!
-Here’s what to consider:
+* Conditional?
 
-As you remove each element from the queue, use a counter to track its index.
-If the index is even, add the element to newQueue.
-If the index is odd, you could add it to another queue (if you want to keep the skipped ones).
-Try using a while loop that runs until the original queue is empty, and use an if statement to check if the index is even.
-What would that look like in code?
+        Yes, you’ll need a conditional!
+        Here’s what to consider:
+        
+        As you remove each element from the queue, use a counter to track its index.
+        If the index is even, add the element to newQueue.
+        If the index is odd, you could add it to another queue (if you want to keep the skipped ones).
+        Try using a while loop that runs until the original queue is empty, and use an if statement to check if the index is even.
+        What would that look like in code?
 
-* o I need a while loop, if conditionals checking if even or odd, two queues for the alternates added and the rest and what else?
-Cosmo
-12:09 PM
-Read message aloud
-You’re on the right track! Here’s what you need:
+* So I need a while loop, if conditionals checking if even or odd, two queues for the alternates added and the rest and what else?
 
-A while loop that processes the original queue until it’s empty.
-A counter to track the index (starting at 0).
-An if conditional to check if the index is even or odd.
-Two queues: one for the alternates (to return), one for the rest.
-One key thing:
-You should be removing elements from the original queue and adding them to the correct new queue inside your loop.
-What do you think you should use as the loop condition?
+        You’re on the right track! Here’s what you need:
+        
+        A while loop that processes the original queue until it’s empty.
+        A counter to track the index (starting at 0).
+        An if conditional to check if the index is even or odd.
+        Two queues: one for the alternates (to return), one for the rest.
+        One key thing:
+        You should be removing elements from the original queue and adding them to the correct new queue inside your loop.
+        What do you think you should use as the loop condition?
 
 
-Tre
-12:10 PM
-So remove from the queue and add to the newQueue?
-Cosmo
-12:10 PM
-Read message aloud
-Exactly! Here’s the flow:
+* So remove from the queue and add to the newQueue?
 
-While the original queue isn’t empty:
-Remove an element from queue.
-If the index is even, add it to newQueue.
-If the index is odd, add it to your "rest" queue (if you want to keep those too).
-Increment your index.
-Try updating your loop to process elements from the original queue instead of newQueue. What do you think will happen?
+        Exactly! Here’s the flow:
+        
+        While the original queue isn’t empty:
+        Remove an element from queue.
+        If the index is even, add it to newQueue.
+        If the index is odd, add it to your "rest" queue (if you want to keep those too).
+        Increment your index.
+        Try updating your loop to process elements from the original queue instead of newQueue. What do you think will happen?
 
-###### feedback: Seems as though the practices are designed to become increasingly more like technical interviews which would be useful if the lessons were in-depth enough to prepare for that. Instead we get broad overviews with very basic examples. These practices are not useful for the depth and speed of the material.
+###### feedback: Combnining things we've learned previously with what is new is good, BUT requiring knowledge of things we did not cover is bad.  Also, misleading comments are bad because there is likely more code that needs to be written outside of that designated area.
+
+Seems as though the practices are designed to become increasingly more like technical interviews which would be useful if the lessons were in-depth enough to prepare for that. Instead we get broad overviews with very basic examples. These practices are not useful for the depth and speed of the material.
 ###### note: it is a personal preference to get through the materials and practice at the conclusion of the COURSE to prepare for the assesment. These practices would be more useful as additional examples in the lessons.
 
 
