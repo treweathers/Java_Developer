@@ -376,5 +376,113 @@ class Solution {
 #### Practice #5
 Let's give our railway network's nodes a more meaningful initialization. Update the Node class to accept stationName as an argument in its constructor. Also, ensure that you modify the calls to the addStation method in our Solution class, passing the station numbers when creating new nodes. Finally, update the show method to display station names connected with " ----> ". Don't forget to test your code by creating station with names!
 ```java
+class Node {
+    int data;
+    Node next;
+    String stationName;
+    // TODO: introduce station names
+    Node(int d, String stationName) {
+        data = d;
+        next = null;
+        this.stationName = stationName;
+    }
+}
 
+class RailwayNetwork {
+    Node head;
+
+    // TODO: Add station name here
+    void addStation(int stationData, String stationName) {
+        Node newStation = new Node(stationData, stationName);
+        if (head == null) {
+            head = newStation;
+        } else {
+            Node last = head;
+            while (last.next != null) {
+                last = last.next;
+            }
+            last.next = newStation;
+        }
+    }
+    
+    // TODO: modify the show method to include station names
+    void show() {
+        Node current = head;
+        while (current.next != null) {
+            System.out.print(current.stationName + " ----> ");
+            current = current.next;
+        }
+        System.out.println(current.data);
+    }
+
+}
+
+class Solution {
+    public static void main(String[] args) {
+        RailwayNetwork network = new RailwayNetwork();
+        // TODO: Add station names here 
+        network.addStation(101, "Big");
+        network.addStation(202, "Bang");
+        network.addStation(303, "Theory");
+        network.show();
+    }
+}
 ```
+Questions I asked Cosmo:
+* Add stationName as an argument in addStation?
+Cosmo
+4:03 PM
+Read message aloud
+Great question! You did add stationName as an argument in addStation, but are you actually using it when creating the new Node?
+
+Check your Node constructor—does it accept a stationName parameter?
+When you create a new Node in addStation, are you passing both the data and the station name?
+Try updating both so the name gets stored in each node!
+
+
+Tre
+4:09 PM
+Should we be including the stationName in show in the print statement?
+Cosmo
+4:09 PM
+Read message aloud
+Yes, exactly! Right now, your show method only prints the data (the station ID).
+To display the station names, update the print statements to use stationName instead.
+
+Does your Node class actually store the stationName?
+Are you printing it in the show method?
+Try printing current.stationName instead of current.data!
+
+
+Tre
+4:16 PM
+What's wrong?
+Cosmo
+4:16 PM
+Read message aloud
+Nice progress! The main issue is in your Node constructor:
+
+Java
+Copy to clipboard
+Node(int d, String stationName) {
+    data = d;
+    next = null;
+}
+You never assign the stationName parameter to the stationName field, so it stays null.
+What line should you add to store the name in each node?
+
+
+Tre
+Just now
+A line initializing it, but what is it supposed to be equal to?
+Cosmo
+Just now
+Read message aloud
+Great question! In your constructor, you want to assign the parameter value to the instance variable.
+Right now, you have:
+
+Java
+Copy to clipboard
+stationName = stationName;
+But this just assigns the parameter to itself.
+How can you refer to the instance variable inside the constructor? (Hint: Try using this!)
