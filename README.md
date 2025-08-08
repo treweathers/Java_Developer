@@ -12,10 +12,10 @@
 
 ## Course 2.1: Hashing, Dictionaries, and Sets in Java✅
 ## Course 2.2: Sorting and Searching Algorithms in Java✅
-## Course 2.3: Advanced Data Structures - Stacks and Queues in Java⏳
-## Course 2.4: Fundamental Data Structures - Linked Lists in Java🔜
+## Course 2.3: Advanced Data Structures - Stacks and Queues in Java✅
+## Course 2.4: Fundamental Data Structures - Linked Lists in Java⏳
 
-<h1 align='center'> Course 3:  </h1> 
+<h1 align='center'> Course 3:  </h1> 🔜
 
 ## Course 3.1:
 
