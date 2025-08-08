@@ -1227,5 +1227,9 @@ Questions I asked Cosmo:
 Seems as though the practices are designed to become increasingly more like technical interviews which would be useful if the lessons were in-depth enough to prepare for that. Instead we get broad overviews with very basic examples. These practices are not useful for the depth and speed of the material.
 ###### note: it is a personal preference to get through the materials and practice at the conclusion of the COURSE to prepare for the assesment. These practices would be more useful as additional examples in the lessons.
 
+#### Practice #2
+Hey there, Space Voyager! Time for another adventure! Let's expand your skill set with the MovingAverage class. Stellar idea, isn't it? Here's your challenge: fill in the missing code parts to correctly update the sum whenever a new element enters or leaves the sliding window. Initiate launch sequence and go for it!
+
+
 
 
