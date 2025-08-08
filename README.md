@@ -1,4 +1,4 @@
-<h1 align='center'> Course 1: Java Programming for Beginners✅ </h1> 
+<h1 align='center'> Course 1: Java Programming for Beginners✅ 550/600 </h1> 
 
 ## Course 1.1: Getting Started with Java: 8 units✅
 ## Course 1.2: Learning Simple Data Structures in Java: 5 units✅
