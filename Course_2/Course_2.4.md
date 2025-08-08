@@ -637,7 +637,182 @@ Questions I asked Cosmo:
 #### Practice #2
 Brace yourself, Space Voyager! This mission circles cosmos navigation. Given a pathway between planets - represented as a singly linked list- you must pinpoint a planet and uncover its position. You must traverse the linked list and calculate the number of nodes we visit before meeting the given value, including the target node itself. If the target number is not in the list, return -1. Remember, the universe is limitless, and the planet could be any real value. Good luck, Detective! Uphold your adventurous spirit and happy coding!
 ```java
+class ListNode {
+    int value;
+    ListNode next;
 
+    ListNode(int value) {
+        this.value = value;
+        this.next = null;
+    }
+}
+
+class LinkedList {
+    ListNode head;
+
+    public void append(int value) {
+        if(head == null) {
+            head = new ListNode(value);
+            return;
+        }
+        ListNode current = head;
+        while(current.next != null) {
+            current = current.next;
+        }
+        current.next = new ListNode(value);
+    }
+}
+
+class Solution {
+    public static int indexOfX(LinkedList list, int x) {
+        // TODO: implement this
+        int length = 1;
+        ListNode current = list.head;
+        
+        while (current != null) {
+            if (current.value == x) {
+                return length;
+            } else {
+                current = current.next;
+                length++;
+            }
+        }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+        list.append(5);
+        list.append(10);
+        list.append(15);
+        int index = indexOfX(list, 15);
+        System.out.println("The value 15 first occurs at position " + index);
+    }
+}
 ```
+
+Questions I asked Cosmo
+* Explain the difference between the examples in the lesson and this problem.
+Cosmo
+7:08 PM
+Read message aloud
+Great question! Here’s how they differ:
+
+In the lesson, you learned how to:
+
+Traverse a linked list to reverse its order (using a stack).
+Count the total number of nodes in a linked list.
+In this practice, you need to:
+
+Traverse the list and count nodes only up to (and including) the first node with a specific value.
+Return the count (position), or -1 if the value isn’t found.
+So, instead of counting all nodes or reversing, you’re searching for a value and counting as you go. What do you think you’d need to change in your traversal to stop at the right moment?
+
+
+Tre
+7:24 PM
+For loop?
+Cosmo
+7:24 PM
+Read message aloud
+Nice catch! A for loop like that isn’t the best fit here. Remember, you want to:
+
+Start at the head of the linked list.
+Move through each node, one by one.
+Count how many nodes you visit until you find the value x.
+What kind of loop would let you walk through each node of a linked list? And how would you check each node’s value?
+
+
+Tre
+7:26 PM
+While loop
+Cosmo
+7:26 PM
+Read message aloud
+Exactly! A while loop is perfect for traversing a linked list. Here’s a quick guide:
+
+Start with a pointer at the head node.
+Use a while loop to move through each node (while (current != null)).
+At each step, check if the current node’s value matches x.
+Don’t forget to count how many nodes you’ve visited!
+Can you try rewriting your function using a while loop and a counter?
+
+
+Tre
+7:29 PM
+Incrementing inside the if block?
+Cosmo
+7:29 PM
+Read message aloud
+You're on the right track thinking about where to increment! But first, notice that your current loop doesn't actually traverse the linked list—it just loops over numbers.
+
+Instead, you want to:
+
+Use a pointer (like current) to move through the nodes.
+Increment your counter each time you visit a node.
+Check inside the loop: if current.value == x, return the counter.
+Where do you think you should move the pointer to the next node?
+
+
+Tre
+7:31 PM
+Why does current.value give an error?
+Cosmo
+7:31 PM
+Read message aloud
+Great question! The error happens because current is a LinkedList, not a ListNode. The value field exists only in ListNode.
+
+To traverse the list, you should set current to list.head (which is a ListNode), and then use current.value. Can you update your code so current is a ListNode?
+
+
+Tre
+7:35 PM
+Got it
+Cosmo
+7:35 PM
+Read message aloud
+Awesome! 🚀
+
+Before you move on, here are a couple of things to check:
+
+Make sure your while loop actually moves to the next node each time (otherwise, it could get stuck).
+Only return -1 after the loop, not inside it—otherwise, you’ll stop after checking just the first node.
+Try updating those parts and see what happens!
+
+Cosmo
+7:38 PM
+Read message aloud
+Good try, but your loop isn't traversing the list correctly and doesn't handle empty lists.
+
+Try rethinking how you move through each node and count positions. Want a hint or would you like to give it another shot first?
+
+Cosmo
+7:41 PM
+Read message aloud
+Good try, but your loop isn't traversing the list correctly and doesn't handle cases where the value isn't found.
+
+Want to give it another shot, or would you like a hint?
+
+
+Tre
+7:41 PM
+Be specific
+Cosmo
+7:41 PM
+Read message aloud
+Absolutely! Here’s what’s happening in your code:
+
+Your while loop condition is current.value == x, so it only enters the loop if the very first node matches x. This means it won’t check the rest of the list if the first node isn’t x.
+If current is null (for an empty list), current.value will cause an error.
+You should be looping while current != null, and inside the loop, check if current.value == x.
+Only increment your counter when you visit a node.
+Try updating your loop to:
+
+Loop while current != null
+Inside the loop, check if current.value == x
+If yes, return the counter (don’t forget to start counting from 1, since the first node is position 1)
+If not, move to the next node and increment the counter
+Want to give it another shot with these adjustments?
+
 ## Lesson 3
 ## Lesson 4
