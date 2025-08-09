@@ -1038,6 +1038,7 @@ Java's `LinkedList` class comes loaded with many powerful methods. We'll focus o
 * `add(int index, E element)`: This method inserts the specified element at the specified position in the list.
 * `remove()`: This method retrieves and removes the list's head (the first element).
 * `get(int index)`: Returns the element at the specified position in the list.
+
 These methods are demonstrated in the following code:
 
 ```java
@@ -1090,6 +1091,7 @@ Now, let's learn a few more exciting methods of Java's LinkedList:
 * `clear()`: This method removes all elements from the list.
 * `contains(Object obj)`: This method returns true if the list contains the specified element.
 * `isEmpty()`: This method returns true if the list contains no elements.
+
 Here is an instance where we use these methods:
 
 ```java
