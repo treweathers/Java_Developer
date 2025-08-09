@@ -1007,4 +1007,114 @@ Questions I asked Cosmo:
         Calculate the sum of every second node’s value (not the average, and not every third node)
         No need to remove duplicates or use a HashSet
         What do you notice about the pattern of nodes you need to sum here compared to the lesson’s average calculation?
-## Lesson 4
+
+## Lesson 4: Exploring Java's Built-in LinkedList
+### Introduction
+Hello! Sometimes, you don't have to implement the linked list yourself. Java has a built-in **LinkedList** class — a fundamental tool for implementing data structures. We have even used it a bit for initializing queues and stacks. In this lesson, you will learn to use Java's `LinkedList`, understand its methods, and see them in action.
+
+### 1. Overview of Java's LinkedList
+Java's `LinkedList` is part of the Java Collections Framework. It represents a doubly-linked list and provides numerous methods for performing operations like adding and removing elements, searching elements, and iterating through the list.
+
+A doubly-linked list is similar to a singly-linked list, but with one key difference. While a singly-linked list has nodes containing a reference to the next node in the sequence, in a doubly-linked list, each node contains a reference to both the next node and the previous node in the sequence. This gives more flexibility in navigating through the list, allowing both forward and backward traversals, but at the cost of increased complexity and resource usage for maintaining references in both directions.
+
+### 2. Working with Java's LinkedList
+Let’s begin by creating a `LinkedList` in Java. You start by instantiating the `LinkedList` class, as shown below:
+
+```java
+import java.util.LinkedList;
+
+public class Main {
+  public static void main(String[] args) {
+    LinkedList<String> students = new LinkedList<>();
+  }
+}
+```
+In the above code, we create a `LinkedList` called `students` that will store `String` type data. However, it's currently empty. Let's see how we can operate on this `LinkedList`.
+
+### 3. Methods in LinkedList
+Java's `LinkedList` class comes loaded with many powerful methods. We'll focus on some basic yet very important ones:
+
+* `add(E element)`: This method appends the specified element to the end of the list.
+* `add(int index, E element)`: This method inserts the specified element at the specified position in the list.
+* `remove()`: This method retrieves and removes the list's head (the first element).
+* `get(int index)`: Returns the element at the specified position in the list.
+These methods are demonstrated in the following code:
+
+```java
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+        LinkedList<String> students = new LinkedList<>();
+
+        students.add("John");
+        students.add(0, "Alice");
+        System.out.println(students.get(0));  // prints Alice
+        students.remove();
+        System.out.println(students.get(0));  // prints John
+    }
+}
+```
+### 4. Exploring LinkedList Traversal
+To visit each element in the `LinkedList`, we must traverse from the start node to the end node. Java's `ListIterator` interface helps with this and provides the methods for such iterations. Let's look at an example:
+
+```java
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+public class Main {
+    public static void main(String[] args) {
+        LinkedList<String> students = new LinkedList<>();
+
+        students.add("John");
+        students.add("Alice");
+
+        ListIterator li = students.listIterator();
+
+        while(li.hasNext()){
+            System.out.println(li.next());
+        }
+        /*
+        Output:
+        John
+        Alice
+         */
+    }
+}
+```
+### 5. Advanced LinkedList Operations
+Now, let's learn a few more exciting methods of Java's LinkedList:
+
+* `addFirst(E e)`: This method inserts the specified element at the beginning of the list.
+* `addLast(E e)`: This method appends the specified element at the end of the list.
+* `clear()`: This method removes all elements from the list.
+* `contains(Object obj)`: This method returns true if the list contains the specified element.
+* `isEmpty()`: This method returns true if the list contains no elements.
+Here is an instance where we use these methods:
+
+```java
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+        LinkedList<String> students = new LinkedList<>();
+
+        students.addFirst("John");
+        students.addLast("Alice");
+        System.out.println(students.contains("Alice"));  // prints true
+        System.out.println(students.isEmpty());  // prints false
+        students.clear();
+        System.out.println(students.isEmpty());  // prints true
+    }
+}
+```
+
+### 6. Complexities Associated with LinkedList Operations
+Understanding the time complexities involved in `LinkedList` operations becomes critical as we journey further. We'll discuss these complexities using Big O notation:
+
+* `add(int index, E element)`: The worst-case time complexity is O(n) as it needs to traverse the list.
+* `add(E element)`: The time complexity is O(1) as it adds an element at the end of the list.
+* `remove()`: It is also O(1) as it removes the first element of the list.
+
+### Lesson Summary and Practice
+Congratulations! We've covered Java's' LinkedList' creation, operations, traversal, and complexities. To encourage practice, which is central to mastering these operations and understanding their utility, this lesson is followed by several exercises that will take you one step closer to becoming a pro in using `LinkedList`. So, get ready, and happy coding!
