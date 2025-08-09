@@ -1121,7 +1121,7 @@ Understanding the time complexities involved in `LinkedList` operations becomes 
 ### Lesson Summary and Practice
 Congratulations! We've covered Java's' LinkedList' creation, operations, traversal, and complexities. To encourage practice, which is central to mastering these operations and understanding their utility, this lesson is followed by several exercises that will take you one step closer to becoming a pro in using `LinkedList`. So, get ready, and happy coding!
 
-#### Practice #1
+#### Practice #1: Update the Daily Task List with LinkedList in Java
 magine you have a list of tasks for the day and need to adjust your schedule by adding, inserting, and removing tasks. Initially, you planned to start with Task 5, then move on to Task 10. However, you realize Task 7 is more urgent and should be completed right after the first task. Moreover, it turns out you can skip the first task altogether. Run the code by clicking the RUN button to see how your updated task list looks!
 ```java
 class Solution {
@@ -1137,7 +1137,7 @@ class Solution {
 }
 ```
 
-#### Practice #2
+#### Practice #2: Managing Daily Tasks with LinkedList in Java
 Great progress! Your mission now is to add the task to the list and then remove the first task once it is completed. Can you do it?
 ```java
 class Solution {
@@ -1157,6 +1157,32 @@ class Solution {
 }
 ```
 
-#### Practice #3
-#### Practice #4
-#### Practice #5
+#### Practice #3: Clear and Check LinkedList Status
+Great journey so far, Space Voyager! Now, can you take the helm? You need to clear all the tasks from the task list and then check if the list is empty. Look for the missing lines
+```java
+class Solution {
+    public static void main(String[] args) {
+        // Let's pretend we are organizing daily tasks using Java's LinkedList.
+        java.util.LinkedList<String> dailyTasks = new java.util.LinkedList<>();
+        
+        // Adding some tasks to our list.
+        dailyTasks.add("Wake up");
+        dailyTasks.add("Brush teeth");
+        dailyTasks.add("Code Java");
+
+        // TODO: Remove all elements from the dailyTasks linked list.
+        dailyTasks.clear();
+        // TODO: Print out if the list is empty now, expecting a true value.
+        System.out.print(dailyTasks.isEmpty());
+    }
+}
+```
+#### Practice #4: Add Daily Task Management to LinkedList
+
+```java
+```
+
+#### Practice #5: Add New Tasks to Daily List and Display Them
+
+```java
+```
