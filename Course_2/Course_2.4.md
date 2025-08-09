@@ -848,6 +848,9 @@ The detailed commentary for each code block elucidates the purpose behind the li
 Through this lesson, we've explored optimization strategies for common linked list challenges, addressing the reasoning behind efficient algorithms and their practical coding implementation. We've moved from understanding the 'how' to grasping the 'why,' deploying tailored, scalable solutions that will serve you well in technical interviews. Having navigated through the theory and dissected the code, it's your turn to practice and embed these concepts!
 
 #### Practice #1
+Hey Stellar Navigator, we’ve got a job. Our digital library has some duplicate books due to a mishap by my assistant. Your task? Remove the duplicates from our new book list, represented by a singly linked list. Each node is a book, denoted by non-negative integers. Rest assured, the input list will always be non-empty. After eliminating duplicates, return the cleaned-up list. Time to get coding and tidy up our library!
+```java
+```
 #### Practice #2
 
 ## Lesson 4
