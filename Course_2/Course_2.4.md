@@ -766,10 +766,10 @@ Welcome back! As we continue to master the art of interview-oriented problems us
 Consider the following real-life problem: You’re tasked with organizing a digital library where some books have been accidentally duplicated. You aim to identify and remove these redundant entries to ensure each title is unique in your catalog.
 
 ### 2. Problem 1: Naive Approach and Its Drawbacks
-A naive approach would be to browse each book and compare it with every other title in a nested loop fashion. As with any large library, this approach would be cumbersome, with a time complexity of O(n2). It also scales poorly with larger datasets because the time taken to process increases exponentially with each additional book — much like searching an entire library to check for duplicates each time a new book is added.
+A naive approach would be to browse each book and compare it with every other title in a nested loop fashion. As with any large library, this approach would be cumbersome, with a time complexity of O(n^2). It also scales poorly with larger datasets because the time taken to process increases exponentially with each additional book — much like searching an entire library to check for duplicates each time a new book is added.
 
 ### 3. Problem 1: Efficient Approach Explanation and Comparison
-To address the issues of the naive approach, we use a more strategic method akin to maintaining a checklist: marking off each book we come across. This method, replicated in our algorithm, employs a HashSet to record unique titles. Consequently, we reduce our time complexity to O(n).
+To address the issues of the naive approach, we use a more strategic method akin to maintaining a checklist: marking off each book we come across. This method, replicated in our algorithm, employs a `HashSet` to record unique titles. Consequently, we reduce our time complexity to O(n).
 
 ### 4. Problem 1: Step-by-Step Solution with Detailed Explanation
 Let's delve into the step-by-step code:
@@ -802,7 +802,7 @@ public ListNode removeDuplicates(ListNode head) {
     return head;
 }
 ```
-With this explanation, we've clarified the importance of each line of code in the context of the overall strategy for duplicate elimination. We implemented a systematic approach to traverse the list and used a HashSet to avoid repetitively processing the same value while maintaining efficient traversal.
+With this explanation, we've clarified the importance of each line of code in the context of the overall strategy for duplicate elimination. We implemented a systematic approach to traverse the list and used a `HashSet` to avoid repetitively processing the same value while maintaining efficient traversal.
 
 ### 5. Problem 2: Finding the Average of Every Third Element
 Now, think of a long-distance race where you must analyze the runners' performance at every third checkpoint to gauge the race's progress.
