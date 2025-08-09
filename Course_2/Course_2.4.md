@@ -850,7 +850,92 @@ Through this lesson, we've explored optimization strategies for common linked li
 #### Practice #1
 Hey Stellar Navigator, we’ve got a job. Our digital library has some duplicate books due to a mishap by my assistant. Your task? Remove the duplicates from our new book list, represented by a singly linked list. Each node is a book, denoted by non-negative integers. Rest assured, the input list will always be non-empty. After eliminating duplicates, return the cleaned-up list. Time to get coding and tidy up our library!
 ```java
+import java.util.HashSet;
+
+class ListNode {
+    int value;
+    ListNode next;
+
+    ListNode(int value) {
+        this.value = value;
+        this.next = null;
+    }
+}
+
+class LinkedList {
+    private ListNode head;
+
+    public LinkedList(int value) {
+        this.head = new ListNode(value);
+    }
+
+    public void append(int value) {
+        ListNode newNode = new ListNode(value);
+        ListNode current = head;
+
+        if (current.next == null) {
+            current.next = newNode;
+        } else {
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = newNode;
+        }
+    }
+
+    public void removeDuplicates() {
+        // implement this
+        if (head == null || head.next == null) {
+            return;
+        }
+        HashSet<Integer> seenBooks = new HashSet<>();
+        ListNode current = head;
+        seenBooks.add(current.value);
+        while (current.next != null) {
+            if (seenBooks.contains(current.next.value)) {
+                current.next = current.next.next;
+            } else {
+                seenBooks.add(current.next.value);
+                current = current.next;
+            }
+        }
+    }
+
+    public void printList() {
+        ListNode current = head;
+        while (current != null) {
+            System.out.println(current.value);
+            current = current.next;
+        }
+    }
+}
 ```
+Questions I asked Cosmo:
+* Why is my head void?
+
+        Great question! In your removeDuplicates method, you might notice that you don’t return anything—it's a void method. That’s because your LinkedList class manages the head node internally, so you just modify the list in place.
+        
+        The head field is private and always points to the start of your list.
+        When you remove duplicates, you update the nodes directly—no need to return a new head.
+        Does that help clarify why void is used here?
+
+
+* So what should it return instead?
+
+        In this design, it’s best for removeDuplicates to stay void—it just updates the list in place. If you wanted to return something, you could return the head node, but since your class already manages head, it’s not necessary.
+        
+        Keeping it void is clean and standard for methods that modify the object itself.
+        Returning head is only useful if you need the updated list outside the class.
+        Do you see a reason you’d want to return the head here?
+
+
+* No return, if conditional?
+
+        Nice catch! You don’t need a return, but you should handle the case where the list is empty or has only one node. That’s what the if (head == null || head.next == null) check is for.
+        
+        If true, just use return; to exit the method early.
+        This prevents errors when trying to access current.value on a null node.
+        Try adding that check at the start of your method! Why do you think it’s important?
 #### Practice #2
 
 ## Lesson 4
