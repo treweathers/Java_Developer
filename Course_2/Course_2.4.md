@@ -1199,6 +1199,24 @@ class Solution {
 ```
 
 #### Practice #5: Add New Tasks to Daily List and Display Them
-
+Great job so far! Now, let's put your knowledge into action. I need you to add two missing lines: one to insert a task into our daily management list, and another to traverse the list. Remember, tasks can pop up at any time!
 ```java
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+class Solution {
+  public static void main(String[] args) {
+    LinkedList<String> tasks = new LinkedList<>();
+    tasks.add("Review tasks"); 
+    tasks.add("Get coffee"); 
+    tasks.add("Take a nap");
+    // TODO: Add a task "Morning meeting" between "Get coffee" and "Take a nap"
+    tasks.add(2, "Morning meeting");
+    
+    // TODO: Traverse the list with a for loop and print out each task
+    for (String task:tasks) {
+      System.out.println(task);
+    }
+  }
+}
 ```
