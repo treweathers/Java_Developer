@@ -1120,3 +1120,43 @@ Understanding the time complexities involved in `LinkedList` operations becomes 
 
 ### Lesson Summary and Practice
 Congratulations! We've covered Java's' LinkedList' creation, operations, traversal, and complexities. To encourage practice, which is central to mastering these operations and understanding their utility, this lesson is followed by several exercises that will take you one step closer to becoming a pro in using `LinkedList`. So, get ready, and happy coding!
+
+#### Practice #1
+magine you have a list of tasks for the day and need to adjust your schedule by adding, inserting, and removing tasks. Initially, you planned to start with Task 5, then move on to Task 10. However, you realize Task 7 is more urgent and should be completed right after the first task. Moreover, it turns out you can skip the first task altogether. Run the code by clicking the RUN button to see how your updated task list looks!
+```java
+class Solution {
+    public static void main(String[] args) {
+        java.util.LinkedList<Integer> taskList = new java.util.LinkedList<>();
+        taskList.add(5);   // adds Task 5 at the end
+        taskList.add(10);  // adds Task 10 at the end
+        taskList.add(1, 7); // inserts Task 7 at index 1
+        taskList.remove(); // removes the first task
+        
+        System.out.println(taskList); // Check the updated list of tasks [7, 10]
+    }
+}
+```
+
+#### Practice #2
+Great progress! Your mission now is to add the task to the list and then remove the first task once it is completed. Can you do it?
+```java
+class Solution {
+    public static void main(String[] args) {
+        java.util.LinkedList<String> tasks = new java.util.LinkedList<>();
+
+        // Adding tasks for the day
+        tasks.add("Email team meeting agenda");
+        tasks.add("Review project proposal");
+        // TODO: Add the task "Prepare presentation slides".
+        tasks.add("Prepare presentation slides");
+        // TODO: Remove the first task after completion.
+        tasks.remove();
+        // The remaining tasks in the list
+        System.out.println(tasks);
+    }
+}
+```
+
+#### Practice #3
+#### Practice #4
+#### Practice #5
