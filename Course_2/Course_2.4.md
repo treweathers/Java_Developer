@@ -937,5 +937,22 @@ Questions I asked Cosmo:
         This prevents errors when trying to access current.value on a null node.
         Try adding that check at the start of your method! Why do you think it’s important?
 #### Practice #2
+Alright, Stellar Navigator, let's take it up a notch. We're handing you a baton relay race where each runner is a node in a linked list, each holding the runner's checkpoint timing. Your task is to find the total time of every alternating runner, pretty much like a leapfrog race! Just so there's fairness in the race, if our linked list has only one or fewer runners, your function should return 0. Fair enough, right? Remember, your function accepts a linked list of integers: the checkpoint timings, with no limit to the number of nodes, and it returns an integer, the total time. To infinity, and beyond!
+```java
 
+```
+Questions I asked Cosmo:
+* Explain the difference between the examples in the lesson and this problem.
+
+        Great question! Here’s a quick breakdown:
+        
+        In the lesson, you worked with:
+        
+        Removing duplicates (using a HashSet)
+        Calculating the average of every third node’s value
+        In this practice, you need to:
+        
+        Calculate the sum of every second node’s value (not the average, and not every third node)
+        No need to remove duplicates or use a HashSet
+        What do you notice about the pattern of nodes you need to sum here compared to the lesson’s average calculation?
 ## Lesson 4
