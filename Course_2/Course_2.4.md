@@ -744,42 +744,19 @@ Questions I asked Cosmo
         To traverse the list, you should set current to list.head (which is a ListNode), and then use current.value. Can you update your code so current is a ListNode?
 
 
-Got it
+        Before you move on, here are a couple of things to check:
+        
+        Make sure your while loop actually moves to the next node each time (otherwise, it could get stuck).
+        Only return -1 after the loop, not inside it—otherwise, you’ll stop after checking just the first node.
+        Try updating those parts and see what happens!
 
-
-Awesome! 🚀
-
-Before you move on, here are a couple of things to check:
-
-Make sure your while loop actually moves to the next node each time (otherwise, it could get stuck).
-Only return -1 after the loop, not inside it—otherwise, you’ll stop after checking just the first node.
-Try updating those parts and see what happens!
-
-
-Good try, but your loop isn't traversing the list correctly and doesn't handle empty lists.
-
-Try rethinking how you move through each node and count positions. Want a hint or would you like to give it another shot first?
-
-
-Good try, but your loop isn't traversing the list correctly and doesn't handle cases where the value isn't found.
-
-Want to give it another shot, or would you like a hint?
-
-Be specific
-
-Absolutely! Here’s what’s happening in your code:
-
-Your while loop condition is current.value == x, so it only enters the loop if the very first node matches x. This means it won’t check the rest of the list if the first node isn’t x.
-If current is null (for an empty list), current.value will cause an error.
-You should be looping while current != null, and inside the loop, check if current.value == x.
-Only increment your counter when you visit a node.
-Try updating your loop to:
-
-Loop while current != null
-Inside the loop, check if current.value == x
-If yes, return the counter (don’t forget to start counting from 1, since the first node is position 1)
-If not, move to the next node and increment the counter
-Want to give it another shot with these adjustments?
+        Try updating your loop to:
+        
+        Loop while current != null
+        Inside the loop, check if current.value == x
+        If yes, return the counter (don’t forget to start counting from 1, since the first node is position 1)
+        If not, move to the next node and increment the counter
+        Want to give it another shot with these adjustments?
 
 ## Lesson 3
 ## Lesson 4
