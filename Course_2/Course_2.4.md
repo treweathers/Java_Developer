@@ -813,7 +813,7 @@ The task requires calculating the average time at regular intervals throughout t
 ### 7. Problem 2: Efficient Approach
 We will simply traverse the given linked list and track the sum and amount of every third element. It sounds easy, but let's examine the solution to see if everything is clear!
 
-### 8 Building the Solution Step-by-Step with Detailed Explanation
+### 8. Building the Solution Step-by-Step with Detailed Explanation
 Here is our strategy translated into code, explained in detail:
 
 ```java
