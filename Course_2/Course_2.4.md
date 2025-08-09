@@ -1177,9 +1177,25 @@ class Solution {
     }
 }
 ```
-#### Practice #4: Add Daily Task Management to LinkedList
 
+#### Practice #4: Add Daily Task Management to LinkedList
+Alright, navigator, are you ready for the next leap through the cosmos of code? Initialize the task list with the most important and final tasks of your busy space day.
 ```java
+class Solution {
+    public static void main(String[] args) {
+        // Create a LinkedList to manage daily tasks.
+        java.util.LinkedList<String> tasks = new java.util.LinkedList<>();
+        tasks.add("Dinner break");
+
+        // TODO: Set the first task of the day in your tasks list.
+        tasks.addFirst("Gym");
+        // TODO: Set the last task of the day in your tasks list.
+        tasks.addLast("Sleep");
+        // Check what tasks we have at the start and end of the day.
+        System.out.println("Morning Task: " + tasks.getFirst());
+        System.out.println("End of Day Task: " + tasks.getLast());
+    }
+}
 ```
 
 #### Practice #5: Add New Tasks to Daily List and Display Them
