@@ -939,7 +939,59 @@ Questions I asked Cosmo:
 #### Practice #2
 Alright, Stellar Navigator, let's take it up a notch. We're handing you a baton relay race where each runner is a node in a linked list, each holding the runner's checkpoint timing. Your task is to find the total time of every alternating runner, pretty much like a leapfrog race! Just so there's fairness in the race, if our linked list has only one or fewer runners, your function should return 0. Fair enough, right? Remember, your function accepts a linked list of integers: the checkpoint timings, with no limit to the number of nodes, and it returns an integer, the total time. To infinity, and beyond!
 ```java
+class ListNode {
+    int value;
+    ListNode next;
 
+    ListNode(int value) {
+        this.value = value;
+        this.next = null;
+    }
+}
+
+class LinkedList {
+    ListNode head;
+
+    public void append(int value) {
+        if(head == null) {
+            head = new ListNode(value);
+            return;
+        }
+        ListNode current = head;
+        while(current.next != null) {
+            current = current.next;
+        }
+        current.next = new ListNode(value);
+    }
+}
+
+class Solution {
+    public static int sumOfEverySecond(LinkedList list) {
+        // TODO: implement this
+        ListNode current = list.head;
+        if (current.next == null) {
+            return 0;
+        }
+        int sum = 0;
+        for (int index = 1; current != null; current = current.next, index ++) { 
+            if (index % 2 == 0) {
+                sum += current.value;
+            }
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+        list.append(5);
+        int sum = sumOfEverySecond(list);
+        System.out.println("Sum of Every Second Node Value: " + sum);
+        list.append(10);
+        list.append(15);
+        sum = sumOfEverySecond(list);
+        System.out.println("Sum of Every Second Node Value: " + sum);
+    }
+}
 ```
 Questions I asked Cosmo:
 * Explain the difference between the examples in the lesson and this problem.
