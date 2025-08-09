@@ -758,5 +758,96 @@ Questions I asked Cosmo
         If not, move to the next node and increment the counter
         Want to give it another shot with these adjustments?
 
-## Lesson 3
+## Lesson 3: Deciphering Linked List Puzzles: Removing Duplicates and Calculating Intervals in Java
+### Introduction to Linked Lists and Interview Challenges
+Welcome back! As we continue to master the art of interview-oriented problems using linked lists in Java, we're setting our sights on practical, algorithmic challenges you will likely face.
+
+### 1. Problem 1: Eliminating Duplicates in Linked Lists
+Consider the following real-life problem: You’re tasked with organizing a digital library where some books have been accidentally duplicated. You aim to identify and remove these redundant entries to ensure each title is unique in your catalog.
+
+### 2. Problem 1: Naive Approach and Its Drawbacks
+A naive approach would be to browse each book and compare it with every other title in a nested loop fashion. As with any large library, this approach would be cumbersome, with a time complexity of O(n2). It also scales poorly with larger datasets because the time taken to process increases exponentially with each additional book — much like searching an entire library to check for duplicates each time a new book is added.
+
+### 3. Problem 1: Efficient Approach Explanation and Comparison
+To address the issues of the naive approach, we use a more strategic method akin to maintaining a checklist: marking off each book we come across. This method, replicated in our algorithm, employs a HashSet to record unique titles. Consequently, we reduce our time complexity to O(n).
+
+### 4. Problem 1: Step-by-Step Solution with Detailed Explanation
+Let's delve into the step-by-step code:
+
+```java
+public ListNode removeDuplicates(ListNode head) {
+    // If the library is empty or has only one book, no duplicates can exist.
+    if (head == null || head.next == null) {
+        return head;
+    }
+    
+    // We initiate our checklist to keep track of unique books we've already checked out.
+    HashSet<Integer> seenBooks = new HashSet<>();
+    ListNode current = head; // Start checking from the first book on the shelf.
+    seenBooks.add(current.value); // The first book is always unique.
+
+    while (current.next != null) {
+        if (seenBooks.contains(current.next.value)) {
+            // We've already seen this book, so we remove it from the shelf by 
+            // redirecting the current pointer to the next unique book.
+            current.next = current.next.next;
+        } else {
+            // Upon detecting a unique book, we add it to the checklist and move to the next on the shelf.
+            seenBooks.add(current.next.value);
+            current = current.next;
+        }
+    }
+    
+    // The cleaned-up library with no duplicate titles.
+    return head;
+}
+```
+With this explanation, we've clarified the importance of each line of code in the context of the overall strategy for duplicate elimination. We implemented a systematic approach to traverse the list and used a HashSet to avoid repetitively processing the same value while maintaining efficient traversal.
+
+### 5. Problem 2: Finding the Average of Every Third Element
+Now, think of a long-distance race where you must analyze the runners' performance at every third checkpoint to gauge the race's progress.
+
+### 6. Problem 2: Problem Actualization
+The task requires calculating the average time at regular intervals throughout the racecourse. This problem aligns with our linked list scenario, wherein the list represents checkpoint timings, and the objective is to find the average time at every third checkpoint.
+
+### 7. Problem 2: Efficient Approach
+We will simply traverse the given linked list and track the sum and amount of every third element. It sounds easy, but let's examine the solution to see if everything is clear!
+
+### 8 Building the Solution Step-by-Step with Detailed Explanation
+Here is our strategy translated into code, explained in detail:
+
+```java
+public double averageOfEveryThird(ListNode head) {
+    // A race with fewer than three checkpoints doesn't provide enough data for averaging.
+    if (head == null || head.next == null || head.next.next == null) {
+        return 0.0;
+    }
+    
+    // Here, we'll record the total times at selected checkpoints.
+    int sum = 0; 
+    // The number of checkpoints that have contributed to our sum.
+    int count = 0; 
+    ListNode current = head; // The start of the race.
+
+    // We use 'index' as our countdown timer, ticking off each checkpoint as we pass.
+    for (int index = 1; current != null; current = current.next, index++) {
+        // Our timer activates at every third checkpoint.
+        if (index % 3 == 0) {
+            sum += current.value; // Add the checkpoint time to our total.
+            count++; // Another checkpoint contributes to the average.
+        }
+    }
+    
+    // The average timing at every third checkpoint, calculated just as a timing system might do.
+    return (double) sum / count;
+}
+```
+The detailed commentary for each code block elucidates the purpose behind the lines of code, aligning them with our race-timing analogy. This enhances understanding by connecting the implementation directly to the problem-solving strategy.
+
+### Lesson Summary
+Through this lesson, we've explored optimization strategies for common linked list challenges, addressing the reasoning behind efficient algorithms and their practical coding implementation. We've moved from understanding the 'how' to grasping the 'why,' deploying tailored, scalable solutions that will serve you well in technical interviews. Having navigated through the theory and dissected the code, it's your turn to practice and embed these concepts!
+
+#### Practice #1
+#### Practice #2
+
 ## Lesson 4
