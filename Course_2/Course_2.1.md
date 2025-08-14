@@ -165,7 +165,7 @@ class Solution {
     }
 }
 ```
-## Lesson 1: Operating HashSets in Java
+## Lesson 2: Operating HashSets in Java
 ### 1. Problem 1: Check if Two Sets are Disjoint
 Imagine you're developing a feature for a social media platform that requires user groups to be exclusive — you need to ensure that users can't belong to more than one group at a time. It's like organizing events where a guest should not appear on the lists for two different parties at the same venue — an overlap would be a significant issue.
 
