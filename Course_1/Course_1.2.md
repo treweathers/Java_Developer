@@ -5,8 +5,9 @@
 
 ### 1. Understanding Arrays in Java
 An array is a container that stores a fixed number of values of a single type. Think of it as a box that holds only tennis balls or apples. Each item in an array is an element, and their positions are called indices. Let's put this into practice:
-
-    int[] numbers = {10, 20, 30, 40, 50}; // creates an array "numbers" of 5 integers
+```java
+int[] numbers = {10, 20, 30, 40, 50}; // creates an array "numbers" of 5 integers
+```
 Consider `numbers` as a box with 5 compartments, each holding a number. Simple, isn't it?
 
 ### 2. Creation of Arrays in Java
