@@ -10,7 +10,7 @@
 ### Course 1.7: Object-Oriented Programming in Java: 6 units✅
 
 <br>
-<h2 align='center'> Course 2: Mastering Algorithms and Data Structures in Java </h2> 
+<h2 align='center'> Course 2: Mastering Algorithms and Data Structures in Java✅ </h2> 
 
 ### Course 2.1: Hashing, Dictionaries, and Sets in Java: 5 units✅
 ### Course 2.2: Sorting and Searching Algorithms in Java: 7 units✅
